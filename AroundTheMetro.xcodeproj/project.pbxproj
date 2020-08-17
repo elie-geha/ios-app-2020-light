@@ -13,6 +13,7 @@
 		1FA3C3F424EB11B700295FFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3C3F224EB11B700295FFA /* Main.storyboard */; };
 		1FA3C3F624EB11BD00295FFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3C3F524EB11BD00295FFA /* Assets.xcassets */; };
 		1FA3C3F924EB11BD00295FFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3C3F724EB11BD00295FFA /* LaunchScreen.storyboard */; };
+		9A8E11562C4F72C0771E6240 /* Pods_AroundTheMetro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57C4B5707ABD4ED9E88BA9B /* Pods_AroundTheMetro.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		1FA3C3F524EB11BD00295FFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FA3C3F824EB11BD00295FFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FA3C3FA24EB11BD00295FFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A85239D9126354EC81AB8AED /* Pods-AroundTheMetro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundTheMetro.debug.xcconfig"; path = "Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro.debug.xcconfig"; sourceTree = "<group>"; };
+		C57C4B5707ABD4ED9E88BA9B /* Pods_AroundTheMetro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundTheMetro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8FC33BDD46E6721368886D7 /* Pods-AroundTheMetro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundTheMetro.release.xcconfig"; path = "Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A8E11562C4F72C0771E6240 /* Pods_AroundTheMetro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				1FA3C3EB24EB11B700295FFA /* AroundTheMetro */,
 				1FA3C3EA24EB11B700295FFA /* Products */,
+				E6EB6807BFD33CADE9B1CCCE /* Pods */,
+				2410F300C0187DE229E3EE8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +66,37 @@
 				1FA3C3EC24EB11B700295FFA /* AppDelegate.swift */,
 				1FA3C3EE24EB11B700295FFA /* SceneDelegate.swift */,
 				1FA3C3F024EB11B700295FFA /* ViewController.swift */,
+				1FA3C40024EB127000295FFA /* Resources */,
+			);
+			path = AroundTheMetro;
+			sourceTree = "<group>";
+		};
+		1FA3C40024EB127000295FFA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				1FA3C3F224EB11B700295FFA /* Main.storyboard */,
 				1FA3C3F524EB11BD00295FFA /* Assets.xcassets */,
 				1FA3C3F724EB11BD00295FFA /* LaunchScreen.storyboard */,
 				1FA3C3FA24EB11BD00295FFA /* Info.plist */,
 			);
-			path = AroundTheMetro;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2410F300C0187DE229E3EE8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C57C4B5707ABD4ED9E88BA9B /* Pods_AroundTheMetro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6EB6807BFD33CADE9B1CCCE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A85239D9126354EC81AB8AED /* Pods-AroundTheMetro.debug.xcconfig */,
+				D8FC33BDD46E6721368886D7 /* Pods-AroundTheMetro.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +106,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FA3C3FD24EB11BD00295FFA /* Build configuration list for PBXNativeTarget "AroundTheMetro" */;
 			buildPhases = (
+				B6B2F2E48973955AE6BBC8B0 /* [CP] Check Pods Manifest.lock */,
 				1FA3C3E524EB11B700295FFA /* Sources */,
 				1FA3C3E624EB11B700295FFA /* Frameworks */,
 				1FA3C3E724EB11B700295FFA /* Resources */,
@@ -132,6 +165,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B6B2F2E48973955AE6BBC8B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AroundTheMetro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1FA3C3E524EB11B700295FFA /* Sources */ = {
@@ -282,11 +340,12 @@
 		};
 		1FA3C3FE24EB11BD00295FFA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A85239D9126354EC81AB8AED /* Pods-AroundTheMetro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
-				INFOPLIST_FILE = AroundTheMetro/Info.plist;
+				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +359,12 @@
 		};
 		1FA3C3FF24EB11BD00295FFA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8FC33BDD46E6721368886D7 /* Pods-AroundTheMetro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
-				INFOPLIST_FILE = AroundTheMetro/Info.plist;
+				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
