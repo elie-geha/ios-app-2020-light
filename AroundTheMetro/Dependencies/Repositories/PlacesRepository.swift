@@ -6,20 +6,10 @@
 //  Copyright © 2020 AugmentedDiscovery. All rights reserved.
 //
 
-import Foundation
-
-enum PlaceType {
-    case restoraunt
-    case boutique
-    case beautyAndHealth
-    case attraction
-}
-
-
 class PlacesRepository: Repository {
-    var placesService: PlacesService
+    var placesService: PlacesServiceRemote
 
-    init(placesService: PlacesService) {
+    init(placesService: PlacesServiceRemote) {
         self.placesService = placesService
     }
 

@@ -6,4 +6,7 @@
 //  Copyright © 2020 AugmentedDiscovery. All rights reserved.
 //
 
-import Foundation
+struct City {
+    let name: String
+    let metroStations: [MetroStation]
+}

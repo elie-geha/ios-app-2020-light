@@ -6,4 +6,7 @@
 //  Copyright © 2020 AugmentedDiscovery. All rights reserved.
 //
 
-import Foundation
+struct Country {
+    let name: String
+    let cities: [City]
+}
