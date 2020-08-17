@@ -7,4 +7,6 @@
 //
 
 protocol Service {}
+protocol APIService: Service {}
+
 protocol Repository {}

@@ -17,6 +17,12 @@
 		1FA3C40E24EB184100295FFA /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C40D24EB184100295FFA /* HomeCoordinator.swift */; };
 		1FA3C41124EB1FFE00295FFA /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C41024EB1FFE00295FFA /* MenuCoordinator.swift */; };
 		1FA3C41324EB212700295FFA /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C41224EB212700295FFA /* Assets.swift */; };
+		1FA3C41524EB290F00295FFA /* PlacesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C41424EB290F00295FFA /* PlacesRepository.swift */; };
+		1FA3C41824EB2A9000295FFA /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C41724EB2A9000295FFA /* Place.swift */; };
+		1FA3C41A24EB2A9800295FFA /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C41924EB2A9800295FFA /* City.swift */; };
+		1FA3C41C24EB2AA200295FFA /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C41B24EB2AA200295FFA /* Country.swift */; };
+		1FA3C41E24EB2AAD00295FFA /* MetroStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C41D24EB2AAD00295FFA /* MetroStation.swift */; };
+		1FA3C42024EB2B2F00295FFA /* PlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C41F24EB2B2F00295FFA /* PlacesService.swift */; };
 		9A8E11562C4F72C0771E6240 /* Pods_AroundTheMetro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57C4B5707ABD4ED9E88BA9B /* Pods_AroundTheMetro.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +39,12 @@
 		1FA3C40D24EB184100295FFA /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		1FA3C41024EB1FFE00295FFA /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
 		1FA3C41224EB212700295FFA /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		1FA3C41424EB290F00295FFA /* PlacesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRepository.swift; sourceTree = "<group>"; };
+		1FA3C41724EB2A9000295FFA /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		1FA3C41924EB2A9800295FFA /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		1FA3C41B24EB2AA200295FFA /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		1FA3C41D24EB2AAD00295FFA /* MetroStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStation.swift; sourceTree = "<group>"; };
+		1FA3C41F24EB2B2F00295FFA /* PlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesService.swift; sourceTree = "<group>"; };
 		A85239D9126354EC81AB8AED /* Pods-AroundTheMetro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundTheMetro.debug.xcconfig"; path = "Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro.debug.xcconfig"; sourceTree = "<group>"; };
 		C57C4B5707ABD4ED9E88BA9B /* Pods_AroundTheMetro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundTheMetro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8FC33BDD46E6721368886D7 /* Pods-AroundTheMetro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundTheMetro.release.xcconfig"; path = "Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +86,7 @@
 				1FA3C3EC24EB11B700295FFA /* AppDelegate.swift */,
 				1FA3C3EE24EB11B700295FFA /* SceneDelegate.swift */,
 				1FA3C40224EB13AB00295FFA /* AppCoordinator.swift */,
+				1FA3C41624EB2A8100295FFA /* Model */,
 				1FA3C40424EB148600295FFA /* Dependencies */,
 				1FA3C40124EB131500295FFA /* Workflows */,
 				1FA3C40024EB127000295FFA /* Resources */,
@@ -123,6 +136,7 @@
 		1FA3C40A24EB181900295FFA /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1FA3C41F24EB2B2F00295FFA /* PlacesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -130,6 +144,7 @@
 		1FA3C40B24EB181E00295FFA /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				1FA3C41424EB290F00295FFA /* PlacesRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -148,6 +163,17 @@
 				1FA3C41024EB1FFE00295FFA /* MenuCoordinator.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		1FA3C41624EB2A8100295FFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3C41724EB2A9000295FFA /* Place.swift */,
+				1FA3C41924EB2A9800295FFA /* City.swift */,
+				1FA3C41B24EB2AA200295FFA /* Country.swift */,
+				1FA3C41D24EB2AAD00295FFA /* MetroStation.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2410F300C0187DE229E3EE8F /* Frameworks */ = {
@@ -285,10 +311,16 @@
 				1FA3C3ED24EB11B700295FFA /* AppDelegate.swift in Sources */,
 				1FA3C41324EB212700295FFA /* Assets.swift in Sources */,
 				1FA3C3EF24EB11B700295FFA /* SceneDelegate.swift in Sources */,
+				1FA3C41C24EB2AA200295FFA /* Country.swift in Sources */,
 				1FA3C40924EB17EB00295FFA /* MainCoordinator.swift in Sources */,
 				1FA3C40624EB14A700295FFA /* DependenciesSpecs.swift in Sources */,
+				1FA3C42024EB2B2F00295FFA /* PlacesService.swift in Sources */,
 				1FA3C41124EB1FFE00295FFA /* MenuCoordinator.swift in Sources */,
+				1FA3C41A24EB2A9800295FFA /* City.swift in Sources */,
+				1FA3C41524EB290F00295FFA /* PlacesRepository.swift in Sources */,
 				1FA3C40E24EB184100295FFA /* HomeCoordinator.swift in Sources */,
+				1FA3C41824EB2A9000295FFA /* Place.swift in Sources */,
+				1FA3C41E24EB2AAD00295FFA /* MetroStation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
