@@ -13,8 +13,12 @@ class AppCoordinator {
 
     private var mainCoordinator: MainCoordinator?
 
-    private var services = [Service]()
-    private var repositories = [Repository]()
+    // repositories
+    private var countriesRepository: CountriesRepository?
+    private var placesRepoository: PlacesRepository?
+
+    // services
+    // settings service?
 
     init(with window: UIWindow) {
         self.window = window
@@ -26,11 +30,14 @@ class AppCoordinator {
         let router = UINavigationController()
         router.setNavigationBarHidden(true, animated: false)
         window.rootViewController = router
-        mainCoordinator = MainCoordinator(with: router)
+        mainCoordinator = MainCoordinator(with: router,
+                                          countriesRepository: countriesRepository,
+                                          placesRepoository: placesRepoository)
         mainCoordinator?.start()
     }
 
     private func createDependencies() {
-
+        countriesRepository = CountriesRepository(countriesService: CountriesServiceLocal())
+        placesRepoository = PlacesRepository(placesService: PlacesServiceRemote())
     }
 }

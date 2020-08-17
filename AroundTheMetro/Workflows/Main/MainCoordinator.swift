@@ -10,6 +10,11 @@ import UIKit
 import AKSideMenu
 
 class MainCoordinator {
+    // Repositories
+    private var countriesRepository: CountriesRepository
+    private var placesRepository: PlacesRepository
+
+    // Navigation
     private var router: UINavigationController
 
     private var sideMenuController: AKSideMenu?
@@ -25,8 +30,13 @@ class MainCoordinator {
 
     private var shareRouter: UINavigationController!
 
-    init(with router: UINavigationController) {
+    init(with router: UINavigationController,
+         countriesRepository: CountriesRepository,
+         placesRepository: PlacesRepository) {
         self.router = router
+        self.countriesRepository = countriesRepository
+        self.placesRepository = placesRepository
+
         createHomeCoordinator()
         createMenuCoordinator()
         createChangeCity()
