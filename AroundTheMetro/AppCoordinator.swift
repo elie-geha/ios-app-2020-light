@@ -10,15 +10,16 @@ import UIKit
 
 class AppCoordinator {
     let window: UIWindow
-
     private var mainCoordinator: MainCoordinator?
 
-    // repositories
-    private var countriesRepository: CountriesRepository?
-    private var placesRepoository: PlacesRepository?
+    // MARK: - repositories
+    private var countriesRepository: CountriesRepository!
+    private var placesRepository: PlacesRepository!
 
-    // services
-    // settings service?
+    // MARK: - services
+    private var userStorageService: UserStorageService!
+
+    // MARK: -
 
     init(with window: UIWindow) {
         self.window = window
@@ -32,12 +33,15 @@ class AppCoordinator {
         window.rootViewController = router
         mainCoordinator = MainCoordinator(with: router,
                                           countriesRepository: countriesRepository,
-                                          placesRepoository: placesRepoository)
+                                          placesRepository: placesRepository,
+                                          userStorageService: userStorageService)
         mainCoordinator?.start()
     }
 
     private func createDependencies() {
         countriesRepository = CountriesRepository(countriesService: CountriesServiceLocal())
-        placesRepoository = PlacesRepository(placesService: PlacesServiceRemote())
+        placesRepository = PlacesRepository(placesService: PlacesServiceRemote())
+
+        userStorageService = UserStorageService()
     }
 }

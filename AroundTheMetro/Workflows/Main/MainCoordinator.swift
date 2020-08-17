@@ -10,11 +10,14 @@ import UIKit
 import AKSideMenu
 
 class MainCoordinator {
-    // Repositories
+    // MARK: - Repositories
     private var countriesRepository: CountriesRepository
     private var placesRepository: PlacesRepository
 
-    // Navigation
+    // MARK: - Services
+    private var userStorageService: UserStorageService
+
+    // MARK: - Navigation
     private var router: UINavigationController
 
     private var sideMenuController: AKSideMenu?
@@ -30,12 +33,18 @@ class MainCoordinator {
 
     private var shareRouter: UINavigationController!
 
+    // MARK: -
+
     init(with router: UINavigationController,
          countriesRepository: CountriesRepository,
-         placesRepository: PlacesRepository) {
+         placesRepository: PlacesRepository,
+         userStorageService: UserStorageService) {
         self.router = router
+
         self.countriesRepository = countriesRepository
         self.placesRepository = placesRepository
+
+        self.userStorageService = userStorageService
 
         createHomeCoordinator()
         createMenuCoordinator()
@@ -65,8 +74,11 @@ class MainCoordinator {
     }
 
     private func initialMainRouter() -> UINavigationController {
-        // if city not selected, open CitySelection
-        return homeCoordinatorRouter
+        if userStorageService.currentCity == nil && userStorageService.currentCountry == nil {
+            return changeCityRouter
+        } else {
+            return homeCoordinatorRouter
+        }
     }
 
     private func createHomeCoordinator() {
