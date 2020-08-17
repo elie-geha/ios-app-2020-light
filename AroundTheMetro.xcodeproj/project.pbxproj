@@ -3,16 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1FA3C3ED24EB11B700295FFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C3EC24EB11B700295FFA /* AppDelegate.swift */; };
 		1FA3C3EF24EB11B700295FFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C3EE24EB11B700295FFA /* SceneDelegate.swift */; };
-		1FA3C3F124EB11B700295FFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C3F024EB11B700295FFA /* ViewController.swift */; };
-		1FA3C3F424EB11B700295FFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3C3F224EB11B700295FFA /* Main.storyboard */; };
 		1FA3C3F624EB11BD00295FFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3C3F524EB11BD00295FFA /* Assets.xcassets */; };
 		1FA3C3F924EB11BD00295FFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3C3F724EB11BD00295FFA /* LaunchScreen.storyboard */; };
+		1FA3C40324EB13AB00295FFA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C40224EB13AB00295FFA /* AppCoordinator.swift */; };
+		1FA3C40624EB14A700295FFA /* DependenciesSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C40524EB14A700295FFA /* DependenciesSpecs.swift */; };
+		1FA3C40924EB17EB00295FFA /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C40824EB17EB00295FFA /* MainCoordinator.swift */; };
+		1FA3C40E24EB184100295FFA /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C40D24EB184100295FFA /* HomeCoordinator.swift */; };
+		1FA3C41124EB1FFE00295FFA /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C41024EB1FFE00295FFA /* MenuCoordinator.swift */; };
+		1FA3C41324EB212700295FFA /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C41224EB212700295FFA /* Assets.swift */; };
 		9A8E11562C4F72C0771E6240 /* Pods_AroundTheMetro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57C4B5707ABD4ED9E88BA9B /* Pods_AroundTheMetro.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +24,15 @@
 		1FA3C3E924EB11B700295FFA /* AroundTheMetro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AroundTheMetro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA3C3EC24EB11B700295FFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FA3C3EE24EB11B700295FFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1FA3C3F024EB11B700295FFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1FA3C3F324EB11B700295FFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FA3C3F524EB11BD00295FFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FA3C3F824EB11BD00295FFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FA3C3FA24EB11BD00295FFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FA3C40224EB13AB00295FFA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		1FA3C40524EB14A700295FFA /* DependenciesSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesSpecs.swift; sourceTree = "<group>"; };
+		1FA3C40824EB17EB00295FFA /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		1FA3C40D24EB184100295FFA /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		1FA3C41024EB1FFE00295FFA /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
+		1FA3C41224EB212700295FFA /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		A85239D9126354EC81AB8AED /* Pods-AroundTheMetro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundTheMetro.debug.xcconfig"; path = "Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro.debug.xcconfig"; sourceTree = "<group>"; };
 		C57C4B5707ABD4ED9E88BA9B /* Pods_AroundTheMetro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundTheMetro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8FC33BDD46E6721368886D7 /* Pods-AroundTheMetro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundTheMetro.release.xcconfig"; path = "Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,7 +73,9 @@
 			children = (
 				1FA3C3EC24EB11B700295FFA /* AppDelegate.swift */,
 				1FA3C3EE24EB11B700295FFA /* SceneDelegate.swift */,
-				1FA3C3F024EB11B700295FFA /* ViewController.swift */,
+				1FA3C40224EB13AB00295FFA /* AppCoordinator.swift */,
+				1FA3C40424EB148600295FFA /* Dependencies */,
+				1FA3C40124EB131500295FFA /* Workflows */,
 				1FA3C40024EB127000295FFA /* Resources */,
 			);
 			path = AroundTheMetro;
@@ -74,12 +84,70 @@
 		1FA3C40024EB127000295FFA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1FA3C3F224EB11B700295FFA /* Main.storyboard */,
+				1FA3C41224EB212700295FFA /* Assets.swift */,
 				1FA3C3F524EB11BD00295FFA /* Assets.xcassets */,
 				1FA3C3F724EB11BD00295FFA /* LaunchScreen.storyboard */,
 				1FA3C3FA24EB11BD00295FFA /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1FA3C40124EB131500295FFA /* Workflows */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3C40724EB17D700295FFA /* Main */,
+			);
+			path = Workflows;
+			sourceTree = "<group>";
+		};
+		1FA3C40424EB148600295FFA /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3C40B24EB181E00295FFA /* Repositories */,
+				1FA3C40A24EB181900295FFA /* Services */,
+				1FA3C40524EB14A700295FFA /* DependenciesSpecs.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		1FA3C40724EB17D700295FFA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3C40F24EB1FEF00295FFA /* Menu */,
+				1FA3C40C24EB183500295FFA /* Home */,
+				1FA3C40824EB17EB00295FFA /* MainCoordinator.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1FA3C40A24EB181900295FFA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1FA3C40B24EB181E00295FFA /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		1FA3C40C24EB183500295FFA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3C40D24EB184100295FFA /* HomeCoordinator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1FA3C40F24EB1FEF00295FFA /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3C41024EB1FFE00295FFA /* MenuCoordinator.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		2410F300C0187DE229E3EE8F /* Frameworks */ = {
@@ -110,6 +178,7 @@
 				1FA3C3E524EB11B700295FFA /* Sources */,
 				1FA3C3E624EB11B700295FFA /* Frameworks */,
 				1FA3C3E724EB11B700295FFA /* Resources */,
+				1E67D382E4CFBBAC4C7105BB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,13 +229,29 @@
 			files = (
 				1FA3C3F924EB11BD00295FFA /* LaunchScreen.storyboard in Resources */,
 				1FA3C3F624EB11BD00295FFA /* Assets.xcassets in Resources */,
-				1FA3C3F424EB11B700295FFA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1E67D382E4CFBBAC4C7105BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B6B2F2E48973955AE6BBC8B0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -196,23 +281,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FA3C3F124EB11B700295FFA /* ViewController.swift in Sources */,
+				1FA3C40324EB13AB00295FFA /* AppCoordinator.swift in Sources */,
 				1FA3C3ED24EB11B700295FFA /* AppDelegate.swift in Sources */,
+				1FA3C41324EB212700295FFA /* Assets.swift in Sources */,
 				1FA3C3EF24EB11B700295FFA /* SceneDelegate.swift in Sources */,
+				1FA3C40924EB17EB00295FFA /* MainCoordinator.swift in Sources */,
+				1FA3C40624EB14A700295FFA /* DependenciesSpecs.swift in Sources */,
+				1FA3C41124EB1FFE00295FFA /* MenuCoordinator.swift in Sources */,
+				1FA3C40E24EB184100295FFA /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1FA3C3F224EB11B700295FFA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1FA3C3F324EB11B700295FFA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1FA3C3F724EB11BD00295FFA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -5,7 +5,8 @@ use_frameworks!
 
 target 'AroundTheMetro' do
     # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-    use_frameworks!
+
+    pod 'AKSideMenu'
 
     # pod 'KVSpinnerView'
     # pod 'GoogleSignIn'
@@ -15,7 +16,6 @@ target 'AroundTheMetro' do
     # pod 'FacebookCore'
     # pod 'Moya'
     # pod 'ObjectMapper'
-    # pod 'AKSideMenu'
     # pod 'Tabman'
     # pod 'Kingfisher', '~> 4.0'
     # pod 'SVProgressHUD'
