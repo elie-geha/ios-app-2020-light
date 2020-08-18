@@ -11,11 +11,7 @@ import AKSideMenu
 
 class MainCoordinator {
     // MARK: - Repositories
-    private var countriesRepository: CountriesRepository
-    private var placesRepository: PlacesRepository
-
-    // MARK: - Services
-    private var userStorageService: UserStorageService
+    private var context: AppContext
 
     // MARK: - Navigation
     private var router: UINavigationController
@@ -36,15 +32,9 @@ class MainCoordinator {
     // MARK: -
 
     init(with router: UINavigationController,
-         countriesRepository: CountriesRepository,
-         placesRepository: PlacesRepository,
-         userStorageService: UserStorageService) {
+         context: AppContext) {
         self.router = router
-
-        self.countriesRepository = countriesRepository
-        self.placesRepository = placesRepository
-
-        self.userStorageService = userStorageService
+        self.context = context
 
         createHomeCoordinator()
         createMenuCoordinator()
@@ -74,7 +64,7 @@ class MainCoordinator {
     }
 
     private func initialMainRouter() -> UINavigationController {
-        if userStorageService.currentCity == nil && userStorageService.currentCountry == nil {
+        if context.userStorageService.currentCity == nil && context.userStorageService.currentCountry == nil {
             return changeCityRouter
         } else {
             return homeCoordinatorRouter
