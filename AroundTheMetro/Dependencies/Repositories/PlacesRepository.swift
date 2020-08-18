@@ -28,4 +28,15 @@ class PlacesRepository: Repository {
             }
         })
     }
+
+    func getMetroStations(with type: PlaceType, country: String, city: String, with result: ((Result<[MetroStation], Error>) -> Void)?) {
+        placesService.fetchMetroStations(with: type, country: country, city: city, with: { fetchResult in
+            switch fetchResult {
+            case .success(let response):
+                result?(.success(response.metros))
+            case .failure(let error):
+                result?(.failure(error))
+            }
+        })
+    }
 }
