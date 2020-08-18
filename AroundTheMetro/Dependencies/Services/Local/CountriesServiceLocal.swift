@@ -32,6 +32,6 @@ class CountriesServiceLocal: LocalStorageService {
 
     private func createCity(with name: String) -> City {
         #warning("parse stations")
-        return City(name: name, metroStations: [])
+        return City(name: name)
     }
 }

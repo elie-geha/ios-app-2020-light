@@ -25,10 +25,7 @@ class AppCoordinator {
         let router = UINavigationController()
         router.setNavigationBarHidden(true, animated: false)
         window.rootViewController = router
-        mainCoordinator = MainCoordinator(with: router,
-                                          countriesRepository: appContext.countriesRepository,
-                                          placesRepository: appContext.placesRepository,
-                                          userStorageService: appContext.userStorageService)
+        mainCoordinator = MainCoordinator(with: router, context: appContext)
         mainCoordinator?.start()
     }
 }
