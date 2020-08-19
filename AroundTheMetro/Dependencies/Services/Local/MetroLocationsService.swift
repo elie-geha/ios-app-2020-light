@@ -6,6 +6,8 @@
 //  Copyright © 2020 AugmentedDiscovery. All rights reserved.
 //
 
+import Foundation
+
 class MetroLocationsService: LocalStorageService {
     var parsedStations = [String: [MetroStationLocation]]()
 
@@ -21,7 +23,7 @@ class MetroLocationsService: LocalStorageService {
 
     private func parseStations(for city: String) -> [MetroStationLocation] {
         guard let pathToCity = Bundle.main.path(forResource: city, ofType: "plist"),
-            let cityData = FileManager.default.contents(atPath: pathToCity) else { return }
+            let cityData = FileManager.default.contents(atPath: pathToCity) else { return [] }
 
         do {
             let stations = try PropertyListDecoder().decode(Stations.self, from: cityData)

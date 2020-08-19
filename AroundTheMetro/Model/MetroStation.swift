@@ -7,11 +7,9 @@
 //
 
 struct MetroStation: Codable {
-    var name: String?
+    var name: String
 
     enum CodingKeys: String, CodingKey {
         case name = "metro_name"
-        case latitude
-        case longitude
     }
 }
