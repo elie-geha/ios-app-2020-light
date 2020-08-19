@@ -24,7 +24,6 @@ class MetroLocationsService: LocalStorageService {
     private func parseStations(for city: String) -> [MetroStationLocation] {
         guard let pathToCity = Bundle.main.path(forResource: city, ofType: "plist"),
             let cityData = FileManager.default.contents(atPath: pathToCity) else { return [] }
-
         do {
             let stations = try PropertyListDecoder().decode(Stations.self, from: cityData)
             return stations.stations

@@ -42,6 +42,20 @@
 		1F4C2BCB24ED955200C39967 /* Miami.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BAB24ED955200C39967 /* Miami.plist */; };
 		1F4C2BCC24ED955200C39967 /* Barcelona.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BAC24ED955200C39967 /* Barcelona.plist */; };
 		1F4C2BCD24ED955200C39967 /* Madrid.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BAD24ED955200C39967 /* Madrid.plist */; };
+		1F4C2BCF24ED9A3700C39967 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BCE24ED9A3700C39967 /* Appearance.swift */; };
+		1F4C2BD124ED9B6F00C39967 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BD024ED9B6F00C39967 /* Home.storyboard */; };
+		1F4C2BD724EDA05E00C39967 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BD624EDA05E00C39967 /* HomeViewController.swift */; };
+		1F4C2BD924EDA08B00C39967 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BD824EDA08B00C39967 /* Storyboard.swift */; };
+		1F4C2BDD24EDA84000C39967 /* BannersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BDC24EDA84000C39967 /* BannersCell.swift */; };
+		1F4C2BDF24EDA8EF00C39967 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BDE24EDA8EF00C39967 /* MenuCell.swift */; };
+		1F4C2BE124EDAAAD00C39967 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BE024EDAAAD00C39967 /* Banner.swift */; };
+		1F4C2BE324EDABD900C39967 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BE224EDABD900C39967 /* ImageCell.swift */; };
+		1F4C2BE524EDAC2200C39967 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BE424EDAC2200C39967 /* ImageCell.xib */; };
+		1F4C2BE824EDAF3300C39967 /* BannersServiceRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BE724EDAF3300C39967 /* BannersServiceRemote.swift */; };
+		1F4C2BEB24EDAFFC00C39967 /* BannersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BEA24EDAFFC00C39967 /* BannersResponse.swift */; };
+		1F4C2BEE24EDB3A500C39967 /* BannersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BED24EDB3A500C39967 /* BannersRepository.swift */; };
+		1F4C2BF024EDBD4200C39967 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */; };
+		1F4C2BF224EDBDBA00C39967 /* HomeMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */; };
 		1FA3C3ED24EB11B700295FFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C3EC24EB11B700295FFA /* AppDelegate.swift */; };
 		1FA3C3EF24EB11B700295FFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C3EE24EB11B700295FFA /* SceneDelegate.swift */; };
 		1FA3C3F624EB11BD00295FFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3C3F524EB11BD00295FFA /* Assets.xcassets */; };
@@ -109,6 +123,21 @@
 		1F4C2BAB24ED955200C39967 /* Miami.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Miami.plist; sourceTree = "<group>"; };
 		1F4C2BAC24ED955200C39967 /* Barcelona.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Barcelona.plist; sourceTree = "<group>"; };
 		1F4C2BAD24ED955200C39967 /* Madrid.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Madrid.plist; sourceTree = "<group>"; };
+		1F4C2BCE24ED9A3700C39967 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		1F4C2BD024ED9B6F00C39967 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		1F4C2BD324ED9CD000C39967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F4C2BD624EDA05E00C39967 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1F4C2BD824EDA08B00C39967 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		1F4C2BDC24EDA84000C39967 /* BannersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersCell.swift; sourceTree = "<group>"; };
+		1F4C2BDE24EDA8EF00C39967 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		1F4C2BE024EDAAAD00C39967 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		1F4C2BE224EDABD900C39967 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		1F4C2BE424EDAC2200C39967 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		1F4C2BE724EDAF3300C39967 /* BannersServiceRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersServiceRemote.swift; sourceTree = "<group>"; };
+		1F4C2BEA24EDAFFC00C39967 /* BannersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersResponse.swift; sourceTree = "<group>"; };
+		1F4C2BED24EDB3A500C39967 /* BannersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersRepository.swift; sourceTree = "<group>"; };
+		1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuType.swift; sourceTree = "<group>"; };
 		1FA3C3E924EB11B700295FFA /* AroundTheMetro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AroundTheMetro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA3C3EC24EB11B700295FFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FA3C3EE24EB11B700295FFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +224,60 @@
 			path = MetroStationLocationsPerCity;
 			sourceTree = "<group>";
 		};
+		1F4C2BD524EDA04800C39967 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C2BEC24EDB1BF00C39967 /* Common */,
+				1F4C2BDB24EDA83000C39967 /* MenuSection */,
+				1F4C2BDA24EDA82400C39967 /* BannersSection */,
+				1F4C2BD024ED9B6F00C39967 /* Home.storyboard */,
+				1F4C2BD624EDA05E00C39967 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F4C2BDA24EDA82400C39967 /* BannersSection */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C2BDC24EDA84000C39967 /* BannersCell.swift */,
+			);
+			path = BannersSection;
+			sourceTree = "<group>";
+		};
+		1F4C2BDB24EDA83000C39967 /* MenuSection */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C2BDE24EDA8EF00C39967 /* MenuCell.swift */,
+			);
+			path = MenuSection;
+			sourceTree = "<group>";
+		};
+		1F4C2BE624EDAF2300C39967 /* Banners */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C2BE924EDAFED00C39967 /* Response */,
+				1F4C2BE724EDAF3300C39967 /* BannersServiceRemote.swift */,
+			);
+			path = Banners;
+			sourceTree = "<group>";
+		};
+		1F4C2BE924EDAFED00C39967 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C2BEA24EDAFFC00C39967 /* BannersResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		1F4C2BEC24EDB1BF00C39967 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C2BE224EDABD900C39967 /* ImageCell.swift */,
+				1F4C2BE424EDAC2200C39967 /* ImageCell.xib */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		1FA3C3E024EB11B700295FFA = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +319,7 @@
 			children = (
 				1F4C2B8D24ED955200C39967 /* MetroStationLocationsPerCity */,
 				1FA3C41224EB212700295FFA /* Assets.swift */,
+				1F4C2BD224ED9CD000C39967 /* Main.storyboard */,
 				1FA3C3F524EB11BD00295FFA /* Assets.xcassets */,
 				1FA3C3F724EB11BD00295FFA /* LaunchScreen.storyboard */,
 				1FA3C3FA24EB11BD00295FFA /* Info.plist */,
@@ -286,6 +370,7 @@
 				1FA3C41424EB290F00295FFA /* PlacesRepository.swift */,
 				1FA3C42324EB2D5700295FFA /* CountriesRepository.swift */,
 				1F4C2B8924ED92BB00C39967 /* MetroLocationsRepository.swift */,
+				1F4C2BED24EDB3A500C39967 /* BannersRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -293,6 +378,7 @@
 		1FA3C40C24EB183500295FFA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1F4C2BD524EDA04800C39967 /* View */,
 				1FA3C40D24EB184100295FFA /* HomeCoordinator.swift */,
 			);
 			path = Home;
@@ -314,6 +400,7 @@
 				1FA3C41B24EB2AA200295FFA /* Country.swift */,
 				1FA3C41D24EB2AAD00295FFA /* MetroStation.swift */,
 				1F4C2B8724ED926100C39967 /* MetroStationLocation.swift */,
+				1F4C2BE024EDAAAD00C39967 /* Banner.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -323,6 +410,7 @@
 			children = (
 				1FA3C42A24EB34D600295FFA /* UserDefaultsBacked.swift */,
 				1FA3C42C24EB352000295FFA /* AnyOptional.swift */,
+				1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -341,6 +429,7 @@
 		1FA3C43124EBDA8500295FFA /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				1F4C2BE624EDAF2300C39967 /* Banners */,
 				1FA3C43A24EBEB8700295FFA /* Places */,
 			);
 			path = Remote;
@@ -359,6 +448,9 @@
 			isa = PBXGroup;
 			children = (
 				1FA3C43824EBDE6A00295FFA /* Constants.swift */,
+				1F4C2BCE24ED9A3700C39967 /* Appearance.swift */,
+				1F4C2BD824EDA08B00C39967 /* Storyboard.swift */,
+				1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */,
 			);
 			path = AppConfig;
 			sourceTree = "<group>";
@@ -479,6 +571,7 @@
 				1F4C2BB724ED955200C39967 /* Busan.plist in Resources */,
 				1F4C2BC824ED955200C39967 /* Stockholm.plist in Resources */,
 				1F4C2BCB24ED955200C39967 /* Miami.plist in Resources */,
+				1F4C2BD124ED9B6F00C39967 /* Home.storyboard in Resources */,
 				1F4C2BB124ED955200C39967 /* Toronto.plist in Resources */,
 				1F4C2BB324ED955200C39967 /* Chicago.plist in Resources */,
 				1F4C2BC024ED955200C39967 /* Montreal.plist in Resources */,
@@ -492,6 +585,7 @@
 				1F4C2BB924ED955200C39967 /* Atlanta.plist in Resources */,
 				1F4C2BCA24ED955200C39967 /* Bilbao.plist in Resources */,
 				1F4C2BAF24ED955200C39967 /* Lausanne.plist in Resources */,
+				1F4C2BE524EDAC2200C39967 /* ImageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,11 +640,13 @@
 			files = (
 				1FA3C42424EB2D5700295FFA /* CountriesRepository.swift in Sources */,
 				1FA3C43D24EBEB9D00295FFA /* PlacesResponse.swift in Sources */,
+				1F4C2BD724EDA05E00C39967 /* HomeViewController.swift in Sources */,
 				1FA3C43624EBDB8A00295FFA /* ATLApiTarget.swift in Sources */,
 				1FA3C40324EB13AB00295FFA /* AppCoordinator.swift in Sources */,
 				1FA3C42D24EB352000295FFA /* AnyOptional.swift in Sources */,
 				1FA3C3ED24EB11B700295FFA /* AppDelegate.swift in Sources */,
 				1F4C2B8C24ED931200C39967 /* MetroLocationsService.swift in Sources */,
+				1F4C2BEB24EDAFFC00C39967 /* BannersResponse.swift in Sources */,
 				1F4C2B8824ED926100C39967 /* MetroStationLocation.swift in Sources */,
 				1FA3C42B24EB34D600295FFA /* UserDefaultsBacked.swift in Sources */,
 				1F4C2B8A24ED92BB00C39967 /* MetroLocationsRepository.swift in Sources */,
@@ -558,20 +654,30 @@
 				1FA3C42224EB2CF900295FFA /* PlacesServiceLocal.swift in Sources */,
 				1FA3C3EF24EB11B700295FFA /* SceneDelegate.swift in Sources */,
 				1FA3C43524EBDB8A00295FFA /* NetworkAdapter.swift in Sources */,
+				1F4C2BDD24EDA84000C39967 /* BannersCell.swift in Sources */,
 				1FA3C41C24EB2AA200295FFA /* Country.swift in Sources */,
+				1F4C2BE324EDABD900C39967 /* ImageCell.swift in Sources */,
 				1FA3C40924EB17EB00295FFA /* MainCoordinator.swift in Sources */,
+				1F4C2BEE24EDB3A500C39967 /* BannersRepository.swift in Sources */,
 				1FA3C42F24EBD8E900295FFA /* AppContext.swift in Sources */,
 				1FA3C40624EB14A700295FFA /* DependenciesSpecs.swift in Sources */,
 				1FA3C42024EB2B2F00295FFA /* PlacesServiceRemote.swift in Sources */,
+				1F4C2BD924EDA08B00C39967 /* Storyboard.swift in Sources */,
 				1FA3C41124EB1FFE00295FFA /* MenuCoordinator.swift in Sources */,
 				1FA3C43F24EBEBAA00295FFA /* MetroStationsResponse.swift in Sources */,
 				1FA3C41A24EB2A9800295FFA /* City.swift in Sources */,
+				1F4C2BF224EDBDBA00C39967 /* HomeMenuType.swift in Sources */,
 				1FA3C41524EB290F00295FFA /* PlacesRepository.swift in Sources */,
 				1FA3C40E24EB184100295FFA /* HomeCoordinator.swift in Sources */,
+				1F4C2BE824EDAF3300C39967 /* BannersServiceRemote.swift in Sources */,
 				1FA3C42824EB349100295FFA /* UserStorageService.swift in Sources */,
+				1F4C2BCF24ED9A3700C39967 /* Appearance.swift in Sources */,
 				1FA3C41824EB2A9000295FFA /* Place.swift in Sources */,
+				1F4C2BF024EDBD4200C39967 /* String+Localized.swift in Sources */,
 				1FA3C41E24EB2AAD00295FFA /* MetroStation.swift in Sources */,
 				1FA3C42624EB2D8A00295FFA /* CountriesServiceLocal.swift in Sources */,
+				1F4C2BE124EDAAAD00C39967 /* Banner.swift in Sources */,
+				1F4C2BDF24EDA8EF00C39967 /* MenuCell.swift in Sources */,
 				1FA3C43924EBDE6A00295FFA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +685,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		1F4C2BD224ED9CD000C39967 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F4C2BD324ED9CD000C39967 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		1FA3C3F724EB11BD00295FFA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
