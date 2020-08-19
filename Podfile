@@ -7,6 +7,7 @@ target 'AroundTheMetro' do
     # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
 
     pod 'AKSideMenu'
+    pod 'Moya'
 
     # pod 'KVSpinnerView'
     # pod 'GoogleSignIn'
@@ -14,7 +15,6 @@ target 'AroundTheMetro' do
     # pod 'FBSDKShareKit'
     # pod 'FBSDKCoreKit'
     # pod 'FacebookCore'
-    # pod 'Moya'
     # pod 'ObjectMapper'
     # pod 'Tabman'
     # pod 'Kingfisher', '~> 4.0'

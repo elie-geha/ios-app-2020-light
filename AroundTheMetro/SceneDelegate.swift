@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.windowScene = windowScene
         window.makeKeyAndVisible()
         self.window = window
-        appCoordinator = AppCoordinator(with: window)
+        appCoordinator = AppCoordinator(with: window, context: AppContext())
         appCoordinator.start()
     }
 }

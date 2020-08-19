@@ -10,27 +10,22 @@ import UIKit
 
 class AppCoordinator {
     let window: UIWindow
-
     private var mainCoordinator: MainCoordinator?
 
-    private var services = [Service]()
-    private var repositories = [Repository]()
+    private var appContext: AppContext
 
-    init(with window: UIWindow) {
+    // MARK: -
+
+    init(with window: UIWindow, context: AppContext) {
         self.window = window
-
-        createDependencies()
+        self.appContext = context
     }
 
     func start() {
         let router = UINavigationController()
         router.setNavigationBarHidden(true, animated: false)
         window.rootViewController = router
-        mainCoordinator = MainCoordinator(with: router)
+        mainCoordinator = MainCoordinator(with: router, context: appContext)
         mainCoordinator?.start()
-    }
-
-    private func createDependencies() {
-
     }
 }

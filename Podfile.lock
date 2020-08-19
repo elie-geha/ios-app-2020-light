@@ -1,16 +1,26 @@
 PODS:
   - AKSideMenu (1.4.5)
+  - Alamofire (5.2.2)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
 
 DEPENDENCIES:
   - AKSideMenu
+  - Moya
 
 SPEC REPOS:
   trunk:
     - AKSideMenu
+    - Alamofire
+    - Moya
 
 SPEC CHECKSUMS:
   AKSideMenu: 2880c44ee04a68f40be783c5cb997b2e0ee22401
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
 
-PODFILE CHECKSUM: 97040de70a460a01c808fdcb798d532e7a45d232
+PODFILE CHECKSUM: ab2f272e2e56ede01336c1a09bd18e9189afbf6d
 
 COCOAPODS: 1.9.3
