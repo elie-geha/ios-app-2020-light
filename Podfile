@@ -8,6 +8,7 @@ target 'AroundTheMetro' do
 
     pod 'AKSideMenu'
     pod 'Moya'
+    pod 'Kingfisher'
 
     # pod 'KVSpinnerView'
     # pod 'GoogleSignIn'
@@ -17,7 +18,6 @@ target 'AroundTheMetro' do
     # pod 'FacebookCore'
     # pod 'ObjectMapper'
     # pod 'Tabman'
-    # pod 'Kingfisher', '~> 4.0'
     # pod 'SVProgressHUD'
     # pod 'Google-Mobile-Ads-SDK'
     # pod 'HDAugmentedReality'
@@ -28,5 +28,4 @@ target 'AroundTheMetro' do
     # pod 'Crashlytics'
     # pod 'Proximiio'
     
-
 end

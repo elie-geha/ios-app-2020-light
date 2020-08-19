@@ -8,4 +8,5 @@
 
 struct AppConstants {
     static let API_URL_BASE = "http://aroundthemetro.com/api"
+    static let BANNER_IMAGE_URL = "http://aroundthemetro.com/assets/images/BannerImages/"
 }

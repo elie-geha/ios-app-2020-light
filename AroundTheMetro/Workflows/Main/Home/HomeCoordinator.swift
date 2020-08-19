@@ -13,13 +13,18 @@ class HomeCoordinator {
     var onMenu: (() -> Void)?
 
     private var router: UINavigationController
+    private var context: AppContext
 
-    init(with router: UINavigationController) {
+    init(with router: UINavigationController, context: AppContext) {
         self.router = router
+        self.context = context
     }
 
     func start() {
-        let viewController = UIViewController()
+        let viewController = Storyboard.homeVC
+        viewController.title = context.userStorageService.currentCity
+        viewController.onLeftBarButton = onMenu
+        viewController.onRightBarButton = onShare
         router.setViewControllers([viewController], animated: false)
     }
 }

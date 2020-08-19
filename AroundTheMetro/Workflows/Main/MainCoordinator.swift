@@ -73,7 +73,7 @@ class MainCoordinator {
 
     private func createHomeCoordinator() {
         homeCoordinatorRouter = UINavigationController()
-        homeCoordinator = HomeCoordinator(with: homeCoordinatorRouter)
+        homeCoordinator = HomeCoordinator(with: homeCoordinatorRouter, context: context)
         homeCoordinator.onMenu = { [weak self] in
             self?.sideMenuController?.presentLeftMenuViewController()
         }
