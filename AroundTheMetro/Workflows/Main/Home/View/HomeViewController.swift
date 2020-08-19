@@ -9,6 +9,8 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    // MARK: - Outlets
+
     @IBOutlet var tableView: UITableView! {
         didSet {
             tableView.delegate = self
@@ -17,8 +19,25 @@ class HomeViewController: UIViewController {
         }
     }
 
+    // MARK: - Properties
+
+    var userStorage: UserStorageService? {
+        didSet {
+            title = userStorage?.currentCity
+        }
+    }
+    var bannersRepository: BannersRepositoryType?
+
+    var menuItems: [MenuItem] = []
+
     var onLeftBarButton: (() -> Void)?
     var onRightBarButton: (() -> Void)?
+
+    // MARK: - Private Properties
+
+    var banners: [Banner] = []
+
+    // MARK: - Actions
 
     @IBAction func leftBarButtonAction() {
         onLeftBarButton?()
@@ -26,6 +45,22 @@ class HomeViewController: UIViewController {
 
     @IBAction func rightBarButtonAction() {
         onRightBarButton?()
+    }
+
+    // MARK: - Lifecycle
+
+    override func viewDidLoad() {
+        guard let country = userStorage?.currentCountry, let city = userStorage?.currentCity else { return }
+        bannersRepository?.getBanners(country: country, city: city, with: { [weak self] result in
+            switch result {
+            case .success(let banners):
+                self?.banners = banners
+                self?.tableView.reloadData()
+            case .failure(_):
+                // TODO: Handle error
+                break
+            }
+        })
     }
 }
 
@@ -53,22 +88,16 @@ extension HomeViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: BannersCell.identifier)
-                as! BannersCell
-            cell.delegate = self
-            cell.pageControl.numberOfPages = bannerimages.count
-            cell.pageControl.currentPageIndicatorTintColor = UIColor.lightGray
-            cell.collectionView.reloadData()
+            let cell = tableView.dequeueReusableCell(withIdentifier: BannersCell.identifier) as! BannersCell
+            cell.banners = banners
             return cell
 
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: MenuCell.identifier)
-                as! MenuCell
-            cell.delegate = self
+            let cell = tableView.dequeueReusableCell(withIdentifier: MenuCell.identifier) as! MenuCell
+            cell.menuItems = menuItems
             return cell
 
         default:
-
             return UITableViewCell()
         }
     }

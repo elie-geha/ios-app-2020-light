@@ -23,7 +23,7 @@ class BannersCell: UITableViewCell {
         didSet {
             collectionView.dataSource = self
             collectionView.delegate = self
-            collectionView.register(BannerCell.nib, forCellWithReuseIdentifier: BannerCell.identifier)
+            collectionView.register(ImageCell.nib, forCellWithReuseIdentifier: ImageCell.identifier)
         }
     }
 
@@ -33,7 +33,11 @@ class BannersCell: UITableViewCell {
         }
     }
 
-    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var pageControl: UIPageControl! {
+        didSet {
+            pageControl.currentPageIndicatorTintColor = UIColor.lightGray
+        }
+    }
 }
 
 extension BannersCell: UICollectionViewDelegate {}
@@ -44,14 +48,12 @@ extension BannersCell: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCell.identifier,
-                                                      for: indexPath) as! BannerCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.identifier,
+                                                      for: indexPath) as! ImageCell
 
         let banner = banners[indexPath.row]
-        if let image = URL(string: AppConstants.BANNER_IMAGE_URL + banner.image) {
-            cell.imageView.kf.setImage(with: image)
-        }
-
+        cell.imageView.kf.setImage(with: URL(string: AppConstants.BANNER_IMAGE_URL + banner.image))
+        
         return cell
     }
 
