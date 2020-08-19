@@ -27,9 +27,5 @@ class AppCoordinator {
         window.rootViewController = router
         mainCoordinator = MainCoordinator(with: router, context: appContext)
         mainCoordinator?.start()
-
-        appContext.metroLocationsRepository.getMetroLocations(country: "", city: "London") { result in
-            print(result)
-        }
     }
 }
