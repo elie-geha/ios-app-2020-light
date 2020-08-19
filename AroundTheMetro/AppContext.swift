@@ -10,6 +10,7 @@ class AppContext {
     // MARK: - repositories
     let countriesRepository: CountriesRepository
     let placesRepository: PlacesRepository
+    let metroLocationsRepository: MetroLocationsRepository
 
     // MARK: - services
     let userStorageService: UserStorageService
@@ -17,6 +18,7 @@ class AppContext {
     init() {
         countriesRepository = CountriesRepository(countriesService: CountriesServiceLocal())
         placesRepository = PlacesRepository(placesService: PlacesServiceRemote())
+        metroLocationsRepository = MetroLocationsRepository(metroLocationsService: MetroLocationsService())
 
         userStorageService = UserStorageService()
     }

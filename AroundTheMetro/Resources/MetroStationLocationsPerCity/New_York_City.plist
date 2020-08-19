@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>stations</key>
+	<array>
+		<dict>
+			<key>latitude</key>
+			<real>40.644007899999998</real>
+			<key>longitude</key>
+			<real>-74.073339300000001</real>
+			<key>name</key>
+			<string>"St. George Terminal"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.637616299999998</real>
+			<key>longitude</key>
+			<real>-74.0750666</real>
+			<key>name</key>
+			<string>"Tompkinsville"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.621319</real>
+			<key>longitude</key>
+			<real>-74.071402000000006</real>
+			<key>name</key>
+			<string>"Clifton"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.603116999999997</real>
+			<key>longitude</key>
+			<real>-74.084086999999997</real>
+			<key>name</key>
+			<string>"Grasmere"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.596612</real>
+			<key>longitude</key>
+			<real>-74.087367999999998</real>
+			<key>name</key>
+			<string>"Old Town"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.588849000000003</real>
+			<key>longitude</key>
+			<real>-74.096090000000004</real>
+			<key>name</key>
+			<string>"Dongan Hills"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>44.9435742</real>
+			<key>longitude</key>
+			<real>-74.891723799999994</real>
+			<key>name</key>
+			<string>"Jefferson Avenue"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.579113399999997</real>
+			<key>longitude</key>
+			<real>-74.109607999999994</real>
+			<key>name</key>
+			<string>"Grant City"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.573480000000004</real>
+			<key>longitude</key>
+			<real>-74.11721</real>
+			<key>name</key>
+			<string>"New Dorp"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.565109999999997</real>
+			<key>longitude</key>
+			<real>-74.126320000000007</real>
+			<key>name</key>
+			<string>"Oakwood Heights"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.779477300000003</real>
+			<key>longitude</key>
+			<real>-73.777270200000004</real>
+			<key>name</key>
+			<string>"Bay Terrace"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.5502647</real>
+			<key>longitude</key>
+			<real>-74.151540600000004</real>
+			<key>name</key>
+			<string>"Great Kills"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.5448077</real>
+			<key>longitude</key>
+			<real>-74.162738200000007</real>
+			<key>name</key>
+			<string>"Eltingville"</string>
+		</dict>
+
+		<dict>
+			<key>latitude</key>
+			<real>40.533189</real>
+			<key>longitude</key>
+			<real>-74.192302100000006</real>
+			<key>name</key>
+			<string>"Huguenot"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.525506999999998</real>
+			<key>longitude</key>
+			<real>-74.200063999999998</real>
+			<key>name</key>
+			<string>"Prince's Bay"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.522410000000001</real>
+			<key>longitude</key>
+			<real>-74.217847000000006</real>
+			<key>name</key>
+			<string>"Pleasant Plains"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.519630999999997</real>
+			<key>longitude</key>
+			<real>-74.229140999999998</real>
+			<key>name</key>
+			<string>"Richmond Valley"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.516636300000002</real>
+			<key>longitude</key>
+			<real>-74.241997900000001</real>
+			<key>name</key>
+			<string>"Arthur Kill"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.512763999999997</real>
+			<key>longitude</key>
+			<real>-74.251960999999994</real>
+			<key>name</key>
+			<string>"Tottenville"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.734647000000002</real>
+			<key>longitude</key>
+			<real>-74.164430999999993</real>
+			<key>name</key>
+			<string>"Newark Penn Station"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.739443799999997</real>
+			<key>longitude</key>
+			<real>-74.155876599999999</real>
+			<key>name</key>
+			<string>"Harrison"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.73301</real>
+			<key>longitude</key>
+			<real>-74.062889999999996</real>
+			<key>name</key>
+			<string>"Journal Square"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.719606200000001</real>
+			<key>longitude</key>
+			<real>-74.042635700000005</real>
+			<key>name</key>
+			<string>"Grove Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.716760000000001</real>
+			<key>longitude</key>
+			<real>-74.032380000000003</real>
+			<key>name</key>
+			<string>"Exchange Place"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.711804100000002</real>
+			<key>longitude</key>
+			<real>-74.010199499999999</real>
+			<key>name</key>
+			<string>"World Trade Center"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.726990000000001</real>
+			<key>longitude</key>
+			<real>-74.033829999999995</real>
+			<key>name</key>
+			<string>"Newport"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.7348529</real>
+			<key>longitude</key>
+			<real>-74.028589999999994</real>
+			<key>name</key>
+			<string>"Hoboken Terminal"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.7330459</real>
+			<key>longitude</key>
+			<real>-74.007052200000004</real>
+			<key>name</key>
+			<string>"Christopher Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.7334788</real>
+			<key>longitude</key>
+			<real>-73.997447300000005</real>
+			<key>name</key>
+			<string>"9th Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.738767199999998</real>
+			<key>longitude</key>
+			<real>-73.999718799999997</real>
+			<key>name</key>
+			<string>"14th Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.7430351</real>
+			<key>longitude</key>
+			<real>-73.993033199999999</real>
+			<key>name</key>
+			<string>"23rd Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.748535400000002</real>
+			<key>longitude</key>
+			<real>-73.988546600000006</real>
+			<key>name</key>
+			<string>"33rd Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.752726199999998</real>
+			<key>longitude</key>
+			<real>-73.977229399999999</real>
+			<key>name</key>
+			<string>"Manhattan"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.739740699999999</real>
+			<key>longitude</key>
+			<real>-74.002803900000004</real>
+			<key>name</key>
+			<string>"14th Street–Eighth Avenue"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.735283799999998</real>
+			<key>longitude</key>
+			<real>-73.991057499999997</real>
+			<key>name</key>
+			<string>"14th Street–Union Square"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.7430351</real>
+			<key>longitude</key>
+			<real>-73.993033199999999</real>
+			<key>name</key>
+			<string>"23rd Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.750781500000002</real>
+			<key>longitude</key>
+			<real>-73.988959300000005</real>
+			<key>name</key>
+			<string>"34th Street–Herald Square"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.754969899999999</real>
+			<key>longitude</key>
+			<real>-74.001005800000001</real>
+			<key>name</key>
+			<string>"34th Street–Hudson Yards"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.751055999999998</real>
+			<key>longitude</key>
+			<real>-73.990310199999996</real>
+			<key>name</key>
+			<string>"34th Street–Penn Station"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.751055999999998</real>
+			<key>longitude</key>
+			<real>-73.990310199999996</real>
+			<key>name</key>
+			<string>"34th Street–Penn Station"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.757827599999999</real>
+			<key>longitude</key>
+			<real>-73.981790700000005</real>
+			<key>name</key>
+			<string>"47th–50th Streets – Rockefeller Center"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.760373800000004</real>
+			<key>longitude</key>
+			<real>-73.983547599999994</real>
+			<key>name</key>
+			<string>"49th Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.762504800000002</real>
+			<key>longitude</key>
+			<real>-73.986246800000004</real>
+			<key>name</key>
+			<string>"50th Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.757149400000003</real>
+			<key>longitude</key>
+			<real>-73.972149799999997</real>
+			<key>name</key>
+			<string>"Lexington Avenue/ 51st–53rd Streets"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.7684839</real>
+			<key>longitude</key>
+			<real>-73.981807000000003</real>
+			<key>name</key>
+			<string>"59th Street–Columbus Circle"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.773587399999997</real>
+			<key>longitude</key>
+			<real>-73.982017200000001</real>
+			<key>name</key>
+			<string>"66th Street–Lincoln Center"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.752726199999998</real>
+			<key>longitude</key>
+			<real>-73.977229399999999</real>
+			<key>name</key>
+			<string>"72nd Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.779458300000002</real>
+			<key>longitude</key>
+			<real>-73.9558289</real>
+			<key>name</key>
+			<string>"86th Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.785682899999998</real>
+			<key>longitude</key>
+			<real>-73.950924799999996</real>
+			<key>name</key>
+			<string>"96th Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.804403100000002</real>
+			<key>longitude</key>
+			<real>-73.937221199999996</real>
+			<key>name</key>
+			<string>"125th Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.814163499999999</real>
+			<key>longitude</key>
+			<real>-73.940627500000005</real>
+			<key>name</key>
+			<string>"135th Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.840723500000003</real>
+			<key>longitude</key>
+			<real>-73.939440599999998</real>
+			<key>name</key>
+			<string>"168th Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.847950099999998</real>
+			<key>longitude</key>
+			<real>-73.9393709</real>
+			<key>name</key>
+			<string>"175th Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.704635799999998</real>
+			<key>longitude</key>
+			<real>-74.013544100000004</real>
+			<key>name</key>
+			<string>"Bowling Green"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.725323000000003</real>
+			<key>longitude</key>
+			<real>-73.995493499999995</real>
+			<key>name</key>
+			<string>"Bleecker Street/Broadway–Lafayette Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.712769000000002</real>
+			<key>longitude</key>
+			<real>-74.004888199999996</real>
+			<key>name</key>
+			<string>"Brooklyn Bridge-City Hall"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.720457199999998</real>
+			<key>longitude</key>
+			<real>-74.004110100000005</real>
+			<key>name</key>
+			<string>"Canal Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.711804100000002</real>
+			<key>longitude</key>
+			<real>-74.010199499999999</real>
+			<key>name</key>
+			<string>"Chambers Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.710836299999997</real>
+			<key>longitude</key>
+			<real>-74.010693799999999</real>
+			<key>name</key>
+			<string>"Cortlandt Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.860951800000002</real>
+			<key>longitude</key>
+			<real>-73.925149599999997</real>
+			<key>name</key>
+			<string>"Dyckman Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.709372999999999</real>
+			<key>longitude</key>
+			<real>-74.008325799999994</real>
+			<key>name</key>
+			<string>"Fulton Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.752726199999998</real>
+			<key>longitude</key>
+			<real>-73.977229399999999</real>
+			<key>name</key>
+			<string>"Grand Central–42nd Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.8678989</real>
+			<key>longitude</key>
+			<real>-73.921234200000001</real>
+			<key>name</key>
+			<string>"Inwood–207th Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.764879200000003</real>
+			<key>longitude</key>
+			<real>-73.9663982</real>
+			<key>name</key>
+			<string>"Lexington Avenue–63rd Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.7591386</real>
+			<key>longitude</key>
+			<real>-73.953254200000003</real>
+			<key>name</key>
+			<string>"Roosevelt Island"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.671945800000003</real>
+			<key>longitude</key>
+			<real>-74.0424948</real>
+			<key>name</key>
+			<string>"South Ferry"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.757151700000001</real>
+			<key>longitude</key>
+			<real>-73.990816300000006</real>
+			<key>name</key>
+			<string>"Times Square–42nd Street / Port Authority Bus Terminal"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.731105900000003</real>
+			<key>longitude</key>
+			<real>-74.001219899999995</real>
+			<key>name</key>
+			<string>"West 4th Street–Washington Square"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.711804100000002</real>
+			<key>longitude</key>
+			<real>-74.010199499999999</real>
+			<key>name</key>
+			<string>"World Trade Center"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.825628899999998</real>
+			<key>longitude</key>
+			<real>-73.930237899999995</real>
+			<key>name</key>
+			<string>"The Bronx"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.816128999999997</real>
+			<key>longitude</key>
+			<real>-73.917811</real>
+			<key>name</key>
+			<string>"Third Avenue–149th Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.8296426</real>
+			<key>longitude</key>
+			<real>-73.926174500000002</real>
+			<key>name</key>
+			<string>"161st Street–Yankee Stadium"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.878993399999999</real>
+			<key>longitude</key>
+			<real>-73.904945400000003</real>
+			<key>name</key>
+			<string>"231st Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.691180000000003</real>
+			<key>longitude</key>
+			<real>-73.765510000000006</real>
+			<key>name</key>
+			<string>"233rd Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.8419229</real>
+			<key>longitude</key>
+			<real>-73.873459999999994</real>
+			<key>name</key>
+			<string>"East 180th Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.862868200000001</real>
+			<key>longitude</key>
+			<real>-73.901113699999996</real>
+			<key>name</key>
+			<string>"Fordham Road"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.877759599999997</real>
+			<key>longitude</key>
+			<real>-73.866307800000001</real>
+			<key>name</key>
+			<string>"Gun Hill Road"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.820819800000002</real>
+			<key>longitude</key>
+			<real>-73.890472500000001</real>
+			<key>name</key>
+			<string>"Hunts Point Avenue"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.867759999999997</real>
+			<key>longitude</key>
+			<real>-73.897174000000007</real>
+			<key>name</key>
+			<string>"Kingsbridge Road"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.852932899999999</real>
+			<key>longitude</key>
+			<real>-73.827089599999994</real>
+			<key>name</key>
+			<string>"Pelham Bay Park"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.858860200000002</real>
+			<key>longitude</key>
+			<real>-73.855459199999999</real>
+			<key>name</key>
+			<string>"Pelham Parkway"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.825628899999998</real>
+			<key>longitude</key>
+			<real>-73.930237899999995</real>
+			<key>name</key>
+			<string>"Simpson Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.712769000000002</real>
+			<key>longitude</key>
+			<real>-74.004888199999996</real>
+			<key>name</key>
+			<string>"Brooklyn"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.683461700000002</real>
+			<key>longitude</key>
+			<real>-73.976582399999998</real>
+			<key>name</key>
+			<string>"Atlantic Avenue–Barclays Center"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.629933700000002</real>
+			<key>longitude</key>
+			<real>-73.961872299999996</real>
+			<key>name</key>
+			<string>"Avenue H"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.601874299999999</real>
+			<key>longitude</key>
+			<real>-73.993717500000002</real>
+			<key>name</key>
+			<string>"Bay Parkway"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.693595500000001</real>
+			<key>longitude</key>
+			<real>-73.990297100000006</real>
+			<key>name</key>
+			<string>"Borough Hall"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.646570599999997</real>
+			<key>longitude</key>
+			<real>-73.901946499999994</real>
+			<key>name</key>
+			<string>"Canarsie–Rockaway Parkway"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.649523299999998</real>
+			<key>longitude</key>
+			<real>-73.963283899999993</real>
+			<key>name</key>
+			<string>"Church Avenue"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.649523299999998</real>
+			<key>longitude</key>
+			<real>-73.963283899999993</real>
+			<key>name</key>
+			<string>"Church Avenue"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.577115599999999</real>
+			<key>longitude</key>
+			<real>-73.981170700000007</real>
+			<key>name</key>
+			<string>"Coney Island–Stillwell Avenue"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.6689364</real>
+			<key>longitude</key>
+			<real>-73.931834699999996</real>
+			<key>name</key>
+			<string>"Crown Heights–Utica Avenue"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.689811499999998</real>
+			<key>longitude</key>
+			<real>-73.981174499999995</real>
+			<key>name</key>
+			<string>"DeKalb Avenue"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.675376999999997</real>
+			<key>longitude</key>
+			<real>-73.872106000000002</real>
+			<key>name</key>
+			<string>"Euclid Avenue"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.632835999999998</real>
+			<key>longitude</key>
+			<real>-73.947642000000002</real>
+			<key>name</key>
+			<string>"Flatbush Avenue–Brooklyn College"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.700722499999998</real>
+			<key>longitude</key>
+			<real>-73.941930999999997</real>
+			<key>name</key>
+			<string>"Flushing Avenue"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.680771200000002</real>
+			<key>longitude</key>
+			<real>-73.955871400000007</real>
+			<key>name</key>
+			<string>"Franklin Avenue–Fulton Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.692345799999998</real>
+			<key>longitude</key>
+			<real>-73.987257</real>
+			<key>name</key>
+			<string>"Jay Street–MetroTech"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.608674700000002</real>
+			<key>longitude</key>
+			<real>-73.957815199999999</real>
+			<key>name</key>
+			<string>"Kings Highway"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.708555400000002</real>
+			<key>longitude</key>
+			<real>-73.957911800000005</real>
+			<key>name</key>
+			<string>"Marcy Avenue"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.6996441</real>
+			<key>longitude</key>
+			<real>-73.911482699999993</real>
+			<key>name</key>
+			<string>"Myrtle–Wyckoff Avenues"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.712726099999998</real>
+			<key>longitude</key>
+			<real>-74.007796499999998</real>
+			<key>name</key>
+			<string>"Park Place"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.6608704</real>
+			<key>longitude</key>
+			<real>-73.962148200000001</real>
+			<key>name</key>
+			<string>"Prospect Park"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.6689364</real>
+			<key>longitude</key>
+			<real>-73.931834699999996</real>
+			<key>name</key>
+			<string>"Utica Avenue"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.761225600000003</real>
+			<key>longitude</key>
+			<real>-73.798397499999993</real>
+			<key>name</key>
+			<string>"Queens"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.7541777</real>
+			<key>longitude</key>
+			<real>-73.942474200000007</real>
+			<key>name</key>
+			<string>"21st Street–Queensbridge"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.745671700000003</real>
+			<key>longitude</key>
+			<real>-73.902914199999998</real>
+			<key>name</key>
+			<string>"61st Street–Woodside"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.672192899999999</real>
+			<key>longitude</key>
+			<real>-73.835796000000002</real>
+			<key>name</key>
+			<string>"Aqueduct Racetrack"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.746209999999998</real>
+			<key>longitude</key>
+			<real>-73.945710000000005</real>
+			<key>name</key>
+			<string>"Court Square"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.603994999999998</real>
+			<key>longitude</key>
+			<real>-73.755404999999996</real>
+			<key>name</key>
+			<string>"Far Rockaway–Mott Avenue"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.759698999999998</real>
+			<key>longitude</key>
+			<real>-73.829977999999997</real>
+			<key>name</key>
+			<string>"Flushing–Main Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.7214983</real>
+			<key>longitude</key>
+			<real>-73.8447666</real>
+			<key>name</key>
+			<string>"Forest Hills–71st Avenue"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.660476000000003</real>
+			<key>longitude</key>
+			<real>-73.830301000000006</real>
+			<key>name</key>
+			<string>"Howard Beach–JFK Airport"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.746689099999998</real>
+			<key>longitude</key>
+			<real>-73.8908579</real>
+			<key>name</key>
+			<string>"Jackson Heights–Roosevelt Avenue/ 74th Street–Broadway"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.712645999999999</real>
+			<key>longitude</key>
+			<real>-73.783816999999999</real>
+			<key>name</key>
+			<string>"Jamaica–179th Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.702144699999998</real>
+			<key>longitude</key>
+			<real>-73.800877099999994</real>
+			<key>name</key>
+			<string>"Jamaica Center–Parsons/Archer"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.702716700000003</real>
+			<key>longitude</key>
+			<real>-73.817210099999997</real>
+			<key>name</key>
+			<string>"Jamaica–Van Wyck"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.749203000000001</real>
+			<key>longitude</key>
+			<real>-73.869336500000003</real>
+			<key>name</key>
+			<string>"Junction Boulevard"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.714088099999998</real>
+			<key>longitude</key>
+			<real>-73.830021299999999</real>
+			<key>name</key>
+			<string>"Kew Gardens–Union Turnpike"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.754716100000003</real>
+			<key>longitude</key>
+			<real>-73.8457334</real>
+			<key>name</key>
+			<string>"Mets–Willets Point"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.712132699999998</real>
+			<key>longitude</key>
+			<real>-73.889275999999995</real>
+			<key>name</key>
+			<string>"Middle Village – Metropolitan Avenue"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.748725999999998</real>
+			<key>longitude</key>
+			<real>-73.937377699999999</real>
+			<key>name</key>
+			<string>"Queens Plaza"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.580546900000002</real>
+			<key>longitude</key>
+			<real>-73.837424900000002</real>
+			<key>name</key>
+			<string>"Rockaway Park–Beach 116th Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>40.700415999999997</real>
+			<key>longitude</key>
+			<real>-73.807908400000002</real>
+			<key>name</key>
+			<string>"Sutphin Boulevard–Archer Avenue JFK Airport"</string>
+		</dict>
+	</array>
+</dict>
+</plist>

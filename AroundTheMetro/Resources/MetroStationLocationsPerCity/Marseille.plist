@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>stations</key>
+	<array>
+		<dict>
+			<key>latitude</key>
+			<real>43.303756100000001</real>
+			<key>longitude</key>
+			<real>5.4243553999999996</real>
+			<key>name</key>
+			<string>"La Fourragère"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.303489599999999</real>
+			<key>longitude</key>
+			<real>5.4187097</real>
+			<key>name</key>
+			<string>"St Barnabé"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.299767600000003</real>
+			<key>longitude</key>
+			<real>5.4133959000000003</real>
+			<key>name</key>
+			<string>"Louis Armand"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.296184599999997</real>
+			<key>longitude</key>
+			<real>5.4066216999999996</real>
+			<key>name</key>
+			<string>"La Blancarde"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.290892399999997</real>
+			<key>longitude</key>
+			<real>5.3999813000000003</real>
+			<key>name</key>
+			<string>"La Timone"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.288363500000003</real>
+			<key>longitude</key>
+			<real>5.3925546999999998</real>
+			<key>name</key>
+			<string>"Baille"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.286296900000004</real>
+			<key>longitude</key>
+			<real>5.3837472000000002</real>
+			<key>name</key>
+			<string>"Castellane"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.290160899999997</real>
+			<key>longitude</key>
+			<real>5.3777090999999997</real>
+			<key>name</key>
+			<string>"Estrangin - Préfecture"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.295430799999998</real>
+			<key>longitude</key>
+			<real>5.3742134999999998</real>
+			<key>name</key>
+			<string>"Vieux-Port - Hôtel de ville"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.300105600000002</real>
+			<key>longitude</key>
+			<real>5.3742068999999999</real>
+			<key>name</key>
+			<string>"Colbert - Hôtel de région"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.303279400000001</real>
+			<key>longitude</key>
+			<real>5.3801420000000002</real>
+			<key>name</key>
+			<string>"St Charles"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.300365200000002</real>
+			<key>longitude</key>
+			<real>5.3856918</real>
+			<key>name</key>
+			<string>"Réformés Canebière"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.3042461</real>
+			<key>longitude</key>
+			<real>5.3972299000000001</real>
+			<key>name</key>
+			<string>"Cinq avenues Longchamp"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.309568499999997</real>
+			<key>longitude</key>
+			<real>5.4016944999999996</real>
+			<key>name</key>
+			<string>"Chartreux"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.315295200000001</real>
+			<key>longitude</key>
+			<real>5.4067974000000003</real>
+			<key>name</key>
+			<string>"St Just - Hôtel de département"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.325766100000003</real>
+			<key>longitude</key>
+			<real>5.4236950999999998</real>
+			<key>name</key>
+			<string>"Frais Vallon"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.333167299999999</real>
+			<key>longitude</key>
+			<real>5.4296375000000001</real>
+			<key>name</key>
+			<string>"La Rose"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.320710599999998</real>
+			<key>longitude</key>
+			<real>5.3715413999999999</real>
+			<key>name</key>
+			<string>"Bougainville"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.315319199999998</real>
+			<key>longitude</key>
+			<real>5.3729927000000002</real>
+			<key>name</key>
+			<string>"National"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.309192000000003</real>
+			<key>longitude</key>
+			<real>5.3724714000000002</real>
+			<key>name</key>
+			<string>"Désirée Clary"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.304586499999999</real>
+			<key>longitude</key>
+			<real>5.3671467000000002</real>
+			<key>name</key>
+			<string>"Joliette"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.3019727</real>
+			<key>longitude</key>
+			<real>5.3736901000000001</real>
+			<key>name</key>
+			<string>"Jules Guesde"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.303279400000001</real>
+			<key>longitude</key>
+			<real>5.3801420000000002</real>
+			<key>name</key>
+			<string>"St Charles"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.297298599999998</real>
+			<key>longitude</key>
+			<real>5.3811960000000001</real>
+			<key>name</key>
+			<string>"Noailles"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.292682499999998</real>
+			<key>longitude</key>
+			<real>5.3838340999999996</real>
+			<key>name</key>
+			<string>"Notre Dame du Mont - Cours Julien"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.286296900000004</real>
+			<key>longitude</key>
+			<real>5.3837472000000002</real>
+			<key>name</key>
+			<string>"Castellane"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.279731699999999</real>
+			<key>longitude</key>
+			<real>5.3874551999999998</real>
+			<key>name</key>
+			<string>"Périer"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.271735300000003</real>
+			<key>longitude</key>
+			<real>5.3922850000000002</real>
+			<key>name</key>
+			<string>"Rond point du Prado"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>43.270627400000002</real>
+			<key>longitude</key>
+			<real>5.4026883999999997</real>
+			<key>name</key>
+			<string>"Sainte-Marguerite Dromel"</string>
+		</dict>
+	</array>
+</dict>
+</plist>

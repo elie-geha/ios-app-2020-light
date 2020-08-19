@@ -7,19 +7,10 @@
 //
 
 struct MetroStation: Codable {
-    var name: String? {
-        return nameFromPlist ?? nameFromServer
-    }
-
-    let latitude: Double?
-    let longitude: Double?
-
-    private var nameFromPlist: String?
-    private var nameFromServer: String?
+    var name: String?
 
     enum CodingKeys: String, CodingKey {
-        case nameFromServer = "metro_name"
-        case nameFromPlist = "name"
+        case name = "metro_name"
         case latitude
         case longitude
     }
