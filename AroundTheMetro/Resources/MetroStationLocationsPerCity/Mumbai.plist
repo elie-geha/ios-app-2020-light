@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>stations</key>
+	<array>
+		<dict>
+			<key>latitude</key>
+			<real>19.205342699999999</real>
+			<key>longitude</key>
+			<real>72.828062000000003</real>
+			<key>name</key>
+			<string>"Charkop"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.185828099999998</real>
+			<key>longitude</key>
+			<real>72.835770999999994</real>
+			<key>name</key>
+			<string>"Malad Metro"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.280916699999999</real>
+			<key>longitude</key>
+			<real>72.855984699999993</real>
+			<key>name</key>
+			<string>"Kasturi Park"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.1656279</real>
+			<key>longitude</key>
+			<real>72.834839000000002</real>
+			<key>name</key>
+			<string>"Bangur Nagar"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.1204556</real>
+			<key>longitude</key>
+			<real>72.8487607</real>
+			<key>name</key>
+			<string>"Goregaon Metro"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>26.4111434</real>
+			<key>longitude</key>
+			<real>74.653309300000004</real>
+			<key>name</key>
+			<string>"Adarsh Nagar"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>18.987750500000001</real>
+			<key>longitude</key>
+			<real>72.828653500000001</real>
+			<key>name</key>
+			<string>"Shastri Nagar"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.1283058</real>
+			<key>longitude</key>
+			<real>72.830242699999999</real>
+			<key>name</key>
+			<string>"D N Nagar"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.119854799999999</real>
+			<key>longitude</key>
+			<real>72.846460100000002</real>
+			<key>name</key>
+			<string>"ESIC Nagar"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.1369075</real>
+			<key>longitude</key>
+			<real>72.855842300000006</real>
+			<key>name</key>
+			<string>"Prem Nagar"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.065818700000001</real>
+			<key>longitude</key>
+			<real>72.889992699999993</real>
+			<key>name</key>
+			<string>"Indira Nagar"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.095828300000001</real>
+			<key>longitude</key>
+			<real>72.840104600000004</real>
+			<key>name</key>
+			<string>"Nanavati Hospital"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.099532199999999</real>
+			<key>longitude</key>
+			<real>72.843963599999995</real>
+			<key>name</key>
+			<string>"Khira Nagar"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>21.204988700000001</real>
+			<key>longitude</key>
+			<real>72.840700100000007</real>
+			<key>name</key>
+			<string>"Saraswat Nagar"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.0630065</real>
+			<key>longitude</key>
+			<real>72.834536900000003</real>
+			<key>name</key>
+			<string>"National College"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.0543184</real>
+			<key>longitude</key>
+			<real>72.853056899999999</real>
+			<key>name</key>
+			<string>"Bandra Metro"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.1283058</real>
+			<key>longitude</key>
+			<real>72.830242699999999</real>
+			<key>name</key>
+			<string>"MMRDA"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.065395599999999</real>
+			<key>longitude</key>
+			<real>72.879763600000004</real>
+			<key>name</key>
+			<string>"S G Barve Marg"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.069530100000001</real>
+			<key>longitude</key>
+			<real>72.891983400000001</real>
+			<key>name</key>
+			<string>"Kurla Terminus"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.065395599999999</real>
+			<key>longitude</key>
+			<real>72.879763600000004</real>
+			<key>name</key>
+			<string>"Kurla (East)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.012557399999999</real>
+			<key>longitude</key>
+			<real>72.871321699999996</real>
+			<key>name</key>
+			<string>"Eastern Express Highway"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.062554899999999</real>
+			<key>longitude</key>
+			<real>72.901210899999995</real>
+			<key>name</key>
+			<string>"Chembur"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.0520204</real>
+			<key>longitude</key>
+			<real>72.901563600000003</real>
+			<key>name</key>
+			<string>"Diamond Garden"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.0458794</real>
+			<key>longitude</key>
+			<real>72.908972500000004</real>
+			<key>name</key>
+			<string>"Shivaji Chowk"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.083171799999999</real>
+			<key>longitude</key>
+			<real>72.830337900000004</real>
+			<key>name</key>
+			<string>"BSNL"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.048523100000001</real>
+			<key>longitude</key>
+			<real>72.932753199999993</real>
+			<key>name</key>
+			<string>"Mankhurd"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.128501499999999</real>
+			<key>longitude</key>
+			<real>72.816878200000005</real>
+			<key>name</key>
+			<string>"Versova"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.1283058</real>
+			<key>longitude</key>
+			<real>72.830242699999999</real>
+			<key>name</key>
+			<string>"D.N. Nagar"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.1268691</real>
+			<key>longitude</key>
+			<real>72.837646599999999</real>
+			<key>name</key>
+			<string>"Azad Nagar"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.119854799999999</real>
+			<key>longitude</key>
+			<real>72.846460100000002</real>
+			<key>name</key>
+			<string>"Andheri"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.115785599999999</real>
+			<key>longitude</key>
+			<real>72.856425099999996</real>
+			<key>name</key>
+			<string>"Western Express Highway"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>18.949428600000001</real>
+			<key>longitude</key>
+			<real>72.834661600000004</real>
+			<key>name</key>
+			<string>"Chakala"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.110069299999999</real>
+			<key>longitude</key>
+			<real>72.874213499999996</real>
+			<key>name</key>
+			<string>"Airport Road"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.108112800000001</real>
+			<key>longitude</key>
+			<real>72.879505499999993</real>
+			<key>name</key>
+			<string>"Marol Naka"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.103528000000001</real>
+			<key>longitude</key>
+			<real>72.887962200000004</real>
+			<key>name</key>
+			<string>"Saki Naka"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.0963615</real>
+			<key>longitude</key>
+			<real>72.894847799999994</real>
+			<key>name</key>
+			<string>"Asalpha"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.092512599999999</real>
+			<key>longitude</key>
+			<real>72.901833600000003</real>
+			<key>name</key>
+			<string>"Jagruti Nagar"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>19.085649100000001</real>
+			<key>longitude</key>
+			<real>72.908220700000001</real>
+			<key>name</key>
+			<string>"Ghatkopar"</string>
+		</dict>
+	</array>
+</dict>
+</plist>

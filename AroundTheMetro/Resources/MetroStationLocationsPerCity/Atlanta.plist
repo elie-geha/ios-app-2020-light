@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>stations</key>
+	<array>
+		<dict>
+			<key>latitude</key>
+			<real>33.640801400000001</real>
+			<key>longitude</key>
+			<real>-84.446231400000002</real>
+			<key>name</key>
+			<string>"Airport"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.775114899999998</real>
+			<key>longitude</key>
+			<real>-84.282357599999997</real>
+			<key>name</key>
+			<string>"Avondale"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.848834099999998</real>
+			<key>longitude</key>
+			<real>-84.368354400000001</real>
+			<key>name</key>
+			<string>"Buckhead"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.945049099999999</real>
+			<key>longitude</key>
+			<real>-84.357259099999993</real>
+			<key>name</key>
+			<string>"North Spring"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.932051000000001</real>
+			<key>longitude</key>
+			<real>-84.350569100000001</real>
+			<key>name</key>
+			<string>"Sandy Spring"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.921236800000003</real>
+			<key>longitude</key>
+			<real>-84.3443738</real>
+			<key>name</key>
+			<string>"Dumwoody"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.910710399999999</real>
+			<key>longitude</key>
+			<real>-84.351571199999995</real>
+			<key>name</key>
+			<string>"Medical Center"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.6516576</real>
+			<key>longitude</key>
+			<real>-84.448799600000001</real>
+			<key>name</key>
+			<string>"College Park"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.677424000000002</real>
+			<key>longitude</key>
+			<real>-84.440541999999994</real>
+			<key>name</key>
+			<string>"East Point"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.700648999999999</real>
+			<key>longitude</key>
+			<real>-84.429541</real>
+			<key>name</key>
+			<string>"Lakewood/Ft. McPherson"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.717139000000003</real>
+			<key>longitude</key>
+			<real>-84.425083999999998</real>
+			<key>name</key>
+			<string>"Oakland City"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.736040299999999</real>
+			<key>longitude</key>
+			<real>-84.413673000000003</real>
+			<key>name</key>
+			<string>"West End"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.748496299999999</real>
+			<key>longitude</key>
+			<real>-84.395938799999996</real>
+			<key>name</key>
+			<string>"Garnett"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.769799200000001</real>
+			<key>longitude</key>
+			<real>-84.229674900000006</real>
+			<key>name</key>
+			<string>"Indian Creek"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.848834099999998</real>
+			<key>longitude</key>
+			<real>-84.368354400000001</real>
+			<key>name</key>
+			<string>"Kensington"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.774688599999998</real>
+			<key>longitude</key>
+			<real>-84.2953464</real>
+			<key>name</key>
+			<string>"Decatur"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.765194100000002</real>
+			<key>longitude</key>
+			<real>-84.312967900000004</real>
+			<key>name</key>
+			<string>"East Lake"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.761955</real>
+			<key>longitude</key>
+			<real>-84.339588000000006</real>
+			<key>name</key>
+			<string>"Edgewood/Candler Park"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.757655999999997</real>
+			<key>longitude</key>
+			<real>-84.352603900000005</real>
+			<key>name</key>
+			<string>"Inman Park/Reynoldstown"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.749970500000003</real>
+			<key>longitude</key>
+			<real>-84.375581400000002</real>
+			<key>name</key>
+			<string>"King Memorial"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.750010199999998</real>
+			<key>longitude</key>
+			<real>-84.385903200000001</real>
+			<key>name</key>
+			<string>"Georgia State"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.753879900000001</real>
+			<key>longitude</key>
+			<real>-84.391621000000001</real>
+			<key>name</key>
+			<string>"Five Points"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.756750599999997</real>
+			<key>longitude</key>
+			<real>-84.397470100000007</real>
+			<key>name</key>
+			<string>"Dome/GWCC/Philips Arena/CNN Center"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.756562600000002</real>
+			<key>longitude</key>
+			<real>-84.404044999999996</real>
+			<key>name</key>
+			<string>"Vine City"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.756249799999999</real>
+			<key>longitude</key>
+			<real>-84.416921900000006</real>
+			<key>name</key>
+			<string>"Ashby"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.753339199999999</real>
+			<key>longitude</key>
+			<real>-84.445369400000004</real>
+			<key>name</key>
+			<string>"West Lake"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.754506300000003</real>
+			<key>longitude</key>
+			<real>-84.470015900000007</real>
+			<key>name</key>
+			<string>"Hamilton E. Holmes"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.772455600000001</real>
+			<key>longitude</key>
+			<real>-84.428959899999995</real>
+			<key>name</key>
+			<string>"Bank Head"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.757990700000001</real>
+			<key>longitude</key>
+			<real>-84.387813100000002</real>
+			<key>name</key>
+			<string>"Peachtree Center"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.766548399999998</real>
+			<key>longitude</key>
+			<real>-84.3876621</real>
+			<key>name</key>
+			<string>"Civic Center"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.771674699999998</real>
+			<key>longitude</key>
+			<real>-84.387052999999995</real>
+			<key>name</key>
+			<string>"North Avenue"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.781104999999997</real>
+			<key>longitude</key>
+			<real>-84.386332899999999</real>
+			<key>name</key>
+			<string>"Midtown"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.789304000000001</real>
+			<key>longitude</key>
+			<real>-84.387007800000006</real>
+			<key>name</key>
+			<string>"Arts Center"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.821237699999998</real>
+			<key>longitude</key>
+			<real>-84.369267800000003</real>
+			<key>name</key>
+			<string>"Lindbergh Center"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.8451132</real>
+			<key>longitude</key>
+			<real>-84.3587682</real>
+			<key>name</key>
+			<string>"Lenox"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.860329</real>
+			<key>longitude</key>
+			<real>-84.339245000000005</real>
+			<key>name</key>
+			<string>"Brook Haven/Oglethorpe"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.887812199999999</real>
+			<key>longitude</key>
+			<real>-84.305396299999998</real>
+			<key>name</key>
+			<string>"Chamblee"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>33.902951700000003</real>
+			<key>longitude</key>
+			<real>-84.280140500000002</real>
+			<key>name</key>
+			<string>"Doraville "</string>
+		</dict>
+	</array>
+</dict>
+</plist>
