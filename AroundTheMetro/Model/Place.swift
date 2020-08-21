@@ -6,6 +6,8 @@
 //  Copyright © 2020 AugmentedDiscovery. All rights reserved.
 //
 
+import Foundation
+
 enum PlaceType: String, Codable {
     case restoraunt = "Restaurant"
     case boutique = "Boutique"
@@ -23,13 +25,15 @@ enum PlaceType: String, Codable {
 }
 
 struct Place: Codable {
+    let metroID: String
     let name: String
     let placeType: PlaceType
     let imageName: String
 
-    var imageURL: String?
+    var imageURL: URL?
 
     enum CodingKeys: String, CodingKey {
+        case metroID = "metro_ID"
         case name
         case placeType = "type"
         case imageName = "imagename"

@@ -53,10 +53,25 @@ class HomeCoordinator {
     private func openMetroPlan() {
         /// TODO
     }
+    
     private func openLocateMetro() {
         /// TODO
     }
+
     private func openPlaces(with placeType: PlaceType) {
-        /// TODO
+        guard let country = context.userStorageService.currentCountry,
+            let city = context.userStorageService.currentCity else { return }
+
+        context.placesRepository.getPlacesByMetros(with: placeType, country: country, city: city) { [weak self] result in
+            switch result {
+            case .success(let metrosAndPlaces):
+                let vc = Storyboard.Home.placesVC
+                vc.metrosAndPlaces = metrosAndPlaces
+                self?.router.pushViewController(vc, animated: true)
+            case .failure(_):
+                // TODO: present error?
+                break
+            }
+        }
     }
 }

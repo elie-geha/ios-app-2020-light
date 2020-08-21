@@ -10,6 +10,7 @@ target 'AroundTheMetro' do
     pod 'Moya'
     pod 'Kingfisher'
     pod 'SVProgressHUD', :git => 'https://github.com/slizeray/SVProgressHUD.git'
+    pod 'Tabman', '~> 2.9'
 
     # pod 'KVSpinnerView'
     # pod 'GoogleSignIn'
@@ -18,7 +19,6 @@ target 'AroundTheMetro' do
     # pod 'FBSDKCoreKit'
     # pod 'FacebookCore'
     # pod 'ObjectMapper'
-    # pod 'Tabman'
     # pod 'Google-Mobile-Ads-SDK'
     # pod 'HDAugmentedReality'
     # pod 'PopupDialog'
