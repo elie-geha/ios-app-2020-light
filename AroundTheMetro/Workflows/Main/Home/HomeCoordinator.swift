@@ -21,7 +21,7 @@ class HomeCoordinator {
     }
 
     func start() {
-        let viewController = Storyboard.homeVC
+        let viewController = Storyboard.Home.homeVC
         viewController.bannersRepository = context.bannersRepository
         viewController.userStorage = context.userStorageService
         viewController.menuItems =

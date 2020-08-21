@@ -85,18 +85,16 @@ class MainCoordinator {
 
     private func createMenuCoordinator() {
         menuCoordinatorRouter = UINavigationController()
+        menuCoordinatorRouter.setNavigationBarHidden(true, animated: false)
         menuCoordinator = MenuCoordinator(with: menuCoordinatorRouter)
         menuCoordinator.onHome = { [weak self] in
-            self?.sideMenuController?.hideMenuViewController()
-            self?.sideMenuController?.contentViewController = self?.homeCoordinatorRouter
+            self?.setContentViewController(self?.homeCoordinatorRouter)
         }
         menuCoordinator.onChangeCity = { [weak self] in
-            self?.sideMenuController?.hideMenuViewController()
-            self?.sideMenuController?.contentViewController = self?.changeCityRouter
+            self?.setContentViewController(self?.changeCityRouter)
         }
         menuCoordinator.onContactUs = { [weak self] in
-            self?.sideMenuController?.hideMenuViewController()
-            self?.sideMenuController?.contentViewController = self?.contactUsRouter
+            self?.setContentViewController(self?.contactUsRouter)
         }
         menuCoordinator.start()
     }
@@ -114,5 +112,11 @@ class MainCoordinator {
     private func createShare() {
         let shareVC = UIViewController() // instantiate from storyboard
         shareRouter = UINavigationController(rootViewController: shareVC)
+    }
+
+    private func setContentViewController(_ viewController: UIViewController?) {
+        guard let viewController = viewController else { return }
+        sideMenuController?.hideMenuViewController()
+        sideMenuController?.setContentViewController(viewController, animated: true)
     }
 }

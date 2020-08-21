@@ -10,8 +10,6 @@ import Kingfisher
 import UIKit
 
 class BannersCell: UITableViewCell {
-    static let identifier: String = "BannersCell"
-
     var banners: [Banner] = [] {
         didSet {
             pageControl.numberOfPages = banners.count
@@ -23,7 +21,7 @@ class BannersCell: UITableViewCell {
         didSet {
             collectionView.dataSource = self
             collectionView.delegate = self
-            collectionView.register(ImageCell.nib, forCellWithReuseIdentifier: ImageCell.identifier)
+            collectionView.register(ImageCell.nib, forCellWithReuseIdentifier: ImageCell.reuseID)
         }
     }
 
@@ -48,7 +46,7 @@ extension BannersCell: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.identifier,
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.reuseID,
                                                       for: indexPath) as! ImageCell
 
         let banner = banners[indexPath.row]

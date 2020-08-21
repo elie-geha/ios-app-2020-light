@@ -19,7 +19,18 @@ class MenuCoordinator {
     }
 
     func start() {
-        let viewController = UIViewController()
+        let viewController = Storyboard.Menu.menuVC
+        viewController.menuItems = [
+            MainMenuItem(type: .home, onSelect: { [weak self] in
+                self?.onHome?()
+            }),
+            MainMenuItem(type: .changeCity, onSelect: { [weak self] in
+                self?.onChangeCity?()
+            }),
+            MainMenuItem(type: .contactUs, onSelect: { [weak self] in
+                self?.onContactUs?()
+            })
+        ]
         router.setViewControllers([viewController], animated: false)
     }
 }

@@ -88,12 +88,12 @@ extension HomeViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: BannersCell.identifier) as! BannersCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: BannersCell.reuseID) as! BannersCell
             cell.banners = banners
             return cell
 
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: MenuCell.identifier) as! MenuCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: MenuCell.reuseID) as! MenuCell
             cell.menuItems = menuItems
             return cell
 

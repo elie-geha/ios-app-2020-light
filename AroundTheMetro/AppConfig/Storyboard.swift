@@ -8,7 +8,27 @@
 
 import UIKit
 
+protocol StoryboardType {
+    static var name: String { get }
+    static var storyboard: UIStoryboard { get }
+}
+
+extension StoryboardType {
+    static var storyboard: UIStoryboard {
+        return UIStoryboard(name: name, bundle: nil)
+    }
+}
+
 struct Storyboard {
-    static let homeVC = UIStoryboard(name: "Home", bundle: nil)
-        .instantiateInitialViewController() as! HomeViewController
+    enum Home: StoryboardType {
+        static let name = "Home"
+
+        static let homeVC = storyboard.instantiateInitialViewController() as! HomeViewController
+    }
+
+    enum Menu: StoryboardType {
+        static let name = "Menu"
+
+        static let menuVC = storyboard.instantiateInitialViewController() as! MenuViewController
+    }
 }

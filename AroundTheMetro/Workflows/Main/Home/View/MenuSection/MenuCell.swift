@@ -14,8 +14,6 @@ struct MenuItem {
 }
 
 class MenuCell: UITableViewCell {
-    static let identifier: String = "MenuCell"
-
     var menuItems: [MenuItem] = [] {
         didSet {
             collectionView.reloadData()
@@ -26,7 +24,7 @@ class MenuCell: UITableViewCell {
         didSet {
             collectionView.dataSource = self
             collectionView.delegate = self
-            collectionView.register(ImageCell.nib, forCellWithReuseIdentifier: ImageCell.identifier)
+            collectionView.register(ImageCell.nib, forCellWithReuseIdentifier: ImageCell.reuseID)
         }
     }
 
@@ -49,7 +47,7 @@ extension MenuCell: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.identifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.reuseID, for: indexPath)
             as! ImageCell
 
         let menuItem = menuItems[indexPath.row]

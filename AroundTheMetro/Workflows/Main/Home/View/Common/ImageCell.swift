@@ -10,9 +10,6 @@ import Kingfisher
 import UIKit
 
 class ImageCell: UICollectionViewCell {
-    static let identifier: String = "ImageCell"
-    static let nib = UINib(nibName: "ImageCell", bundle: nil)
-
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel! {
