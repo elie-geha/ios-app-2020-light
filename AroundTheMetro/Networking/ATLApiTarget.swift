@@ -19,7 +19,7 @@ extension UndergroundTarget: TargetType {
     }
     
     var baseURL: URL {
-        return URL(string: AppConstants.API_URL_BASE)!
+        return URL(string: AppConstants.API.URL_BASE)!
     }
     
     var path: String {

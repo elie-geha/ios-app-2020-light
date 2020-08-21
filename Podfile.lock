@@ -8,11 +8,13 @@ PODS:
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
+  - SVProgressHUD (2.2.6)
 
 DEPENDENCIES:
   - AKSideMenu
   - Kingfisher
   - Moya
+  - SVProgressHUD (from `https://github.com/slizeray/SVProgressHUD.git`)
 
 SPEC REPOS:
   trunk:
@@ -21,12 +23,22 @@ SPEC REPOS:
     - Kingfisher
     - Moya
 
+EXTERNAL SOURCES:
+  SVProgressHUD:
+    :git: https://github.com/slizeray/SVProgressHUD.git
+
+CHECKOUT OPTIONS:
+  SVProgressHUD:
+    :commit: aabac68e1b18d489e92ca52ec708334f248edad2
+    :git: https://github.com/slizeray/SVProgressHUD.git
+
 SPEC CHECKSUMS:
   AKSideMenu: 2880c44ee04a68f40be783c5cb997b2e0ee22401
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  SVProgressHUD: 6ed134667e9ebb2f33679e8273cd48fd3fa349e5
 
-PODFILE CHECKSUM: 919ce68612c2af953b69dcaaf47c3fb09c75060d
+PODFILE CHECKSUM: 438a8e686f9b4bd5c87e8185b0cbddea9da9f5be
 
 COCOAPODS: 1.9.3

@@ -6,8 +6,8 @@
 //  Copyright © 2020 AugmentedDiscovery. All rights reserved.
 //
 
-import UIKit
 import AKSideMenu
+import UIKit
 
 class MainCoordinator {
     // MARK: - Repositories
@@ -25,7 +25,7 @@ class MainCoordinator {
 
     private var menuCoordinatorRouter: UINavigationController!
     private var changeCityRouter: UINavigationController!
-    private var contactUsRouter: UINavigationController!
+    private var contactUsController: ContactUsController!
 
     private var shareRouter: UINavigationController!
 
@@ -94,7 +94,7 @@ class MainCoordinator {
             self?.setContentViewController(self?.changeCityRouter)
         }
         menuCoordinator.onContactUs = { [weak self] in
-            self?.setContentViewController(self?.contactUsRouter)
+            self?.showContactUs()
         }
         menuCoordinator.start()
     }
@@ -105,8 +105,7 @@ class MainCoordinator {
     }
 
     private func createContactUs() {
-        let contactUsVC = UIViewController() // instantiate from storyboard
-        contactUsRouter = UINavigationController(rootViewController: contactUsVC)
+        contactUsController = ContactUsController()
     }
 
     private func createShare() {
@@ -118,5 +117,9 @@ class MainCoordinator {
         guard let viewController = viewController else { return }
         sideMenuController?.hideMenuViewController()
         sideMenuController?.setContentViewController(viewController, animated: true)
+    }
+
+    private func showContactUs() {
+        contactUsController.present(from: router)
     }
 }

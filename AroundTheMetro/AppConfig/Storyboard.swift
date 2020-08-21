@@ -19,7 +19,7 @@ extension StoryboardType {
     }
 }
 
-struct Storyboard {
+enum Storyboard {
     enum Home: StoryboardType {
         static let name = "Home"
 

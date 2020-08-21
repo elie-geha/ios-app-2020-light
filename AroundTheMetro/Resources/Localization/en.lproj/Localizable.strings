@@ -1,0 +1,104 @@
+/* 
+  Localizable.strings
+  AroundTheMetro
+
+  Created by gaurav vashisht on 19/02/19.
+  Copyright © 2019 AugmentedDiscovery. All rights reserved.
+*/
+
+//MARK: - Login VC
+"LOG IN WITH GOOGLE" = "LOG IN WITH GOOGLE";
+"LOG IN WITH FACEBOOK" = "LOG IN WITH FACEBOOK";
+
+"Error" = "Error";
+"There is a problem in login!" = "There is a problem in login!";
+
+
+//MARK: - Dashboard VC
+"Metro Plan" = "Metro Plan";
+"AR View" = "AR View";
+"Restaurants" = "Restaurants";
+"Boutiques" = "Boutiques";
+"Beauty & Health" = "Beauty & Health";
+"Attractions" = "Attractions";
+
+"Type : Restaurant" = "Type : Restaurant";
+"Type : Boutique" = "Type : Boutique";
+"Type : Beauty & Health" = "Type : Beauty & Health";
+"Type : Attraction" = "Type : Attraction";
+
+
+//MARK:-MyProfile
+"Home" = "Home";
+"My Profile" = "My Profile";
+"Change City" = "Change City";
+"Contact us" = "Contact us";
+"Change Language" = "Change Language";
+"English" = "English";
+"French" = "French";
+"Spanish" = "Spanish";
+"Chinese" = "Chinese";
+
+//MARK:-ArView
+"All" = "All";
+"Restaurant" = "Restaurant";
+"Beauty & Health" = "Beauty & Health";
+"Attraction" = "Attraction";
+"Boutique" = "Boutique";
+
+
+//MARK:-ContactUS
+"Description" = "A World to Discover Around the Metro. \n Find everything you need in a short walking distance from any metro system in the world on our hyperlocal and global platform.";
+"no_mail" = "Unable to send message. Ensure you have at least one account setup in Mail.app";
+
+
+//MARK:-Profiel
+"Profile" = "Profile";
+"Log out" = "Log out";
+"Done" = "Done";
+
+
+//MARK:-Contact
+"Contact" = "Contact";
+"Around" = "Around";
+"The Metro" = "The Metro";
+
+//MARK:-City
+"City" = "City";
+"Select Country And City" = "Select Country And City";
+"Confirm" = "Confirm";
+"Please select country and city" = "Please select country and city";
+"OK" = "OK";
+"Alert" = "Alert";
+
+
+
+//MARK: - PlacesViewController
+"Attractions" = "Attractions";
+"Beauty & Health" = "Beauty & Health";
+"Boutiques" = "Boutiques";
+"Restaurants" = "Restaurants";
+"ALL" = "ALL";
+"BY METRO" = "BY METRO";
+"SIGNING IN GOOGLE" = "SIGNING IN GOOGLE";
+"SIGNING IN FACEBOOK" = "SIGNING IN FACEBOOK";
+
+
+//MARK: - Places Detail VC
+"Call Us" = "Call Us";
+"Website" = "Website";
+"Metro" = "Metro";
+"Mall" = "Mall";
+
+//MARK: - Home Extension
+"Cannot open the website" = "Cannot open the website";
+"URL not specified" = "URL not specified";
+
+
+//ShareExtension
+"Facebook Post failed" = "Facebook Post failed";
+"You do have to Sign in Facebook to post." = "You do have to Sign in Facebook to post.";
+"Cancel" = "Cancel";
+"Setting" = "Setting";
+
+"ATM" = "ATM";

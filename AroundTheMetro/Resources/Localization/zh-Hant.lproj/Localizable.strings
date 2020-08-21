@@ -1,0 +1,110 @@
+/* 
+  Localizable.strings
+  AroundTheMetro
+
+  Created by gaurav vashisht on 19/02/19.
+  Copyright © 2019 AugmentedDiscovery. All rights reserved.
+*/
+
+//MARK: - Login VC
+"LOG IN WITH GOOGLE" = "用GOOGLE登錄";
+"LOG IN WITH FACEBOOK" = "使用FACEBOOK登錄";
+"Error" = "錯誤";
+"There is a problem in login!" = "登錄時出現問題！";
+
+//MARK: - Dashboard VC
+"Metro Plan" = "地鐵計劃";
+"AR View" = "AR視圖";
+"Restaurants" = "餐館";
+"Boutiques" = "精品店";
+"Beauty & Health" = "美容與健康";
+"Attractions" = "景點";
+"Type : Restaurant" = "类型：餐厅";
+"Type : Boutique" = "类型：精品";
+"Type : Beauty & Health" = "类型：美容与健康";
+"Type : Attraction" = "类型：吸引力";
+
+
+
+//MARK:-MyProfile
+"Home" = "家";
+"My Profile" = "我的簡歷";
+"Change City" = "改變城市";
+"Contact us" = "聯繫我們";
+"English" = "英語";
+"French" = "法國";
+"Spanish" = "西班牙語";
+"Chinese" = "中文";
+
+
+
+//MARK:-Arview
+"All" = "所有";
+"Restaurant" = "餐廳";
+"Beauty & Health" = "美容與健康";
+"Attraction" = "引力";
+"Boutique" = "精品";
+
+
+//MARK:-ContactUS
+"Description" = "環遊世界的世界。\n 在我們的超本地和全球平台上，您可以在距離世界上任何地鐵系統的短距離步行範圍內找到所需的一切";
+"no_mail" = "Unable to send message. Ensure you have at least one account setup in Mail.app";
+
+
+
+//MARK:-Profiel
+"Profile" = "輪廓";
+"Log out" = "登出";
+"Change Language" = "改變語言";
+"Done" = "完成";
+
+
+//MARK:-Contact
+"Contact" = "接觸";
+"Around" = "周圍";
+"The Metro" = "地鐵";
+
+//MARK:-City
+"City" = "市";
+"Select Country And City" = "Sélectionnez un pays et une ville";
+"Confirm" = "確認";
+"Please select country and city" = "請選擇國家和城市";
+"OK" = "好";
+"Alert" = "警報";
+
+
+
+//MARK: - PlacesViewController
+"Attractions" = "景點";
+"Beauty & Health" = "美容與健康";
+"Boutiques" = "精品店";
+"Restaurants" = "餐館";
+"ALL" = "所有";
+"BY METRO" = "按地鐵計算";
+
+"SIGNING IN GOOGLE" = "在GOOGLE註冊";
+"SIGNING IN FACEBOOK" = "登錄FACEBOOK";
+
+
+//MARK: - Places Detail VC
+"Call Us" = "打電話給我們";
+"Website" = "網站";
+"Metro" = "地铁";
+"Mall" = "购物中心";
+
+
+
+
+//MARK: - Home Extension
+"Cannot open the website" = "無法打開網站";
+"URL not specified" = "未指定URL";
+
+
+
+
+//ShareExtension
+"Facebook Post failed" = "Facebook Post失敗了";
+"You do have to Sign in Facebook to post." = "你必須登錄Facebook發布。";
+"Cancel" = "取消";
+"Setting" = "設置";
+"ATM" = "自動取款機";
