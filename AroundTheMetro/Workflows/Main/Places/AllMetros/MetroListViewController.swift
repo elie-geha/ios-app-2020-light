@@ -13,11 +13,18 @@ class MetroListViewController: UIViewController {
 
     var metrosAndPlaces: [MetroStation: [Place]] = [:] {
         didSet {
+            sortedMetroStations = metrosAndPlaces
+                .keys
+                .map { $0 }
+                .sorted(by: { $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending })
+
             if isViewLoaded {
                 tableView.reloadData()
             }
         }
     }
+
+    var onOpenPlaces: (([Place]) -> Void)?
 
     // MARK: - Outlets
 
@@ -25,11 +32,18 @@ class MetroListViewController: UIViewController {
 
     // MARK: - Private properties
 
+    private var sortedMetroStations: [MetroStation] = []
+
     // MARK: - Lifecycle
 }
 
 extension MetroListViewController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if sortedMetroStations.indices.contains(indexPath.row),
+            let places = metrosAndPlaces[sortedMetroStations[indexPath.row]] {
+            onOpenPlaces?(places)
+        }
+    }
 }
 
 extension MetroListViewController: UITableViewDataSource {
@@ -40,8 +54,8 @@ extension MetroListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MetroListCell.reuseID) as! MetroListCell
 
-        if metrosAndPlaces.keys.count > indexPath.row {
-            cell.configure(with: Array(metrosAndPlaces.keys)[indexPath.row])
+        if sortedMetroStations.indices.contains(indexPath.row) {
+            cell.configure(with: sortedMetroStations[indexPath.row])
         }
 
         return cell

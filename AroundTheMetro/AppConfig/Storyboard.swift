@@ -24,15 +24,22 @@ enum Storyboard {
         static let name = "Home"
 
         static let homeVC = storyboard.instantiateInitialViewController() as! HomeViewController
-        static let placesVC = storyboard.instantiateViewController(identifier: "PlacesViewController") as! PlacesViewController
-
-        static let allPlacesListVC = storyboard.instantiateViewController(identifier: "AllPlacesListViewController") as! AllPlacesListViewController
-        static let metroListVC = storyboard.instantiateViewController(identifier: "MetroListViewController") as! MetroListViewController
     }
 
     enum Menu: StoryboardType {
         static let name = "Menu"
 
         static let menuVC = storyboard.instantiateInitialViewController() as! MenuViewController
+    }
+
+    enum Places: StoryboardType {
+        static let name = "Places"
+
+        static let placesVC = storyboard.instantiateViewController(identifier: "PlacesViewController") as! PlacesViewController
+
+        static let allPlacesListVC = storyboard.instantiateViewController(identifier: "AllPlacesListViewController") as! AllPlacesListViewController
+        static let metroListVC = storyboard.instantiateViewController(identifier: "MetroListViewController") as! MetroListViewController
+
+        static let placeDetailsVC = storyboard.instantiateViewController(identifier: "PlaceDetailViewController") as! PlaceDetailViewController
     }
 }

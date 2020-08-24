@@ -19,6 +19,8 @@ class AllPlacesListViewController: UIViewController {
         }
     }
 
+    var onOpenDetails: ((Place) -> Void)?
+
     // MARK: - Outlets
 
     @IBOutlet var placesTableView: UITableView!
@@ -29,7 +31,11 @@ class AllPlacesListViewController: UIViewController {
 }
 
 extension AllPlacesListViewController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if places.indices.contains(indexPath.row) {
+            onOpenDetails?(places[indexPath.row])
+        }
+    }
 }
 
 extension AllPlacesListViewController: UITableViewDataSource {
@@ -40,7 +46,7 @@ extension AllPlacesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PlaceListCell.reuseID) as! PlaceListCell
 
-        if places.count > indexPath.row {
+        if places.indices.contains(indexPath.row) {
             cell.configure(with: places[indexPath.row])
         }
 

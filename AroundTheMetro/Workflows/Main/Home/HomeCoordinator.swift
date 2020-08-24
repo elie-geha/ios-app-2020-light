@@ -15,6 +15,8 @@ class HomeCoordinator {
     private var router: UINavigationController
     private var context: AppContext
 
+    private var placesCoordinator: PlacesCoordinator?
+
     init(with router: UINavigationController, context: AppContext) {
         self.router = router
         self.context = context
@@ -59,19 +61,7 @@ class HomeCoordinator {
     }
 
     private func openPlaces(with placeType: PlaceType) {
-        guard let country = context.userStorageService.currentCountry,
-            let city = context.userStorageService.currentCity else { return }
-
-        context.placesRepository.getPlacesByMetros(with: placeType, country: country, city: city) { [weak self] result in
-            switch result {
-            case .success(let metrosAndPlaces):
-                let vc = Storyboard.Home.placesVC
-                vc.metrosAndPlaces = metrosAndPlaces
-                self?.router.pushViewController(vc, animated: true)
-            case .failure(_):
-                // TODO: present error?
-                break
-            }
-        }
+        placesCoordinator = PlacesCoordinator(with: router, context: context, type: placeType)
+        placesCoordinator?.start()
     }
 }

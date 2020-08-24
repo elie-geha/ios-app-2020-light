@@ -13,10 +13,28 @@ import UIKit
 class PlacesViewController: TabmanViewController {
     // MARK: - Properties
 
+    var allPlacesViewController: AllPlacesListViewController?
+    var metroViewController: MetroListViewController?
+
     var metrosAndPlaces: [MetroStation: [Place]] = [:] {
         didSet {
             if isViewLoaded {
                 reloadChildControllers()
+            }
+        }
+    }
+
+    var onOpenDetails: ((Place) -> Void)? {
+        didSet {
+            if isViewLoaded {
+                allPlacesViewController?.onOpenDetails = onOpenDetails
+            }
+        }
+    }
+    var onOpenPlaces: (([Place]) -> Void)? {
+        didSet {
+            if isViewLoaded {
+                metroViewController?.onOpenPlaces = onOpenPlaces
             }
         }
     }
@@ -28,27 +46,17 @@ class PlacesViewController: TabmanViewController {
 
     // MARK: - Private properties
 
-    private var allPlacesViewController: AllPlacesListViewController!
-    private var metroViewController: MetroListViewController!
-
     private var barItems: [TMBarItem] = {
         return [TMBarItem(title: "ALL".localized), TMBarItem(title: "BY METRO".localized)]
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViewControllers()
         setupView()
+        reloadChildControllers()
     }
 
     // MARK: - Private
-
-    private func setupViewControllers() {
-        allPlacesViewController = Storyboard.Home.allPlacesListVC
-        metroViewController = Storyboard.Home.metroListVC
-
-        reloadChildControllers()
-    }
 
     private func setupView() {
         self.dataSource = self
@@ -77,8 +85,8 @@ class PlacesViewController: TabmanViewController {
     }
 
     private func reloadChildControllers() {
-        allPlacesViewController.places = metrosAndPlaces.flatMap { $0.value }
-        metroViewController.metrosAndPlaces = metrosAndPlaces
+        allPlacesViewController?.places = metrosAndPlaces.flatMap { $0.value }
+        metroViewController?.metrosAndPlaces = metrosAndPlaces
     }
 }
 
