@@ -12,20 +12,19 @@ target 'AroundTheMetro' do
     pod 'SVProgressHUD', :git => 'https://github.com/slizeray/SVProgressHUD.git'
     pod 'Tabman', '~> 2.9'
     pod 'Google-Mobile-Ads-SDK'
+    pod 'Firebase/Core'
+    pod 'FacebookCore'
 
     # pod 'KVSpinnerView'
     # pod 'GoogleSignIn'
     # pod 'FBSDKLoginKit'
     # pod 'FBSDKShareKit'
     # pod 'FBSDKCoreKit'
-    # pod 'FacebookCore'
     # pod 'ObjectMapper'
     # pod 'HDAugmentedReality'
     # pod 'PopupDialog'
     # pod 'TwitterKit'
-    # pod 'Fabric'
     # pod 'Firebase/Core'
-    # pod 'Crashlytics'
     # pod 'Proximiio'
     
 end
