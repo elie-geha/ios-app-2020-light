@@ -1,6 +1,33 @@
 PODS:
   - AKSideMenu (1.4.5)
   - Alamofire (5.2.2)
+  - Google-Mobile-Ads-SDK (7.64.0):
+    - GoogleAppMeasurement (~> 6.0)
+    - GoogleUserMessagingPlatform (~> 1.1)
+  - GoogleAppMeasurement (6.7.2):
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
+    - GoogleUtilities/MethodSwizzler (~> 6.7)
+    - GoogleUtilities/Network (~> 6.7)
+    - "GoogleUtilities/NSData+zlib (~> 6.7)"
+    - nanopb (~> 1.30905.0)
+  - GoogleUserMessagingPlatform (1.1.0)
+  - GoogleUtilities/AppDelegateSwizzler (6.7.2):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (6.7.2):
+    - PromisesObjC (~> 1.2)
+  - GoogleUtilities/Logger (6.7.2):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (6.7.2):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (6.7.2):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (6.7.2)"
+  - GoogleUtilities/Reachability (6.7.2):
+    - GoogleUtilities/Logger
   - Kingfisher (5.14.1):
     - Kingfisher/Core (= 5.14.1)
   - Kingfisher/Core (5.14.1)
@@ -8,13 +35,20 @@ PODS:
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
+  - nanopb (1.30905.0):
+    - nanopb/decode (= 1.30905.0)
+    - nanopb/encode (= 1.30905.0)
+  - nanopb/decode (1.30905.0)
+  - nanopb/encode (1.30905.0)
   - Pageboy (3.6.1)
+  - PromisesObjC (1.2.10)
   - SVProgressHUD (2.2.6)
   - Tabman (2.9.1):
     - Pageboy (~> 3.6.0)
 
 DEPENDENCIES:
   - AKSideMenu
+  - Google-Mobile-Ads-SDK
   - Kingfisher
   - Moya
   - SVProgressHUD (from `https://github.com/slizeray/SVProgressHUD.git`)
@@ -24,9 +58,15 @@ SPEC REPOS:
   trunk:
     - AKSideMenu
     - Alamofire
+    - Google-Mobile-Ads-SDK
+    - GoogleAppMeasurement
+    - GoogleUserMessagingPlatform
+    - GoogleUtilities
     - Kingfisher
     - Moya
+    - nanopb
     - Pageboy
+    - PromisesObjC
     - Tabman
 
 EXTERNAL SOURCES:
@@ -41,12 +81,18 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AKSideMenu: 2880c44ee04a68f40be783c5cb997b2e0ee22401
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  Google-Mobile-Ads-SDK: aec52559ce73ddf1e6478d1904dd71a741f1bc61
+  GoogleAppMeasurement: 3def7652b1f5b5a576178dc332e2a36a260fbef6
+  GoogleUserMessagingPlatform: 9dc714d2e1f0aa727b9cc52d266dc1b155f4c3f2
+  GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
   Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   Pageboy: 29a2d474ad99404b4d77f325e0ab6d705930a4fb
+  PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
   SVProgressHUD: 6ed134667e9ebb2f33679e8273cd48fd3fa349e5
   Tabman: 085d89c65be9e883629bdaf5b1453a6397e57846
 
-PODFILE CHECKSUM: 115c9eeecdc344910cb1f28955417090ed89b4fa
+PODFILE CHECKSUM: fd4da0aa3cb3f0b54694abd771263d4098cae262
 
 COCOAPODS: 1.9.3

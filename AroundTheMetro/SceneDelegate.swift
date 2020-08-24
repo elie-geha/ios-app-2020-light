@@ -6,6 +6,7 @@
 //  Copyright © 2020 AugmentedDiscovery. All rights reserved.
 //
 
+import GoogleMobileAds
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -15,12 +16,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
+        setupIntegrations()
+
         let window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window.windowScene = windowScene
         window.makeKeyAndVisible()
         self.window = window
+
         appCoordinator = AppCoordinator(with: window, context: AppContext())
         appCoordinator.start()
+    }
+
+    private func setupIntegrations() {
+        // MARK: - Admob banner
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
     }
 }
 

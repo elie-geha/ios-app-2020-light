@@ -24,7 +24,9 @@ class AppCoordinator {
     func start() {
         let router = UINavigationController()
         router.setNavigationBarHidden(true, animated: false)
-        window.rootViewController = router
+        let adsControllerContainer = AdsControllerContainer()
+        adsControllerContainer.contentViewController = router
+        window.rootViewController = adsControllerContainer
         mainCoordinator = MainCoordinator(with: router, context: appContext)
         mainCoordinator?.start()
     }

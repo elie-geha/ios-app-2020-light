@@ -50,7 +50,7 @@ extension BannersCell: UICollectionViewDataSource {
                                                       for: indexPath) as! ImageCell
 
         let banner = banners[indexPath.row]
-        cell.imageView.kf.setImage(with: URL(string: AppConstants.API.BANNER_IMAGE_URL + banner.image))
+        cell.imageView.kf.setImage(with: URL(string: AppConstants.API.bannerImageURL + banner.image))
         
         return cell
     }
