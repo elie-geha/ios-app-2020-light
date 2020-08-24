@@ -76,9 +76,7 @@ class AdsControllerContainer: UIViewController {
         bannerView.adUnitID = AppConstants.Ads.bannerAdsUnitID
         bannerView.rootViewController = self
         bannerView.delegate = self
-
-        let request = GADRequest()
-        bannerView.load(request)
+        bannerView.isAutoloadEnabled = true
     }
 }
 
