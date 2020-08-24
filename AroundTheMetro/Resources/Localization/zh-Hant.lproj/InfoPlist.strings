@@ -1,0 +1,16 @@
+/* 
+  InfoPlist.strings
+  AroundTheMetro
+
+  Created by gaurav vashisht on 19/02/19.
+  Copyright © 2019 AugmentedDiscovery. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "地鐵周圍";
+"CFBundleName" = "地鐵周圍";
+
+"NSBluetoothPeripheralUsageDescription" = "地鐵周圍需要您的位置以獲得大多數功能";
+"NSCameraUsageDescription" = "需要增強現實功能";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "地鐵周圍需要您的位置以獲得大多數功能";
+"NSLocationAlwaysUsageDescription" = "允許您使用此應用的位置！";
+"NSLocationWhenInUseUsageDescription" = "您當前的位置將用於在增強現實中查找和顯示您周圍的商店。";

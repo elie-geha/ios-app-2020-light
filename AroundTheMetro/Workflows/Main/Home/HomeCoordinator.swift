@@ -15,6 +15,8 @@ class HomeCoordinator {
     private var router: UINavigationController
     private var context: AppContext
 
+    private var placesCoordinator: PlacesCoordinator?
+
     init(with router: UINavigationController, context: AppContext) {
         self.router = router
         self.context = context
@@ -53,10 +55,13 @@ class HomeCoordinator {
     private func openMetroPlan() {
         /// TODO
     }
+    
     private func openLocateMetro() {
         /// TODO
     }
+
     private func openPlaces(with placeType: PlaceType) {
-        /// TODO
+        placesCoordinator = PlacesCoordinator(with: router, context: context, type: placeType)
+        placesCoordinator?.start()
     }
 }

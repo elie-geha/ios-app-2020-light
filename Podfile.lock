@@ -8,11 +8,17 @@ PODS:
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
+  - Pageboy (3.6.1)
+  - SVProgressHUD (2.2.6)
+  - Tabman (2.9.1):
+    - Pageboy (~> 3.6.0)
 
 DEPENDENCIES:
   - AKSideMenu
   - Kingfisher
   - Moya
+  - SVProgressHUD (from `https://github.com/slizeray/SVProgressHUD.git`)
+  - Tabman (~> 2.9)
 
 SPEC REPOS:
   trunk:
@@ -20,13 +26,27 @@ SPEC REPOS:
     - Alamofire
     - Kingfisher
     - Moya
+    - Pageboy
+    - Tabman
+
+EXTERNAL SOURCES:
+  SVProgressHUD:
+    :git: https://github.com/slizeray/SVProgressHUD.git
+
+CHECKOUT OPTIONS:
+  SVProgressHUD:
+    :commit: aabac68e1b18d489e92ca52ec708334f248edad2
+    :git: https://github.com/slizeray/SVProgressHUD.git
 
 SPEC CHECKSUMS:
   AKSideMenu: 2880c44ee04a68f40be783c5cb997b2e0ee22401
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Pageboy: 29a2d474ad99404b4d77f325e0ab6d705930a4fb
+  SVProgressHUD: 6ed134667e9ebb2f33679e8273cd48fd3fa349e5
+  Tabman: 085d89c65be9e883629bdaf5b1453a6397e57846
 
-PODFILE CHECKSUM: 919ce68612c2af953b69dcaaf47c3fb09c75060d
+PODFILE CHECKSUM: 115c9eeecdc344910cb1f28955417090ed89b4fa
 
 COCOAPODS: 1.9.3
