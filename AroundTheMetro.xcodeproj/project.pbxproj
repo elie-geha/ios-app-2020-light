@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1DD6A024F3D4AF003C4A9F /* LocateMetroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD69F24F3D4AF003C4A9F /* LocateMetroViewController.swift */; };
 		1F4C2B8824ED926100C39967 /* MetroStationLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8724ED926100C39967 /* MetroStationLocation.swift */; };
 		1F4C2B8A24ED92BB00C39967 /* MetroLocationsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8924ED92BB00C39967 /* MetroLocationsRepository.swift */; };
 		1F4C2B8C24ED931200C39967 /* MetroLocationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8B24ED931200C39967 /* MetroLocationsService.swift */; };
@@ -108,6 +109,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F1DD69F24F3D4AF003C4A9F /* LocateMetroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateMetroViewController.swift; sourceTree = "<group>"; };
 		1F4C2B8724ED926100C39967 /* MetroStationLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStationLocation.swift; sourceTree = "<group>"; };
 		1F4C2B8924ED92BB00C39967 /* MetroLocationsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroLocationsRepository.swift; sourceTree = "<group>"; };
 		1F4C2B8B24ED931200C39967 /* MetroLocationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroLocationsService.swift; sourceTree = "<group>"; };
@@ -231,6 +233,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F1DD69D24F3D47F003C4A9F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6847E24F0765B0068A69A /* Details */,
+				1FF6847D24F076520068A69A /* AllMetros */,
+				1FF6847A24F076360068A69A /* AllPlaces */,
+				1FF6847224F06B070068A69A /* PlacesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F1DD69E24F3D497003C4A9F /* LocateMetro */ = {
+			isa = PBXGroup;
+			children = (
+				1F1DD69F24F3D4AF003C4A9F /* LocateMetroViewController.swift */,
+			);
+			path = LocateMetro;
+			sourceTree = "<group>";
+		};
 		1F4C2B8D24ED955200C39967 /* MetroStationLocationsPerCity */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +294,8 @@
 		1F4C2BD524EDA04800C39967 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1F1DD69E24F3D497003C4A9F /* LocateMetro */,
+				1FF6844224F0616F0068A69A /* ContactUs */,
 				1F4C2BEC24EDB1BF00C39967 /* Common */,
 				1F4C2BDB24EDA83000C39967 /* MenuSection */,
 				1F4C2BDA24EDA82400C39967 /* BannersSection */,
@@ -425,7 +448,6 @@
 		1FA3C40C24EB183500295FFA /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				1FF6844224F0616F0068A69A /* ContactUs */,
 				1F4C2BD524EDA04800C39967 /* View */,
 				1FA3C40D24EB184100295FFA /* HomeCoordinator.swift */,
 				1F4C2BD024ED9B6F00C39967 /* Home.storyboard */,
@@ -567,10 +589,7 @@
 		1FF6847124F069A60068A69A /* Places */ = {
 			isa = PBXGroup;
 			children = (
-				1FF6847E24F0765B0068A69A /* Details */,
-				1FF6847D24F076520068A69A /* AllMetros */,
-				1FF6847A24F076360068A69A /* AllPlaces */,
-				1FF6847224F06B070068A69A /* PlacesViewController.swift */,
+				1F1DD69D24F3D47F003C4A9F /* View */,
 				1FF6848124F3CA860068A69A /* PlacesCoordinator.swift */,
 				1FF6848324F3CACC0068A69A /* Places.storyboard */,
 			);
@@ -827,6 +846,7 @@
 				1FA3C41E24EB2AAD00295FFA /* MetroStation.swift in Sources */,
 				1FF6847524F075F00068A69A /* AllPlacesListViewController.swift in Sources */,
 				1FA3C42624EB2D8A00295FFA /* CountriesServiceLocal.swift in Sources */,
+				1F1DD6A024F3D4AF003C4A9F /* LocateMetroViewController.swift in Sources */,
 				1FF6848024F076720068A69A /* MetroListCell.swift in Sources */,
 				1F4C2BE124EDAAAD00C39967 /* Banner.swift in Sources */,
 				1F4C2BDF24EDA8EF00C39967 /* MenuCell.swift in Sources */,

@@ -169,12 +169,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wv7-as-Hhz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5738" y="-1065"/>
+            <point key="canvasLocation" x="5713" y="-721"/>
         </scene>
         <!--Locate Metro View Controller-->
         <scene sceneID="nkH-Tl-MDP">
             <objects>
-                <viewController storyboardIdentifier="locateMetroViewController" id="Z0u-IY-0OC" customClass="LocateMetroViewController" customModule="AroundTheMetro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocateMetroViewController" id="Z0u-IY-0OC" customClass="LocateMetroViewController" customModule="AroundTheMetro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TKo-Ph-TLS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -252,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgq-d1-MUJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5738" y="-1759"/>
+            <point key="canvasLocation" x="5713" y="-1414"/>
         </scene>
     </scenes>
     <resources>

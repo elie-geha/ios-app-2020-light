@@ -6,6 +6,7 @@
 //  Copyright © 2020 AugmentedDiscovery. All rights reserved.
 //
 
+import SVProgressHUD
 import UIKit
 
 class HomeCoordinator {
@@ -57,7 +58,25 @@ class HomeCoordinator {
     }
     
     private func openLocateMetro() {
-        /// TODO
+        guard let country = context.userStorageService.currentCountry,
+            let city = context.userStorageService.currentCity else { return }
+
+        SVProgressHUD.show()
+
+        context.metroLocationsRepository.getMetroLocations(
+            country: country,
+            city: city) { [weak self] result in
+                switch result {
+                case .success(let stations):
+                    SVProgressHUD.dismiss()
+                    let vc = Storyboard.Home.locateMetroVC
+                    vc.stations = stations
+                    self?.router.pushViewController(vc, animated: true)
+                case .failure(let error):
+                    SVProgressHUD.showError(withStatus: error.localizedDescription)
+                    SVProgressHUD.dismiss(withDelay: 3.0)
+                }
+        }
     }
 
     private func openPlaces(with placeType: PlaceType) {
