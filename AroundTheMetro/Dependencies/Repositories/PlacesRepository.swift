@@ -20,7 +20,7 @@ class PlacesRepository: Repository {
     }
 
     func getPlacesByMetros(with type: PlaceType,
-                           country: String, city: String,
+                           country: Country, city: City,
                            with result: ((Result<[MetroStation: [Place]], Error>) -> Void)?) {
 
         getMetroStations(with: type, country: country, city: city) { [weak self] metrosResult in
@@ -45,7 +45,7 @@ class PlacesRepository: Repository {
     }
 
     func getPlaces(with type: PlaceType,
-                   country: String, city: String,
+                   country: Country, city: City,
                    with result: ((Result<[Place], Error>) -> Void)?) {
         placesService.fetchPlaces(with: type, country: country, city: city, with: { fetchResult in
             switch fetchResult {
@@ -62,7 +62,7 @@ class PlacesRepository: Repository {
         })
     }
 
-    func getMetroStations(with type: PlaceType, country: String, city: String, with result: ((Result<[MetroStation], Error>) -> Void)?) {
+    func getMetroStations(with type: PlaceType, country: Country, city: City, with result: ((Result<[MetroStation], Error>) -> Void)?) {
         placesService.fetchMetroStations(with: type, country: country, city: city, with: { fetchResult in
             switch fetchResult {
             case .success(let response):

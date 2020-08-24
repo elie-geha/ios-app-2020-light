@@ -9,7 +9,7 @@
 import Foundation
 
 class BannersServiceRemote: BannersAPIService {
-    func fetchBanners(country: String, city: String, with result: ((Result<BannersResponse, Error>) -> Void)?) {
+    func fetchBanners(country: Country, city: City, with result: ((Result<BannersResponse, Error>) -> Void)?) {
         let errorHandler: (Error) -> Void = { error in
             result?(.failure(error))
         }

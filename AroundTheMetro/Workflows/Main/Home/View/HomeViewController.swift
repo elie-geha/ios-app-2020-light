@@ -21,21 +21,19 @@ class HomeViewController: UIViewController {
 
     // MARK: - Properties
 
-    var userStorage: UserStorageService? {
+    var menuItems: [MenuItem] = []
+    var banners: [Banner] = [] {
         didSet {
-            title = userStorage?.currentCity
+            if isViewLoaded {
+                tableView.reloadData()
+            }
         }
     }
-    var bannersRepository: BannersRepositoryType?
-
-    var menuItems: [MenuItem] = []
 
     var onLeftBarButton: (() -> Void)?
     var onRightBarButton: (() -> Void)?
 
     // MARK: - Private Properties
-
-    var banners: [Banner] = []
 
     // MARK: - Actions
 
@@ -48,20 +46,6 @@ class HomeViewController: UIViewController {
     }
 
     // MARK: - Lifecycle
-
-    override func viewDidLoad() {
-        guard let country = userStorage?.currentCountry, let city = userStorage?.currentCity else { return }
-        bannersRepository?.getBanners(country: country, city: city, with: { [weak self] result in
-            switch result {
-            case .success(let banners):
-                self?.banners = banners
-                self?.tableView.reloadData()
-            case .failure(_):
-                // TODO: Handle error
-                break
-            }
-        })
-    }
 }
 
 extension HomeViewController: UITableViewDelegate {

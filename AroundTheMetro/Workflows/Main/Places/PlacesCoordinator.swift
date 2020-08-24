@@ -21,8 +21,8 @@ class PlacesCoordinator {
     }
 
     func start() {
-        guard let country = context.userStorageService.currentCountry,
-            let city = context.userStorageService.currentCity else { return }
+        guard let country = context.countriesRepository.currentCountry,
+            let city = context.countriesRepository.currentCity else { return }
 
         SVProgressHUD.show()
 

@@ -13,7 +13,7 @@ class MetroLocationsRepository: Repository {
         self.metroLocationsService = metroLocationsService
     }
 
-    func getMetroLocations(country: String, city: String,
+    func getMetroLocations(country: Country, city: City,
                            with result: ((Result<[MetroStationLocation], Error>) -> Void)?) {
         result?(.success(metroLocationsService.stations(for: city)))
     }

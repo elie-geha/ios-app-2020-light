@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F1DD6A024F3D4AF003C4A9F /* LocateMetroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD69F24F3D4AF003C4A9F /* LocateMetroViewController.swift */; };
+		1F1DD6A224F3D7D9003C4A9F /* MetroPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6A124F3D7D9003C4A9F /* MetroPlanViewController.swift */; };
 		1F4C2B8824ED926100C39967 /* MetroStationLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8724ED926100C39967 /* MetroStationLocation.swift */; };
 		1F4C2B8A24ED92BB00C39967 /* MetroLocationsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8924ED92BB00C39967 /* MetroLocationsRepository.swift */; };
 		1F4C2B8C24ED931200C39967 /* MetroLocationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8B24ED931200C39967 /* MetroLocationsService.swift */; };
@@ -110,6 +111,7 @@
 
 /* Begin PBXFileReference section */
 		1F1DD69F24F3D4AF003C4A9F /* LocateMetroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateMetroViewController.swift; sourceTree = "<group>"; };
+		1F1DD6A124F3D7D9003C4A9F /* MetroPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroPlanViewController.swift; sourceTree = "<group>"; };
 		1F4C2B8724ED926100C39967 /* MetroStationLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStationLocation.swift; sourceTree = "<group>"; };
 		1F4C2B8924ED92BB00C39967 /* MetroLocationsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroLocationsRepository.swift; sourceTree = "<group>"; };
 		1F4C2B8B24ED931200C39967 /* MetroLocationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroLocationsService.swift; sourceTree = "<group>"; };
@@ -252,6 +254,14 @@
 			path = LocateMetro;
 			sourceTree = "<group>";
 		};
+		1F1DD6A324F3D7DF003C4A9F /* MetroPlan */ = {
+			isa = PBXGroup;
+			children = (
+				1F1DD6A124F3D7D9003C4A9F /* MetroPlanViewController.swift */,
+			);
+			path = MetroPlan;
+			sourceTree = "<group>";
+		};
 		1F4C2B8D24ED955200C39967 /* MetroStationLocationsPerCity */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +304,7 @@
 		1F4C2BD524EDA04800C39967 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1F1DD6A324F3D7DF003C4A9F /* MetroPlan */,
 				1F1DD69E24F3D497003C4A9F /* LocateMetro */,
 				1FF6844224F0616F0068A69A /* ContactUs */,
 				1F4C2BEC24EDB1BF00C39967 /* Common */,
@@ -802,6 +813,7 @@
 				1FA3C40324EB13AB00295FFA /* AppCoordinator.swift in Sources */,
 				1FA3C42D24EB352000295FFA /* AnyOptional.swift in Sources */,
 				1FA3C3ED24EB11B700295FFA /* AppDelegate.swift in Sources */,
+				1F1DD6A224F3D7D9003C4A9F /* MetroPlanViewController.swift in Sources */,
 				1F4C2B8C24ED931200C39967 /* MetroLocationsService.swift in Sources */,
 				1F4C2BEB24EDAFFC00C39967 /* BannersResponse.swift in Sources */,
 				1FF6847C24F0764B0068A69A /* PlaceListCell.swift in Sources */,

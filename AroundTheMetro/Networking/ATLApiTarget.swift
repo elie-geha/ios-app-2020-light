@@ -5,10 +5,10 @@ enum UndergroundTarget {
     case authenticateUser(name: String, userid: String, acessToken: String, photourl: String, isfb: Bool)
     case sharedApplication(userid: String, country: String, city: String)
 
-    case getBannerImagesAPI(country: String, city: String)
-    case getPromotionsAPI(type: PlaceType, country: String, city: String)
-    case getPlaces(type: PlaceType, country: String, city: String)
-    case getMetroListForStoreAPI(type: PlaceType, country: String, city: String)
+    case getBannerImagesAPI(country: Country, city: City)
+    case getPromotionsAPI(type: PlaceType, country: Country, city: City)
+    case getPlaces(type: PlaceType, country: Country, city: City)
+    case getMetroListForStoreAPI(type: PlaceType, country: Country, city: City)
     case getCountriesList
     case getCitiesList
 }
@@ -29,13 +29,13 @@ extension UndergroundTarget: TargetType {
         case .sharedApplication(_, let country, let city):
             return "\(country)/\(city)/sharedApplication"
         case .getBannerImagesAPI(let country, let city):
-            return "\(country)/\(city)/getbannerimages"
+            return "\(country.name)/\(city.name)/getbannerimages"
         case .getPlaces(_, let country, let city):
-            return "\(country)/\(city)/getPlaces"
+            return "\(country.name)/\(city.name)/getPlaces"
         case .getPromotionsAPI(_, let country, let city):
-            return "\(country)/\(city)/getplacesforar"
+            return "\(country.name)/\(city.name)/getplacesforar"
         case .getMetroListForStoreAPI(_, let country, let city):
-            return "\(country)/\(city)/getMetroListForStore"
+            return "\(country.name)/\(city.name)/getMetroListForStore"
         case .getCitiesList:
             return "getcities"
         case .getCountriesList:

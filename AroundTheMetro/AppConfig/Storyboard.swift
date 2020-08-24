@@ -20,17 +20,18 @@ extension StoryboardType {
 }
 
 enum Storyboard {
+    enum Menu: StoryboardType {
+        static let name = "Menu"
+
+        static let menuVC = storyboard.instantiateInitialViewController() as! MenuViewController
+    }
+    
     enum Home: StoryboardType {
         static let name = "Home"
 
         static let homeVC = storyboard.instantiateInitialViewController() as! HomeViewController
         static let locateMetroVC = storyboard.instantiateViewController(identifier: "LocateMetroViewController") as! LocateMetroViewController
-    }
-
-    enum Menu: StoryboardType {
-        static let name = "Menu"
-
-        static let menuVC = storyboard.instantiateInitialViewController() as! MenuViewController
+        static let metroPlanVC = storyboard.instantiateViewController(identifier: "MetroPlanViewController") as! MetroPlanViewController
     }
 
     enum Places: StoryboardType {

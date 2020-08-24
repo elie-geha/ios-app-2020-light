@@ -64,7 +64,7 @@ class MainCoordinator {
     }
 
     private func initialMainRouter() -> UINavigationController {
-        if context.userStorageService.currentCity == nil && context.userStorageService.currentCountry == nil {
+        if context.countriesRepository.currentCity == nil && context.countriesRepository.currentCountry == nil {
             return changeCityRouter
         } else {
             return homeCoordinatorRouter

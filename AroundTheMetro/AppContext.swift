@@ -17,11 +17,12 @@ class AppContext {
     let userStorageService: UserStorageService
 
     init() {
-        countriesRepository = CountriesRepository(countriesService: CountriesServiceLocal())
+        userStorageService = UserStorageService()
+
+        countriesRepository = CountriesRepository(countriesService: CountriesServiceLocal(),
+                                                  userStorageService: userStorageService)
         placesRepository = PlacesRepository(placesService: PlacesServiceRemote())
         metroLocationsRepository = MetroLocationsRepository(metroLocationsService: MetroLocationsService())
         bannersRepository = BannersRepository(bannersService: BannersServiceRemote())
-
-        userStorageService = UserStorageService()
     }
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 class PlacesServiceRemote: APIService {
-    func fetchPlaces(with type: PlaceType, country: String, city: String,
+    func fetchPlaces(with type: PlaceType, country: Country, city: City,
                      with result: ((Result<PlacesResponse, Error>) -> Void)?) {
         let errorHandler: (Error) -> Void = { error in
             result?(.failure(error))
@@ -28,7 +28,7 @@ class PlacesServiceRemote: APIService {
                                failure: errorHandler)
     }
 
-    func fetchMetroStations(with type: PlaceType, country: String, city: String,
+    func fetchMetroStations(with type: PlaceType, country: Country, city: City,
                             with result: ((Result<MetroStationsResponse, Error>) -> Void)?) {
         let errorHandler: (Error) -> Void = { error in
             result?(.failure(error))

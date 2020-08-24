@@ -18,16 +18,19 @@ class HomeCoordinator {
 
     private var placesCoordinator: PlacesCoordinator?
 
+    private var homeViewController: HomeViewController?
+
     init(with router: UINavigationController, context: AppContext) {
         self.router = router
         self.context = context
     }
 
     func start() {
-        let viewController = Storyboard.Home.homeVC
-        viewController.bannersRepository = context.bannersRepository
-        viewController.userStorage = context.userStorageService
-        viewController.menuItems =
+        homeViewController = Storyboard.Home.homeVC
+
+        updateBanners()
+
+        homeViewController?.menuItems =
         [
             MenuItem(type: .metroPlan, onSelect: { [weak self] in
                 self?.openMetroPlan()
@@ -48,18 +51,20 @@ class HomeCoordinator {
                 self?.openPlaces(with: .attraction)
             })
         ]
-        viewController.onLeftBarButton = onMenu
-        viewController.onRightBarButton = onShare
-        router.setViewControllers([viewController], animated: false)
+        homeViewController?.onLeftBarButton = onMenu
+        homeViewController?.onRightBarButton = onShare
+        router.setViewControllers([homeViewController].compactMap { $0 }, animated: false)
     }
 
     private func openMetroPlan() {
-        /// TODO
+        let vc = Storyboard.Home.metroPlanVC
+        vc.city = context.countriesRepository.currentCity
+        router.pushViewController(vc, animated: true)
     }
     
     private func openLocateMetro() {
-        guard let country = context.userStorageService.currentCountry,
-            let city = context.userStorageService.currentCity else { return }
+        guard let country = context.countriesRepository.currentCountry,
+            let city = context.countriesRepository.currentCity else { return }
 
         SVProgressHUD.show()
 
@@ -82,5 +87,20 @@ class HomeCoordinator {
     private func openPlaces(with placeType: PlaceType) {
         placesCoordinator = PlacesCoordinator(with: router, context: context, type: placeType)
         placesCoordinator?.start()
+    }
+
+    func updateBanners() {
+        guard let country = context.countriesRepository.currentCountry,
+            let city = context.countriesRepository.currentCity else { return }
+
+        context.bannersRepository.getBanners(country: country, city: city, with: { [weak self] result in
+            switch result {
+            case .success(let banners):
+                self?.homeViewController?.banners = banners
+            case .failure(_):
+                // TODO: Handle error
+                break
+            }
+        })
     }
 }

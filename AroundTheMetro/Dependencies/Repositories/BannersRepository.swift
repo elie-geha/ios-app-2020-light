@@ -13,7 +13,7 @@ class BannersRepository: BannersRepositoryType {
         self.bannersService = bannersService
     }
 
-    func getBanners(country: String, city: String, with result: ((Result<[Banner], Error>) -> Void)?) {
+    func getBanners(country: Country, city: City, with result: ((Result<[Banner], Error>) -> Void)?) {
         bannersService.fetchBanners(country: country, city: city, with: { fetchResult in
             switch fetchResult {
             case .success(let response):

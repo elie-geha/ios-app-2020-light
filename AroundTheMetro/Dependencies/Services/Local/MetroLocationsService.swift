@@ -9,9 +9,9 @@
 import Foundation
 
 class MetroLocationsService: LocalStorageService {
-    var parsedStations = [String: [MetroStationLocation]]()
+    var parsedStations = [City: [MetroStationLocation]]()
 
-    func stations(for city: String) -> [MetroStationLocation] {
+    func stations(for city: City) -> [MetroStationLocation] {
         guard let cachedStations = parsedStations[city] else {
             let stations = parseStations(for: city)
             parsedStations[city] = stations
@@ -21,8 +21,9 @@ class MetroLocationsService: LocalStorageService {
         return cachedStations
     }
 
-    private func parseStations(for city: String) -> [MetroStationLocation] {
-        guard let pathToCity = Bundle.main.path(forResource: city, ofType: "plist"),
+    private func parseStations(for city: City) -> [MetroStationLocation] {
+        guard let pathToCity = Bundle.main.path(forResource: city.metroLocationsPlistFilename ?? city.name,
+                                                ofType: "plist"),
             let cityData = FileManager.default.contents(atPath: pathToCity) else { return [] }
         do {
             let stations = try PropertyListDecoder().decode(Stations.self, from: cityData)
