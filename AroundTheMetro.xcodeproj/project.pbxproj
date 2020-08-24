@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1F1DD6A024F3D4AF003C4A9F /* LocateMetroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD69F24F3D4AF003C4A9F /* LocateMetroViewController.swift */; };
 		1F1DD6A224F3D7D9003C4A9F /* MetroPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6A124F3D7D9003C4A9F /* MetroPlanViewController.swift */; };
+		1F1DD6A624F3E9C4003C4A9F /* AdsControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6A524F3E9C4003C4A9F /* AdsControllerContainer.swift */; };
+		1F1DD6A824F3F07B003C4A9F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F1DD6A724F3F07B003C4A9F /* GoogleService-Info.plist */; };
 		1F4C2B8824ED926100C39967 /* MetroStationLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8724ED926100C39967 /* MetroStationLocation.swift */; };
 		1F4C2B8A24ED92BB00C39967 /* MetroLocationsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8924ED92BB00C39967 /* MetroLocationsRepository.swift */; };
 		1F4C2B8C24ED931200C39967 /* MetroLocationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8B24ED931200C39967 /* MetroLocationsService.swift */; };
@@ -112,6 +114,8 @@
 /* Begin PBXFileReference section */
 		1F1DD69F24F3D4AF003C4A9F /* LocateMetroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateMetroViewController.swift; sourceTree = "<group>"; };
 		1F1DD6A124F3D7D9003C4A9F /* MetroPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroPlanViewController.swift; sourceTree = "<group>"; };
+		1F1DD6A524F3E9C4003C4A9F /* AdsControllerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsControllerContainer.swift; sourceTree = "<group>"; };
+		1F1DD6A724F3F07B003C4A9F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1F4C2B8724ED926100C39967 /* MetroStationLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStationLocation.swift; sourceTree = "<group>"; };
 		1F4C2B8924ED92BB00C39967 /* MetroLocationsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroLocationsRepository.swift; sourceTree = "<group>"; };
 		1F4C2B8B24ED931200C39967 /* MetroLocationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroLocationsService.swift; sourceTree = "<group>"; };
@@ -262,6 +266,14 @@
 			path = MetroPlan;
 			sourceTree = "<group>";
 		};
+		1F1DD6A424F3E9A4003C4A9F /* NavigationWithAds */ = {
+			isa = PBXGroup;
+			children = (
+				1F1DD6A524F3E9C4003C4A9F /* AdsControllerContainer.swift */,
+			);
+			path = NavigationWithAds;
+			sourceTree = "<group>";
+		};
 		1F4C2B8D24ED955200C39967 /* MetroStationLocationsPerCity */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +372,7 @@
 		1FA3C3E024EB11B700295FFA = {
 			isa = PBXGroup;
 			children = (
+				1F1DD6A724F3F07B003C4A9F /* GoogleService-Info.plist */,
 				1FA3C3EB24EB11B700295FFA /* AroundTheMetro */,
 				1FA3C3EA24EB11B700295FFA /* Products */,
 				E6EB6807BFD33CADE9B1CCCE /* Pods */,
@@ -492,6 +505,7 @@
 		1FA3C42924EB34B200295FFA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1F1DD6A424F3E9A4003C4A9F /* NavigationWithAds */,
 				1FA3C42A24EB34D600295FFA /* UserDefaultsBacked.swift */,
 				1FA3C42C24EB352000295FFA /* AnyOptional.swift */,
 				1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */,
@@ -754,6 +768,7 @@
 				1F4C2BCA24ED955200C39967 /* Bilbao.plist in Resources */,
 				1F4C2BAF24ED955200C39967 /* Lausanne.plist in Resources */,
 				1F4C2BE524EDAC2200C39967 /* ImageCell.xib in Resources */,
+				1F1DD6A824F3F07B003C4A9F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -823,6 +838,7 @@
 				1F4C2B8A24ED92BB00C39967 /* MetroLocationsRepository.swift in Sources */,
 				1FF6843D24F0547F0068A69A /* Collection+Registerable.swift in Sources */,
 				1FA3C41324EB212700295FFA /* Assets.swift in Sources */,
+				1F1DD6A624F3E9C4003C4A9F /* AdsControllerContainer.swift in Sources */,
 				1FA3C42224EB2CF900295FFA /* PlacesServiceLocal.swift in Sources */,
 				1FF6844424F061870068A69A /* ContactUsController.swift in Sources */,
 				1FA3C3EF24EB11B700295FFA /* SceneDelegate.swift in Sources */,

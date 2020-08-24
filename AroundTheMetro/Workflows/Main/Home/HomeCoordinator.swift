@@ -59,6 +59,7 @@ class HomeCoordinator {
     private func openMetroPlan() {
         let vc = Storyboard.Home.metroPlanVC
         vc.city = context.countriesRepository.currentCity
+        vc.title = context.countriesRepository.currentCity?.name
         router.pushViewController(vc, animated: true)
     }
     
@@ -76,6 +77,7 @@ class HomeCoordinator {
                     SVProgressHUD.dismiss()
                     let vc = Storyboard.Home.locateMetroVC
                     vc.stations = stations
+                    vc.title = city.name
                     self?.router.pushViewController(vc, animated: true)
                 case .failure(let error):
                     SVProgressHUD.showError(withStatus: error.localizedDescription)

@@ -8,7 +8,7 @@
 
 import UIKit
 import Kingfisher
-// import FirebaseAnalytics
+import FirebaseAnalytics
 
 class PlaceDetailViewController: UIViewController {
 
@@ -39,12 +39,10 @@ class PlaceDetailViewController: UIViewController {
 
         UIApplication.shared.open(numberURL, options: [:], completionHandler: nil)
 
-        // TODO: analytics
-        //let p = place.name
-//        Analytics.logEvent("call_placed", parameters: [
-//            "place": p as NSObject,
-//            "phoneNumber": phoneNumber ?? "not a number" as NSObject
-//            ])
+        Analytics.logEvent("call_placed", parameters: [
+            "place": place.name as NSObject,
+            "phoneNumber": place.phoneNumber ?? "not a number" as NSObject
+        ])
     }
 
     @IBAction func websiteBtnTapped(_ sender: UIButton) {
@@ -55,34 +53,20 @@ class PlaceDetailViewController: UIViewController {
 
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
 
-//
-//        let p = (place["name"] as? String)!
-//
-//        Analytics.logEvent("website_clicked", parameters: [
-//            "place": p as NSObject,
-//            "url": websiteAddress ?? "no url" as NSObject
-//            ])
-//
-//        let rentFormVC = self.storyboard?.instantiateViewController(withIdentifier: "rentFormViewController") as! RentFormViewController
-//
-//        rentFormVC.titlename = (place["name"] as? String)!
-//
-//        rentFormVC.url = websiteAddress! as String
-//
-//        Public.configureBackButton(vc: self)
-//
-//        self.navigationController?.pushViewController(rentFormVC, animated: true)
+        Analytics.logEvent("website_clicked", parameters: [
+            "place": place.name as NSObject,
+            "url": place.website ?? "no url" as NSObject
+        ])
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        //Sending info to Firebase (place name of page viewed)
-//        let p = (place["name"] as? String)!
-//
-//        Analytics.logEvent("place_page_view", parameters: [
-//            "place": p as NSObject,
-//            ])
+        if let place = place {
+            Analytics.logEvent("place_page_view", parameters: [
+                "place": place.name as NSObject
+            ])
+        }
 
         callusBtn.setTitle("Call Us".localized, for: .normal)
         websiteBtn.setTitle("Website".localized, for: .normal)
