@@ -6,7 +6,7 @@
 //  Copyright © 2020 AugmentedDiscovery. All rights reserved.
 //
 
-struct Country {
+struct Country: Equatable {
     let name: String
     let cities: [City]
 }

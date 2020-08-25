@@ -27,6 +27,7 @@ class HomeCoordinator {
 
     func start() {
         homeViewController = Storyboard.Home.homeVC
+        homeViewController?.title = context.countriesRepository.currentCity?.name
 
         updateBanners()
 

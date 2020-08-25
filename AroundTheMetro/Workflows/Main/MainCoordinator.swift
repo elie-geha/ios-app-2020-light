@@ -25,6 +25,7 @@ class MainCoordinator {
 
     private var menuCoordinatorRouter: UINavigationController!
     private var changeCityRouter: UINavigationController!
+    private var changeCityController: ChangeCityViewController!
     private var contactUsController: ContactUsController!
 
     private var shareRouter: UINavigationController!
@@ -65,6 +66,7 @@ class MainCoordinator {
 
     private func initialMainRouter() -> UINavigationController {
         if context.countriesRepository.currentCity == nil && context.countriesRepository.currentCountry == nil {
+            showChangeCity(fromLeftMenu: false)
             return changeCityRouter
         } else {
             return homeCoordinatorRouter
@@ -91,7 +93,7 @@ class MainCoordinator {
             self?.setContentViewController(self?.homeCoordinatorRouter)
         }
         menuCoordinator.onChangeCity = { [weak self] in
-            self?.setContentViewController(self?.changeCityRouter)
+            self?.showChangeCity()
         }
         menuCoordinator.onContactUs = { [weak self] in
             self?.showContactUs()
@@ -100,7 +102,14 @@ class MainCoordinator {
     }
 
     private func createChangeCity() {
-        let changeCityVC = UIViewController() // instantiate from storyboard
+        let changeCityVC = Storyboard.Menu.changeCityVC
+        self.changeCityController = changeCityVC
+        changeCityVC.onConfirm = { [weak self] selectedCountry, selectedCity in
+            self?.context.countriesRepository.currentCountry = selectedCountry
+            self?.context.countriesRepository.currentCity = selectedCity
+            self?.homeCoordinator.start()
+            self?.setContentViewController(self?.homeCoordinatorRouter)
+        }
         changeCityRouter = UINavigationController(rootViewController: changeCityVC)
     }
 
@@ -121,5 +130,22 @@ class MainCoordinator {
 
     private func showContactUs() {
         contactUsController.present(from: router)
+    }
+
+    private func showChangeCity(fromLeftMenu: Bool = true) {
+        changeCityController.isFromLeftMenu = fromLeftMenu
+        setContentViewController(changeCityRouter)
+
+        context.countriesRepository.getCountries { [weak self] result in
+            switch result {
+            case .success(let countries):
+                self?.changeCityController.set(countries: countries,
+                                               selectedCountry: self?.context.countriesRepository.currentCountry,
+                                               selectedCity: self?.context.countriesRepository.currentCity)
+            case .failure(_):
+                // TODO: handle errors
+                break
+            }
+        }
     }
 }

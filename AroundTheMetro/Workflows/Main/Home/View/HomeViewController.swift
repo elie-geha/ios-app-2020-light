@@ -46,6 +46,11 @@ class HomeViewController: UIViewController {
     }
 
     // MARK: - Lifecycle
+
+    override func viewDidLoad() {
+        #warning("disabling share screen temporary")
+        navigationItem.rightBarButtonItem = nil
+    }
 }
 
 extension HomeViewController: UITableViewDelegate {

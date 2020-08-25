@@ -11,6 +11,7 @@
 		1F1DD6A224F3D7D9003C4A9F /* MetroPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6A124F3D7D9003C4A9F /* MetroPlanViewController.swift */; };
 		1F1DD6A624F3E9C4003C4A9F /* AdsControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6A524F3E9C4003C4A9F /* AdsControllerContainer.swift */; };
 		1F1DD6A824F3F07B003C4A9F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F1DD6A724F3F07B003C4A9F /* GoogleService-Info.plist */; };
+		1F1DD6AC24F4D496003C4A9F /* ChangeCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6AB24F4D496003C4A9F /* ChangeCityViewController.swift */; };
 		1F4C2B8824ED926100C39967 /* MetroStationLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8724ED926100C39967 /* MetroStationLocation.swift */; };
 		1F4C2B8A24ED92BB00C39967 /* MetroLocationsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8924ED92BB00C39967 /* MetroLocationsRepository.swift */; };
 		1F4C2B8C24ED931200C39967 /* MetroLocationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8B24ED931200C39967 /* MetroLocationsService.swift */; };
@@ -116,6 +117,7 @@
 		1F1DD6A124F3D7D9003C4A9F /* MetroPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroPlanViewController.swift; sourceTree = "<group>"; };
 		1F1DD6A524F3E9C4003C4A9F /* AdsControllerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsControllerContainer.swift; sourceTree = "<group>"; };
 		1F1DD6A724F3F07B003C4A9F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1F1DD6AB24F4D496003C4A9F /* ChangeCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCityViewController.swift; sourceTree = "<group>"; };
 		1F4C2B8724ED926100C39967 /* MetroStationLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStationLocation.swift; sourceTree = "<group>"; };
 		1F4C2B8924ED92BB00C39967 /* MetroLocationsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroLocationsRepository.swift; sourceTree = "<group>"; };
 		1F4C2B8B24ED931200C39967 /* MetroLocationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroLocationsService.swift; sourceTree = "<group>"; };
@@ -272,6 +274,24 @@
 				1F1DD6A524F3E9C4003C4A9F /* AdsControllerContainer.swift */,
 			);
 			path = NavigationWithAds;
+			sourceTree = "<group>";
+		};
+		1F1DD6A924F4D479003C4A9F /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6843524F04E7D0068A69A /* MenuCell */,
+				1FF6843324F04CC20068A69A /* MainMenuItem.swift */,
+				1FF6843124F04C5C0068A69A /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		1F1DD6AA24F4D485003C4A9F /* ChangeCity */ = {
+			isa = PBXGroup;
+			children = (
+				1F1DD6AB24F4D496003C4A9F /* ChangeCityViewController.swift */,
+			);
+			path = ChangeCity;
 			sourceTree = "<group>";
 		};
 		1F4C2B8D24ED955200C39967 /* MetroStationLocationsPerCity */ = {
@@ -578,9 +598,8 @@
 		1FF6842E24F04BEA0068A69A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1FF6843524F04E7D0068A69A /* MenuCell */,
-				1FF6843324F04CC20068A69A /* MainMenuItem.swift */,
-				1FF6843124F04C5C0068A69A /* MenuViewController.swift */,
+				1F1DD6AA24F4D485003C4A9F /* ChangeCity */,
+				1F1DD6A924F4D479003C4A9F /* Menu */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -844,6 +863,7 @@
 				1FA3C3EF24EB11B700295FFA /* SceneDelegate.swift in Sources */,
 				1FA3C43524EBDB8A00295FFA /* NetworkAdapter.swift in Sources */,
 				1F4C2BDD24EDA84000C39967 /* BannersCell.swift in Sources */,
+				1F1DD6AC24F4D496003C4A9F /* ChangeCityViewController.swift in Sources */,
 				1FA3C41C24EB2AA200295FFA /* Country.swift in Sources */,
 				1F4C2BE324EDABD900C39967 /* ImageCell.swift in Sources */,
 				1FF6847924F0761B0068A69A /* PlaceDetailsViewController.swift in Sources */,
