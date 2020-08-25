@@ -443,6 +443,9 @@
 		1FA3C40124EB131500295FFA /* Workflows */ = {
 			isa = PBXGroup;
 			children = (
+				1FA3C40F24EB1FEF00295FFA /* Menu */,
+				1FF6847124F069A60068A69A /* Places */,
+				1FA3C40C24EB183500295FFA /* Home */,
 				1FA3C40724EB17D700295FFA /* Main */,
 			);
 			path = Workflows;
@@ -461,9 +464,6 @@
 		1FA3C40724EB17D700295FFA /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				1FA3C40F24EB1FEF00295FFA /* Menu */,
-				1FF6847124F069A60068A69A /* Places */,
-				1FA3C40C24EB183500295FFA /* Home */,
 				1FA3C40824EB17EB00295FFA /* MainCoordinator.swift */,
 			);
 			path = Main;
