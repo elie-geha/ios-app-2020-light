@@ -45,7 +45,7 @@ class CountriesServiceLocal: LocalStorageService {
         case "Montreal": return City(name: "Montreal", metroPlanImage: #imageLiteral(resourceName: "Montreal_Map"))
         case "Paris": return City(name: "Paris", metroPlanImage: #imageLiteral(resourceName: "Paris_Map"))
         case "New_York_City":
-            return City(name: "New York City", metroLocationsPlistFilename: "New_York_City", metroPlanImage: #imageLiteral(resourceName: "New_York_City_Map"))
+            return City(name: "New York City", plistName: "New_York_City", metroPlanImage: #imageLiteral(resourceName: "New_York_City_Map"))
         case "London": return City(name: "London", metroPlanImage: #imageLiteral(resourceName: "London_Map"))
         case "Barcelona": return City(name: "Barcelona", metroPlanImage: #imageLiteral(resourceName: "Barcelona_Map"))
         case "Toronto": return City(name: "Toronto", metroPlanImage: #imageLiteral(resourceName: "Toronto_Map"))
