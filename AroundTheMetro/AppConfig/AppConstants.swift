@@ -15,7 +15,6 @@ enum AppConstants {
     }
 
     enum ContactUs {
-        static let cc = ["elias@gegweb.com"]
         static let recepient = "info@aroundthemetro.com"
         static let subject = "Message from Around the Metro iOS App"
     }

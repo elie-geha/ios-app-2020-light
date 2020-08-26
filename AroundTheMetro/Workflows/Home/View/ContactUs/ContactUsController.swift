@@ -20,7 +20,6 @@ class ContactUsController: NSObject {
 
         let contactUsVC = MFMailComposeViewController()
         contactUsVC.mailComposeDelegate = self
-        contactUsVC.setCcRecipients(AppConstants.ContactUs.cc)
         contactUsVC.setToRecipients([AppConstants.ContactUs.recepient])
         contactUsVC.setSubject(AppConstants.ContactUs.subject)
 
