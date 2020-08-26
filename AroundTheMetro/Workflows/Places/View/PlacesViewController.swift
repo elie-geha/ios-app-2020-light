@@ -31,13 +31,6 @@ class PlacesViewController: TabmanViewController {
             }
         }
     }
-    var onOpenPlaces: (([Place]) -> Void)? {
-        didSet {
-            if isViewLoaded {
-                metroViewController?.onOpenPlaces = onOpenPlaces
-            }
-        }
-    }
 
     // MARK: - Outlets
 
@@ -55,6 +48,10 @@ class PlacesViewController: TabmanViewController {
         setupView()
         reloadChildControllers()
     }
+//
+//    override func viewWillAppear(_ animated: Bool) {
+//        barLayoutGuide.heightAnchor
+//    }
 
     // MARK: - Private
 

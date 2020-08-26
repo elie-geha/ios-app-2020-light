@@ -24,7 +24,7 @@ class MetroListViewController: UIViewController {
         }
     }
 
-    var onOpenPlaces: (([Place]) -> Void)?
+    var onOpenPlaces: ((MetroStation, [Place]) -> Void)?
 
     // MARK: - Outlets
 
@@ -41,7 +41,7 @@ extension MetroListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if sortedMetroStations.indices.contains(indexPath.row),
             let places = metrosAndPlaces[sortedMetroStations[indexPath.row]] {
-            onOpenPlaces?(places)
+            onOpenPlaces?(sortedMetroStations[indexPath.row], places)
         }
     }
 }
