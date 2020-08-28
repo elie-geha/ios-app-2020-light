@@ -115,10 +115,10 @@ extension ChangeCityViewController: UIPickerViewDelegate {
 
         switch component {
         case 0:
-            pickerView.reloadComponent(1)
-            pickerView.selectRow(0, inComponent: 1, animated: false)
             selectedCountry = countries[optional: selectedCountryIndex]
             selectedCity = countries[optional: selectedCountryIndex]?.cities[optional: 0]
+            pickerView.reloadComponent(1)
+            pickerView.selectRow(0, inComponent: 1, animated: false)
         case 1:
             selectedCity = countries[optional: selectedCountryIndex]?.cities[optional: selectedCityIndex]
         default: break
@@ -148,11 +148,12 @@ extension ChangeCityViewController: UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if component == 0 {
             return countries[row].name
-        }
-        else {
+        } else {
             let selectedCountry = pickerView.selectedRow(inComponent: 0)
+            let country = countries[optional: selectedCountry]
+            let city = country?.cities[optional: row]
 
-            return countries[optional: selectedCountry]?.cities[optional: row]?.name
+            return city?.name
         }
     }
 

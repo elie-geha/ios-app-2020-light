@@ -10,12 +10,12 @@ import UIKit
 
 struct City: Hashable {
     let name: String
-    let metroLocationsPlistFilename: String?
+    let plistName: String?
     let metroPlanImage: UIImage
 
-    init(name: String, metroLocationsPlistFilename: String? = nil, metroPlanImage: UIImage) {
+    init(name: String, plistName: String? = nil, metroPlanImage: UIImage) {
         self.name = name
-        self.metroLocationsPlistFilename = metroLocationsPlistFilename
+        self.plistName = plistName
         self.metroPlanImage = metroPlanImage
     }
 }

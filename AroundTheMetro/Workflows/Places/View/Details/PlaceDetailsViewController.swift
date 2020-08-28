@@ -87,25 +87,29 @@ class PlaceDetailViewController: UIViewController {
         titleLabel.text = place?.name
 
         if let type = place?.placeType.rawValue {
-
+            typeLabel.isHidden = false
             typeLabel.text = "Type : \(type)".localized
         } else {
-            typeLabel.text = ""
+            typeLabel.isHidden = true
         }
 
         if let metroName = place?.metroName {
+            metroLabel.isHidden = false
             metroLabel.text = "Metro".localized + " : \(metroName)"
         } else {
-            metroLabel.text = ""
+            metroLabel.isHidden = true
         }
 
         if let mallname = place?.mallName {
+            mallLabel.isHidden = false
             mallLabel.text = "Mall".localized + " : \(mallname)"
         } else {
-            mallLabel.text = ""
+            mallLabel.isHidden = true
         }
 
         websiteBtn.isHidden = place?.website == nil || place?.website?.isEmpty == true
         callusBtn.isHidden = place?.phoneNumber == nil || place?.phoneNumber?.isEmpty == true
+
+        openhoursTxtView.isHidden = true
     }
 }

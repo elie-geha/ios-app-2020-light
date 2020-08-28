@@ -53,9 +53,11 @@ class PlacesCoordinator {
         vc.allPlacesViewController = allPlacesVC
 
         let metrosVC = Storyboard.Places.metroListVC
-        metrosVC.onOpenPlaces = { [weak self] places in
+        metrosVC.onOpenPlaces = { [weak self] metro, places in
             let allPlacesVC = Storyboard.Places.allPlacesListVC
             allPlacesVC.onOpenDetails = vc.onOpenDetails
+            allPlacesVC.title = metro.name
+            allPlacesVC.additionalSafeAreaInsets = .zero
             self?.router.pushViewController(allPlacesVC, animated: true)
         }
         vc.metroViewController = metrosVC

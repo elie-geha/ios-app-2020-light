@@ -218,7 +218,7 @@
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KHa-NU-7vu">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KHa-NU-7vu">
                                         <rect key="frame" x="20" y="259" width="334" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ng-58-bQj">
@@ -265,6 +265,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="knP-6D-oGP" firstAttribute="centerX" secondItem="Axq-lu-vL6" secondAttribute="centerX" id="RBX-OU-CfH"/>
+                            <constraint firstItem="knP-6D-oGP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Axq-lu-vL6" secondAttribute="top" constant="20" id="Rwx-Yn-Y8u"/>
                             <constraint firstItem="knP-6D-oGP" firstAttribute="centerY" secondItem="syx-Fn-2xS" secondAttribute="centerY" id="hGB-Nh-4fo"/>
                             <constraint firstItem="knP-6D-oGP" firstAttribute="leading" secondItem="Axq-lu-vL6" secondAttribute="leading" constant="20" id="n4X-Ph-sDY"/>
                             <constraint firstItem="Axq-lu-vL6" firstAttribute="trailing" secondItem="knP-6D-oGP" secondAttribute="trailing" constant="20" id="rzA-bX-X3T"/>

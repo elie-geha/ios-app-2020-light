@@ -24,6 +24,8 @@
 	<string>AroundTheMetro</string>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-5420876778958572~6113034677</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSHasLocalizedDisplayName</key>
 	<true/>
 	<key>LSRequiresIPhoneOS</key>
@@ -33,6 +35,8 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Around the metro needs your location for most features</string>
 	<key>SKAdNetworkItems</key>
 	<dict>
 		<key>SKAdNetworkIdentifier</key>
@@ -73,7 +77,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
 </dict>
 </plist>

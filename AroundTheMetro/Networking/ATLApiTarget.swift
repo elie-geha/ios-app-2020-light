@@ -29,13 +29,13 @@ extension UndergroundTarget: TargetType {
         case .sharedApplication(_, let country, let city):
             return "\(country)/\(city)/sharedApplication"
         case .getBannerImagesAPI(let country, let city):
-            return "\(country.name)/\(city.name)/getbannerimages"
+            return "\(country.name)/\(city.plistName ?? city.name)/getbannerimages"
         case .getPlaces(_, let country, let city):
-            return "\(country.name)/\(city.name)/getPlaces"
+            return "\(country.name)/\(city.plistName ?? city.name)/getPlaces"
         case .getPromotionsAPI(_, let country, let city):
-            return "\(country.name)/\(city.name)/getplacesforar"
+            return "\(country.name)/\(city.plistName ?? city.name)/getplacesforar"
         case .getMetroListForStoreAPI(_, let country, let city):
-            return "\(country.name)/\(city.name)/getMetroListForStore"
+            return "\(country.name)/\(city.plistName ?? city.name)/getMetroListForStore"
         case .getCitiesList:
             return "getcities"
         case .getCountriesList:
