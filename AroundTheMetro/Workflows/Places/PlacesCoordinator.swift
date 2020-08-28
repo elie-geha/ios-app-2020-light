@@ -6,6 +6,7 @@
 //  Copyright © 2020 AugmentedDiscovery. All rights reserved.
 //
 
+import FirebaseAnalytics
 import SVProgressHUD
 import UIKit
 
@@ -68,6 +69,27 @@ class PlacesCoordinator {
     private func openPlaceDetails(with place: Place) {
         let vc = Storyboard.Places.placeDetailsVC
         vc.place = place
+        vc.onCall = { [weak self] place in
+            guard let phoneNumber = place.phoneNumber,
+                !phoneNumber.isEmpty,
+                let numberURL = URL(string: "telprompt://" + phoneNumber) else { return }
+
+            UIApplication.shared.open(numberURL, options: [:], completionHandler: nil)
+
+            self?.context.analytics.trackEvent(with: .callClicked(place.name, place.phoneNumber ?? "not a number"))
+        }
+        vc.onWebsite = { [weak self] place in
+            guard let website = place.website,
+                !website.isEmpty,
+                let url = URL(string: website) else { return }
+
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+
+            self?.context.analytics.trackEvent(with: .websiteClicked(place.name, place.website ?? "no url"))
+        }
         router.pushViewController(vc, animated: true)
+
+        context.analytics.trackEvent(with: .detailsPageView(place.name))
+        context.ads.handleEvent(with: .openDetailsPage)
     }
 }

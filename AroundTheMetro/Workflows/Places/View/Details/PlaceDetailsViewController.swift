@@ -20,6 +20,9 @@ class PlaceDetailViewController: UIViewController {
         }
     }
 
+    var onCall: ((Place) -> Void)?
+    var onWebsite: ((Place) -> Void)?
+
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
@@ -33,40 +36,19 @@ class PlaceDetailViewController: UIViewController {
 
 
     @IBAction func callUsBtnTapped(_ sender: UIButton) {
-        guard let place = place, let phoneNumber = place.phoneNumber,
-            !phoneNumber.isEmpty,
-            let numberURL = URL(string: "telprompt://" + phoneNumber) else { return }
-
-        UIApplication.shared.open(numberURL, options: [:], completionHandler: nil)
-
-        Analytics.logEvent("call_placed", parameters: [
-            "place": place.name as NSObject,
-            "phoneNumber": place.phoneNumber ?? "not a number" as NSObject
-        ])
+        if let place = place {
+            onCall?(place)
+        }
     }
 
     @IBAction func websiteBtnTapped(_ sender: UIButton) {
-        guard let place = place,
-            let website = place.website,
-            !website.isEmpty,
-            let url = URL(string: website) else { return }
-
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-
-        Analytics.logEvent("website_clicked", parameters: [
-            "place": place.name as NSObject,
-            "url": place.website ?? "no url" as NSObject
-        ])
+        if let place = place {
+            onWebsite?(place)
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let place = place {
-            Analytics.logEvent("place_page_view", parameters: [
-                "place": place.name as NSObject
-            ])
-        }
 
         callusBtn.setTitle("Call Us".localized, for: .normal)
         websiteBtn.setTitle("Website".localized, for: .normal)

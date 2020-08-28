@@ -9,9 +9,13 @@
 /* Begin PBXBuildFile section */
 		1F1DD6A024F3D4AF003C4A9F /* LocateMetroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD69F24F3D4AF003C4A9F /* LocateMetroViewController.swift */; };
 		1F1DD6A224F3D7D9003C4A9F /* MetroPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6A124F3D7D9003C4A9F /* MetroPlanViewController.swift */; };
-		1F1DD6A624F3E9C4003C4A9F /* AdsControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6A524F3E9C4003C4A9F /* AdsControllerContainer.swift */; };
+		1F1DD6A624F3E9C4003C4A9F /* AdsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6A524F3E9C4003C4A9F /* AdsContainerViewController.swift */; };
 		1F1DD6A824F3F07B003C4A9F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F1DD6A724F3F07B003C4A9F /* GoogleService-Info.plist */; };
 		1F1DD6AC24F4D496003C4A9F /* ChangeCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6AB24F4D496003C4A9F /* ChangeCityViewController.swift */; };
+		1F1DD6D524F9829E003C4A9F /* AnalyticsEventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6D424F9829E003C4A9F /* AnalyticsEventType.swift */; };
+		1F1DD6D924F98434003C4A9F /* AdsEventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6D824F98434003C4A9F /* AdsEventType.swift */; };
+		1F1DD6DB24F9861B003C4A9F /* AnalyticsIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6DA24F9861B003C4A9F /* AnalyticsIntegration.swift */; };
+		1F1DD6DD24F9882B003C4A9F /* AdsIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6DC24F9882B003C4A9F /* AdsIntegration.swift */; };
 		1F4C2B8824ED926100C39967 /* MetroStationLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8724ED926100C39967 /* MetroStationLocation.swift */; };
 		1F4C2B8A24ED92BB00C39967 /* MetroLocationsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8924ED92BB00C39967 /* MetroLocationsRepository.swift */; };
 		1F4C2B8C24ED931200C39967 /* MetroLocationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8B24ED931200C39967 /* MetroLocationsService.swift */; };
@@ -115,9 +119,13 @@
 /* Begin PBXFileReference section */
 		1F1DD69F24F3D4AF003C4A9F /* LocateMetroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateMetroViewController.swift; sourceTree = "<group>"; };
 		1F1DD6A124F3D7D9003C4A9F /* MetroPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroPlanViewController.swift; sourceTree = "<group>"; };
-		1F1DD6A524F3E9C4003C4A9F /* AdsControllerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsControllerContainer.swift; sourceTree = "<group>"; };
+		1F1DD6A524F3E9C4003C4A9F /* AdsContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsContainerViewController.swift; sourceTree = "<group>"; };
 		1F1DD6A724F3F07B003C4A9F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1F1DD6AB24F4D496003C4A9F /* ChangeCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCityViewController.swift; sourceTree = "<group>"; };
+		1F1DD6D424F9829E003C4A9F /* AnalyticsEventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEventType.swift; sourceTree = "<group>"; };
+		1F1DD6D824F98434003C4A9F /* AdsEventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsEventType.swift; sourceTree = "<group>"; };
+		1F1DD6DA24F9861B003C4A9F /* AnalyticsIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsIntegration.swift; sourceTree = "<group>"; };
+		1F1DD6DC24F9882B003C4A9F /* AdsIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsIntegration.swift; sourceTree = "<group>"; };
 		1F4C2B8724ED926100C39967 /* MetroStationLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStationLocation.swift; sourceTree = "<group>"; };
 		1F4C2B8924ED92BB00C39967 /* MetroLocationsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroLocationsRepository.swift; sourceTree = "<group>"; };
 		1F4C2B8B24ED931200C39967 /* MetroLocationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroLocationsService.swift; sourceTree = "<group>"; };
@@ -271,7 +279,7 @@
 		1F1DD6A424F3E9A4003C4A9F /* NavigationWithAds */ = {
 			isa = PBXGroup;
 			children = (
-				1F1DD6A524F3E9C4003C4A9F /* AdsControllerContainer.swift */,
+				1F1DD6A524F3E9C4003C4A9F /* AdsContainerViewController.swift */,
 			);
 			path = NavigationWithAds;
 			sourceTree = "<group>";
@@ -292,6 +300,26 @@
 				1F1DD6AB24F4D496003C4A9F /* ChangeCityViewController.swift */,
 			);
 			path = ChangeCity;
+			sourceTree = "<group>";
+		};
+		1F1DD6D224F981EC003C4A9F /* Integrations */ = {
+			isa = PBXGroup;
+			children = (
+				1F1DD6DA24F9861B003C4A9F /* AnalyticsIntegration.swift */,
+				1F1DD6DC24F9882B003C4A9F /* AdsIntegration.swift */,
+			);
+			path = Integrations;
+			sourceTree = "<group>";
+		};
+		1F1DD6D324F98285003C4A9F /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6843A24F051780068A69A /* MainMenuType.swift */,
+				1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */,
+				1F1DD6D424F9829E003C4A9F /* AnalyticsEventType.swift */,
+				1F1DD6D824F98434003C4A9F /* AdsEventType.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 		1F4C2B8D24ED955200C39967 /* MetroStationLocationsPerCity */ = {
@@ -413,10 +441,11 @@
 			children = (
 				1FA3C42E24EBD8E900295FFA /* AppContext.swift */,
 				1FA3C3EC24EB11B700295FFA /* AppDelegate.swift */,
-				1FA3C3EE24EB11B700295FFA /* SceneDelegate.swift */,
 				1FA3C40224EB13AB00295FFA /* AppCoordinator.swift */,
+				1FA3C3EE24EB11B700295FFA /* SceneDelegate.swift */,
 				1FA3C43724EBDE5C00295FFA /* AppConfig */,
 				1FA3C43224EBDB4F00295FFA /* Networking */,
+				1F1DD6D324F98285003C4A9F /* Types */,
 				1FA3C41624EB2A8100295FFA /* Model */,
 				1FA3C40424EB148600295FFA /* Dependencies */,
 				1FA3C40124EB131500295FFA /* Workflows */,
@@ -454,6 +483,7 @@
 		1FA3C40424EB148600295FFA /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				1F1DD6D224F981EC003C4A9F /* Integrations */,
 				1FA3C40B24EB181E00295FFA /* Repositories */,
 				1FA3C40A24EB181900295FFA /* Services */,
 				1FA3C40524EB14A700295FFA /* DependenciesSpecs.swift */,
@@ -571,8 +601,6 @@
 				1FA3C43824EBDE6A00295FFA /* AppConstants.swift */,
 				1F4C2BCE24ED9A3700C39967 /* Appearance.swift */,
 				1F4C2BD824EDA08B00C39967 /* Storyboard.swift */,
-				1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */,
-				1FF6843A24F051780068A69A /* MainMenuType.swift */,
 			);
 			path = AppConfig;
 			sourceTree = "<group>";
@@ -851,16 +879,19 @@
 				1F4C2B8C24ED931200C39967 /* MetroLocationsService.swift in Sources */,
 				1F4C2BEB24EDAFFC00C39967 /* BannersResponse.swift in Sources */,
 				1FF6847C24F0764B0068A69A /* PlaceListCell.swift in Sources */,
+				1F1DD6DD24F9882B003C4A9F /* AdsIntegration.swift in Sources */,
+				1F1DD6D924F98434003C4A9F /* AdsEventType.swift in Sources */,
 				1F4C2B8824ED926100C39967 /* MetroStationLocation.swift in Sources */,
 				1FF6843F24F054AE0068A69A /* UIView+Factory.swift in Sources */,
 				1FA3C42B24EB34D600295FFA /* UserDefaultsBacked.swift in Sources */,
 				1F4C2B8A24ED92BB00C39967 /* MetroLocationsRepository.swift in Sources */,
 				1FF6843D24F0547F0068A69A /* Collection+Registerable.swift in Sources */,
 				1FA3C41324EB212700295FFA /* Assets.swift in Sources */,
-				1F1DD6A624F3E9C4003C4A9F /* AdsControllerContainer.swift in Sources */,
+				1F1DD6A624F3E9C4003C4A9F /* AdsContainerViewController.swift in Sources */,
 				1FA3C42224EB2CF900295FFA /* PlacesServiceLocal.swift in Sources */,
 				1FF6844424F061870068A69A /* ContactUsController.swift in Sources */,
 				1FA3C3EF24EB11B700295FFA /* SceneDelegate.swift in Sources */,
+				1F1DD6DB24F9861B003C4A9F /* AnalyticsIntegration.swift in Sources */,
 				1FA3C43524EBDB8A00295FFA /* NetworkAdapter.swift in Sources */,
 				1F4C2BDD24EDA84000C39967 /* BannersCell.swift in Sources */,
 				1F1DD6AC24F4D496003C4A9F /* ChangeCityViewController.swift in Sources */,
@@ -890,6 +921,7 @@
 				1FF6844124F054DC0068A69A /* UIBundle+Current.swift in Sources */,
 				1F4C2BCF24ED9A3700C39967 /* Appearance.swift in Sources */,
 				1FA3C41824EB2A9000295FFA /* Place.swift in Sources */,
+				1F1DD6D524F9829E003C4A9F /* AnalyticsEventType.swift in Sources */,
 				1F4C2BF024EDBD4200C39967 /* String+Localized.swift in Sources */,
 				1FA3C41E24EB2AAD00295FFA /* MetroStation.swift in Sources */,
 				1FF6847524F075F00068A69A /* AllPlacesListViewController.swift in Sources */,

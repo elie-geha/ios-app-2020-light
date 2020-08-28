@@ -6,7 +6,6 @@
 //  Copyright © 2020 AugmentedDiscovery. All rights reserved.
 //
 
-import GoogleMobileAds
 import UIKit
 
 class AdsContainerViewController: UIViewController {

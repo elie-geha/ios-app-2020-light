@@ -39,6 +39,9 @@ class HomeCoordinator {
             MenuItem(type: .locateMetro, onSelect: { [weak self] in
                 self?.openLocateMetro()
             }),
+            MenuItem(type: .attractions, onSelect: { [weak self] in
+                self?.openPlaces(with: .attraction)
+            }),
             MenuItem(type: .restoraunts, onSelect: { [weak self] in
                 self?.openPlaces(with: .restoraunt)
             }),
@@ -47,9 +50,6 @@ class HomeCoordinator {
             }),
             MenuItem(type: .beautyAndHealth, onSelect: { [weak self] in
                 self?.openPlaces(with: .beautyAndHealth)
-            }),
-            MenuItem(type: .attractions, onSelect: { [weak self] in
-                self?.openPlaces(with: .attraction)
             })
         ]
         homeViewController?.onLeftBarButton = onMenu

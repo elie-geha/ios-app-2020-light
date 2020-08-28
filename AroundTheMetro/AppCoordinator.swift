@@ -27,8 +27,10 @@ class AppCoordinator {
         let router = UINavigationController()
         router.setNavigationBarHidden(true, animated: false)
 
-        let adsControllerContainer = AdsControllerContainer()
+        let adsControllerContainer = AdsContainerViewController()
         adsControllerContainer.contentViewController = router
+
+        appContext.ads.setAdsContainer(adsControllerContainer)
 
         window.rootViewController = adsControllerContainer
 

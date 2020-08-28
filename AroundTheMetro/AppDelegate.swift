@@ -7,9 +7,7 @@
 //
 
 import FacebookCore
-import FBSDKCoreKit
 import Firebase
-import GoogleMobileAds
 import UIKit
 
 @UIApplicationMain
@@ -30,10 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func setupIntegrations(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
-        // MARK: - Admob banner
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
-
-        //MARK: - Firebase config
+        // MARK: - Firebase config
         FirebaseApp.configure()
 
         //MARK: - FACEBOOK SDK CONFIGURATION
