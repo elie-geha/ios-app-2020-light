@@ -29,7 +29,7 @@ class CountriesRepository: Repository {
             return countriesService.city(with: userStorageService.currentCity)
         }
         set {
-            userStorageService.currentCity = newValue?.plistName
+            userStorageService.currentCity = newValue?.plistName ?? newValue?.name
         }
     }
 
