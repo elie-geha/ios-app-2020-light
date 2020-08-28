@@ -3,28 +3,227 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1DD6A024F3D4AF003C4A9F /* LocateMetroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD69F24F3D4AF003C4A9F /* LocateMetroViewController.swift */; };
+		1F1DD6A224F3D7D9003C4A9F /* MetroPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6A124F3D7D9003C4A9F /* MetroPlanViewController.swift */; };
+		1F1DD6A624F3E9C4003C4A9F /* AdsControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6A524F3E9C4003C4A9F /* AdsControllerContainer.swift */; };
+		1F1DD6A824F3F07B003C4A9F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F1DD6A724F3F07B003C4A9F /* GoogleService-Info.plist */; };
+		1F1DD6AC24F4D496003C4A9F /* ChangeCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6AB24F4D496003C4A9F /* ChangeCityViewController.swift */; };
+		1F4C2B8824ED926100C39967 /* MetroStationLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8724ED926100C39967 /* MetroStationLocation.swift */; };
+		1F4C2B8A24ED92BB00C39967 /* MetroLocationsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8924ED92BB00C39967 /* MetroLocationsRepository.swift */; };
+		1F4C2B8C24ED931200C39967 /* MetroLocationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8B24ED931200C39967 /* MetroLocationsService.swift */; };
+		1F4C2BAE24ED955200C39967 /* Mumbai.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8E24ED955200C39967 /* Mumbai.plist */; };
+		1F4C2BAF24ED955200C39967 /* Lausanne.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8F24ED955200C39967 /* Lausanne.plist */; };
+		1F4C2BB024ED955200C39967 /* Paris.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2B9024ED955200C39967 /* Paris.plist */; };
+		1F4C2BB124ED955200C39967 /* Toronto.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2B9124ED955200C39967 /* Toronto.plist */; };
+		1F4C2BB224ED955200C39967 /* Taipei.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2B9224ED955200C39967 /* Taipei.plist */; };
+		1F4C2BB324ED955200C39967 /* Chicago.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2B9324ED955200C39967 /* Chicago.plist */; };
+		1F4C2BB424ED955200C39967 /* New_York_City.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2B9424ED955200C39967 /* New_York_City.plist */; };
+		1F4C2BB524ED955200C39967 /* Marseille.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2B9524ED955200C39967 /* Marseille.plist */; };
+		1F4C2BB624ED955200C39967 /* Toulouse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2B9624ED955200C39967 /* Toulouse.plist */; };
+		1F4C2BB724ED955200C39967 /* Busan.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2B9724ED955200C39967 /* Busan.plist */; };
+		1F4C2BB824ED955200C39967 /* Osaka.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2B9824ED955200C39967 /* Osaka.plist */; };
+		1F4C2BB924ED955200C39967 /* Atlanta.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2B9924ED955200C39967 /* Atlanta.plist */; };
+		1F4C2BBA24ED955200C39967 /* Rome.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2B9A24ED955200C39967 /* Rome.plist */; };
+		1F4C2BBB24ED955200C39967 /* London.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2B9B24ED955200C39967 /* London.plist */; };
+		1F4C2BBC24ED955200C39967 /* Milan.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2B9C24ED955200C39967 /* Milan.plist */; };
+		1F4C2BBD24ED955200C39967 /* Seoul.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2B9D24ED955200C39967 /* Seoul.plist */; };
+		1F4C2BBE24ED955200C39967 /* Glasgow.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2B9E24ED955200C39967 /* Glasgow.plist */; };
+		1F4C2BBF24ED955200C39967 /* Vancouver.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2B9F24ED955200C39967 /* Vancouver.plist */; };
+		1F4C2BC024ED955200C39967 /* Montreal.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BA024ED955200C39967 /* Montreal.plist */; };
+		1F4C2BC124ED955200C39967 /* Tokyo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BA124ED955200C39967 /* Tokyo.plist */; };
+		1F4C2BC224ED955200C39967 /* Nagoya.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BA224ED955200C39967 /* Nagoya.plist */; };
+		1F4C2BC324ED955200C39967 /* Istanbul.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BA324ED955200C39967 /* Istanbul.plist */; };
+		1F4C2BC424ED955200C39967 /* Vienna.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BA424ED955200C39967 /* Vienna.plist */; };
+		1F4C2BC524ED955200C39967 /* Kolkata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BA524ED955200C39967 /* Kolkata.plist */; };
+		1F4C2BC624ED955200C39967 /* Dubai.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BA624ED955200C39967 /* Dubai.plist */; };
+		1F4C2BC724ED955200C39967 /* Lyon.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BA724ED955200C39967 /* Lyon.plist */; };
+		1F4C2BC824ED955200C39967 /* Stockholm.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BA824ED955200C39967 /* Stockholm.plist */; };
+		1F4C2BC924ED955200C39967 /* Yokohama.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BA924ED955200C39967 /* Yokohama.plist */; };
+		1F4C2BCA24ED955200C39967 /* Bilbao.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BAA24ED955200C39967 /* Bilbao.plist */; };
+		1F4C2BCB24ED955200C39967 /* Miami.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BAB24ED955200C39967 /* Miami.plist */; };
+		1F4C2BCC24ED955200C39967 /* Barcelona.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BAC24ED955200C39967 /* Barcelona.plist */; };
+		1F4C2BCD24ED955200C39967 /* Madrid.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BAD24ED955200C39967 /* Madrid.plist */; };
+		1F4C2BCF24ED9A3700C39967 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BCE24ED9A3700C39967 /* Appearance.swift */; };
+		1F4C2BD124ED9B6F00C39967 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BD024ED9B6F00C39967 /* Home.storyboard */; };
+		1F4C2BD724EDA05E00C39967 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BD624EDA05E00C39967 /* HomeViewController.swift */; };
+		1F4C2BD924EDA08B00C39967 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BD824EDA08B00C39967 /* Storyboard.swift */; };
+		1F4C2BDD24EDA84000C39967 /* BannersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BDC24EDA84000C39967 /* BannersCell.swift */; };
+		1F4C2BDF24EDA8EF00C39967 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BDE24EDA8EF00C39967 /* MenuCell.swift */; };
+		1F4C2BE124EDAAAD00C39967 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BE024EDAAAD00C39967 /* Banner.swift */; };
+		1F4C2BE324EDABD900C39967 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BE224EDABD900C39967 /* ImageCell.swift */; };
+		1F4C2BE524EDAC2200C39967 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C2BE424EDAC2200C39967 /* ImageCell.xib */; };
+		1F4C2BE824EDAF3300C39967 /* BannersServiceRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BE724EDAF3300C39967 /* BannersServiceRemote.swift */; };
+		1F4C2BEB24EDAFFC00C39967 /* BannersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BEA24EDAFFC00C39967 /* BannersResponse.swift */; };
+		1F4C2BEE24EDB3A500C39967 /* BannersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BED24EDB3A500C39967 /* BannersRepository.swift */; };
+		1F4C2BF024EDBD4200C39967 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */; };
+		1F4C2BF224EDBDBA00C39967 /* HomeMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */; };
 		1FA3C3ED24EB11B700295FFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C3EC24EB11B700295FFA /* AppDelegate.swift */; };
 		1FA3C3EF24EB11B700295FFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C3EE24EB11B700295FFA /* SceneDelegate.swift */; };
-		1FA3C3F124EB11B700295FFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C3F024EB11B700295FFA /* ViewController.swift */; };
-		1FA3C3F424EB11B700295FFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3C3F224EB11B700295FFA /* Main.storyboard */; };
 		1FA3C3F624EB11BD00295FFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3C3F524EB11BD00295FFA /* Assets.xcassets */; };
 		1FA3C3F924EB11BD00295FFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3C3F724EB11BD00295FFA /* LaunchScreen.storyboard */; };
+		1FA3C40324EB13AB00295FFA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C40224EB13AB00295FFA /* AppCoordinator.swift */; };
+		1FA3C40624EB14A700295FFA /* DependenciesSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C40524EB14A700295FFA /* DependenciesSpecs.swift */; };
+		1FA3C40924EB17EB00295FFA /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C40824EB17EB00295FFA /* MainCoordinator.swift */; };
+		1FA3C40E24EB184100295FFA /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C40D24EB184100295FFA /* HomeCoordinator.swift */; };
+		1FA3C41124EB1FFE00295FFA /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C41024EB1FFE00295FFA /* MenuCoordinator.swift */; };
+		1FA3C41324EB212700295FFA /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C41224EB212700295FFA /* Assets.swift */; };
+		1FA3C41524EB290F00295FFA /* PlacesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C41424EB290F00295FFA /* PlacesRepository.swift */; };
+		1FA3C41824EB2A9000295FFA /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C41724EB2A9000295FFA /* Place.swift */; };
+		1FA3C41A24EB2A9800295FFA /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C41924EB2A9800295FFA /* City.swift */; };
+		1FA3C41C24EB2AA200295FFA /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C41B24EB2AA200295FFA /* Country.swift */; };
+		1FA3C41E24EB2AAD00295FFA /* MetroStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C41D24EB2AAD00295FFA /* MetroStation.swift */; };
+		1FA3C42024EB2B2F00295FFA /* PlacesServiceRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C41F24EB2B2F00295FFA /* PlacesServiceRemote.swift */; };
+		1FA3C42224EB2CF900295FFA /* PlacesServiceLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C42124EB2CF900295FFA /* PlacesServiceLocal.swift */; };
+		1FA3C42424EB2D5700295FFA /* CountriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C42324EB2D5700295FFA /* CountriesRepository.swift */; };
+		1FA3C42624EB2D8A00295FFA /* CountriesServiceLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C42524EB2D8A00295FFA /* CountriesServiceLocal.swift */; };
+		1FA3C42824EB349100295FFA /* UserStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C42724EB349100295FFA /* UserStorageService.swift */; };
+		1FA3C42B24EB34D600295FFA /* UserDefaultsBacked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C42A24EB34D600295FFA /* UserDefaultsBacked.swift */; };
+		1FA3C42D24EB352000295FFA /* AnyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C42C24EB352000295FFA /* AnyOptional.swift */; };
+		1FA3C42F24EBD8E900295FFA /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C42E24EBD8E900295FFA /* AppContext.swift */; };
+		1FA3C43524EBDB8A00295FFA /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C43324EBDB8A00295FFA /* NetworkAdapter.swift */; };
+		1FA3C43624EBDB8A00295FFA /* ATLApiTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C43424EBDB8A00295FFA /* ATLApiTarget.swift */; };
+		1FA3C43924EBDE6A00295FFA /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C43824EBDE6A00295FFA /* AppConstants.swift */; };
+		1FA3C43D24EBEB9D00295FFA /* PlacesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C43C24EBEB9D00295FFA /* PlacesResponse.swift */; };
+		1FA3C43F24EBEBAA00295FFA /* MetroStationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C43E24EBEBAA00295FFA /* MetroStationsResponse.swift */; };
+		1FF6843024F04BFE0068A69A /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6842F24F04BFE0068A69A /* Menu.storyboard */; };
+		1FF6843224F04C5C0068A69A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6843124F04C5C0068A69A /* MenuViewController.swift */; };
+		1FF6843424F04CC20068A69A /* MainMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6843324F04CC20068A69A /* MainMenuItem.swift */; };
+		1FF6843724F04E8B0068A69A /* MainMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6843624F04E8B0068A69A /* MainMenuCell.swift */; };
+		1FF6843924F050AF0068A69A /* MainMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6843824F050AF0068A69A /* MainMenuCell.xib */; };
+		1FF6843B24F051780068A69A /* MainMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6843A24F051780068A69A /* MainMenuType.swift */; };
+		1FF6843D24F0547F0068A69A /* Collection+Registerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6843C24F0547F0068A69A /* Collection+Registerable.swift */; };
+		1FF6843F24F054AE0068A69A /* UIView+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6843E24F054AE0068A69A /* UIView+Factory.swift */; };
+		1FF6844124F054DC0068A69A /* UIBundle+Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6844024F054DC0068A69A /* UIBundle+Current.swift */; };
+		1FF6844424F061870068A69A /* ContactUsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6844324F061870068A69A /* ContactUsController.swift */; };
+		1FF6846F24F0655C0068A69A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6846424F0648B0068A69A /* Localizable.strings */; };
+		1FF6847024F0655F0068A69A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6846224F0648B0068A69A /* InfoPlist.strings */; };
+		1FF6847324F06B070068A69A /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6847224F06B070068A69A /* PlacesViewController.swift */; };
+		1FF6847524F075F00068A69A /* AllPlacesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6847424F075F00068A69A /* AllPlacesListViewController.swift */; };
+		1FF6847724F075FF0068A69A /* MetroListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6847624F075FF0068A69A /* MetroListViewController.swift */; };
+		1FF6847924F0761B0068A69A /* PlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6847824F0761B0068A69A /* PlaceDetailsViewController.swift */; };
+		1FF6847C24F0764B0068A69A /* PlaceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6847B24F0764B0068A69A /* PlaceListCell.swift */; };
+		1FF6848024F076720068A69A /* MetroListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6847F24F076720068A69A /* MetroListCell.swift */; };
+		1FF6848224F3CA860068A69A /* PlacesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6848124F3CA860068A69A /* PlacesCoordinator.swift */; };
+		1FF6848424F3CACC0068A69A /* Places.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6848324F3CACC0068A69A /* Places.storyboard */; };
 		9A8E11562C4F72C0771E6240 /* Pods_AroundTheMetro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57C4B5707ABD4ED9E88BA9B /* Pods_AroundTheMetro.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F1DD69F24F3D4AF003C4A9F /* LocateMetroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateMetroViewController.swift; sourceTree = "<group>"; };
+		1F1DD6A124F3D7D9003C4A9F /* MetroPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroPlanViewController.swift; sourceTree = "<group>"; };
+		1F1DD6A524F3E9C4003C4A9F /* AdsControllerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsControllerContainer.swift; sourceTree = "<group>"; };
+		1F1DD6A724F3F07B003C4A9F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1F1DD6AB24F4D496003C4A9F /* ChangeCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCityViewController.swift; sourceTree = "<group>"; };
+		1F4C2B8724ED926100C39967 /* MetroStationLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStationLocation.swift; sourceTree = "<group>"; };
+		1F4C2B8924ED92BB00C39967 /* MetroLocationsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroLocationsRepository.swift; sourceTree = "<group>"; };
+		1F4C2B8B24ED931200C39967 /* MetroLocationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroLocationsService.swift; sourceTree = "<group>"; };
+		1F4C2B8E24ED955200C39967 /* Mumbai.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Mumbai.plist; sourceTree = "<group>"; };
+		1F4C2B8F24ED955200C39967 /* Lausanne.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Lausanne.plist; sourceTree = "<group>"; };
+		1F4C2B9024ED955200C39967 /* Paris.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Paris.plist; sourceTree = "<group>"; };
+		1F4C2B9124ED955200C39967 /* Toronto.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Toronto.plist; sourceTree = "<group>"; };
+		1F4C2B9224ED955200C39967 /* Taipei.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Taipei.plist; sourceTree = "<group>"; };
+		1F4C2B9324ED955200C39967 /* Chicago.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Chicago.plist; sourceTree = "<group>"; };
+		1F4C2B9424ED955200C39967 /* New_York_City.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = New_York_City.plist; sourceTree = "<group>"; };
+		1F4C2B9524ED955200C39967 /* Marseille.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Marseille.plist; sourceTree = "<group>"; };
+		1F4C2B9624ED955200C39967 /* Toulouse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Toulouse.plist; sourceTree = "<group>"; };
+		1F4C2B9724ED955200C39967 /* Busan.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Busan.plist; sourceTree = "<group>"; };
+		1F4C2B9824ED955200C39967 /* Osaka.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Osaka.plist; sourceTree = "<group>"; };
+		1F4C2B9924ED955200C39967 /* Atlanta.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Atlanta.plist; sourceTree = "<group>"; };
+		1F4C2B9A24ED955200C39967 /* Rome.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Rome.plist; sourceTree = "<group>"; };
+		1F4C2B9B24ED955200C39967 /* London.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = London.plist; sourceTree = "<group>"; };
+		1F4C2B9C24ED955200C39967 /* Milan.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Milan.plist; sourceTree = "<group>"; };
+		1F4C2B9D24ED955200C39967 /* Seoul.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Seoul.plist; sourceTree = "<group>"; };
+		1F4C2B9E24ED955200C39967 /* Glasgow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Glasgow.plist; sourceTree = "<group>"; };
+		1F4C2B9F24ED955200C39967 /* Vancouver.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Vancouver.plist; sourceTree = "<group>"; };
+		1F4C2BA024ED955200C39967 /* Montreal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Montreal.plist; sourceTree = "<group>"; };
+		1F4C2BA124ED955200C39967 /* Tokyo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tokyo.plist; sourceTree = "<group>"; };
+		1F4C2BA224ED955200C39967 /* Nagoya.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Nagoya.plist; sourceTree = "<group>"; };
+		1F4C2BA324ED955200C39967 /* Istanbul.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Istanbul.plist; sourceTree = "<group>"; };
+		1F4C2BA424ED955200C39967 /* Vienna.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Vienna.plist; sourceTree = "<group>"; };
+		1F4C2BA524ED955200C39967 /* Kolkata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Kolkata.plist; sourceTree = "<group>"; };
+		1F4C2BA624ED955200C39967 /* Dubai.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Dubai.plist; sourceTree = "<group>"; };
+		1F4C2BA724ED955200C39967 /* Lyon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Lyon.plist; sourceTree = "<group>"; };
+		1F4C2BA824ED955200C39967 /* Stockholm.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Stockholm.plist; sourceTree = "<group>"; };
+		1F4C2BA924ED955200C39967 /* Yokohama.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Yokohama.plist; sourceTree = "<group>"; };
+		1F4C2BAA24ED955200C39967 /* Bilbao.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Bilbao.plist; sourceTree = "<group>"; };
+		1F4C2BAB24ED955200C39967 /* Miami.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Miami.plist; sourceTree = "<group>"; };
+		1F4C2BAC24ED955200C39967 /* Barcelona.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Barcelona.plist; sourceTree = "<group>"; };
+		1F4C2BAD24ED955200C39967 /* Madrid.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Madrid.plist; sourceTree = "<group>"; };
+		1F4C2BCE24ED9A3700C39967 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		1F4C2BD024ED9B6F00C39967 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		1F4C2BD324ED9CD000C39967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F4C2BD624EDA05E00C39967 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1F4C2BD824EDA08B00C39967 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		1F4C2BDC24EDA84000C39967 /* BannersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersCell.swift; sourceTree = "<group>"; };
+		1F4C2BDE24EDA8EF00C39967 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		1F4C2BE024EDAAAD00C39967 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		1F4C2BE224EDABD900C39967 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		1F4C2BE424EDAC2200C39967 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		1F4C2BE724EDAF3300C39967 /* BannersServiceRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersServiceRemote.swift; sourceTree = "<group>"; };
+		1F4C2BEA24EDAFFC00C39967 /* BannersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersResponse.swift; sourceTree = "<group>"; };
+		1F4C2BED24EDB3A500C39967 /* BannersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersRepository.swift; sourceTree = "<group>"; };
+		1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuType.swift; sourceTree = "<group>"; };
 		1FA3C3E924EB11B700295FFA /* AroundTheMetro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AroundTheMetro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA3C3EC24EB11B700295FFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FA3C3EE24EB11B700295FFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1FA3C3F024EB11B700295FFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1FA3C3F324EB11B700295FFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FA3C3F524EB11BD00295FFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FA3C3F824EB11BD00295FFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FA3C3FA24EB11BD00295FFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FA3C40224EB13AB00295FFA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		1FA3C40524EB14A700295FFA /* DependenciesSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesSpecs.swift; sourceTree = "<group>"; };
+		1FA3C40824EB17EB00295FFA /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		1FA3C40D24EB184100295FFA /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		1FA3C41024EB1FFE00295FFA /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
+		1FA3C41224EB212700295FFA /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		1FA3C41424EB290F00295FFA /* PlacesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRepository.swift; sourceTree = "<group>"; };
+		1FA3C41724EB2A9000295FFA /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		1FA3C41924EB2A9800295FFA /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		1FA3C41B24EB2AA200295FFA /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		1FA3C41D24EB2AAD00295FFA /* MetroStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStation.swift; sourceTree = "<group>"; };
+		1FA3C41F24EB2B2F00295FFA /* PlacesServiceRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesServiceRemote.swift; sourceTree = "<group>"; };
+		1FA3C42124EB2CF900295FFA /* PlacesServiceLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesServiceLocal.swift; sourceTree = "<group>"; };
+		1FA3C42324EB2D5700295FFA /* CountriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesRepository.swift; sourceTree = "<group>"; };
+		1FA3C42524EB2D8A00295FFA /* CountriesServiceLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesServiceLocal.swift; sourceTree = "<group>"; };
+		1FA3C42724EB349100295FFA /* UserStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorageService.swift; sourceTree = "<group>"; };
+		1FA3C42A24EB34D600295FFA /* UserDefaultsBacked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsBacked.swift; sourceTree = "<group>"; };
+		1FA3C42C24EB352000295FFA /* AnyOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyOptional.swift; sourceTree = "<group>"; };
+		1FA3C42E24EBD8E900295FFA /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
+		1FA3C43324EBDB8A00295FFA /* NetworkAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAdapter.swift; sourceTree = "<group>"; };
+		1FA3C43424EBDB8A00295FFA /* ATLApiTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATLApiTarget.swift; sourceTree = "<group>"; };
+		1FA3C43824EBDE6A00295FFA /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		1FA3C43C24EBEB9D00295FFA /* PlacesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesResponse.swift; sourceTree = "<group>"; };
+		1FA3C43E24EBEBAA00295FFA /* MetroStationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStationsResponse.swift; sourceTree = "<group>"; };
+		1FF6842F24F04BFE0068A69A /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		1FF6843124F04C5C0068A69A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		1FF6843324F04CC20068A69A /* MainMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuItem.swift; sourceTree = "<group>"; };
+		1FF6843624F04E8B0068A69A /* MainMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCell.swift; sourceTree = "<group>"; };
+		1FF6843824F050AF0068A69A /* MainMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuCell.xib; sourceTree = "<group>"; };
+		1FF6843A24F051780068A69A /* MainMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuType.swift; sourceTree = "<group>"; };
+		1FF6843C24F0547F0068A69A /* Collection+Registerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Registerable.swift"; sourceTree = "<group>"; };
+		1FF6843E24F054AE0068A69A /* UIView+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Factory.swift"; sourceTree = "<group>"; };
+		1FF6844024F054DC0068A69A /* UIBundle+Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBundle+Current.swift"; sourceTree = "<group>"; };
+		1FF6844324F061870068A69A /* ContactUsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsController.swift; sourceTree = "<group>"; };
+		1FF6846324F0648B0068A69A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1FF6846524F0648B0068A69A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1FF6846824F064930068A69A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		1FF6846924F064950068A69A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1FF6846A24F064970068A69A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1FF6846B24F0649A0068A69A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1FF6846C24F0649C0068A69A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1FF6846D24F0649E0068A69A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		1FF6847224F06B070068A69A /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		1FF6847424F075F00068A69A /* AllPlacesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPlacesListViewController.swift; sourceTree = "<group>"; };
+		1FF6847624F075FF0068A69A /* MetroListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroListViewController.swift; sourceTree = "<group>"; };
+		1FF6847824F0761B0068A69A /* PlaceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewController.swift; sourceTree = "<group>"; };
+		1FF6847B24F0764B0068A69A /* PlaceListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListCell.swift; sourceTree = "<group>"; };
+		1FF6847F24F076720068A69A /* MetroListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroListCell.swift; sourceTree = "<group>"; };
+		1FF6848124F3CA860068A69A /* PlacesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCoordinator.swift; sourceTree = "<group>"; };
+		1FF6848324F3CACC0068A69A /* Places.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Places.storyboard; sourceTree = "<group>"; };
 		A85239D9126354EC81AB8AED /* Pods-AroundTheMetro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundTheMetro.debug.xcconfig"; path = "Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro.debug.xcconfig"; sourceTree = "<group>"; };
 		C57C4B5707ABD4ED9E88BA9B /* Pods_AroundTheMetro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundTheMetro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8FC33BDD46E6721368886D7 /* Pods-AroundTheMetro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundTheMetro.release.xcconfig"; path = "Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro.release.xcconfig"; sourceTree = "<group>"; };
@@ -42,9 +241,158 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F1DD69D24F3D47F003C4A9F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6847E24F0765B0068A69A /* Details */,
+				1FF6847D24F076520068A69A /* AllMetros */,
+				1FF6847A24F076360068A69A /* AllPlaces */,
+				1FF6847224F06B070068A69A /* PlacesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F1DD69E24F3D497003C4A9F /* LocateMetro */ = {
+			isa = PBXGroup;
+			children = (
+				1F1DD69F24F3D4AF003C4A9F /* LocateMetroViewController.swift */,
+			);
+			path = LocateMetro;
+			sourceTree = "<group>";
+		};
+		1F1DD6A324F3D7DF003C4A9F /* MetroPlan */ = {
+			isa = PBXGroup;
+			children = (
+				1F1DD6A124F3D7D9003C4A9F /* MetroPlanViewController.swift */,
+			);
+			path = MetroPlan;
+			sourceTree = "<group>";
+		};
+		1F1DD6A424F3E9A4003C4A9F /* NavigationWithAds */ = {
+			isa = PBXGroup;
+			children = (
+				1F1DD6A524F3E9C4003C4A9F /* AdsControllerContainer.swift */,
+			);
+			path = NavigationWithAds;
+			sourceTree = "<group>";
+		};
+		1F1DD6A924F4D479003C4A9F /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6843524F04E7D0068A69A /* MenuCell */,
+				1FF6843324F04CC20068A69A /* MainMenuItem.swift */,
+				1FF6843124F04C5C0068A69A /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		1F1DD6AA24F4D485003C4A9F /* ChangeCity */ = {
+			isa = PBXGroup;
+			children = (
+				1F1DD6AB24F4D496003C4A9F /* ChangeCityViewController.swift */,
+			);
+			path = ChangeCity;
+			sourceTree = "<group>";
+		};
+		1F4C2B8D24ED955200C39967 /* MetroStationLocationsPerCity */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C2B8E24ED955200C39967 /* Mumbai.plist */,
+				1F4C2B8F24ED955200C39967 /* Lausanne.plist */,
+				1F4C2B9024ED955200C39967 /* Paris.plist */,
+				1F4C2B9124ED955200C39967 /* Toronto.plist */,
+				1F4C2B9224ED955200C39967 /* Taipei.plist */,
+				1F4C2B9324ED955200C39967 /* Chicago.plist */,
+				1F4C2B9424ED955200C39967 /* New_York_City.plist */,
+				1F4C2B9524ED955200C39967 /* Marseille.plist */,
+				1F4C2B9624ED955200C39967 /* Toulouse.plist */,
+				1F4C2B9724ED955200C39967 /* Busan.plist */,
+				1F4C2B9824ED955200C39967 /* Osaka.plist */,
+				1F4C2B9924ED955200C39967 /* Atlanta.plist */,
+				1F4C2B9A24ED955200C39967 /* Rome.plist */,
+				1F4C2B9B24ED955200C39967 /* London.plist */,
+				1F4C2B9C24ED955200C39967 /* Milan.plist */,
+				1F4C2B9D24ED955200C39967 /* Seoul.plist */,
+				1F4C2B9E24ED955200C39967 /* Glasgow.plist */,
+				1F4C2B9F24ED955200C39967 /* Vancouver.plist */,
+				1F4C2BA024ED955200C39967 /* Montreal.plist */,
+				1F4C2BA124ED955200C39967 /* Tokyo.plist */,
+				1F4C2BA224ED955200C39967 /* Nagoya.plist */,
+				1F4C2BA324ED955200C39967 /* Istanbul.plist */,
+				1F4C2BA424ED955200C39967 /* Vienna.plist */,
+				1F4C2BA524ED955200C39967 /* Kolkata.plist */,
+				1F4C2BA624ED955200C39967 /* Dubai.plist */,
+				1F4C2BA724ED955200C39967 /* Lyon.plist */,
+				1F4C2BA824ED955200C39967 /* Stockholm.plist */,
+				1F4C2BA924ED955200C39967 /* Yokohama.plist */,
+				1F4C2BAA24ED955200C39967 /* Bilbao.plist */,
+				1F4C2BAB24ED955200C39967 /* Miami.plist */,
+				1F4C2BAC24ED955200C39967 /* Barcelona.plist */,
+				1F4C2BAD24ED955200C39967 /* Madrid.plist */,
+			);
+			path = MetroStationLocationsPerCity;
+			sourceTree = "<group>";
+		};
+		1F4C2BD524EDA04800C39967 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F1DD6A324F3D7DF003C4A9F /* MetroPlan */,
+				1F1DD69E24F3D497003C4A9F /* LocateMetro */,
+				1FF6844224F0616F0068A69A /* ContactUs */,
+				1F4C2BEC24EDB1BF00C39967 /* Common */,
+				1F4C2BDB24EDA83000C39967 /* MenuSection */,
+				1F4C2BDA24EDA82400C39967 /* BannersSection */,
+				1F4C2BD624EDA05E00C39967 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F4C2BDA24EDA82400C39967 /* BannersSection */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C2BDC24EDA84000C39967 /* BannersCell.swift */,
+			);
+			path = BannersSection;
+			sourceTree = "<group>";
+		};
+		1F4C2BDB24EDA83000C39967 /* MenuSection */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C2BDE24EDA8EF00C39967 /* MenuCell.swift */,
+			);
+			path = MenuSection;
+			sourceTree = "<group>";
+		};
+		1F4C2BE624EDAF2300C39967 /* Banners */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C2BE924EDAFED00C39967 /* Response */,
+				1F4C2BE724EDAF3300C39967 /* BannersServiceRemote.swift */,
+			);
+			path = Banners;
+			sourceTree = "<group>";
+		};
+		1F4C2BE924EDAFED00C39967 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C2BEA24EDAFFC00C39967 /* BannersResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		1F4C2BEC24EDB1BF00C39967 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C2BE224EDABD900C39967 /* ImageCell.swift */,
+				1F4C2BE424EDAC2200C39967 /* ImageCell.xib */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		1FA3C3E024EB11B700295FFA = {
 			isa = PBXGroup;
 			children = (
+				1F1DD6A724F3F07B003C4A9F /* GoogleService-Info.plist */,
 				1FA3C3EB24EB11B700295FFA /* AroundTheMetro */,
 				1FA3C3EA24EB11B700295FFA /* Products */,
 				E6EB6807BFD33CADE9B1CCCE /* Pods */,
@@ -63,10 +411,17 @@
 		1FA3C3EB24EB11B700295FFA /* AroundTheMetro */ = {
 			isa = PBXGroup;
 			children = (
+				1FA3C42E24EBD8E900295FFA /* AppContext.swift */,
 				1FA3C3EC24EB11B700295FFA /* AppDelegate.swift */,
 				1FA3C3EE24EB11B700295FFA /* SceneDelegate.swift */,
-				1FA3C3F024EB11B700295FFA /* ViewController.swift */,
+				1FA3C40224EB13AB00295FFA /* AppCoordinator.swift */,
+				1FA3C43724EBDE5C00295FFA /* AppConfig */,
+				1FA3C43224EBDB4F00295FFA /* Networking */,
+				1FA3C41624EB2A8100295FFA /* Model */,
+				1FA3C40424EB148600295FFA /* Dependencies */,
+				1FA3C40124EB131500295FFA /* Workflows */,
 				1FA3C40024EB127000295FFA /* Resources */,
+				1FA3C42924EB34B200295FFA /* Utils */,
 			);
 			path = AroundTheMetro;
 			sourceTree = "<group>";
@@ -74,12 +429,241 @@
 		1FA3C40024EB127000295FFA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1FA3C3F224EB11B700295FFA /* Main.storyboard */,
+				1FF6844524F0644A0068A69A /* Localization */,
+				1F4C2B8D24ED955200C39967 /* MetroStationLocationsPerCity */,
+				1FA3C41224EB212700295FFA /* Assets.swift */,
+				1F4C2BD224ED9CD000C39967 /* Main.storyboard */,
 				1FA3C3F524EB11BD00295FFA /* Assets.xcassets */,
 				1FA3C3F724EB11BD00295FFA /* LaunchScreen.storyboard */,
 				1FA3C3FA24EB11BD00295FFA /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1FA3C40124EB131500295FFA /* Workflows */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3C40F24EB1FEF00295FFA /* Menu */,
+				1FF6847124F069A60068A69A /* Places */,
+				1FA3C40C24EB183500295FFA /* Home */,
+				1FA3C40724EB17D700295FFA /* Main */,
+			);
+			path = Workflows;
+			sourceTree = "<group>";
+		};
+		1FA3C40424EB148600295FFA /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3C40B24EB181E00295FFA /* Repositories */,
+				1FA3C40A24EB181900295FFA /* Services */,
+				1FA3C40524EB14A700295FFA /* DependenciesSpecs.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		1FA3C40724EB17D700295FFA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3C40824EB17EB00295FFA /* MainCoordinator.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1FA3C40A24EB181900295FFA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3C43124EBDA8500295FFA /* Remote */,
+				1FA3C43024EBDA7500295FFA /* Local */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1FA3C40B24EB181E00295FFA /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3C41424EB290F00295FFA /* PlacesRepository.swift */,
+				1FA3C42324EB2D5700295FFA /* CountriesRepository.swift */,
+				1F4C2B8924ED92BB00C39967 /* MetroLocationsRepository.swift */,
+				1F4C2BED24EDB3A500C39967 /* BannersRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		1FA3C40C24EB183500295FFA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C2BD524EDA04800C39967 /* View */,
+				1FA3C40D24EB184100295FFA /* HomeCoordinator.swift */,
+				1F4C2BD024ED9B6F00C39967 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1FA3C40F24EB1FEF00295FFA /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6842E24F04BEA0068A69A /* View */,
+				1FA3C41024EB1FFE00295FFA /* MenuCoordinator.swift */,
+				1FF6842F24F04BFE0068A69A /* Menu.storyboard */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		1FA3C41624EB2A8100295FFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3C41724EB2A9000295FFA /* Place.swift */,
+				1FA3C41924EB2A9800295FFA /* City.swift */,
+				1FA3C41B24EB2AA200295FFA /* Country.swift */,
+				1FA3C41D24EB2AAD00295FFA /* MetroStation.swift */,
+				1F4C2B8724ED926100C39967 /* MetroStationLocation.swift */,
+				1F4C2BE024EDAAAD00C39967 /* Banner.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1FA3C42924EB34B200295FFA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1F1DD6A424F3E9A4003C4A9F /* NavigationWithAds */,
+				1FA3C42A24EB34D600295FFA /* UserDefaultsBacked.swift */,
+				1FA3C42C24EB352000295FFA /* AnyOptional.swift */,
+				1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */,
+				1FF6843C24F0547F0068A69A /* Collection+Registerable.swift */,
+				1FF6843E24F054AE0068A69A /* UIView+Factory.swift */,
+				1FF6844024F054DC0068A69A /* UIBundle+Current.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1FA3C43024EBDA7500295FFA /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3C42124EB2CF900295FFA /* PlacesServiceLocal.swift */,
+				1FA3C42524EB2D8A00295FFA /* CountriesServiceLocal.swift */,
+				1FA3C42724EB349100295FFA /* UserStorageService.swift */,
+				1F4C2B8B24ED931200C39967 /* MetroLocationsService.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		1FA3C43124EBDA8500295FFA /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C2BE624EDAF2300C39967 /* Banners */,
+				1FA3C43A24EBEB8700295FFA /* Places */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		1FA3C43224EBDB4F00295FFA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3C43424EBDB8A00295FFA /* ATLApiTarget.swift */,
+				1FA3C43324EBDB8A00295FFA /* NetworkAdapter.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1FA3C43724EBDE5C00295FFA /* AppConfig */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3C43824EBDE6A00295FFA /* AppConstants.swift */,
+				1F4C2BCE24ED9A3700C39967 /* Appearance.swift */,
+				1F4C2BD824EDA08B00C39967 /* Storyboard.swift */,
+				1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */,
+				1FF6843A24F051780068A69A /* MainMenuType.swift */,
+			);
+			path = AppConfig;
+			sourceTree = "<group>";
+		};
+		1FA3C43A24EBEB8700295FFA /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3C43B24EBEB9000295FFA /* Response */,
+				1FA3C41F24EB2B2F00295FFA /* PlacesServiceRemote.swift */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
+		1FA3C43B24EBEB9000295FFA /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3C43C24EBEB9D00295FFA /* PlacesResponse.swift */,
+				1FA3C43E24EBEBAA00295FFA /* MetroStationsResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		1FF6842E24F04BEA0068A69A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F1DD6AA24F4D485003C4A9F /* ChangeCity */,
+				1F1DD6A924F4D479003C4A9F /* Menu */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1FF6843524F04E7D0068A69A /* MenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6843624F04E8B0068A69A /* MainMenuCell.swift */,
+				1FF6843824F050AF0068A69A /* MainMenuCell.xib */,
+			);
+			path = MenuCell;
+			sourceTree = "<group>";
+		};
+		1FF6844224F0616F0068A69A /* ContactUs */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6844324F061870068A69A /* ContactUsController.swift */,
+			);
+			path = ContactUs;
+			sourceTree = "<group>";
+		};
+		1FF6844524F0644A0068A69A /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6846224F0648B0068A69A /* InfoPlist.strings */,
+				1FF6846424F0648B0068A69A /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		1FF6847124F069A60068A69A /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				1F1DD69D24F3D47F003C4A9F /* View */,
+				1FF6848124F3CA860068A69A /* PlacesCoordinator.swift */,
+				1FF6848324F3CACC0068A69A /* Places.storyboard */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
+		1FF6847A24F076360068A69A /* AllPlaces */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6847424F075F00068A69A /* AllPlacesListViewController.swift */,
+				1FF6847B24F0764B0068A69A /* PlaceListCell.swift */,
+			);
+			path = AllPlaces;
+			sourceTree = "<group>";
+		};
+		1FF6847D24F076520068A69A /* AllMetros */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6847624F075FF0068A69A /* MetroListViewController.swift */,
+				1FF6847F24F076720068A69A /* MetroListCell.swift */,
+			);
+			path = AllMetros;
+			sourceTree = "<group>";
+		};
+		1FF6847E24F0765B0068A69A /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6847824F0761B0068A69A /* PlaceDetailsViewController.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		2410F300C0187DE229E3EE8F /* Frameworks */ = {
@@ -110,6 +694,7 @@
 				1FA3C3E524EB11B700295FFA /* Sources */,
 				1FA3C3E624EB11B700295FFA /* Frameworks */,
 				1FA3C3E724EB11B700295FFA /* Resources */,
+				1E67D382E4CFBBAC4C7105BB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,6 +727,9 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
+				"zh-Hant",
+				es,
 			);
 			mainGroup = 1FA3C3E024EB11B700295FFA;
 			productRefGroup = 1FA3C3EA24EB11B700295FFA /* Products */;
@@ -158,15 +746,71 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F4C2BBB24ED955200C39967 /* London.plist in Resources */,
+				1F4C2BCD24ED955200C39967 /* Madrid.plist in Resources */,
+				1F4C2BB624ED955200C39967 /* Toulouse.plist in Resources */,
+				1F4C2BC324ED955200C39967 /* Istanbul.plist in Resources */,
+				1F4C2BBF24ED955200C39967 /* Vancouver.plist in Resources */,
+				1FF6846F24F0655C0068A69A /* Localizable.strings in Resources */,
+				1FF6843024F04BFE0068A69A /* Menu.storyboard in Resources */,
+				1F4C2BCC24ED955200C39967 /* Barcelona.plist in Resources */,
+				1F4C2BAE24ED955200C39967 /* Mumbai.plist in Resources */,
+				1FF6847024F0655F0068A69A /* InfoPlist.strings in Resources */,
+				1F4C2BC924ED955200C39967 /* Yokohama.plist in Resources */,
+				1F4C2BBD24ED955200C39967 /* Seoul.plist in Resources */,
+				1F4C2BB024ED955200C39967 /* Paris.plist in Resources */,
+				1FF6843924F050AF0068A69A /* MainMenuCell.xib in Resources */,
+				1F4C2BB424ED955200C39967 /* New_York_City.plist in Resources */,
+				1F4C2BBA24ED955200C39967 /* Rome.plist in Resources */,
 				1FA3C3F924EB11BD00295FFA /* LaunchScreen.storyboard in Resources */,
+				1F4C2BC724ED955200C39967 /* Lyon.plist in Resources */,
+				1FF6848424F3CACC0068A69A /* Places.storyboard in Resources */,
+				1F4C2BBC24ED955200C39967 /* Milan.plist in Resources */,
 				1FA3C3F624EB11BD00295FFA /* Assets.xcassets in Resources */,
-				1FA3C3F424EB11B700295FFA /* Main.storyboard in Resources */,
+				1F4C2BC524ED955200C39967 /* Kolkata.plist in Resources */,
+				1F4C2BC124ED955200C39967 /* Tokyo.plist in Resources */,
+				1F4C2BB724ED955200C39967 /* Busan.plist in Resources */,
+				1F4C2BC824ED955200C39967 /* Stockholm.plist in Resources */,
+				1F4C2BCB24ED955200C39967 /* Miami.plist in Resources */,
+				1F4C2BD124ED9B6F00C39967 /* Home.storyboard in Resources */,
+				1F4C2BB124ED955200C39967 /* Toronto.plist in Resources */,
+				1F4C2BB324ED955200C39967 /* Chicago.plist in Resources */,
+				1F4C2BC024ED955200C39967 /* Montreal.plist in Resources */,
+				1F4C2BB824ED955200C39967 /* Osaka.plist in Resources */,
+				1F4C2BB524ED955200C39967 /* Marseille.plist in Resources */,
+				1F4C2BB224ED955200C39967 /* Taipei.plist in Resources */,
+				1F4C2BC424ED955200C39967 /* Vienna.plist in Resources */,
+				1F4C2BBE24ED955200C39967 /* Glasgow.plist in Resources */,
+				1F4C2BC624ED955200C39967 /* Dubai.plist in Resources */,
+				1F4C2BC224ED955200C39967 /* Nagoya.plist in Resources */,
+				1F4C2BB924ED955200C39967 /* Atlanta.plist in Resources */,
+				1F4C2BCA24ED955200C39967 /* Bilbao.plist in Resources */,
+				1F4C2BAF24ED955200C39967 /* Lausanne.plist in Resources */,
+				1F4C2BE524EDAC2200C39967 /* ImageCell.xib in Resources */,
+				1F1DD6A824F3F07B003C4A9F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1E67D382E4CFBBAC4C7105BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B6B2F2E48973955AE6BBC8B0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -196,19 +840,76 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FA3C3F124EB11B700295FFA /* ViewController.swift in Sources */,
+				1FA3C42424EB2D5700295FFA /* CountriesRepository.swift in Sources */,
+				1FA3C43D24EBEB9D00295FFA /* PlacesResponse.swift in Sources */,
+				1F4C2BD724EDA05E00C39967 /* HomeViewController.swift in Sources */,
+				1FA3C43624EBDB8A00295FFA /* ATLApiTarget.swift in Sources */,
+				1FA3C40324EB13AB00295FFA /* AppCoordinator.swift in Sources */,
+				1FA3C42D24EB352000295FFA /* AnyOptional.swift in Sources */,
 				1FA3C3ED24EB11B700295FFA /* AppDelegate.swift in Sources */,
+				1F1DD6A224F3D7D9003C4A9F /* MetroPlanViewController.swift in Sources */,
+				1F4C2B8C24ED931200C39967 /* MetroLocationsService.swift in Sources */,
+				1F4C2BEB24EDAFFC00C39967 /* BannersResponse.swift in Sources */,
+				1FF6847C24F0764B0068A69A /* PlaceListCell.swift in Sources */,
+				1F4C2B8824ED926100C39967 /* MetroStationLocation.swift in Sources */,
+				1FF6843F24F054AE0068A69A /* UIView+Factory.swift in Sources */,
+				1FA3C42B24EB34D600295FFA /* UserDefaultsBacked.swift in Sources */,
+				1F4C2B8A24ED92BB00C39967 /* MetroLocationsRepository.swift in Sources */,
+				1FF6843D24F0547F0068A69A /* Collection+Registerable.swift in Sources */,
+				1FA3C41324EB212700295FFA /* Assets.swift in Sources */,
+				1F1DD6A624F3E9C4003C4A9F /* AdsControllerContainer.swift in Sources */,
+				1FA3C42224EB2CF900295FFA /* PlacesServiceLocal.swift in Sources */,
+				1FF6844424F061870068A69A /* ContactUsController.swift in Sources */,
 				1FA3C3EF24EB11B700295FFA /* SceneDelegate.swift in Sources */,
+				1FA3C43524EBDB8A00295FFA /* NetworkAdapter.swift in Sources */,
+				1F4C2BDD24EDA84000C39967 /* BannersCell.swift in Sources */,
+				1F1DD6AC24F4D496003C4A9F /* ChangeCityViewController.swift in Sources */,
+				1FA3C41C24EB2AA200295FFA /* Country.swift in Sources */,
+				1F4C2BE324EDABD900C39967 /* ImageCell.swift in Sources */,
+				1FF6847924F0761B0068A69A /* PlaceDetailsViewController.swift in Sources */,
+				1FA3C40924EB17EB00295FFA /* MainCoordinator.swift in Sources */,
+				1F4C2BEE24EDB3A500C39967 /* BannersRepository.swift in Sources */,
+				1FA3C42F24EBD8E900295FFA /* AppContext.swift in Sources */,
+				1FA3C40624EB14A700295FFA /* DependenciesSpecs.swift in Sources */,
+				1FF6843B24F051780068A69A /* MainMenuType.swift in Sources */,
+				1FF6843724F04E8B0068A69A /* MainMenuCell.swift in Sources */,
+				1FF6843424F04CC20068A69A /* MainMenuItem.swift in Sources */,
+				1FA3C42024EB2B2F00295FFA /* PlacesServiceRemote.swift in Sources */,
+				1F4C2BD924EDA08B00C39967 /* Storyboard.swift in Sources */,
+				1FA3C41124EB1FFE00295FFA /* MenuCoordinator.swift in Sources */,
+				1FF6847324F06B070068A69A /* PlacesViewController.swift in Sources */,
+				1FA3C43F24EBEBAA00295FFA /* MetroStationsResponse.swift in Sources */,
+				1FF6847724F075FF0068A69A /* MetroListViewController.swift in Sources */,
+				1FA3C41A24EB2A9800295FFA /* City.swift in Sources */,
+				1F4C2BF224EDBDBA00C39967 /* HomeMenuType.swift in Sources */,
+				1FA3C41524EB290F00295FFA /* PlacesRepository.swift in Sources */,
+				1FA3C40E24EB184100295FFA /* HomeCoordinator.swift in Sources */,
+				1FF6843224F04C5C0068A69A /* MenuViewController.swift in Sources */,
+				1F4C2BE824EDAF3300C39967 /* BannersServiceRemote.swift in Sources */,
+				1FA3C42824EB349100295FFA /* UserStorageService.swift in Sources */,
+				1FF6844124F054DC0068A69A /* UIBundle+Current.swift in Sources */,
+				1F4C2BCF24ED9A3700C39967 /* Appearance.swift in Sources */,
+				1FA3C41824EB2A9000295FFA /* Place.swift in Sources */,
+				1F4C2BF024EDBD4200C39967 /* String+Localized.swift in Sources */,
+				1FA3C41E24EB2AAD00295FFA /* MetroStation.swift in Sources */,
+				1FF6847524F075F00068A69A /* AllPlacesListViewController.swift in Sources */,
+				1FA3C42624EB2D8A00295FFA /* CountriesServiceLocal.swift in Sources */,
+				1F1DD6A024F3D4AF003C4A9F /* LocateMetroViewController.swift in Sources */,
+				1FF6848024F076720068A69A /* MetroListCell.swift in Sources */,
+				1F4C2BE124EDAAAD00C39967 /* Banner.swift in Sources */,
+				1F4C2BDF24EDA8EF00C39967 /* MenuCell.swift in Sources */,
+				1FF6848224F3CA860068A69A /* PlacesCoordinator.swift in Sources */,
+				1FA3C43924EBDE6A00295FFA /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1FA3C3F224EB11B700295FFA /* Main.storyboard */ = {
+		1F4C2BD224ED9CD000C39967 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1FA3C3F324EB11B700295FFA /* Base */,
+				1F4C2BD324ED9CD000C39967 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -219,6 +920,28 @@
 				1FA3C3F824EB11BD00295FFA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1FF6846224F0648B0068A69A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FF6846324F0648B0068A69A /* en */,
+				1FF6846824F064930068A69A /* zh-Hant */,
+				1FF6846924F064950068A69A /* fr */,
+				1FF6846A24F064970068A69A /* es */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1FF6846424F0648B0068A69A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FF6846524F0648B0068A69A /* en */,
+				1FF6846B24F0649A0068A69A /* es */,
+				1FF6846C24F0649C0068A69A /* fr */,
+				1FF6846D24F0649E0068A69A /* zh-Hant */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -344,12 +1067,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
 				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AugmentedDiscovery.AroundTheMetro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -363,12 +1088,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
 				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AugmentedDiscovery.AroundTheMetro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

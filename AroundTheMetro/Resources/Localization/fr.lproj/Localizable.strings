@@ -1,0 +1,109 @@
+/* 
+  Localizable.strings
+  AroundTheMetro
+
+  Created by gaurav vashisht on 19/02/19.
+  Copyright © 2019 AugmentedDiscovery. All rights reserved.
+*/
+//MARK: - Login VC
+"LOG IN WITH GOOGLE" = "CONNEXION AVEC GOOGLE";
+"LOG IN WITH FACEBOOK" = "SE CONNECTER AVEC FACEBOOK";
+"Error" = "Erreur";
+"There is a problem in login!" = "Il y a un problème de connexion!";
+
+//MARK: - Dashboard VC
+"Metro Plan" = "Plan de métro";
+"AR View" = "AR Voir";
+"Restaurants" = "Restaurants";
+"Boutiques" = "Des boutiques";
+"Beauty & Health" = "Beauté et santé";
+"Attractions" = "Attractions";
+"Type : Restaurant" = "Type : Restaurant";
+
+"Type : Boutique" = "Type : Boutique";
+
+"Type : Beauty & Health" = "Type: Beauté & Santé";
+"Type : Attraction" = "Type : Attraction";
+
+
+//MARK: - MyProfile
+"Home" = "Accueil";
+"My Profile" = "Mon profil";
+"Change City" = "Changer de ville";
+"Contact us" = "Contactez nous";
+"Change Language" = "Changer de langue";
+"English" = "Anglais";
+"French" = "français";
+"Spanish" = "Espanol";
+"Chinese" = "chinois";
+
+
+
+//MARK:- Arview
+"All" = "Tout";
+"Restaurant" = "Restaurant";
+"Beauty & Health" = "Beauté et santé";
+"Attraction" = "Attraction";
+"Boutique" = "Boutique";
+
+
+
+//MARK:- ContactUS
+"Description" = "Un monde à découvrir autour du métro. \n Trouvez tout ce dont vous avez besoin à quelques minutes de marche de tous les métros du monde sur notre plate-forme hyperlocale et mondiale.";
+"no_mail" = "Unable to send message. Ensure you have at least one account setup in Mail.app";
+
+
+
+
+//MARK:- Profiel
+"Profile" = "Profil";
+"Log out" = "Connectez - Out";
+"Done" = "Terminé";
+
+
+//MARK:- Contact
+"Contact" = "Contact";
+"Around" = "Autour";
+"The Metro" = "Le métro";
+
+//MARK:- City
+"City" = "Ville";
+"Select Country And City" = "Sélectionnez un pays et une ville";
+"Confirm" = "Confirmer";
+"Please select country and city" = "Veuillez sélectionner un pays et une ville";
+"OK" = "D'accord";
+"Alert" = "Alerte";
+
+
+
+//MARK: - PlacesViewController
+"Attractions" = "Attractions";
+"Beauty & Health" = "Beauté et santé";
+"Boutiques" = "Des boutiques";
+"Restaurants" = "Restaurants";
+
+"ALL" = "TOUT";
+"BY METRO" = "PAR METRO";
+"SIGNING IN GOOGLE" = "SIGNING IN GOOGLE";
+"SIGNING IN FACEBOOK" = "SIGNING FACEBOOK";
+
+
+//MARK: - Places Detail VC
+"Call Us" = "Appelez nous";
+"Website" = "Site Internet";
+"Metro" = "Métro";
+"Mall" = "Centre commercial";
+
+
+
+//MARK: - Home Extension
+"Cannot open the website" = "Impossible d'ouvrir le site";
+"URL not specified" = "URL non spécifiée";
+
+
+//ShareExtension
+"Facebook Post failed" = "Facebook Post a échoué";
+"You do have to Sign in Facebook to post." = "Vous devez vous connecter à Facebook pour poster.";
+"Cancel" = "Annuler";
+"Setting" = "Réglage";
+"ATM" = "AU M";

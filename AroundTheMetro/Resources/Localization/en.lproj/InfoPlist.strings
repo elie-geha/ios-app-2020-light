@@ -1,0 +1,19 @@
+/* 
+  InfoPlist.strings
+  AroundTheMetro
+
+  Created by gaurav vashisht on 19/02/19.
+  Copyright © 2019 AugmentedDiscovery. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "AroundTheMetro";
+"CFBundleName" = "AroundTheMetro";
+
+"NSBluetoothPeripheralUsageDescription" = "Around the metro needs your location for most features";
+"NSCameraUsageDescription" = "Needed for the augmented reality feature";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Around the metro needs your location for most features";
+"NSLocationAlwaysUsageDescription" = "Allow the usage of your position for this app to work!";
+"NSLocationWhenInUseUsageDescription" = "Your current location will be used to find and display stores around you in the augmented reality.";
+
+
+

@@ -6,32 +6,38 @@
 //  Copyright © 2020 AugmentedDiscovery. All rights reserved.
 //
 
+import FacebookCore
+import FBSDKCoreKit
+import Firebase
+import GoogleMobileAds
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        setupIntegrations(application: application, launchOptions: launchOptions)
         return true
+    }
+
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        AppEvents.activateApp()
     }
 
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    private func setupIntegrations(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        // MARK: - Admob banner
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+
+        //MARK: - Firebase config
+        FirebaseApp.configure()
+
+        //MARK: - FACEBOOK SDK CONFIGURATION
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
-
-
 }
 

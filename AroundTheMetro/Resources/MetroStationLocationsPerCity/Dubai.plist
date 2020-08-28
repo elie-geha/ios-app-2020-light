@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>stations</key>
+	<array>
+		<dict>
+			<key>latitude</key>
+			<real>25.230181999999999</real>
+			<key>longitude</key>
+			<real>55.391365800000003</real>
+			<key>name</key>
+			<string>"Rashidiya"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.258589600000001</real>
+			<key>longitude</key>
+			<real>55.297452200000002</real>
+			<key>name</key>
+			<string>"Emirates"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.245025900000002</real>
+			<key>longitude</key>
+			<real>55.359603200000002</real>
+			<key>name</key>
+			<string>"Airport Terminal 3"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.248564699999999</real>
+			<key>longitude</key>
+			<real>55.352286999999997</real>
+			<key>name</key>
+			<string>"Airport Terminal 1"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.249245200000001</real>
+			<key>longitude</key>
+			<real>55.340237600000002</real>
+			<key>name</key>
+			<string>"GGICO formerly Al Garhoud"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.253595000000001</real>
+			<key>longitude</key>
+			<real>55.332931000000002</real>
+			<key>name</key>
+			<string>"Deira City Centre"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.263324099999998</real>
+			<key>longitude</key>
+			<real>55.323996800000003</real>
+			<key>name</key>
+			<string>"Al Rigga"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.266158999999998</real>
+			<key>longitude</key>
+			<real>55.313775999999997</real>
+			<key>name</key>
+			<string>"Union"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.254800599999999</real>
+			<key>longitude</key>
+			<real>55.304276299999998</real>
+			<key>name</key>
+			<string>"BurJuman formerly Khalid Bin Al Waleed"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.243615699999999</real>
+			<key>longitude</key>
+			<real>55.298644299999999</real>
+			<key>name</key>
+			<string>"ADCB formerly Al Karama"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.2336621</real>
+			<key>longitude</key>
+			<real>55.292229200000001</real>
+			<key>name</key>
+			<string>"Al Jaffliya"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.224881700000001</real>
+			<key>longitude</key>
+			<real>55.285066499999999</real>
+			<key>name</key>
+			<string>"World Trade Centre"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.2172269</real>
+			<key>longitude</key>
+			<real>55.279839099999997</real>
+			<key>name</key>
+			<string>"Emirates Towers"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.210920000000002</real>
+			<key>longitude</key>
+			<real>55.275463000000002</real>
+			<key>name</key>
+			<string>"Financial Centre"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.201368800000001</real>
+			<key>longitude</key>
+			<real>55.2695425</real>
+			<key>name</key>
+			<string>"Burj Khalifa/Dubai Mall"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.191260400000001</real>
+			<key>longitude</key>
+			<real>55.260428599999997</real>
+			<key>name</key>
+			<string>"Business Bay"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.155730200000001</real>
+			<key>longitude</key>
+			<real>55.228471999999996</real>
+			<key>name</key>
+			<string>"Noor Bank formerly Noor Islamic Back / Al Quo"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.126781099999999</real>
+			<key>longitude</key>
+			<real>55.207883500000001</real>
+			<key>name</key>
+			<string>"First Gulf Bank"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.116333399999998</real>
+			<key>longitude</key>
+			<real>55.195642399999997</real>
+			<key>name</key>
+			<string>"Mall of the Emirates"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.114863</real>
+			<key>longitude</key>
+			<real>55.190944899999998</real>
+			<key>name</key>
+			<string>"Sharaf DG"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.102143699999999</real>
+			<key>longitude</key>
+			<real>55.173718200000003</real>
+			<key>name</key>
+			<string>"Dubai Internet City"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.0888615</real>
+			<key>longitude</key>
+			<real>55.158039299999999</real>
+			<key>name</key>
+			<string>"Nakheel"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.0799527</real>
+			<key>longitude</key>
+			<real>55.147499500000002</real>
+			<key>name</key>
+			<string>"DAMAC Properties formerly Dubai Marina"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.070872999999999</real>
+			<key>longitude</key>
+			<real>55.138704300000001</real>
+			<key>name</key>
+			<string>"Jumeirah Lakes Towers"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.057936900000001</real>
+			<key>longitude</key>
+			<real>55.127242299999999</real>
+			<key>name</key>
+			<string>"Nakheel Harbour &amp; Tower"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.046184799999999</real>
+			<key>longitude</key>
+			<real>55.117840800000003</real>
+			<key>name</key>
+			<string>"Ibn Battuta"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.026350399999998</real>
+			<key>longitude</key>
+			<real>55.101260000000003</real>
+			<key>name</key>
+			<string>"Energy"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>24.996549999999999</real>
+			<key>longitude</key>
+			<real>55.092990999999998</real>
+			<key>name</key>
+			<string>"Danube formerly Jebel Ali Industrial"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>24.9775122</real>
+			<key>longitude</key>
+			<real>55.090969399999999</real>
+			<key>name</key>
+			<string>"UAE Exchange formerly Jebel Ali"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.2547794</real>
+			<key>longitude</key>
+			<real>55.401043100000003</real>
+			<key>name</key>
+			<string>"Etisalat"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.277825199999999</real>
+			<key>longitude</key>
+			<real>55.361493199999998</real>
+			<key>name</key>
+			<string>"Al Qusais"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.2698657</real>
+			<key>longitude</key>
+			<real>55.375049799999999</real>
+			<key>name</key>
+			<string>"Dubai Airport Free Zone"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.273503699999999</real>
+			<key>longitude</key>
+			<real>55.369193199999998</real>
+			<key>name</key>
+			<string>"Al Nahda"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.277825199999999</real>
+			<key>longitude</key>
+			<real>55.361493199999998</real>
+			<key>name</key>
+			<string>"Stadium (Dubai)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.277693800000002</real>
+			<key>longitude</key>
+			<real>55.352748200000001</real>
+			<key>name</key>
+			<string>"Al Qiyadah"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.275172699999999</real>
+			<key>longitude</key>
+			<real>55.346276899999999</real>
+			<key>name</key>
+			<string>"Abu Hail"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.2711802</real>
+			<key>longitude</key>
+			<real>55.332748600000002</real>
+			<key>name</key>
+			<string>"Abu Bakr Seddiq"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.269602200000001</real>
+			<key>longitude</key>
+			<real>55.329539199999999</real>
+			<key>name</key>
+			<string>"Salahuddin"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.2758061</real>
+			<key>longitude</key>
+			<real>55.301246399999997</real>
+			<key>name</key>
+			<string>"Palm Deira"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.268595000000001</real>
+			<key>longitude</key>
+			<real>55.293516199999999</real>
+			<key>name</key>
+			<string>"Al Ras"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.262443399999999</real>
+			<key>longitude</key>
+			<real>55.288305299999998</real>
+			<key>name</key>
+			<string>"Al Ghubaiba"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.258589600000001</real>
+			<key>longitude</key>
+			<real>55.297452200000002</real>
+			<key>name</key>
+			<string>"Al Fahidi"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.254800599999999</real>
+			<key>longitude</key>
+			<real>55.304276299999998</real>
+			<key>name</key>
+			<string>"BurJuman– transfer to Red Line"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.243675</real>
+			<key>longitude</key>
+			<real>55.315881400000002</real>
+			<key>name</key>
+			<string>"Oud Metha"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.230899000000001</real>
+			<key>longitude</key>
+			<real>55.322733999999997</real>
+			<key>name</key>
+			<string>"Healthcare City"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.224887299999999</real>
+			<key>longitude</key>
+			<real>55.3336598</real>
+			<key>name</key>
+			<string>"Al Jadaf"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>25.218922200000002</real>
+			<key>longitude</key>
+			<real>55.338885699999999</real>
+			<key>name</key>
+			<string>"Creek"</string>
+		</dict>
+	</array>
+</dict>
+</plist>

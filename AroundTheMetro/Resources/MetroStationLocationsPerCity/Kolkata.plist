@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>stations</key>
+	<array>
+		<dict>
+			<key>latitude</key>
+			<real>22.4719883</real>
+			<key>longitude</key>
+			<real>88.397890500000003</real>
+			<key>name</key>
+			<string>"Kavi Subhash"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.465969699999999</real>
+			<key>longitude</key>
+			<real>88.391826800000004</real>
+			<key>name</key>
+			<string>"Shahid Khudiram"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.464182300000001</real>
+			<key>longitude</key>
+			<real>88.380606700000001</real>
+			<key>name</key>
+			<string>"Kavi Nazrul"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.469474300000002</real>
+			<key>longitude</key>
+			<real>88.369838700000003</real>
+			<key>name</key>
+			<string>"Gitanjali"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.4735038</real>
+			<key>longitude</key>
+			<real>88.360873699999999</real>
+			<key>name</key>
+			<string>"Masterda Surya Sen"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.4809637</real>
+			<key>longitude</key>
+			<real>88.346018200000003</real>
+			<key>name</key>
+			<string>"Netaji"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.494639200000002</real>
+			<key>longitude</key>
+			<real>88.345031800000001</real>
+			<key>name</key>
+			<string>"Mahanayak Uttam Kumar"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.507992699999999</real>
+			<key>longitude</key>
+			<real>88.345642999999995</real>
+			<key>name</key>
+			<string>"Rabindra Sarobar"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.516880700000002</real>
+			<key>longitude</key>
+			<real>88.346262600000003</real>
+			<key>name</key>
+			<string>"Kalighat"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.524262</real>
+			<key>longitude</key>
+			<real>88.346489000000005</real>
+			<key>name</key>
+			<string>"Jatin Das Park"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.532976999999999</real>
+			<key>longitude</key>
+			<real>88.345712399999996</real>
+			<key>name</key>
+			<string>"Netaji Bhavan"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.5412216</real>
+			<key>longitude</key>
+			<real>88.347272599999997</real>
+			<key>name</key>
+			<string>"Rabindra Sadan"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.541780299999999</real>
+			<key>longitude</key>
+			<real>88.346683999999996</real>
+			<key>name</key>
+			<string>"Maidan"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.5546905</real>
+			<key>longitude</key>
+			<real>88.350268799999995</real>
+			<key>name</key>
+			<string>"Park Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.508738999999998</real>
+			<key>longitude</key>
+			<real>88.336729599999998</real>
+			<key>name</key>
+			<string>"Esplanade"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.566795500000001</real>
+			<key>longitude</key>
+			<real>88.354137499999993</real>
+			<key>name</key>
+			<string>"Chandni Chowk"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.572469900000002</real>
+			<key>longitude</key>
+			<real>88.358788500000003</real>
+			<key>name</key>
+			<string>"Central"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.580858299999999</real>
+			<key>longitude</key>
+			<real>88.361401000000001</real>
+			<key>name</key>
+			<string>"Mahatma Gandhi Road"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.587142700000001</real>
+			<key>longitude</key>
+			<real>88.363082800000001</real>
+			<key>name</key>
+			<string>"Girish Park"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.596029099999999</real>
+			<key>longitude</key>
+			<real>88.365284799999998</real>
+			<key>name</key>
+			<string>"Shobhabazar Sutanuti"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.6006027</real>
+			<key>longitude</key>
+			<real>88.370292800000001</real>
+			<key>name</key>
+			<string>"Shyambazar"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.6058132</real>
+			<key>longitude</key>
+			<real>88.386099700000003</real>
+			<key>name</key>
+			<string>"Belgachhia"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.621130900000001</real>
+			<key>longitude</key>
+			<real>88.393105800000001</real>
+			<key>name</key>
+			<string>"Dum Dum"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>22.639849999999999</real>
+			<key>longitude</key>
+			<real>88.394093999999996</real>
+			<key>name</key>
+			<string>"Noapara"</string>
+		</dict>
+	</array>
+</dict>
+</plist>

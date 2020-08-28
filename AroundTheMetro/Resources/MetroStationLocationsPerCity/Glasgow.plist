@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>stations</key>
+	<array>
+		<dict>
+			<key>latitude</key>
+			<real>55.874316100000001</real>
+			<key>longitude</key>
+			<real>-4.2797261000000004</real>
+			<key>name</key>
+			<string>"Kelvinbridge"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>55.875236899999997</real>
+			<key>longitude</key>
+			<real>-4.2934216999999997</real>
+			<key>name</key>
+			<string>"Hillhead"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>55.871215499999998</real>
+			<key>longitude</key>
+			<real>-4.2691980000000003</real>
+			<key>name</key>
+			<string>"St George's Cross"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>55.871049200000002</real>
+			<key>longitude</key>
+			<real>-4.2998497000000002</real>
+			<key>name</key>
+			<string>"Kelvinhall"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>55.868977000000001</real>
+			<key>longitude</key>
+			<real>-4.259747</real>
+			<key>name</key>
+			<string>"Cowcaddens"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>55.8698768</real>
+			<key>longitude</key>
+			<real>-4.3088357999999998</real>
+			<key>name</key>
+			<string>"Partick National Rail"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>55.859111800000001</real>
+			<key>longitude</key>
+			<real>-4.2581087999999996</real>
+			<key>name</key>
+			<string>"Glasgow Queen Street National Rail"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>55.8698768</real>
+			<key>longitude</key>
+			<real>-4.3088357999999998</real>
+			<key>name</key>
+			<string>"Merkland Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>55.862390300000001</real>
+			<key>longitude</key>
+			<real>-4.2533833000000003</real>
+			<key>name</key>
+			<string>"Buchanan Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>55.859111800000001</real>
+			<key>longitude</key>
+			<real>-4.2581087999999996</real>
+			<key>name</key>
+			<string>"Glasgow Central National Rail"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>55.857417300000002</real>
+			<key>longitude</key>
+			<real>-4.2550777999999996</real>
+			<key>name</key>
+			<string>"St Enoch"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>55.862259999999999</real>
+			<key>longitude</key>
+			<real>-4.3105900000000004</real>
+			<key>name</key>
+			<string>"Govan"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>55.857707300000001</real>
+			<key>longitude</key>
+			<real>-4.2566990999999996</real>
+			<key>name</key>
+			<string>"Bridge Street Parking"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>55.849530000000001</real>
+			<key>longitude</key>
+			<real>-4.2659200000000004</real>
+			<key>name</key>
+			<string>"West Street"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>55.849994700000003</real>
+			<key>longitude</key>
+			<real>-4.2753454</real>
+			<key>name</key>
+			<string>"Shields Road Parking"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>55.859111800000001</real>
+			<key>longitude</key>
+			<real>-4.2581087999999996</real>
+			<key>name</key>
+			<string>"Ibrox"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>55.850364499999998</real>
+			<key>longitude</key>
+			<real>-4.2878464999999997</real>
+			<key>name</key>
+			<string>"Kinning Park"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>55.8518142</real>
+			<key>longitude</key>
+			<real>-4.2929734000000002</real>
+			<key>name</key>
+			<string>"Cessnock"</string>
+		</dict>
+	</array>
+</dict>
+</plist>

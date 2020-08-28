@@ -1,3 +1,156 @@
-PODFILE CHECKSUM: 16053beee6922eab20a642bb6873f5388a8a3178
+PODS:
+  - AKSideMenu (1.4.5)
+  - Alamofire (5.2.2)
+  - FacebookCore (0.9.0):
+    - FBSDKCoreKit (~> 5.0)
+  - FBSDKCoreKit (5.15.1):
+    - FBSDKCoreKit/Basics (= 5.15.1)
+    - FBSDKCoreKit/Core (= 5.15.1)
+  - FBSDKCoreKit/Basics (5.15.1)
+  - FBSDKCoreKit/Core (5.15.1):
+    - FBSDKCoreKit/Basics
+  - Firebase/Core (6.30.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 6.7.2)
+  - Firebase/CoreOnly (6.30.0):
+    - FirebaseCore (= 6.10.0)
+  - FirebaseAnalytics (6.7.2):
+    - FirebaseCore (~> 6.8)
+    - FirebaseInstallations (~> 1.4)
+    - GoogleAppMeasurement (= 6.7.2)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
+    - GoogleUtilities/MethodSwizzler (~> 6.7)
+    - GoogleUtilities/Network (~> 6.7)
+    - "GoogleUtilities/NSData+zlib (~> 6.7)"
+    - nanopb (~> 1.30905.0)
+  - FirebaseCore (6.10.0):
+    - FirebaseCoreDiagnostics (~> 1.3)
+    - GoogleUtilities/Environment (~> 6.7)
+    - GoogleUtilities/Logger (~> 6.7)
+  - FirebaseCoreDiagnostics (1.5.0):
+    - GoogleDataTransport (~> 7.0)
+    - GoogleUtilities/Environment (~> 6.7)
+    - GoogleUtilities/Logger (~> 6.7)
+    - nanopb (~> 1.30905.0)
+  - FirebaseInstallations (1.6.0):
+    - FirebaseCore (~> 6.10)
+    - GoogleUtilities/Environment (~> 6.7)
+    - GoogleUtilities/UserDefaults (~> 6.7)
+    - PromisesObjC (~> 1.2)
+  - Google-Mobile-Ads-SDK (7.64.0):
+    - GoogleAppMeasurement (~> 6.0)
+    - GoogleUserMessagingPlatform (~> 1.1)
+  - GoogleAppMeasurement (6.7.2):
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
+    - GoogleUtilities/MethodSwizzler (~> 6.7)
+    - GoogleUtilities/Network (~> 6.7)
+    - "GoogleUtilities/NSData+zlib (~> 6.7)"
+    - nanopb (~> 1.30905.0)
+  - GoogleDataTransport (7.2.0):
+    - nanopb (~> 1.30905.0)
+  - GoogleUserMessagingPlatform (1.1.0)
+  - GoogleUtilities/AppDelegateSwizzler (6.7.2):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (6.7.2):
+    - PromisesObjC (~> 1.2)
+  - GoogleUtilities/Logger (6.7.2):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (6.7.2):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (6.7.2):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (6.7.2)"
+  - GoogleUtilities/Reachability (6.7.2):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (6.7.2):
+    - GoogleUtilities/Logger
+  - Kingfisher (5.14.1):
+    - Kingfisher/Core (= 5.14.1)
+  - Kingfisher/Core (5.14.1)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - nanopb (1.30905.0):
+    - nanopb/decode (= 1.30905.0)
+    - nanopb/encode (= 1.30905.0)
+  - nanopb/decode (1.30905.0)
+  - nanopb/encode (1.30905.0)
+  - Pageboy (3.6.1)
+  - PromisesObjC (1.2.10)
+  - SVProgressHUD (2.2.6)
+  - Tabman (2.9.1):
+    - Pageboy (~> 3.6.0)
+
+DEPENDENCIES:
+  - AKSideMenu
+  - FacebookCore
+  - Firebase/Core
+  - Google-Mobile-Ads-SDK
+  - Kingfisher
+  - Moya
+  - SVProgressHUD (from `https://github.com/slizeray/SVProgressHUD.git`)
+  - Tabman (~> 2.9)
+
+SPEC REPOS:
+  trunk:
+    - AKSideMenu
+    - Alamofire
+    - FacebookCore
+    - FBSDKCoreKit
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseCoreDiagnostics
+    - FirebaseInstallations
+    - Google-Mobile-Ads-SDK
+    - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleUserMessagingPlatform
+    - GoogleUtilities
+    - Kingfisher
+    - Moya
+    - nanopb
+    - Pageboy
+    - PromisesObjC
+    - Tabman
+
+EXTERNAL SOURCES:
+  SVProgressHUD:
+    :git: https://github.com/slizeray/SVProgressHUD.git
+
+CHECKOUT OPTIONS:
+  SVProgressHUD:
+    :commit: aabac68e1b18d489e92ca52ec708334f248edad2
+    :git: https://github.com/slizeray/SVProgressHUD.git
+
+SPEC CHECKSUMS:
+  AKSideMenu: 2880c44ee04a68f40be783c5cb997b2e0ee22401
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  FacebookCore: ba86524b66cfa86d0f8e65d08faa8504a9f732dd
+  FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
+  Firebase: 210f41ca352067d83b1ba4fd2e7fb49a0c017397
+  FirebaseAnalytics: a299a86ef70fcc6aa011418bc65a7e101fb9636c
+  FirebaseCore: 9a41e2de78fef10f63cee30ab10e2945266bc1fc
+  FirebaseCoreDiagnostics: 7535fe695737f8c5b350584292a70b7f8ff0357b
+  FirebaseInstallations: 45f9d44d3a8d6f780fa337ee8987dad87210fcbc
+  Google-Mobile-Ads-SDK: aec52559ce73ddf1e6478d1904dd71a741f1bc61
+  GoogleAppMeasurement: 3def7652b1f5b5a576178dc332e2a36a260fbef6
+  GoogleDataTransport: 672fb0ce96fe7f7f31d43672fca62ad2c9c86f7b
+  GoogleUserMessagingPlatform: 9dc714d2e1f0aa727b9cc52d266dc1b155f4c3f2
+  GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
+  Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
+  Pageboy: 29a2d474ad99404b4d77f325e0ab6d705930a4fb
+  PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
+  SVProgressHUD: 6ed134667e9ebb2f33679e8273cd48fd3fa349e5
+  Tabman: 085d89c65be9e883629bdaf5b1453a6397e57846
+
+PODFILE CHECKSUM: 9b0f52ef4a52cdb37da11769d8052c4ff1e8b46e
 
 COCOAPODS: 1.9.3
