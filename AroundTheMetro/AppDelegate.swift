@@ -13,9 +13,21 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    private var appCoordinator: AppCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupIntegrations(application: application, launchOptions: launchOptions)
+
+        if #available(iOS 13, *) {
+            // do nothing, scenes available, SceneDelegate will start the app
+        } else {
+            let window = UIWindow(frame: UIScreen.main.bounds)
+            window.makeKeyAndVisible()
+            self.window = window
+
+            appCoordinator = AppCoordinator(with: window, context: AppContext())
+            appCoordinator?.start()
+        }
         return true
     }
 

@@ -9,8 +9,12 @@
 //MARK: - Login VC
 "LOG IN WITH GOOGLE" = "用GOOGLE登錄";
 "LOG IN WITH FACEBOOK" = "使用FACEBOOK登錄";
+"SIGNING IN GOOGLE" = "在GOOGLE註冊";
+"SIGNING IN FACEBOOK" = "登錄FACEBOOK";
+
 "Error" = "錯誤";
 "There is a problem in login!" = "登錄時出現問題！";
+
 
 //MARK: - Dashboard VC
 "Metro Plan" = "地鐵計劃";
@@ -25,17 +29,11 @@
 "Type : Attraction" = "类型：吸引力";
 
 
-
 //MARK:-MyProfile
 "Home" = "家";
 "My Profile" = "我的簡歷";
 "Change City" = "改變城市";
 "Contact us" = "聯繫我們";
-"English" = "英語";
-"French" = "法國";
-"Spanish" = "西班牙語";
-"Chinese" = "中文";
-
 
 
 //MARK:-Arview
@@ -51,11 +49,9 @@
 "no_mail" = "Unable to send message. Ensure you have at least one account setup in Mail.app";
 
 
-
 //MARK:-Profiel
 "Profile" = "輪廓";
 "Log out" = "登出";
-"Change Language" = "改變語言";
 "Done" = "完成";
 
 
@@ -63,6 +59,7 @@
 "Contact" = "接觸";
 "Around" = "周圍";
 "The Metro" = "地鐵";
+
 
 //MARK:-City
 "City" = "市";
@@ -73,17 +70,9 @@
 "Alert" = "警報";
 
 
-
 //MARK: - PlacesViewController
-"Attractions" = "景點";
-"Beauty & Health" = "美容與健康";
-"Boutiques" = "精品店";
-"Restaurants" = "餐館";
 "ALL" = "所有";
 "BY METRO" = "按地鐵計算";
-
-"SIGNING IN GOOGLE" = "在GOOGLE註冊";
-"SIGNING IN FACEBOOK" = "登錄FACEBOOK";
 
 
 //MARK: - Places Detail VC
@@ -93,13 +82,9 @@
 "Mall" = "购物中心";
 
 
-
-
 //MARK: - Home Extension
 "Cannot open the website" = "無法打開網站";
 "URL not specified" = "未指定URL";
-
-
 
 
 //ShareExtension
@@ -108,3 +93,17 @@
 "Cancel" = "取消";
 "Setting" = "設置";
 "ATM" = "自動取款機";
+
+
+// OnBoarding
+"onboarding.next" = "继续";
+"onboarding.skip" = "启动应用";
+"onboarding.go" = "走";
+"onboarding.discover.title" = "发现";
+"onboarding.discover.description" = "发现有趣的地方地铁站周围";
+"onboarding.locate.title" = "定位";
+"onboarding.locate.description" = "轻松找到最近的地铁站";
+"onboarding.offlineMap.title" = "离线地图";
+"onboarding.offlineMap.description" = "即使手机离线也可以访问都会区地图";
+"onboarding.stayTuned.title" = "很快";
+"onboarding.stayTuned.description" = "即将推出更多精彩功能...敬请期待！";

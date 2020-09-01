@@ -9,6 +9,8 @@
 //MARK: - Login VC
 "LOG IN WITH GOOGLE" = "LOG IN WITH GOOGLE";
 "LOG IN WITH FACEBOOK" = "LOG IN WITH FACEBOOK";
+"SIGNING IN GOOGLE" = "SIGNING IN GOOGLE";
+"SIGNING IN FACEBOOK" = "SIGNING IN FACEBOOK";
 
 "Error" = "Error";
 "There is a problem in login!" = "There is a problem in login!";
@@ -33,11 +35,7 @@
 "My Profile" = "My Profile";
 "Change City" = "Change City";
 "Contact us" = "Contact us";
-"Change Language" = "Change Language";
-"English" = "English";
-"French" = "French";
-"Spanish" = "Spanish";
-"Chinese" = "Chinese";
+
 
 //MARK:-ArView
 "All" = "All";
@@ -63,6 +61,7 @@
 "Around" = "Around";
 "The Metro" = "The Metro";
 
+
 //MARK:-City
 "City" = "City";
 "Select Country And City" = "Select Country And City";
@@ -72,16 +71,9 @@
 "Alert" = "Alert";
 
 
-
 //MARK: - PlacesViewController
-"Attractions" = "Attractions";
-"Beauty & Health" = "Beauty & Health";
-"Boutiques" = "Boutiques";
-"Restaurants" = "Restaurants";
 "ALL" = "ALL";
 "BY METRO" = "BY METRO";
-"SIGNING IN GOOGLE" = "SIGNING IN GOOGLE";
-"SIGNING IN FACEBOOK" = "SIGNING IN FACEBOOK";
 
 
 //MARK: - Places Detail VC
@@ -89,6 +81,7 @@
 "Website" = "Website";
 "Metro" = "Metro";
 "Mall" = "Mall";
+
 
 //MARK: - Home Extension
 "Cannot open the website" = "Cannot open the website";
@@ -102,3 +95,17 @@
 "Setting" = "Setting";
 
 "ATM" = "ATM";
+
+
+// OnBoarding
+"onboarding.next" = "Next";
+"onboarding.skip" = "Skip";
+"onboarding.go" = "Go!";
+"onboarding.discover.title" = "Discover";
+"onboarding.discover.description" = "Discover interesting places around metro stations";
+"onboarding.locate.title" = "Locate";
+"onboarding.locate.description" = "Easily locate the nearest metro station";
+"onboarding.offlineMap.title" = "Offline Map";
+"onboarding.offlineMap.description" = "Access metro map even when your phone is offline";
+"onboarding.stayTuned.title" = "Stay Tuned";
+"onboarding.stayTuned.description" = "More amazing features to come... Stay tuned!";

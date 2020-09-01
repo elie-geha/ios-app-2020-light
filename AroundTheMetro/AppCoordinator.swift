@@ -11,6 +11,7 @@ import UIKit
 class AppCoordinator {
     let window: UIWindow
     private var mainCoordinator: MainCoordinator?
+    private var onBoardingCoordinator: OnBoardingCoordinator?
 
     private var appContext: AppContext
 
@@ -36,5 +37,13 @@ class AppCoordinator {
 
         mainCoordinator = MainCoordinator(with: router, context: appContext)
         mainCoordinator?.start()
+
+        if true {
+            onBoardingCoordinator = OnBoardingCoordinator(with: router, context: appContext)
+            onBoardingCoordinator?.onComplete = {
+
+            }
+            onBoardingCoordinator?.start()
+        }
     }
 }

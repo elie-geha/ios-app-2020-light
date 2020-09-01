@@ -9,8 +9,8 @@
 import AKSideMenu
 import UIKit
 
-class MainCoordinator {
-    // MARK: - Repositories
+class MainCoordinator: CoordinatorType {
+    // MARK: - Context
     private var context: AppContext
 
     // MARK: - Navigation

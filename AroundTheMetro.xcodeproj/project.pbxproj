@@ -65,6 +65,12 @@
 		1F4C2BEE24EDB3A500C39967 /* BannersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BED24EDB3A500C39967 /* BannersRepository.swift */; };
 		1F4C2BF024EDBD4200C39967 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */; };
 		1F4C2BF224EDBDBA00C39967 /* HomeMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */; };
+		1F8E20F224FEBC4A00F28DB2 /* OnBoardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20F124FEBC4A00F28DB2 /* OnBoardingCoordinator.swift */; };
+		1F8E20F524FEBCBA00F28DB2 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20F424FEBCBA00F28DB2 /* CoordinatorType.swift */; };
+		1F8E20F824FEBDBA00F28DB2 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E20F724FEBDBA00F28DB2 /* OnBoarding.storyboard */; };
+		1F8E20FA24FEBF6800F28DB2 /* OnBoardingStepType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20F924FEBF6800F28DB2 /* OnBoardingStepType.swift */; };
+		1F8E20FC24FEC07E00F28DB2 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20FB24FEC07E00F28DB2 /* UIColor+hex.swift */; };
+		1F8E20FE24FEC29B00F28DB2 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20FD24FEC29B00F28DB2 /* OnBoardingViewController.swift */; };
 		1FA3C3ED24EB11B700295FFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C3EC24EB11B700295FFA /* AppDelegate.swift */; };
 		1FA3C3EF24EB11B700295FFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C3EE24EB11B700295FFA /* SceneDelegate.swift */; };
 		1FA3C3F624EB11BD00295FFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3C3F524EB11BD00295FFA /* Assets.xcassets */; };
@@ -176,6 +182,12 @@
 		1F4C2BED24EDB3A500C39967 /* BannersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersRepository.swift; sourceTree = "<group>"; };
 		1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuType.swift; sourceTree = "<group>"; };
+		1F8E20F124FEBC4A00F28DB2 /* OnBoardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCoordinator.swift; sourceTree = "<group>"; };
+		1F8E20F424FEBCBA00F28DB2 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
+		1F8E20F724FEBDBA00F28DB2 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
+		1F8E20F924FEBF6800F28DB2 /* OnBoardingStepType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingStepType.swift; sourceTree = "<group>"; };
+		1F8E20FB24FEC07E00F28DB2 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
+		1F8E20FD24FEC29B00F28DB2 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		1FA3C3E924EB11B700295FFA /* AroundTheMetro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AroundTheMetro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA3C3EC24EB11B700295FFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FA3C3EE24EB11B700295FFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -314,10 +326,8 @@
 		1F1DD6D324F98285003C4A9F /* Types */ = {
 			isa = PBXGroup;
 			children = (
-				1FF6843A24F051780068A69A /* MainMenuType.swift */,
-				1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */,
-				1F1DD6D424F9829E003C4A9F /* AnalyticsEventType.swift */,
-				1F1DD6D824F98434003C4A9F /* AdsEventType.swift */,
+				1F8E20F624FEBD5400F28DB2 /* Enums */,
+				1F8E20F424FEBCBA00F28DB2 /* CoordinatorType.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -417,6 +427,46 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		1F8E20EF24FEBC1E00F28DB2 /* Subflows */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3C40F24EB1FEF00295FFA /* Menu */,
+				1FF6847124F069A60068A69A /* Places */,
+				1FA3C40C24EB183500295FFA /* Home */,
+			);
+			path = Subflows;
+			sourceTree = "<group>";
+		};
+		1F8E20F024FEBC3900F28DB2 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				1F8E20F324FEBC4E00F28DB2 /* View */,
+				1F8E20F124FEBC4A00F28DB2 /* OnBoardingCoordinator.swift */,
+				1F8E20F724FEBDBA00F28DB2 /* OnBoarding.storyboard */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		1F8E20F324FEBC4E00F28DB2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F8E20FD24FEC29B00F28DB2 /* OnBoardingViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F8E20F624FEBD5400F28DB2 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6843A24F051780068A69A /* MainMenuType.swift */,
+				1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */,
+				1F1DD6D424F9829E003C4A9F /* AnalyticsEventType.swift */,
+				1F1DD6D824F98434003C4A9F /* AdsEventType.swift */,
+				1F8E20F924FEBF6800F28DB2 /* OnBoardingStepType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		1FA3C3E024EB11B700295FFA = {
 			isa = PBXGroup;
 			children = (
@@ -472,9 +522,7 @@
 		1FA3C40124EB131500295FFA /* Workflows */ = {
 			isa = PBXGroup;
 			children = (
-				1FA3C40F24EB1FEF00295FFA /* Menu */,
-				1FF6847124F069A60068A69A /* Places */,
-				1FA3C40C24EB183500295FFA /* Home */,
+				1F8E20F024FEBC3900F28DB2 /* OnBoarding */,
 				1FA3C40724EB17D700295FFA /* Main */,
 			);
 			path = Workflows;
@@ -494,6 +542,7 @@
 		1FA3C40724EB17D700295FFA /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				1F8E20EF24FEBC1E00F28DB2 /* Subflows */,
 				1FA3C40824EB17EB00295FFA /* MainCoordinator.swift */,
 			);
 			path = Main;
@@ -562,6 +611,7 @@
 				1FF6843C24F0547F0068A69A /* Collection+Registerable.swift */,
 				1FF6843E24F054AE0068A69A /* UIView+Factory.swift */,
 				1FF6844024F054DC0068A69A /* UIBundle+Current.swift */,
+				1F8E20FB24FEC07E00F28DB2 /* UIColor+hex.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -810,6 +860,7 @@
 				1F4C2BC424ED955200C39967 /* Vienna.plist in Resources */,
 				1F4C2BBE24ED955200C39967 /* Glasgow.plist in Resources */,
 				1F4C2BC624ED955200C39967 /* Dubai.plist in Resources */,
+				1F8E20F824FEBDBA00F28DB2 /* OnBoarding.storyboard in Resources */,
 				1F4C2BC224ED955200C39967 /* Nagoya.plist in Resources */,
 				1F4C2BB924ED955200C39967 /* Atlanta.plist in Resources */,
 				1F4C2BCA24ED955200C39967 /* Bilbao.plist in Resources */,
@@ -885,6 +936,7 @@
 				1FF6843F24F054AE0068A69A /* UIView+Factory.swift in Sources */,
 				1FA3C42B24EB34D600295FFA /* UserDefaultsBacked.swift in Sources */,
 				1F4C2B8A24ED92BB00C39967 /* MetroLocationsRepository.swift in Sources */,
+				1F8E20F224FEBC4A00F28DB2 /* OnBoardingCoordinator.swift in Sources */,
 				1FF6843D24F0547F0068A69A /* Collection+Registerable.swift in Sources */,
 				1FA3C41324EB212700295FFA /* Assets.swift in Sources */,
 				1F1DD6A624F3E9C4003C4A9F /* AdsContainerViewController.swift in Sources */,
@@ -892,7 +944,9 @@
 				1FF6844424F061870068A69A /* ContactUsController.swift in Sources */,
 				1FA3C3EF24EB11B700295FFA /* SceneDelegate.swift in Sources */,
 				1F1DD6DB24F9861B003C4A9F /* AnalyticsIntegration.swift in Sources */,
+				1F8E20F524FEBCBA00F28DB2 /* CoordinatorType.swift in Sources */,
 				1FA3C43524EBDB8A00295FFA /* NetworkAdapter.swift in Sources */,
+				1F8E20FE24FEC29B00F28DB2 /* OnBoardingViewController.swift in Sources */,
 				1F4C2BDD24EDA84000C39967 /* BannersCell.swift in Sources */,
 				1F1DD6AC24F4D496003C4A9F /* ChangeCityViewController.swift in Sources */,
 				1FA3C41C24EB2AA200295FFA /* Country.swift in Sources */,
@@ -915,6 +969,7 @@
 				1F4C2BF224EDBDBA00C39967 /* HomeMenuType.swift in Sources */,
 				1FA3C41524EB290F00295FFA /* PlacesRepository.swift in Sources */,
 				1FA3C40E24EB184100295FFA /* HomeCoordinator.swift in Sources */,
+				1F8E20FC24FEC07E00F28DB2 /* UIColor+hex.swift in Sources */,
 				1FF6843224F04C5C0068A69A /* MenuViewController.swift in Sources */,
 				1F4C2BE824EDAF3300C39967 /* BannersServiceRemote.swift in Sources */,
 				1FA3C42824EB349100295FFA /* UserStorageService.swift in Sources */,
@@ -928,6 +983,7 @@
 				1FA3C42624EB2D8A00295FFA /* CountriesServiceLocal.swift in Sources */,
 				1F1DD6A024F3D4AF003C4A9F /* LocateMetroViewController.swift in Sources */,
 				1FF6848024F076720068A69A /* MetroListCell.swift in Sources */,
+				1F8E20FA24FEBF6800F28DB2 /* OnBoardingStepType.swift in Sources */,
 				1F4C2BE124EDAAAD00C39967 /* Banner.swift in Sources */,
 				1F4C2BDF24EDA8EF00C39967 /* MenuCell.swift in Sources */,
 				1FF6848224F3CA860068A69A /* PlacesCoordinator.swift in Sources */,

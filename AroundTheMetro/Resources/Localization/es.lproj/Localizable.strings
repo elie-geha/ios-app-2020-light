@@ -9,8 +9,12 @@
 //MARK: - login VC
 "LOG IN WITH GOOGLE" = "Inicia sesión con GOOGLE";
 "LOG IN WITH FACEBOOK" = "INICIAR SESIÓN CON FACEBOOK";
+"SIGNING IN GOOGLE" = "FIRMANDO EN GOOGLE";
+"SIGNING IN FACEBOOK" = "FIRMANDO EN FACEBOOK";
+
 "Error" = "Error";
 "There is a problem in login!" = "Hay un problema en el inicio de sesión!";
+
 
 //MARK: - Dashboard VC
 "Metro Plan" = "Plan de metro";
@@ -19,14 +23,11 @@
 "Boutiques" = "Boutiques";
 "Beauty & Health" = "Salud y Belleza";
 "Attractions" = "Atracciones";
+
 "Type : Restaurant" = "Tipo: Restaurante";
-
 "Type : Boutique" = "Tipo: Boutique";
-
 "Type : Beauty & Health" = "Tipo: Belleza y Salud";
 "Type : Attraction" = "Tipo: Atracción";
-
-
 
 
 //MARK: - MyProfile
@@ -34,11 +35,6 @@
 "My Profile" = "Mi perfil";
 "Change City" = "Cambiar ciudad";
 "Contact us" = "Contáctenos";
-"Change Language" = "Cambiar idioma";
-"English" = "Inglés";
-"French" = "francés";
-"Spanish" = "Español";
-"Chinese" = "chino";
 
 
 //MARK: -Arview
@@ -49,11 +45,9 @@
 "Boutique" = "Boutique";
 
 
-
 //MARK: -ContactUS
 "Description" = "Un mundo por descubrir alrededor del metro. \n Encuentre todo lo que necesita a una corta distancia a pie de cualquier sistema de metro del mundo en nuestra plataforma hiperlocal y global.";
 "no_mail" = "Unable to send message. Ensure you have at least one account setup in Mail.app";
-
 
 
 //MARK: -Profiel
@@ -67,7 +61,6 @@
 "The Metro" = "El metro";
 
 
-
 //MARK: -City
 "City" = "Ciudad";
 "Select Country And City" = "Seleccione País Y Ciudad";
@@ -77,17 +70,9 @@
 "Alert" = "Alerta";
 
 
-
-
 //MARK: - PlacesViewController
-"Attractions" = "Atracciones";
-"Beauty & Health" = "Salud y Belleza";
-"Boutiques" = "Boutiques";
-"Restaurants" = "Los restaurantes";
 "ALL" = "TODOS";
 "BY METRO" = "Por metro";
-"SIGNING IN GOOGLE" = "FIRMANDO EN GOOGLE";
-"SIGNING IN FACEBOOK" = "FIRMANDO EN FACEBOOK";
 
 
 //MARK: - Places Detail VC
@@ -102,11 +87,9 @@
 "URL not specified" = "";
 
 
-
 //MARK: - Home Extension
 "Cannot open the website" = "No se puede abrir el sitio web";
 "URL not specified" = "URL no especificada";
-
 
 
 //MARK: - ShareExtension
@@ -115,3 +98,18 @@
 "Cancel" = "Cancelar";
 "Setting" = "Ajuste";
 "ATM" = "Cajero automático";
+
+
+// OnBoarding
+"onboarding.next" = "Próximo";
+"onboarding.skip" = "Lanzar la aplicación";
+"onboarding.go" = "Go!";
+"onboarding.discover.title" = "Descubrir";
+"onboarding.discover.description" = "Descubrir lugares interesantes alrededor de las estaciones de metro";
+"onboarding.locate.title" = "Localice";
+"onboarding.locate.description" = "Localice fácilmente el más cercano estación de metro";
+"onboarding.offlineMap.title" = "Mapa sin conexión";
+"onboarding.offlineMap.description" = "Acceda al mapa del metro incluso cuando su teléfono no esté conectado";
+"onboarding.stayTuned.title" = "Más pronto";
+"onboarding.stayTuned.description" = "Más funciones sorprendentes por venir ... ¡Estén atentos!";
+
