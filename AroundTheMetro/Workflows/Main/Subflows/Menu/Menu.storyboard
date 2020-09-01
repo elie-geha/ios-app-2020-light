@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ewh-UI-bae">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,11 +13,11 @@
             <objects>
                 <viewController id="Ewh-UI-bae" customClass="MenuViewController" customModule="AroundTheMetro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fcy-Zm-5jj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xJA-CS-6ZN">
-                                <rect key="frame" x="0.0" y="198" width="414" height="500"/>
+                                <rect key="frame" x="0.0" y="118" width="414" height="500"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="500" id="5RV-6j-A7e"/>
@@ -48,26 +49,30 @@
             <objects>
                 <viewController storyboardIdentifier="ChangeCityViewController" id="kiC-TO-rHG" customClass="ChangeCityViewController" customModule="AroundTheMetro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZhG-rV-owA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syw-gu-9L6">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Country And City" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXe-dm-bPZ">
-                                        <rect key="frame" x="99.5" y="291" width="215" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cityselect" translatesAutoresizingMaskIntoConstraints="NO" id="Fed-oo-dl6">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                    </imageView>
                                     <pickerView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Amd-g5-hHF">
-                                        <rect key="frame" x="7" y="71" width="400" height="120"/>
+                                        <rect key="frame" x="12" y="30" width="390" height="300"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="Uyp-8w-ELW"/>
+                                            <constraint firstAttribute="height" constant="300" id="Uyp-8w-ELW"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </pickerView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jf2-SG-6aa">
-                                        <rect key="frame" x="157" y="364.5" width="100" height="45"/>
-                                        <color key="backgroundColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                        <rect key="frame" x="157" y="611" width="100" height="45"/>
+                                        <color key="backgroundColor" red="0.30263412000000001" green="0.67376112939999999" blue="0.91378301380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="O7Y-vs-aQI"/>
                                             <constraint firstAttribute="height" constant="45" id="ffG-tL-jbc"/>
@@ -88,13 +93,16 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="lXe-dm-bPZ" firstAttribute="centerX" secondItem="Syw-gu-9L6" secondAttribute="centerX" id="6Ed-Zg-fAZ"/>
-                                    <constraint firstItem="lXe-dm-bPZ" firstAttribute="top" secondItem="Amd-g5-hHF" secondAttribute="bottom" constant="100" id="8vX-JN-OKU"/>
-                                    <constraint firstItem="Jf2-SG-6aa" firstAttribute="top" secondItem="lXe-dm-bPZ" secondAttribute="bottom" constant="50" id="AKI-T6-2AJ"/>
-                                    <constraint firstItem="Amd-g5-hHF" firstAttribute="leading" secondItem="Syw-gu-9L6" secondAttribute="leading" constant="7" id="WWy-8a-nry"/>
-                                    <constraint firstAttribute="trailing" secondItem="Amd-g5-hHF" secondAttribute="trailing" constant="7" id="klP-Yq-zWF"/>
+                                    <constraint firstItem="Fed-oo-dl6" firstAttribute="top" secondItem="Syw-gu-9L6" secondAttribute="top" id="06Y-In-uO6"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jf2-SG-6aa" secondAttribute="bottom" priority="900" constant="80" id="74D-we-dq4"/>
+                                    <constraint firstItem="Fed-oo-dl6" firstAttribute="leading" secondItem="Syw-gu-9L6" secondAttribute="leading" id="F0c-La-k8D"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fed-oo-dl6" secondAttribute="bottom" id="RJh-ls-2IH"/>
+                                    <constraint firstItem="Amd-g5-hHF" firstAttribute="leading" secondItem="Syw-gu-9L6" secondAttribute="leading" constant="12" id="WWy-8a-nry"/>
+                                    <constraint firstAttribute="trailing" secondItem="Amd-g5-hHF" secondAttribute="trailing" constant="12" id="klP-Yq-zWF"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fed-oo-dl6" secondAttribute="trailing" id="q7o-63-cmk"/>
                                     <constraint firstItem="Jf2-SG-6aa" firstAttribute="centerX" secondItem="Syw-gu-9L6" secondAttribute="centerX" id="ruH-Df-ODS"/>
-                                    <constraint firstItem="Amd-g5-hHF" firstAttribute="top" secondItem="Syw-gu-9L6" secondAttribute="top" constant="71" id="tmv-9N-6vt"/>
+                                    <constraint firstItem="Jf2-SG-6aa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Amd-g5-hHF" secondAttribute="bottom" constant="30" id="srE-8c-g0F"/>
+                                    <constraint firstItem="Amd-g5-hHF" firstAttribute="top" secondItem="Syw-gu-9L6" secondAttribute="top" constant="30" id="tmv-9N-6vt"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -110,7 +118,6 @@
                     <toolbarItems/>
                     <connections>
                         <outlet property="btnConfirmOutlet" destination="Jf2-SG-6aa" id="XIj-Eq-exX"/>
-                        <outlet property="cityLabel" destination="lXe-dm-bPZ" id="l5m-do-qKf"/>
                         <outlet property="pickerView" destination="Amd-g5-hHF" id="drw-6f-hQV"/>
                     </connections>
                 </viewController>
@@ -119,4 +126,7 @@
             <point key="canvasLocation" x="1016" y="131"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cityselect" width="320" height="568"/>
+    </resources>
 </document>

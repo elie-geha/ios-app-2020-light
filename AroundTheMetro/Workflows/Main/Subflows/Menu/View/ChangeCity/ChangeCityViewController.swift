@@ -10,9 +10,7 @@ import UIKit
 
 class ChangeCityViewController: UIViewController {
     @IBOutlet weak var btnConfirmOutlet: UIButton!
-
     @IBOutlet weak var pickerView: UIPickerView!
-    @IBOutlet weak var cityLabel: UILabel!
 
     private var countries = [Country]()
     private var selectedCountry: Country?
@@ -31,7 +29,6 @@ class ChangeCityViewController: UIViewController {
 
         setupBackButton()
 
-        title = "City".localized
         btnConfirmOutlet.setTitle("Confirm".localized, for: .normal)
         updateCityLabel()
     }
@@ -101,9 +98,9 @@ class ChangeCityViewController: UIViewController {
 
     private func updateCityLabel() {
         if let city = selectedCity {
-            cityLabel.text = "City".localized + ": \(city.name)"
+            title = "City".localized + ": \(city.name)"
         } else {
-            cityLabel.text = "Select Country And City".localized
+            title = "Select Country And City".localized
         }
     }
 }
