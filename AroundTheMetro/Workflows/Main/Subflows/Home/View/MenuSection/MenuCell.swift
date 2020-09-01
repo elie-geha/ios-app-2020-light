@@ -28,10 +28,13 @@ class MenuCell: UITableViewCell {
         }
     }
 
-    @IBOutlet weak var layout: UICollectionViewFlowLayout!{
-        didSet {
-            layout.itemSize = CGSize(width: (UIScreen.main.bounds.width - 16)/2, height: 140)
-        }
+    @IBOutlet weak var layout: UICollectionViewFlowLayout!
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        layout.itemSize = CGSize(width: (bounds.width - 16)/2, height: 140)
+        collectionView.collectionViewLayout.invalidateLayout()
     }
 }
 

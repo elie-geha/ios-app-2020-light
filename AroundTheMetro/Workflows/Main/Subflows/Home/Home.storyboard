@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RVU-cL-dAE">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,22 +13,22 @@
             <objects>
                 <viewController restorationIdentifier="homeViewController" storyboardIdentifier="homeViewController" id="RVU-cL-dAE" customClass="HomeViewController" customModule="AroundTheMetro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="32U-7F-9mg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QLL-aL-E5p">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BannersCell" rowHeight="184" id="yRr-n3-8nx" customClass="BannersCell" customModule="AroundTheMetro" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="184"/>
+                                        <rect key="frame" x="0.0" y="28" width="1024" height="184"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yRr-n3-8nx" id="x1b-NP-wTt">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="184"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pLj-bP-eS3" customClass="InfiniteCollectionView" customModule="AroundTheMetro" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="184"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="1Ei-Y4-ZkP">
                                                         <size key="itemSize" width="50" height="50"/>
@@ -38,7 +39,7 @@
                                                     <cells/>
                                                 </collectionView>
                                                 <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="10" translatesAutoresizingMaskIntoConstraints="NO" id="uAq-jn-wPa">
-                                                    <rect key="frame" x="0.0" y="127" width="414" height="37"/>
+                                                    <rect key="frame" x="0.0" y="127" width="1024" height="37"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="37" id="eMr-AB-Qpl"/>
                                                     </constraints>
@@ -63,14 +64,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuCell" rowHeight="450" id="3m7-Rp-96l" customClass="MenuCell" customModule="AroundTheMetro" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="212" width="414" height="450"/>
+                                        <rect key="frame" x="0.0" y="212" width="1024" height="450"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3m7-Rp-96l" id="5kY-1Y-qRw">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="450"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="soa-5N-YIz" customClass="InfiniteCollectionView" customModule="AroundTheMetro" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="450"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Qdg-gz-w28">
                                                         <size key="itemSize" width="180" height="140"/>
@@ -126,21 +127,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RvD-5Y-ouc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4808" y="-1067"/>
+            <point key="canvasLocation" x="4296" y="-1062"/>
         </scene>
         <!--Metro Plan View Controller-->
         <scene sceneID="b5F-Qu-oqF">
             <objects>
                 <viewController storyboardIdentifier="MetroPlanViewController" id="dQ8-Kc-A2y" customClass="MetroPlanViewController" customModule="AroundTheMetro" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xRp-7j-9ff">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hd1-Qa-2bN">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gfc-AU-zdP">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -176,14 +177,14 @@
             <objects>
                 <viewController storyboardIdentifier="LocateMetroViewController" id="Z0u-IY-0OC" customClass="LocateMetroViewController" customModule="AroundTheMetro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TKo-Ph-TLS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fVu-LJ-RxQ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTv-j6-ASy">
-                                <rect key="frame" x="129" y="434.5" width="156" height="27"/>
+                                <rect key="frame" x="434" y="370.5" width="156" height="27"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No data for this city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tis-dO-Zxo">
                                         <rect key="frame" x="3" y="3" width="150" height="21"/>
@@ -206,7 +207,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQK-hc-8DS">
-                                <rect key="frame" x="338" y="737" width="60" height="60"/>
+                                <rect key="frame" x="948" y="643" width="60" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7A-PO-UfH">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>

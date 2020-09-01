@@ -44,8 +44,10 @@ protocol AnalyticsIntegrationType: Integration {
 protocol AdsContainer: UIViewController {
     func setBannerView(_ bannerView: UIView)
     func removeBannerView()
-    func showBanner()
     func hideBanner()
+    func resizeBanner(to height: CGFloat)
+
+    var onResized: ((CGSize) -> Void)? { get set }
 }
 
 protocol AdsIntegrationType: Integration {

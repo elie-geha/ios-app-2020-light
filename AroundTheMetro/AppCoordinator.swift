@@ -38,10 +38,12 @@ class AppCoordinator {
         mainCoordinator = MainCoordinator(with: router, context: appContext)
         mainCoordinator?.start()
 
-        if true {
-            onBoardingCoordinator = OnBoardingCoordinator(with: router, context: appContext)
-            onBoardingCoordinator?.onComplete = {
+        if appContext.userStorageService.isFirstLaunch {
+            appContext.userStorageService.isFirstLaunch = false
 
+            onBoardingCoordinator = OnBoardingCoordinator(with: router, context: appContext)
+            onBoardingCoordinator?.onComplete = { isFinished in
+                router.presentedViewController?.dismiss(animated: true)
             }
             onBoardingCoordinator?.start()
         }

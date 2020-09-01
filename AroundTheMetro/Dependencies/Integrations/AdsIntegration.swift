@@ -40,13 +40,19 @@ class AdsIntegration: NSObject, AdsIntegrationType {
         self.adsContainer = adsContainer
 
         if let adsContainer = adsContainer {
-            let bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+            let bannerView = GADBannerView()
             bannerView.rootViewController = adsContainer
             bannerView.adUnitID = AppConstants.Ads.bannerAdsUnitID
             bannerView.delegate = self
             bannerView.isAutoloadEnabled = true
 
             adsContainer.setBannerView(bannerView)
+            adsContainer.onResized = { newSize in
+                let size = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(newSize.width)
+                bannerView.adSize = size
+                adsContainer.resizeBanner(to: size.size.height)
+                bannerView.load(GADRequest())
+            }
         }
     }
 
@@ -64,7 +70,7 @@ class AdsIntegration: NSObject, AdsIntegrationType {
 
 extension AdsIntegration: GADBannerViewDelegate {
     func adViewDidReceiveAd(_ view: GADBannerView) {
-        adsContainer?.showBanner()
+        adsContainer?.resizeBanner(to: view.adSize.size.height)
     }
 
     // NO AdMob banner available

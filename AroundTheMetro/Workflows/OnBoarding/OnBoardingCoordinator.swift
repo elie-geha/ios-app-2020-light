@@ -17,7 +17,7 @@ class OnBoardingCoordinator: CoordinatorType {
 
     // MARK: - Actions
 
-    var onComplete: (() -> Void)?
+    var onComplete: ((Bool) -> Void)?
 
     // MARK: -
 
@@ -31,12 +31,10 @@ class OnBoardingCoordinator: CoordinatorType {
         let onBoardingVC = Storyboard.OnBoarding.onBoardingVC
         onBoardingVC.steps = [.discover, .locate, .offlineMap, .stayTuned]
         onBoardingVC.onFinish = { [weak self] in
-            self?.onComplete?()
-            onBoardingVC.dismiss(animated: true)
+            self?.onComplete?(true)
         }
         onBoardingVC.onSkip = { [weak self] in
-            self?.onComplete?()
-            onBoardingVC.dismiss(animated: true)
+            self?.onComplete?(false)
         }
         router.present(onBoardingVC, animated: true)
     }

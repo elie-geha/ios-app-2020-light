@@ -14,6 +14,8 @@ class AdsContainerViewController: UIViewController {
     private var bannerViewContainer = UIView()
     private var contentContainer = UIView()
 
+    var onResized: ((CGSize) -> Void)?
+
     var contentViewController: UIViewController? {
         didSet {
             contentContainer.subviews.forEach { $0.removeFromSuperview() }
@@ -33,6 +35,18 @@ class AdsContainerViewController: UIViewController {
 
     override func viewDidLoad() {
         layoutViews()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        self.onResized?(view.frame.size)
+    }
+
+    override func viewWillTransition(to size: CGSize,
+                            with coordinator: UIViewControllerTransitionCoordinator) {
+      super.viewWillTransition(to:size, with:coordinator)
+      coordinator.animate(alongsideTransition: { _ in
+        self.onResized?(size)
+      })
     }
 
     private func setBannerHeight(_ bannerHeight: CGFloat) {
@@ -58,7 +72,7 @@ class AdsContainerViewController: UIViewController {
         bannerViewContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         bannerViewContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
 
-        bannerHeight = bannerViewContainer.heightAnchor.constraint(equalToConstant: AppConstants.Ads.adBannerHeight)
+        bannerHeight = bannerViewContainer.heightAnchor.constraint(equalToConstant: 0)
         bannerHeight.isActive = true
     }
 }
@@ -68,18 +82,20 @@ extension AdsContainerViewController: AdsContainer {
         removeBannerView()
         bannerViewContainer.addSubview(bannerView)
         bannerView.translatesAutoresizingMaskIntoConstraints = false
-        bannerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        bannerView.topAnchor.constraint(equalTo: bannerViewContainer.topAnchor).isActive = true
+        bannerView.bottomAnchor.constraint(equalTo: bannerViewContainer.bottomAnchor).isActive = true
+        bannerView.centerXAnchor.constraint(equalTo: bannerViewContainer.centerXAnchor).isActive = true
     }
 
     func removeBannerView() {
         bannerViewContainer.subviews.forEach { $0.removeFromSuperview() }
     }
 
-    func showBanner() {
-        setBannerHeight(AppConstants.Ads.adBannerHeight)
-    }
-
     func hideBanner() {
         setBannerHeight(0)
+    }
+
+    func resizeBanner(to height: CGFloat) {
+        setBannerHeight(height)
     }
 }

@@ -25,16 +25,19 @@ class BannersCell: UITableViewCell {
         }
     }
 
-    @IBOutlet weak var layout: UICollectionViewFlowLayout! {
-        didSet {
-            layout.itemSize = CGSize(width: UIScreen.main.bounds.width, height: 240)
-        }
-    }
-
     @IBOutlet weak var pageControl: UIPageControl! {
         didSet {
             pageControl.currentPageIndicatorTintColor = UIColor.lightGray
         }
+    }
+
+    @IBOutlet weak var layout: UICollectionViewFlowLayout!
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        layout.itemSize = CGSize(width: bounds.width, height: 240)
+        collectionView.collectionViewLayout.invalidateLayout()
     }
 }
 
@@ -55,7 +58,9 @@ extension BannersCell: UICollectionViewDataSource {
         return cell
     }
 
-    func scrollView(_ scrollView: UIScrollView, pageIndex: Int) {
-        pageControl.currentPage = pageIndex
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard bounds.width > 0 else { return }
+        let pageIndex = scrollView.contentOffset.x / bounds.width
+        pageControl.currentPage = Int(pageIndex)
     }
 }
