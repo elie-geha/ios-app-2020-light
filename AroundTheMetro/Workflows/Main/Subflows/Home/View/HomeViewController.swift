@@ -56,7 +56,10 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
-        case 0: return 240
+        case 0:
+            let width = UIScreen.main.bounds.width
+            let height = width * 0.57
+            return min(240, height)
         case 1: return 450
         default: return 0
         }
