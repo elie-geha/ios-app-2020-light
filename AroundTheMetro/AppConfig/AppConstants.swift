@@ -25,7 +25,7 @@ enum AppConstants {
         static let interstitialUnitID = "ca-app-pub-3940256099942544/4411468910"
         static let applicationID = "ca-app-pub-5420876778958572~6113034677"
 
-        static let detailsPageViewsToShowInterstitial = 5
-        static let intervalBetweenInterstitialShows: TimeInterval = 5.0 * 60
+        static let detailsPageViewsToShowInterstitial = 3
+        static let intervalBetweenInterstitialShows: TimeInterval = 3.0 * 60
     }
 }
