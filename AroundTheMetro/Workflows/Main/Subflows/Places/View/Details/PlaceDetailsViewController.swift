@@ -70,7 +70,7 @@ class PlaceDetailViewController: UIViewController {
 
         if let type = place?.placeType.rawValue {
             typeLabel.isHidden = false
-            typeLabel.text = "Type : \(type)".localized
+            typeLabel.text = "Type".localized + " : " + type.localized
         } else {
             typeLabel.isHidden = true
         }

@@ -19,15 +19,15 @@
 //MARK: - Dashboard VC
 "Metro Plan" = "Plan de metro";
 "AR View" = "Vista AR";
-"Restaurants" = "Los restaurantes";
-"Boutiques" = "Boutiques";
+"Restaurants" = "Comer y beber";
+"Boutiques" = "Compras";
 "Beauty & Health" = "Salud y Belleza";
 "Attractions" = "Atracciones";
 
-"Type : Restaurant" = "Tipo: Restaurante";
-"Type : Boutique" = "Tipo: Boutique";
-"Type : Beauty & Health" = "Tipo: Belleza y Salud";
-"Type : Attraction" = "Tipo: Atracción";
+"Restaurant" = "Restaurante";
+"Beauty & Health" = "Salud y Belleza";
+"Attraction" = "Atracción";
+"Boutique" = "Boutique";
 
 
 //MARK: - MyProfile
@@ -39,10 +39,6 @@
 
 //MARK: -Arview
 "All" = "Todos";
-"Restaurant" = "Restaurante";
-"Beauty & Health" = "Salud y Belleza";
-"Attraction" = "Atracción";
-"Boutique" = "Boutique";
 
 
 //MARK: -ContactUS
@@ -80,6 +76,7 @@
 "Website" = "Sitio web";
 "Metro" = "Metro";
 "Mall" = "Centro comercial";
+"Type" = "Tipo";
 
 
 //MARK: - Home Extension
