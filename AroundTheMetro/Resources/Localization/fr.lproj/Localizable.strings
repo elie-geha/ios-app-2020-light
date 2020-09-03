@@ -19,15 +19,16 @@
 //MARK: - Dashboard VC
 "Metro Plan" = "Plan de métro";
 "AR View" = "AR Voir";
-"Restaurants" = "Restaurants";
-"Boutiques" = "Des boutiques";
+
+"Restaurants" = "Boire et manger";
+"Boutiques" = "Shopping";
 "Beauty & Health" = "Beauté et santé";
 "Attractions" = "Attractions";
 
-"Type : Restaurant" = "Type : Restaurant";
-"Type : Boutique" = "Type : Boutique";
-"Type : Beauty & Health" = "Type: Beauté & Santé";
-"Type : Attraction" = "Type : Attraction";
+"Restaurant" = "Restaurant";
+"Beauty & Health" = "Beauté et santé";
+"Attraction" = "Attraction";
+"Boutique" = "Boutique";
 
 
 //MARK: - MyProfile
@@ -39,11 +40,6 @@
 
 //MARK:- Arview
 "All" = "Tout";
-"Restaurant" = "Restaurant";
-"Beauty & Health" = "Beauté et santé";
-"Attraction" = "Attraction";
-"Boutique" = "Boutique";
-
 
 //MARK:- ContactUS
 "Description" = "Un monde à découvrir autour du métro. \n Trouvez tout ce dont vous avez besoin à quelques minutes de marche de tous les métros du monde sur notre plate-forme hyperlocale et mondiale.";
@@ -80,6 +76,7 @@
 "Website" = "Site Internet";
 "Metro" = "Métro";
 "Mall" = "Centre commercial";
+"Type" = "Type";
 
 
 //MARK: - Home Extension

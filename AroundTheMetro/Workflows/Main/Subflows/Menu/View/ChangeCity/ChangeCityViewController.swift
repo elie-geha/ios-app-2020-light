@@ -162,8 +162,7 @@ extension ChangeCityViewController: UIPickerViewDataSource {
             titleData = countries[row].name
 
             attributedString = NSAttributedString(string: titleData,
-                                                  attributes: [.font: UIFont(name: "Georgia", size: 15.0)!,
-                                                               .foregroundColor: UIColor.black])
+                                                  attributes: [.font: UIFont(name: "Georgia", size: 15.0)!])
         } else {
             let selectedCountry = pickerView.selectedRow(inComponent: 0)
 
@@ -172,8 +171,7 @@ extension ChangeCityViewController: UIPickerViewDataSource {
             }
 
             attributedString = NSAttributedString(string: titleData,
-                                                  attributes: [.font: UIFont(name: "Futura", size: 5.0)!,
-                                                               .foregroundColor: UIColor.black])
+                                                  attributes: [.font: UIFont(name: "Futura", size: 5.0)!])
         }
         
         return attributedString

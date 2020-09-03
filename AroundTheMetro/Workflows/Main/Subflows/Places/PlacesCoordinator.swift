@@ -83,7 +83,9 @@ class PlacesCoordinator: CoordinatorType {
                 !website.isEmpty,
                 let url = URL(string: website) else { return }
 
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            let webBrowser = WebBrowserViewController()
+            webBrowser.url = url
+            self?.router.pushViewController(webBrowser, animated: true)
 
             self?.context.analytics.trackEvent(with: .websiteClicked(place.name, place.website ?? "no url"))
         }

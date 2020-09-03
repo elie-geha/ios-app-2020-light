@@ -57,6 +57,7 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cityselect" translatesAutoresizingMaskIntoConstraints="NO" id="Fed-oo-dl6">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <pickerView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Amd-g5-hHF">
                                         <rect key="frame" x="12" y="30" width="390" height="300"/>
@@ -92,6 +93,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Fed-oo-dl6" firstAttribute="top" secondItem="Syw-gu-9L6" secondAttribute="top" id="06Y-In-uO6"/>
                                     <constraint firstAttribute="bottom" secondItem="Jf2-SG-6aa" secondAttribute="bottom" priority="900" constant="80" id="74D-we-dq4"/>
@@ -106,7 +108,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Syw-gu-9L6" firstAttribute="trailing" secondItem="WMS-Nc-zmu" secondAttribute="trailing" id="7tR-nF-czg"/>
                             <constraint firstItem="Syw-gu-9L6" firstAttribute="leading" secondItem="WMS-Nc-zmu" secondAttribute="leading" id="PtK-K4-1I9"/>

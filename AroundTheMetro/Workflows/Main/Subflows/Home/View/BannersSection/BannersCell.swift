@@ -36,7 +36,7 @@ class BannersCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        layout.itemSize = CGSize(width: bounds.width, height: 240)
+        layout.itemSize = bounds.size
         collectionView.collectionViewLayout.invalidateLayout()
     }
 }

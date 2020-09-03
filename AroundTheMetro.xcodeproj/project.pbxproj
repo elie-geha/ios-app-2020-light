@@ -71,6 +71,7 @@
 		1F8E20FA24FEBF6800F28DB2 /* OnBoardingStepType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20F924FEBF6800F28DB2 /* OnBoardingStepType.swift */; };
 		1F8E20FC24FEC07E00F28DB2 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20FB24FEC07E00F28DB2 /* UIColor+hex.swift */; };
 		1F8E20FE24FEC29B00F28DB2 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20FD24FEC29B00F28DB2 /* OnBoardingViewController.swift */; };
+		1F8E210124FF960000F28DB2 /* WebBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E210024FF960000F28DB2 /* WebBrowserViewController.swift */; };
 		1FA3C3ED24EB11B700295FFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C3EC24EB11B700295FFA /* AppDelegate.swift */; };
 		1FA3C3EF24EB11B700295FFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C3EE24EB11B700295FFA /* SceneDelegate.swift */; };
 		1FA3C3F624EB11BD00295FFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3C3F524EB11BD00295FFA /* Assets.xcassets */; };
@@ -188,6 +189,7 @@
 		1F8E20F924FEBF6800F28DB2 /* OnBoardingStepType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingStepType.swift; sourceTree = "<group>"; };
 		1F8E20FB24FEC07E00F28DB2 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
 		1F8E20FD24FEC29B00F28DB2 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		1F8E210024FF960000F28DB2 /* WebBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBrowserViewController.swift; sourceTree = "<group>"; };
 		1FA3C3E924EB11B700295FFA /* AroundTheMetro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AroundTheMetro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA3C3EC24EB11B700295FFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FA3C3EE24EB11B700295FFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -286,14 +288,6 @@
 				1F1DD6A124F3D7D9003C4A9F /* MetroPlanViewController.swift */,
 			);
 			path = MetroPlan;
-			sourceTree = "<group>";
-		};
-		1F1DD6A424F3E9A4003C4A9F /* NavigationWithAds */ = {
-			isa = PBXGroup;
-			children = (
-				1F1DD6A524F3E9C4003C4A9F /* AdsContainerViewController.swift */,
-			);
-			path = NavigationWithAds;
 			sourceTree = "<group>";
 		};
 		1F1DD6A924F4D479003C4A9F /* Menu */ = {
@@ -467,6 +461,15 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		1F8E20FF24FF95D300F28DB2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1F1DD6A524F3E9C4003C4A9F /* AdsContainerViewController.swift */,
+				1F8E210024FF960000F28DB2 /* WebBrowserViewController.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		1FA3C3E024EB11B700295FFA = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +502,7 @@
 				1FA3C41624EB2A8100295FFA /* Model */,
 				1FA3C40424EB148600295FFA /* Dependencies */,
 				1FA3C40124EB131500295FFA /* Workflows */,
+				1F8E20FF24FF95D300F28DB2 /* Components */,
 				1FA3C40024EB127000295FFA /* Resources */,
 				1FA3C42924EB34B200295FFA /* Utils */,
 			);
@@ -604,7 +608,6 @@
 		1FA3C42924EB34B200295FFA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				1F1DD6A424F3E9A4003C4A9F /* NavigationWithAds */,
 				1FA3C42A24EB34D600295FFA /* UserDefaultsBacked.swift */,
 				1FA3C42C24EB352000295FFA /* AnyOptional.swift */,
 				1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */,
@@ -971,6 +974,7 @@
 				1FA3C40E24EB184100295FFA /* HomeCoordinator.swift in Sources */,
 				1F8E20FC24FEC07E00F28DB2 /* UIColor+hex.swift in Sources */,
 				1FF6843224F04C5C0068A69A /* MenuViewController.swift in Sources */,
+				1F8E210124FF960000F28DB2 /* WebBrowserViewController.swift in Sources */,
 				1F4C2BE824EDAF3300C39967 /* BannersServiceRemote.swift in Sources */,
 				1FA3C42824EB349100295FFA /* UserStorageService.swift in Sources */,
 				1FF6844124F054DC0068A69A /* UIBundle+Current.swift in Sources */,
@@ -1155,7 +1159,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
 				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1177,7 +1181,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
 				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
