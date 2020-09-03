@@ -11,6 +11,7 @@ import UIKit
 class AppCoordinator {
     let window: UIWindow
     private var mainCoordinator: MainCoordinator?
+    private var onBoardingCoordinator: OnBoardingCoordinator?
 
     private var appContext: AppContext
 
@@ -27,12 +28,24 @@ class AppCoordinator {
         let router = UINavigationController()
         router.setNavigationBarHidden(true, animated: false)
 
-        let adsControllerContainer = AdsControllerContainer()
+        let adsControllerContainer = AdsContainerViewController()
         adsControllerContainer.contentViewController = router
+
+        appContext.ads.setAdsContainer(adsControllerContainer)
 
         window.rootViewController = adsControllerContainer
 
         mainCoordinator = MainCoordinator(with: router, context: appContext)
         mainCoordinator?.start()
+
+        if appContext.userStorageService.isFirstLaunch {
+            appContext.userStorageService.isFirstLaunch = false
+
+            onBoardingCoordinator = OnBoardingCoordinator(with: router, context: appContext)
+            onBoardingCoordinator?.onComplete = { isFinished in
+                router.presentedViewController?.dismiss(animated: true)
+            }
+            onBoardingCoordinator?.start()
+        }
     }
 }

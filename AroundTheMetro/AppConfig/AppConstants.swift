@@ -20,8 +20,11 @@ enum AppConstants {
     }
 
     enum Ads {
-        static let adBannerheight: CGFloat = 50
         static let bannerAdsUnitID = "ca-app-pub-5420876778958572/4194336391"
+        static let interstitialUnitID = "ca-app-pub-5420876778958572/6826921820"
         static let applicationID = "ca-app-pub-5420876778958572~6113034677"
+
+        static let detailsPageViewsToShowInterstitial = 3
+        static let intervalBetweenInterstitialShows: TimeInterval = 3.0 * 60
     }
 }

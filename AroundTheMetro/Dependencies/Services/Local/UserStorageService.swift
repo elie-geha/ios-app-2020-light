@@ -6,15 +6,19 @@
 //  Copyright © 2020 AugmentedDiscovery. All rights reserved.
 //
 
-struct Keys {
+enum Keys {
     static let country = "country"
     static let city = "city"
+    static let  isFirstLaunch = "isFirstLaunch"
 }
 
 class UserStorageService: LocalStorageService {
-    @UserDefaultsBacked(key: Keys.country, defaultValue: nil)
+    @UserDefaultsBacked(key: Keys.country)
     var currentCountry: String?
 
-    @UserDefaultsBacked(key: Keys.city, defaultValue: nil)
+    @UserDefaultsBacked(key: Keys.city)
     var currentCity: String?
+
+    @UserDefaultsBacked(key: Keys.isFirstLaunch, defaultValue: true)
+    var isFirstLaunch: Bool
 }

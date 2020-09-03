@@ -5,25 +5,30 @@
   Created by gaurav vashisht on 19/02/19.
   Copyright © 2019 AugmentedDiscovery. All rights reserved.
 */
+
 //MARK: - Login VC
 "LOG IN WITH GOOGLE" = "CONNEXION AVEC GOOGLE";
 "LOG IN WITH FACEBOOK" = "SE CONNECTER AVEC FACEBOOK";
+"SIGNING IN GOOGLE" = "SIGNING IN GOOGLE";
+"SIGNING IN FACEBOOK" = "SIGNING FACEBOOK";
+
 "Error" = "Erreur";
 "There is a problem in login!" = "Il y a un problème de connexion!";
+
 
 //MARK: - Dashboard VC
 "Metro Plan" = "Plan de métro";
 "AR View" = "AR Voir";
-"Restaurants" = "Restaurants";
-"Boutiques" = "Des boutiques";
+
+"Restaurants" = "Boire et manger";
+"Boutiques" = "Shopping";
 "Beauty & Health" = "Beauté et santé";
 "Attractions" = "Attractions";
-"Type : Restaurant" = "Type : Restaurant";
 
-"Type : Boutique" = "Type : Boutique";
-
-"Type : Beauty & Health" = "Type: Beauté & Santé";
-"Type : Attraction" = "Type : Attraction";
+"Restaurant" = "Restaurant";
+"Beauty & Health" = "Beauté et santé";
+"Attraction" = "Attraction";
+"Boutique" = "Boutique";
 
 
 //MARK: - MyProfile
@@ -31,28 +36,14 @@
 "My Profile" = "Mon profil";
 "Change City" = "Changer de ville";
 "Contact us" = "Contactez nous";
-"Change Language" = "Changer de langue";
-"English" = "Anglais";
-"French" = "français";
-"Spanish" = "Espanol";
-"Chinese" = "chinois";
-
 
 
 //MARK:- Arview
 "All" = "Tout";
-"Restaurant" = "Restaurant";
-"Beauty & Health" = "Beauté et santé";
-"Attraction" = "Attraction";
-"Boutique" = "Boutique";
-
-
 
 //MARK:- ContactUS
 "Description" = "Un monde à découvrir autour du métro. \n Trouvez tout ce dont vous avez besoin à quelques minutes de marche de tous les métros du monde sur notre plate-forme hyperlocale et mondiale.";
 "no_mail" = "Unable to send message. Ensure you have at least one account setup in Mail.app";
-
-
 
 
 //MARK:- Profiel
@@ -66,6 +57,7 @@
 "Around" = "Autour";
 "The Metro" = "Le métro";
 
+
 //MARK:- City
 "City" = "Ville";
 "Select Country And City" = "Sélectionnez un pays et une ville";
@@ -75,25 +67,16 @@
 "Alert" = "Alerte";
 
 
-
 //MARK: - PlacesViewController
-"Attractions" = "Attractions";
-"Beauty & Health" = "Beauté et santé";
-"Boutiques" = "Des boutiques";
-"Restaurants" = "Restaurants";
-
 "ALL" = "TOUT";
 "BY METRO" = "PAR METRO";
-"SIGNING IN GOOGLE" = "SIGNING IN GOOGLE";
-"SIGNING IN FACEBOOK" = "SIGNING FACEBOOK";
-
 
 //MARK: - Places Detail VC
 "Call Us" = "Appelez nous";
 "Website" = "Site Internet";
 "Metro" = "Métro";
 "Mall" = "Centre commercial";
-
+"Type" = "Type";
 
 
 //MARK: - Home Extension
@@ -107,3 +90,17 @@
 "Cancel" = "Annuler";
 "Setting" = "Réglage";
 "ATM" = "AU M";
+
+
+// OnBoarding
+"onboarding.next" = "Suivant";
+"onboarding.skip" = "Lancer l'application";
+"onboarding.go" = "Go!";
+"onboarding.discover.title" = "Découvrez";
+"onboarding.discover.description" = "Découvrez des endroits intéressants autour des stations de métro";
+"onboarding.locate.title" = "Localisez";
+"onboarding.locate.description" = "Localisez facilement la station de métro la plus proche";
+"onboarding.offlineMap.title" = "Carte hors ligne";
+"onboarding.offlineMap.description" = "Accédez au plan du métro même lorsque votre téléphone est hors ligne";
+"onboarding.stayTuned.title" = "Plus à venir";
+"onboarding.stayTuned.description" = "D'autres fonctionnalités étonnantes à venir ... Restez à l'écoute!";

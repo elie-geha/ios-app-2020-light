@@ -7,17 +7,27 @@
 //
 
 import FacebookCore
-import FBSDKCoreKit
 import Firebase
-import GoogleMobileAds
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    private var appCoordinator: AppCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupIntegrations(application: application, launchOptions: launchOptions)
+
+        if #available(iOS 13, *) {
+            // do nothing, scenes available, SceneDelegate will start the app
+        } else {
+            let window = UIWindow(frame: UIScreen.main.bounds)
+            window.makeKeyAndVisible()
+            self.window = window
+
+            appCoordinator = AppCoordinator(with: window, context: AppContext())
+            appCoordinator?.start()
+        }
         return true
     }
 
@@ -35,10 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func setupIntegrations(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
-        // MARK: - Admob banner
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
-
-        //MARK: - Firebase config
+        // MARK: - Firebase config
         FirebaseApp.configure()
 
         //MARK: - FACEBOOK SDK CONFIGURATION

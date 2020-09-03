@@ -16,6 +16,10 @@ class AppContext {
     // MARK: - services
     let userStorageService: UserStorageService
 
+    // MARK: - Integrations
+    let analytics: AnalyticsIntegrationType
+    let ads: AdsIntegrationType
+
     init() {
         userStorageService = UserStorageService()
 
@@ -24,5 +28,8 @@ class AppContext {
         placesRepository = PlacesRepository(placesService: PlacesServiceRemote())
         metroLocationsRepository = MetroLocationsRepository(metroLocationsService: MetroLocationsService())
         bannersRepository = BannersRepository(bannersService: BannersServiceRemote())
+
+        analytics = AnalyticsIntegration()
+        ads = AdsIntegration()
     }
 }

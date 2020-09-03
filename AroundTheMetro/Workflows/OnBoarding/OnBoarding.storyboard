@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--On Boarding View Controller-->
+        <scene sceneID="Abt-pf-15G">
+            <objects>
+                <viewController storyboardIdentifier="OnBoardingViewController" id="4WD-Ad-Wnk" customClass="OnBoardingViewController" customModule="AroundTheMetro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fDy-up-h1Q">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yp7-0S-upx">
+                                <rect key="frame" x="297.5" y="40" width="429" height="536"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Yp7-0S-upx" secondAttribute="height" multiplier="4:5" id="83X-gb-q4K"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bip-sd-y42">
+                                <rect key="frame" x="469.5" y="606" width="85" height="27"/>
+                                <fontDescription key="fontDescription" name="NotoSansKannada-Bold" family="Noto Sans Kannada" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44I-JB-MvD">
+                                <rect key="frame" x="437" y="674" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.30263412000000001" green="0.67376112939999999" blue="0.91378301380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="8N1-0Q-TeA">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="30" id="RLR-gE-Tua">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                    </constraint>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onNext" destination="4WD-Ad-Wnk" eventType="touchUpInside" id="K7r-ZE-Vtn"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="YbZ-zo-fP9">
+                                <rect key="frame" x="492.5" y="754" width="39" height="10"/>
+                                <color key="tintColor" red="0.30263412000000001" green="0.67376112939999999" blue="0.91378301380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="7US-op-97l"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="0.30263412000000001" green="0.67376112939999999" blue="0.91378301380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHT-Is-5nT">
+                                <rect key="frame" x="20" y="641" width="984" height="23"/>
+                                <fontDescription key="fontDescription" name="NotoSansKannada-Regular" family="Noto Sans Kannada" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vHT-Is-5nT" firstAttribute="leading" secondItem="k0U-JO-v4X" secondAttribute="leading" constant="20" id="236-bc-crq"/>
+                            <constraint firstItem="k0U-JO-v4X" firstAttribute="bottom" secondItem="YbZ-zo-fP9" secondAttribute="bottom" constant="4" id="Bks-Cr-e7M"/>
+                            <constraint firstItem="Yp7-0S-upx" firstAttribute="top" secondItem="k0U-JO-v4X" secondAttribute="top" constant="40" id="DcH-bn-tA4"/>
+                            <constraint firstItem="Yp7-0S-upx" firstAttribute="centerX" secondItem="fDy-up-h1Q" secondAttribute="centerX" id="HDU-va-bOy"/>
+                            <constraint firstItem="44I-JB-MvD" firstAttribute="centerX" secondItem="fDy-up-h1Q" secondAttribute="centerX" id="IBI-Mx-F8W"/>
+                            <constraint firstItem="YbZ-zo-fP9" firstAttribute="top" secondItem="44I-JB-MvD" secondAttribute="bottom" constant="30" id="N3N-zd-Z7d"/>
+                            <constraint firstItem="vHT-Is-5nT" firstAttribute="top" secondItem="bip-sd-y42" secondAttribute="bottom" constant="8" id="Tv2-mX-YyA"/>
+                            <constraint firstItem="bip-sd-y42" firstAttribute="centerX" secondItem="fDy-up-h1Q" secondAttribute="centerX" id="bNc-hl-VLC"/>
+                            <constraint firstItem="k0U-JO-v4X" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Yp7-0S-upx" secondAttribute="trailing" constant="20" id="e6Z-k9-ktk"/>
+                            <constraint firstItem="YbZ-zo-fP9" firstAttribute="centerX" secondItem="fDy-up-h1Q" secondAttribute="centerX" id="enP-Ao-uKt"/>
+                            <constraint firstItem="k0U-JO-v4X" firstAttribute="trailing" secondItem="vHT-Is-5nT" secondAttribute="trailing" constant="20" id="iyj-au-rkh"/>
+                            <constraint firstItem="bip-sd-y42" firstAttribute="top" secondItem="Yp7-0S-upx" secondAttribute="bottom" priority="900" constant="30" id="mpa-Kh-4pX"/>
+                            <constraint firstItem="Yp7-0S-upx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="k0U-JO-v4X" secondAttribute="leading" constant="20" id="ps3-RB-Ev9"/>
+                            <constraint firstItem="vHT-Is-5nT" firstAttribute="centerX" secondItem="fDy-up-h1Q" secondAttribute="centerX" id="v4w-Te-at5"/>
+                            <constraint firstItem="44I-JB-MvD" firstAttribute="top" secondItem="vHT-Is-5nT" secondAttribute="bottom" constant="10" id="w2c-Lq-PLP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="k0U-JO-v4X"/>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="44I-JB-MvD" id="Atj-D8-qyA"/>
+                        <outlet property="descriptionLabel" destination="vHT-Is-5nT" id="vJJ-Fm-p7q"/>
+                        <outlet property="pageControl" destination="YbZ-zo-fP9" id="uu5-VT-cdm"/>
+                        <outlet property="stepImage" destination="Yp7-0S-upx" id="oq2-rp-YGY"/>
+                        <outlet property="titleLabel" destination="bip-sd-y42" id="n27-Jh-5bg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QuD-mK-anz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15.942028985507248" y="22.767857142857142"/>
+        </scene>
+    </scenes>
+</document>

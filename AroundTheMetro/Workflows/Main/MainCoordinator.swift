@@ -9,8 +9,8 @@
 import AKSideMenu
 import UIKit
 
-class MainCoordinator {
-    // MARK: - Repositories
+class MainCoordinator: CoordinatorType {
+    // MARK: - Context
     private var context: AppContext
 
     // MARK: - Navigation
@@ -118,8 +118,8 @@ class MainCoordinator {
     }
 
     private func createShare() {
-        let shareVC = UIViewController() // instantiate from storyboard
-        shareRouter = UINavigationController(rootViewController: shareVC)
+//        let shareVC = UIViewController() // instantiate from storyboard
+//        shareRouter = UINavigationController(rootViewController: shareVC)
     }
 
     private func setContentViewController(_ viewController: UIViewController?) {

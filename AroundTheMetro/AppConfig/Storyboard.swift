@@ -45,4 +45,10 @@ enum Storyboard {
 
         static let placeDetailsVC = storyboard.instantiateViewController(withIdentifier: "PlaceDetailViewController") as! PlaceDetailViewController
     }
+
+    enum OnBoarding: StoryboardType {
+        static let name = "OnBoarding"
+
+        static let onBoardingVC = storyboard.instantiateViewController(withIdentifier: "OnBoardingViewController") as! OnBoardingViewController
+    }
 }

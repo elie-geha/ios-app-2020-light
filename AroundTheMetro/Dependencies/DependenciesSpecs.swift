@@ -8,6 +8,8 @@
 
 // MARK: - Services
 
+import UIKit
+
 protocol Service {}
 
 protocol APIService: Service {}
@@ -17,6 +19,8 @@ protocol BannersAPIService: APIService {
     func fetchBanners(country: Country, city: City, with result: ((Result<BannersResponse, Error>) -> Void)?)
 }
 
+// TODO: other services
+
 // MARK: - Repositories
 
 protocol Repository {}
@@ -25,4 +29,28 @@ protocol BannersRepositoryType {
     var bannersService: BannersAPIService { get }
 
     func getBanners(country: Country, city: City, with result: ((Result<[Banner], Error>) -> Void)?)
+}
+
+// TODO: other repos
+
+// MARK: - Integrations
+
+protocol Integration {}
+
+protocol AnalyticsIntegrationType: Integration {
+    func trackEvent(with type: AnalyticsEventType)
+}
+
+protocol AdsContainer: UIViewController {
+    func setBannerView(_ bannerView: UIView)
+    func removeBannerView()
+    func hideBanner()
+    func resizeBanner(to height: CGFloat)
+
+    var onResized: ((CGSize) -> Void)? { get set }
+}
+
+protocol AdsIntegrationType: Integration {
+    func setAdsContainer(_ adsContainer: AdsContainer?)
+    func handleEvent(with type: AdsEventType)
 }
