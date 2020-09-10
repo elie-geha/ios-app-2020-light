@@ -8,6 +8,22 @@
 
 import UIKit
 
-protocol CoordinatorType {    
+protocol CoordinatorType {
+    var router: RouterType { get }
+    var initialContainer: ContainerType? { get }
+    var onComplete: ((_ success: Bool) -> Void)? { get set }
+
     func start()
+    func finish()
+}
+
+extension CoordinatorType {
+    func finish() {
+        if let initialContainer = initialContainer {
+            router.hide(container: initialContainer, animated: true)
+            onComplete?(true)
+        } else {
+            onComplete?(false)
+        }
+    }
 }

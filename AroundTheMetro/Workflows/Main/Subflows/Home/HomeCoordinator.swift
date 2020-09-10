@@ -10,23 +10,27 @@ import SVProgressHUD
 import UIKit
 
 class HomeCoordinator: CoordinatorType {
+    var router: RouterType
+    var initialContainer: ContainerType?
+    var onComplete: ((Bool) -> Void)?
+
     var onShare: (() -> Void)?
     var onMenu: (() -> Void)?
 
-    private var router: UINavigationController
     private var context: AppContext
 
     private var placesCoordinator: PlacesCoordinator?
-
     private var homeViewController: HomeViewController?
 
-    init(with router: UINavigationController, context: AppContext) {
+    init(with router: RouterType, context: AppContext) {
         self.router = router
         self.context = context
     }
 
     func start() {
-        homeViewController = Storyboard.Home.homeVC
+        let viewController = Storyboard.Home.homeVC
+        initialContainer = viewController
+        homeViewController = viewController
         homeViewController?.title = context.countriesRepository.currentCity?.name
 
         updateBanners()
@@ -54,14 +58,14 @@ class HomeCoordinator: CoordinatorType {
         ]
         homeViewController?.onLeftBarButton = onMenu
         homeViewController?.onRightBarButton = onShare
-        router.setViewControllers([homeViewController].compactMap { $0 }, animated: false)
+        router.show(container: viewController, animated: true)
     }
 
     private func openMetroPlan() {
         let vc = Storyboard.Home.metroPlanVC
         vc.city = context.countriesRepository.currentCity
         vc.title = context.countriesRepository.currentCity?.name
-        router.pushViewController(vc, animated: true)
+        router.show(container: vc, animated: true)
     }
     
     private func openLocateMetro() {
@@ -79,7 +83,7 @@ class HomeCoordinator: CoordinatorType {
                     let vc = Storyboard.Home.locateMetroVC
                     vc.stations = stations
                     vc.title = city.name
-                    self?.router.pushViewController(vc, animated: true)
+                    self?.router.show(container: vc, animated: true)
                 case .failure(let error):
                     SVProgressHUD.showError(withStatus: error.localizedDescription)
                     SVProgressHUD.dismiss(withDelay: 3.0)

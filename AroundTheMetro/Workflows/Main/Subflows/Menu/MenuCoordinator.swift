@@ -9,18 +9,22 @@
 import UIKit
 
 class MenuCoordinator: CoordinatorType {
+    var router: RouterType
+    var initialContainer: ContainerType?
+    var onComplete: ((Bool) -> Void)?
+
     var onHome: (() -> Void)?
     var onChangeCity: (() -> Void)?
     var onContactUs: (() -> Void)?
-    
-    private var router: UINavigationController
 
-    init(with router: UINavigationController) {
+
+    init(with router: RouterType) {
         self.router = router
     }
 
     func start() {
         let viewController = Storyboard.Menu.menuVC
+        initialContainer = viewController
         viewController.menuItems = [
             MainMenuItem(type: .home, onSelect: { [weak self] in
                 self?.onHome?()
@@ -32,6 +36,6 @@ class MenuCoordinator: CoordinatorType {
                 self?.onContactUs?()
             })
         ]
-        router.setViewControllers([viewController], animated: false)
+        router.show(container: viewController, animated: false)
     }
 }

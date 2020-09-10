@@ -29,7 +29,7 @@ class AppCoordinator {
         router.setNavigationBarHidden(true, animated: false)
 
         let adsControllerContainer = AdsContainerViewController()
-        adsControllerContainer.contentViewController = router
+        adsControllerContainer.contentViewController = router.asUIViewController()
 
         appContext.ads.setAdsContainer(adsControllerContainer)
 
@@ -42,9 +42,6 @@ class AppCoordinator {
             appContext.userStorageService.isFirstLaunch = false
 
             onBoardingCoordinator = OnBoardingCoordinator(with: router, context: appContext)
-            onBoardingCoordinator?.onComplete = { isFinished in
-                router.presentedViewController?.dismiss(animated: true)
-            }
             onBoardingCoordinator?.start()
         }
     }

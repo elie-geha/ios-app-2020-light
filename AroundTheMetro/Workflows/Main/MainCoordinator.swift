@@ -14,25 +14,25 @@ class MainCoordinator: CoordinatorType {
     private var context: AppContext
 
     // MARK: - Navigation
-    private var router: UINavigationController
+    var router: RouterType
+    var initialContainer: ContainerType?
+    var onComplete: ((Bool) -> Void)?
 
     private var sideMenuController: AKSideMenu?
 
     private var homeCoordinator: HomeCoordinator!
     private var menuCoordinator: MenuCoordinator!
 
-    private var homeCoordinatorRouter: UINavigationController!
+    private var homeCoordinatorRouter: RouterType!
 
-    private var menuCoordinatorRouter: UINavigationController!
-    private var changeCityRouter: UINavigationController!
+    private var menuCoordinatorRouter: RouterType!
+    private var changeCityRouter: RouterType!
     private var changeCityController: ChangeCityViewController!
     private var contactUsController: ContactUsController!
 
-    private var shareRouter: UINavigationController!
-
     // MARK: -
 
-    init(with router: UINavigationController,
+    init(with router: RouterType,
          context: AppContext) {
         self.router = router
         self.context = context
@@ -41,17 +41,17 @@ class MainCoordinator: CoordinatorType {
         createMenuCoordinator()
         createChangeCity()
         createContactUs()
-        createShare()
     }
 
     func start() {
-        let sideMenuController = AKSideMenu(contentViewController: initialMainRouter(),
-                                            leftMenuViewController: menuCoordinatorRouter,
-                                            rightMenuViewController: shareRouter)
+        let sideMenuController = AKSideMenu(contentViewController: initialMainRouter().asUIViewController() ?? UIViewController(),
+                                            leftMenuViewController: menuCoordinatorRouter.asUIViewController(),
+                                            rightMenuViewController: nil)
         self.sideMenuController = sideMenuController
+        initialContainer = sideMenuController
         setupSideMenu()
 
-        router.setViewControllers([sideMenuController], animated: false)
+        router.show(container: sideMenuController, animated: false)
     }
 
     private func setupSideMenu() {
@@ -64,7 +64,7 @@ class MainCoordinator: CoordinatorType {
         sideMenuController?.backgroundImage = Assets.menuBackground
     }
 
-    private func initialMainRouter() -> UINavigationController {
+    private func initialMainRouter() -> RouterType {
         if context.countriesRepository.currentCity == nil && context.countriesRepository.currentCountry == nil {
             showChangeCity(fromLeftMenu: false)
             return changeCityRouter
@@ -86,11 +86,12 @@ class MainCoordinator: CoordinatorType {
     }
 
     private func createMenuCoordinator() {
-        menuCoordinatorRouter = UINavigationController()
+        let menuCoordinatorRouter = UINavigationController()
+        self.menuCoordinatorRouter = menuCoordinatorRouter
         menuCoordinatorRouter.setNavigationBarHidden(true, animated: false)
         menuCoordinator = MenuCoordinator(with: menuCoordinatorRouter)
         menuCoordinator.onHome = { [weak self] in
-            self?.setContentViewController(self?.homeCoordinatorRouter)
+            self?.setContentViewController(self?.homeCoordinatorRouter.asUIViewController())
         }
         menuCoordinator.onChangeCity = { [weak self] in
             self?.showChangeCity()
@@ -108,18 +109,13 @@ class MainCoordinator: CoordinatorType {
             self?.context.countriesRepository.currentCountry = selectedCountry
             self?.context.countriesRepository.currentCity = selectedCity
             self?.homeCoordinator.start()
-            self?.setContentViewController(self?.homeCoordinatorRouter)
+            self?.setContentViewController(self?.homeCoordinatorRouter.asUIViewController())
         }
         changeCityRouter = UINavigationController(rootViewController: changeCityVC)
     }
 
     private func createContactUs() {
         contactUsController = ContactUsController()
-    }
-
-    private func createShare() {
-//        let shareVC = UIViewController() // instantiate from storyboard
-//        shareRouter = UINavigationController(rootViewController: shareVC)
     }
 
     private func setContentViewController(_ viewController: UIViewController?) {
@@ -129,12 +125,13 @@ class MainCoordinator: CoordinatorType {
     }
 
     private func showContactUs() {
-        contactUsController.present(from: router)
+        guard let viewController = router.asUIViewController() else { return }
+        contactUsController.present(from: viewController)
     }
 
     private func showChangeCity(fromLeftMenu: Bool = true) {
         changeCityController.isFromLeftMenu = fromLeftMenu
-        setContentViewController(changeCityRouter)
+        setContentViewController(changeCityRouter.asUIViewController())
 
         context.countriesRepository.getCountries { [weak self] result in
             switch result {

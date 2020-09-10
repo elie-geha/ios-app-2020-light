@@ -13,15 +13,15 @@ class OnBoardingCoordinator: CoordinatorType {
     private var context: AppContext
 
     // MARK: - Navigation
-    private var router: UIViewController
+    var router: RouterType
+    var initialContainer: ContainerType?
 
     // MARK: - Actions
-
     var onComplete: ((Bool) -> Void)?
 
     // MARK: -
 
-    init(with router: UIViewController,
+    init(with router: RouterType,
          context: AppContext) {
         self.router = router
         self.context = context
@@ -29,13 +29,16 @@ class OnBoardingCoordinator: CoordinatorType {
 
     func start() {
         let onBoardingVC = Storyboard.OnBoarding.onBoardingVC
+        initialContainer = onBoardingVC
         onBoardingVC.steps = [.discover, .locate, .offlineMap, .stayTuned]
         onBoardingVC.onFinish = { [weak self] in
             self?.onComplete?(true)
+            self?.router.hide(container: onBoardingVC, animated: true)
         }
         onBoardingVC.onSkip = { [weak self] in
             self?.onComplete?(false)
+            self?.router.hide(container: onBoardingVC, animated: true)
         }
-        router.present(onBoardingVC, animated: true)
+        router.show(container: onBoardingVC, animated: true)
     }
 }
