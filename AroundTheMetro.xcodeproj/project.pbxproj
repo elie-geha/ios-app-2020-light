@@ -100,9 +100,12 @@
 		1FA3C43924EBDE6A00295FFA /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C43824EBDE6A00295FFA /* AppConstants.swift */; };
 		1FA3C43D24EBEB9D00295FFA /* PlacesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C43C24EBEB9D00295FFA /* PlacesResponse.swift */; };
 		1FA3C43F24EBEBAA00295FFA /* MetroStationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C43E24EBEBAA00295FFA /* MetroStationsResponse.swift */; };
-		1FDBC93F250A9CD60009CD8D /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDBC93E250A9CD60009CD8D /* Authorization.storyboard */; };
 		1FDBC941250A9FDE0009CD8D /* RouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC940250A9FDE0009CD8D /* RouterType.swift */; };
 		1FDBC943250AA0230009CD8D /* ContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC942250AA0230009CD8D /* ContainerType.swift */; };
+		1FDBC94B250AB9CD0009CD8D /* AuthorizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC948250AB9CD0009CD8D /* AuthorizationCoordinator.swift */; };
+		1FDBC94C250AB9CD0009CD8D /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDBC949250AB9CD0009CD8D /* Authorization.storyboard */; };
+		1FDBC94D250AB9CD0009CD8D /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC94A250AB9CD0009CD8D /* AuthorizationViewController.swift */; };
+		1FDBC951250ABD4D0009CD8D /* AuthIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC950250ABD4D0009CD8D /* AuthIntegration.swift */; };
 		1FF6843024F04BFE0068A69A /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6842F24F04BFE0068A69A /* Menu.storyboard */; };
 		1FF6843224F04C5C0068A69A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6843124F04C5C0068A69A /* MenuViewController.swift */; };
 		1FF6843424F04CC20068A69A /* MainMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6843324F04CC20068A69A /* MainMenuItem.swift */; };
@@ -223,9 +226,12 @@
 		1FA3C43824EBDE6A00295FFA /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		1FA3C43C24EBEB9D00295FFA /* PlacesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesResponse.swift; sourceTree = "<group>"; };
 		1FA3C43E24EBEBAA00295FFA /* MetroStationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStationsResponse.swift; sourceTree = "<group>"; };
-		1FDBC93E250A9CD60009CD8D /* Authorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
 		1FDBC940250A9FDE0009CD8D /* RouterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterType.swift; sourceTree = "<group>"; };
 		1FDBC942250AA0230009CD8D /* ContainerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerType.swift; sourceTree = "<group>"; };
+		1FDBC948250AB9CD0009CD8D /* AuthorizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCoordinator.swift; sourceTree = "<group>"; };
+		1FDBC949250AB9CD0009CD8D /* Authorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
+		1FDBC94A250AB9CD0009CD8D /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		1FDBC950250ABD4D0009CD8D /* AuthIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthIntegration.swift; sourceTree = "<group>"; };
 		1FF6842F24F04BFE0068A69A /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		1FF6843124F04C5C0068A69A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		1FF6843324F04CC20068A69A /* MainMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuItem.swift; sourceTree = "<group>"; };
@@ -317,6 +323,7 @@
 		1F1DD6D224F981EC003C4A9F /* Integrations */ = {
 			isa = PBXGroup;
 			children = (
+				1FDBC952250ABEDE0009CD8D /* Auth */,
 				1F1DD6DA24F9861B003C4A9F /* AnalyticsIntegration.swift */,
 				1F1DD6DC24F9882B003C4A9F /* AdsIntegration.swift */,
 			);
@@ -688,9 +695,27 @@
 		1FDBC93D250A9A740009CD8D /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				1FDBC93E250A9CD60009CD8D /* Authorization.storyboard */,
+				1FDBC94F250AB9D90009CD8D /* View */,
+				1FDBC948250AB9CD0009CD8D /* AuthorizationCoordinator.swift */,
+				1FDBC949250AB9CD0009CD8D /* Authorization.storyboard */,
 			);
 			path = Authorization;
+			sourceTree = "<group>";
+		};
+		1FDBC94F250AB9D90009CD8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1FDBC94A250AB9CD0009CD8D /* AuthorizationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1FDBC952250ABEDE0009CD8D /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				1FDBC950250ABD4D0009CD8D /* AuthIntegration.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		1FF6842E24F04BEA0068A69A /* View */ = {
@@ -848,7 +873,7 @@
 				1F4C2BCD24ED955200C39967 /* Madrid.plist in Resources */,
 				1F4C2BB624ED955200C39967 /* Toulouse.plist in Resources */,
 				1F4C2BC324ED955200C39967 /* Istanbul.plist in Resources */,
-				1FDBC93F250A9CD60009CD8D /* Authorization.storyboard in Resources */,
+				1FDBC94C250AB9CD0009CD8D /* Authorization.storyboard in Resources */,
 				1F4C2BBF24ED955200C39967 /* Vancouver.plist in Resources */,
 				1FF6846F24F0655C0068A69A /* Localizable.strings in Resources */,
 				1FF6843024F04BFE0068A69A /* Menu.storyboard in Resources */,
@@ -951,10 +976,12 @@
 				1F4C2B8C24ED931200C39967 /* MetroLocationsService.swift in Sources */,
 				1F4C2BEB24EDAFFC00C39967 /* BannersResponse.swift in Sources */,
 				1FF6847C24F0764B0068A69A /* PlaceListCell.swift in Sources */,
+				1FDBC94B250AB9CD0009CD8D /* AuthorizationCoordinator.swift in Sources */,
 				1F1DD6DD24F9882B003C4A9F /* AdsIntegration.swift in Sources */,
 				1F1DD6D924F98434003C4A9F /* AdsEventType.swift in Sources */,
 				1F4C2B8824ED926100C39967 /* MetroStationLocation.swift in Sources */,
 				1FF6843F24F054AE0068A69A /* UIView+Factory.swift in Sources */,
+				1FDBC951250ABD4D0009CD8D /* AuthIntegration.swift in Sources */,
 				1FA3C42B24EB34D600295FFA /* UserDefaultsBacked.swift in Sources */,
 				1F4C2B8A24ED92BB00C39967 /* MetroLocationsRepository.swift in Sources */,
 				1F8E20F224FEBC4A00F28DB2 /* OnBoardingCoordinator.swift in Sources */,
@@ -965,6 +992,7 @@
 				1FF6844424F061870068A69A /* ContactUsController.swift in Sources */,
 				1FA3C3EF24EB11B700295FFA /* SceneDelegate.swift in Sources */,
 				1F1DD6DB24F9861B003C4A9F /* AnalyticsIntegration.swift in Sources */,
+				1FDBC94D250AB9CD0009CD8D /* AuthorizationViewController.swift in Sources */,
 				1F8E20F524FEBCBA00F28DB2 /* CoordinatorType.swift in Sources */,
 				1FA3C43524EBDB8A00295FFA /* NetworkAdapter.swift in Sources */,
 				1F8E20FE24FEC29B00F28DB2 /* OnBoardingViewController.swift in Sources */,

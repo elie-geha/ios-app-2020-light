@@ -9,7 +9,7 @@
 enum Keys {
     static let country = "country"
     static let city = "city"
-    static let  isFirstLaunch = "isFirstLaunch"
+    static let isFirstLaunch = "isFirstLaunch"
 }
 
 class UserStorageService: LocalStorageService {

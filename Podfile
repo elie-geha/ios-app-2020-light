@@ -13,6 +13,7 @@ target 'AroundTheMetro' do
     pod 'Tabman', '~> 2.9'
     pod 'Google-Mobile-Ads-SDK'
     pod 'Firebase/Core'
+    pod 'Firebase/Auth'
     pod 'FacebookCore'
 
     # pod 'KVSpinnerView'
@@ -24,7 +25,6 @@ target 'AroundTheMetro' do
     # pod 'HDAugmentedReality'
     # pod 'PopupDialog'
     # pod 'TwitterKit'
-    # pod 'Firebase/Core'
     # pod 'Proximiio'
     
 end

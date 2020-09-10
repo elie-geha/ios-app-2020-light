@@ -26,6 +26,12 @@ enum Storyboard {
         static let menuVC = storyboard.instantiateInitialViewController() as! MenuViewController
         static let changeCityVC = storyboard.instantiateViewController(withIdentifier: "ChangeCityViewController") as! ChangeCityViewController
     }
+
+    enum Authorization: StoryboardType {
+        static let name = "Authorization"
+
+        static let authorizationVC = storyboard.instantiateInitialViewController() as! AuthorizationViewController
+    }
     
     enum Home: StoryboardType {
         static let name = "Home"

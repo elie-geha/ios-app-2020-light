@@ -54,3 +54,22 @@ protocol AdsIntegrationType: Integration {
     func setAdsContainer(_ adsContainer: AdsContainer?)
     func handleEvent(with type: AdsEventType)
 }
+
+struct AuthUserInfo {
+    var displayName: String?
+    var photoURL: URL?
+}
+
+enum AuthError: Error {
+    case loginError(String)
+    case alreadyLoggedIn
+}
+
+protocol AuthIntegrationType: Integration {
+    var isAuthorized: Bool { get }
+    var userInfo: AuthUserInfo? { get }
+
+    func login(with email: String, password: String, completion: ((Result<AuthUserInfo?, AuthError>) -> Void)?)
+    func register(with email: String, password: String, completion: ((Result<AuthUserInfo?, AuthError>) -> Void)?)
+    func logout(completion: ((Error?) -> Void)?)
+}
