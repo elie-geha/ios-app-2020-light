@@ -10,6 +10,7 @@ import UIKit
 
 protocol RouterType: ContainerType {
     func show(container: ContainerType, animated: Bool)
+    func present(container: ContainerType, animated: Bool)
     func hide(container: ContainerType, animated: Bool)
 }
 
@@ -26,11 +27,22 @@ extension UIViewController: RouterType {
         }
     }
 
+    func present(container: ContainerType, animated: Bool) {
+        guard let controller = container.asUIViewController() else { return }
+        present(controller, animated: animated)
+    }
+
     func hide(container: ContainerType, animated: Bool = true) {
         guard let controller = container.asUIViewController() else { return }
 
-        if let navigationController = self as? UINavigationController {
-            navigationController.popToViewController(controller, animated: animated)
+        if let navigationController = self as? UINavigationController, presentedViewController != controller {
+            if let indexOfController = navigationController.viewControllers.firstIndex(of: controller),
+                indexOfController > 0 {
+                let previousController = navigationController.viewControllers[indexOfController - 1]
+                navigationController.popToViewController(previousController, animated: animated)
+            } else {
+                navigationController.popViewController(animated: animated)
+            }
         } else {
             controller.dismiss(animated: animated, completion: nil)
         }

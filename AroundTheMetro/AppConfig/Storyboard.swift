@@ -27,10 +27,18 @@ enum Storyboard {
         static let changeCityVC = storyboard.instantiateViewController(withIdentifier: "ChangeCityViewController") as! ChangeCityViewController
     }
 
+    enum Profile: StoryboardType {
+        static let name = "Profile"
+
+        static let profileVC = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+
+    }
+
     enum Authorization: StoryboardType {
         static let name = "Authorization"
 
         static let authorizationVC = storyboard.instantiateInitialViewController() as! AuthorizationViewController
+        static let registrationVC = storyboard.instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
     }
     
     enum Home: StoryboardType {

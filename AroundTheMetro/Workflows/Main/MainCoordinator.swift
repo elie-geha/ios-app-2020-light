@@ -7,6 +7,7 @@
 //
 
 import AKSideMenu
+import SVProgressHUD
 import UIKit
 
 class MainCoordinator: CoordinatorType {
@@ -22,6 +23,8 @@ class MainCoordinator: CoordinatorType {
 
     private var homeCoordinator: HomeCoordinator!
     private var menuCoordinator: MenuCoordinator!
+    private var authCoordinator: AuthorizationCoordinator?
+    private var profileCoordinator: ProfileCoordinator?
 
     private var homeCoordinatorRouter: RouterType!
 
@@ -89,7 +92,13 @@ class MainCoordinator: CoordinatorType {
         let menuCoordinatorRouter = UINavigationController()
         self.menuCoordinatorRouter = menuCoordinatorRouter
         menuCoordinatorRouter.setNavigationBarHidden(true, animated: false)
-        menuCoordinator = MenuCoordinator(with: menuCoordinatorRouter)
+        menuCoordinator = MenuCoordinator(with: menuCoordinatorRouter, context: context)
+        menuCoordinator.onLogin = { [weak self] in
+            self?.showLogin()
+        }
+        menuCoordinator.onProfile = { [weak self] in
+            self?.showProfile()
+        }
         menuCoordinator.onHome = { [weak self] in
             self?.setContentViewController(self?.homeCoordinatorRouter.asUIViewController())
         }
@@ -144,5 +153,35 @@ class MainCoordinator: CoordinatorType {
                 break
             }
         }
+    }
+
+    private func showLogin() {
+        let authRouter = UINavigationController()
+        authRouter.setNavigationBarHidden(true, animated: false)
+        authCoordinator = AuthorizationCoordinator(with: authRouter, context: context)
+        authCoordinator?.onComplete = { [weak self] success in
+            if success {
+                self?.menuCoordinator.restart()
+                self?.router.hide(container: authRouter, animated: true)
+            }
+        }
+        authCoordinator?.start()
+        router.present(container: authRouter, animated: true)
+    }
+
+    private func showProfile() {
+        profileCoordinator = ProfileCoordinator(with: router)
+        profileCoordinator?.onLogout = { [weak self] in
+            self?.context.auth.logout(completion: { error in
+                guard error == nil else {
+                    SVProgressHUD.showError(withStatus: error?.localizedDescription)
+                    SVProgressHUD.dismiss(withDelay: 3.0)
+                    return
+                }
+
+                self?.menuCoordinator.restart()
+            })
+        }
+        profileCoordinator?.start()
     }
 }

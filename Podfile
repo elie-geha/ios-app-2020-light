@@ -15,6 +15,7 @@ target 'AroundTheMetro' do
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
     pod 'FacebookCore'
+    pod 'IQKeyboardManagerSwift'
 
     # pod 'KVSpinnerView'
     # pod 'GoogleSignIn'

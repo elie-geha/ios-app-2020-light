@@ -8,6 +8,7 @@
 
 import FacebookCore
 import Firebase
+import IQKeyboardManagerSwift
 import UIKit
 
 @UIApplicationMain
@@ -45,6 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func setupIntegrations(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        IQKeyboardManager.shared.enable = true
+        
         // MARK: - Firebase config
         FirebaseApp.configure()
 

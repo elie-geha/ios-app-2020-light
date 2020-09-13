@@ -19,6 +19,7 @@ class AppContext {
     // MARK: - Integrations
     let analytics: AnalyticsIntegrationType
     let ads: AdsIntegrationType
+    let auth: AuthIntegration
 
     init() {
         userStorageService = UserStorageService()
@@ -31,5 +32,6 @@ class AppContext {
 
         analytics = AnalyticsIntegration()
         ads = AdsIntegration()
+        auth = AuthIntegration()
     }
 }

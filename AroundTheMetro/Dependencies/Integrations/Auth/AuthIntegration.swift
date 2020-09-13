@@ -30,7 +30,7 @@ class AuthIntegration: AuthIntegrationType {
                 return
             }
 
-            if result != nil, result?.credential != nil {
+            if result != nil {
                 completion?(.success(self.userInfo))
             }
         }
@@ -61,6 +61,7 @@ class AuthIntegration: AuthIntegrationType {
 
         do {
             try Auth.auth().signOut()
+            completion?(nil)
         } catch {
             completion?(error)
         }

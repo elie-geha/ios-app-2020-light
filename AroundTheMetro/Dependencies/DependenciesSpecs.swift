@@ -63,6 +63,7 @@ struct AuthUserInfo {
 enum AuthError: Error {
     case loginError(String)
     case alreadyLoggedIn
+    case logoutError
 }
 
 protocol AuthIntegrationType: Integration {

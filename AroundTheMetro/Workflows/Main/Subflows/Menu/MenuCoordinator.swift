@@ -13,19 +13,30 @@ class MenuCoordinator: CoordinatorType {
     var initialContainer: ContainerType?
     var onComplete: ((Bool) -> Void)?
 
+    var context: AppContext
+
+    var onLogin: (() -> Void)?
+    var onProfile: (() -> Void)?
     var onHome: (() -> Void)?
     var onChangeCity: (() -> Void)?
     var onContactUs: (() -> Void)?
 
-
-    init(with router: RouterType) {
+    init(with router: RouterType, context: AppContext) {
         self.router = router
+        self.context = context
     }
 
     func start() {
         let viewController = Storyboard.Menu.menuVC
         initialContainer = viewController
         viewController.menuItems = [
+            MainMenuItem(
+                type: context.auth.isAuthorized ? .profile : .login,
+                onSelect: { [weak self] in
+                    self?.context.auth.isAuthorized == true
+                        ? self?.onProfile?()
+                        : self?.onLogin?()
+            }),
             MainMenuItem(type: .home, onSelect: { [weak self] in
                 self?.onHome?()
             }),

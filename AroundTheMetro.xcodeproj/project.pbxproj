@@ -106,6 +106,10 @@
 		1FDBC94C250AB9CD0009CD8D /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDBC949250AB9CD0009CD8D /* Authorization.storyboard */; };
 		1FDBC94D250AB9CD0009CD8D /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC94A250AB9CD0009CD8D /* AuthorizationViewController.swift */; };
 		1FDBC951250ABD4D0009CD8D /* AuthIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC950250ABD4D0009CD8D /* AuthIntegration.swift */; };
+		1FDBC955250E15250009CD8D /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC954250E15250009CD8D /* RegistrationViewController.swift */; };
+		1FDBC95A250E24900009CD8D /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC957250E24900009CD8D /* ProfileCoordinator.swift */; };
+		1FDBC95B250E24900009CD8D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDBC958250E24900009CD8D /* Profile.storyboard */; };
+		1FDBC95C250E24900009CD8D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC959250E24900009CD8D /* ProfileViewController.swift */; };
 		1FF6843024F04BFE0068A69A /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6842F24F04BFE0068A69A /* Menu.storyboard */; };
 		1FF6843224F04C5C0068A69A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6843124F04C5C0068A69A /* MenuViewController.swift */; };
 		1FF6843424F04CC20068A69A /* MainMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6843324F04CC20068A69A /* MainMenuItem.swift */; };
@@ -232,6 +236,10 @@
 		1FDBC949250AB9CD0009CD8D /* Authorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
 		1FDBC94A250AB9CD0009CD8D /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		1FDBC950250ABD4D0009CD8D /* AuthIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthIntegration.swift; sourceTree = "<group>"; };
+		1FDBC954250E15250009CD8D /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		1FDBC957250E24900009CD8D /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		1FDBC958250E24900009CD8D /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		1FDBC959250E24900009CD8D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1FF6842F24F04BFE0068A69A /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		1FF6843124F04C5C0068A69A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		1FF6843324F04CC20068A69A /* MainMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuItem.swift; sourceTree = "<group>"; };
@@ -541,6 +549,7 @@
 		1FA3C40124EB131500295FFA /* Workflows */ = {
 			isa = PBXGroup;
 			children = (
+				1FDBC956250E24780009CD8D /* Profile */,
 				1FDBC93D250A9A740009CD8D /* Authorization */,
 				1F8E20F024FEBC3900F28DB2 /* OnBoarding */,
 				1FA3C40724EB17D700295FFA /* Main */,
@@ -706,6 +715,7 @@
 			isa = PBXGroup;
 			children = (
 				1FDBC94A250AB9CD0009CD8D /* AuthorizationViewController.swift */,
+				1FDBC954250E15250009CD8D /* RegistrationViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -716,6 +726,24 @@
 				1FDBC950250ABD4D0009CD8D /* AuthIntegration.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		1FDBC956250E24780009CD8D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1FDBC95D250E24970009CD8D /* View */,
+				1FDBC957250E24900009CD8D /* ProfileCoordinator.swift */,
+				1FDBC958250E24900009CD8D /* Profile.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		1FDBC95D250E24970009CD8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1FDBC959250E24900009CD8D /* ProfileViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		1FF6842E24F04BEA0068A69A /* View */ = {
@@ -911,6 +939,7 @@
 				1F4C2BB924ED955200C39967 /* Atlanta.plist in Resources */,
 				1F4C2BCA24ED955200C39967 /* Bilbao.plist in Resources */,
 				1F4C2BAF24ED955200C39967 /* Lausanne.plist in Resources */,
+				1FDBC95B250E24900009CD8D /* Profile.storyboard in Resources */,
 				1F4C2BE524EDAC2200C39967 /* ImageCell.xib in Resources */,
 				1F1DD6A824F3F07B003C4A9F /* GoogleService-Info.plist in Resources */,
 			);
@@ -967,6 +996,7 @@
 			files = (
 				1FA3C42424EB2D5700295FFA /* CountriesRepository.swift in Sources */,
 				1FA3C43D24EBEB9D00295FFA /* PlacesResponse.swift in Sources */,
+				1FDBC955250E15250009CD8D /* RegistrationViewController.swift in Sources */,
 				1F4C2BD724EDA05E00C39967 /* HomeViewController.swift in Sources */,
 				1FA3C43624EBDB8A00295FFA /* ATLApiTarget.swift in Sources */,
 				1FA3C40324EB13AB00295FFA /* AppCoordinator.swift in Sources */,
@@ -986,6 +1016,7 @@
 				1F4C2B8A24ED92BB00C39967 /* MetroLocationsRepository.swift in Sources */,
 				1F8E20F224FEBC4A00F28DB2 /* OnBoardingCoordinator.swift in Sources */,
 				1FF6843D24F0547F0068A69A /* Collection+Registerable.swift in Sources */,
+				1FDBC95A250E24900009CD8D /* ProfileCoordinator.swift in Sources */,
 				1FA3C41324EB212700295FFA /* Assets.swift in Sources */,
 				1F1DD6A624F3E9C4003C4A9F /* AdsContainerViewController.swift in Sources */,
 				1FA3C42224EB2CF900295FFA /* PlacesServiceLocal.swift in Sources */,
@@ -999,6 +1030,7 @@
 				1F4C2BDD24EDA84000C39967 /* BannersCell.swift in Sources */,
 				1F1DD6AC24F4D496003C4A9F /* ChangeCityViewController.swift in Sources */,
 				1FA3C41C24EB2AA200295FFA /* Country.swift in Sources */,
+				1FDBC95C250E24900009CD8D /* ProfileViewController.swift in Sources */,
 				1F4C2BE324EDABD900C39967 /* ImageCell.swift in Sources */,
 				1FF6847924F0761B0068A69A /* PlaceDetailsViewController.swift in Sources */,
 				1FA3C40924EB17EB00295FFA /* MainCoordinator.swift in Sources */,

@@ -15,6 +15,7 @@ protocol CoordinatorType {
 
     func start()
     func finish()
+    func restart()
 }
 
 extension CoordinatorType {
@@ -25,5 +26,10 @@ extension CoordinatorType {
         } else {
             onComplete?(false)
         }
+    }
+
+    func restart() {
+        finish()
+        start()
     }
 }

@@ -6,20 +6,74 @@
 //  Copyright © 2020 AugmentedDiscovery. All rights reserved.
 //
 
+import SVProgressHUD
 import UIKit
 
 public final class AuthorizationViewController: UIViewController {
     // MARK: - Outlets
 
+    @IBOutlet var loginButton: UIButton!
+    @IBOutlet var backButton: UIButton!
+    @IBOutlet var registerButton: UIButton!
+    @IBOutlet var forgotPasswordButton: UIButton!
+
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+
+    @IBOutlet var orLabel: UILabel!
+
     // MARK: - Properties
 
     // MARK: - Callbacks
+
+    var onBack: (() -> Void)?
+    var onLogin: ((_ email: String, _ password: String) -> Void)?
+    var onRegister: (() -> Void)?
+    var onForgotPassword: (() -> Void)?
 
     // MARK: - Private variables
 
     // MARK: - LyfeCicle
 
+    public override func viewDidLoad() {
+        if #available(iOS 12, *) {
+            backButton.isHidden = true
+        }
+    }
+
     // MARK: - Actions
 
+    @IBAction func back() {
+        onBack?()
+    }
+
+    @IBAction func login() {
+        guard let (email, password) = validate() else {
+            // show error!
+            return
+        }
+
+        onLogin?(email, password)
+    }
+
+    @IBAction func register() {
+        onRegister?()
+    }
+
+    @IBAction func forgotPassword() {
+        onForgotPassword?()
+    }
+
     // MARK: - Private
+
+    private func validate() -> (String, String)? {
+        guard let email = emailTextField.text, let password = passwordTextField.text,
+            !email.isEmpty, !password.isEmpty else {
+                SVProgressHUD.showError(withStatus: "Please fill in email and password")
+                SVProgressHUD.dismiss(withDelay: 3.0)
+                return nil
+        }
+
+        return (email, password)
+    }
 }
