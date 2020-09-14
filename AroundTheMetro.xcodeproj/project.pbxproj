@@ -120,6 +120,7 @@
 		1FF6848024F076720068A69A /* MetroListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6847F24F076720068A69A /* MetroListCell.swift */; };
 		1FF6848224F3CA860068A69A /* PlacesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6848124F3CA860068A69A /* PlacesCoordinator.swift */; };
 		1FF6848424F3CACC0068A69A /* Places.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6848324F3CACC0068A69A /* Places.storyboard */; };
+		51C50D5D250FEC0B0048EB09 /* Boston-tocomplete.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D5C250FEC0B0048EB09 /* Boston-tocomplete.plist */; };
 		9A8E11562C4F72C0771E6240 /* Pods_AroundTheMetro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57C4B5707ABD4ED9E88BA9B /* Pods_AroundTheMetro.framework */; };
 /* End PBXBuildFile section */
 
@@ -246,6 +247,7 @@
 		1FF6847F24F076720068A69A /* MetroListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroListCell.swift; sourceTree = "<group>"; };
 		1FF6848124F3CA860068A69A /* PlacesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCoordinator.swift; sourceTree = "<group>"; };
 		1FF6848324F3CACC0068A69A /* Places.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Places.storyboard; sourceTree = "<group>"; };
+		51C50D5C250FEC0B0048EB09 /* Boston-tocomplete.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Boston-tocomplete.plist"; sourceTree = "<group>"; };
 		A85239D9126354EC81AB8AED /* Pods-AroundTheMetro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundTheMetro.debug.xcconfig"; path = "Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro.debug.xcconfig"; sourceTree = "<group>"; };
 		C57C4B5707ABD4ED9E88BA9B /* Pods_AroundTheMetro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundTheMetro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8FC33BDD46E6721368886D7 /* Pods-AroundTheMetro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundTheMetro.release.xcconfig"; path = "Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro.release.xcconfig"; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				1F4C2B8E24ED955200C39967 /* Mumbai.plist */,
+				51C50D5C250FEC0B0048EB09 /* Boston-tocomplete.plist */,
 				1F4C2B8F24ED955200C39967 /* Lausanne.plist */,
 				1F4C2B9024ED955200C39967 /* Paris.plist */,
 				1F4C2B9124ED955200C39967 /* Toronto.plist */,
@@ -858,6 +861,7 @@
 				1F4C2BB324ED955200C39967 /* Chicago.plist in Resources */,
 				1F4C2BC024ED955200C39967 /* Montreal.plist in Resources */,
 				1F4C2BB824ED955200C39967 /* Osaka.plist in Resources */,
+				51C50D5D250FEC0B0048EB09 /* Boston-tocomplete.plist in Resources */,
 				1F4C2BB524ED955200C39967 /* Marseille.plist in Resources */,
 				1F4C2BB224ED955200C39967 /* Taipei.plist in Resources */,
 				1F4C2BC424ED955200C39967 /* Vienna.plist in Resources */,
