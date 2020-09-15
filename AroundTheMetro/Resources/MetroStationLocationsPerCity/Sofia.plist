@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>stations</key>
+	<array>
+		<dict>
+			<key>latitude</key>
+			<real>42.6713830</real>
+			<key>longitude</key>
+			<real>23.3509260</real>
+			<key>name</key>
+			<string>"Joliot-Curie (Жолио Кюри)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.6628810</real>
+			<key>longitude</key>
+			<real>23.3579070</real>
+			<key>name</key>
+			<string>"G.M.Dimitrov (Г. М. Димитров)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.6586000</real>
+			<key>longitude</key>
+			<real>23.3643260</real>
+			<key>name</key>
+			<string>"Musagenitsa (Мусагеница)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.6541844</real>
+			<key>longitude</key>
+			<real>23.3719215</real>
+			<key>name</key>
+			<string>"Mladost 1 (Младост 1)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.6464680</real>
+			<key>longitude</key>
+			<real>23.3840010</real>
+			<key>name</key>
+			<string>"Mladost 3 (Младост 3)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.6498542</real>
+			<key>longitude</key>
+			<real>23.3938374</real>
+			<key>name</key>
+			<string>"Inter Expo Center - Tsarigradsko shose (Интер Експо Център - Цариградско шосе)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.6588932</real>
+			<key>longitude</key>
+			<real>23.3946397</real>
+			<key>name</key>
+			<string>"Druzhba (Дружба)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.6685137</real>
+			<key>longitude</key>
+			<real>23.4020893</real>
+			<key>name</key>
+			<string>"Iskarsko shose (Искърско шосе)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.6764458</real>
+			<key>longitude</key>
+			<real>23.4101897</real>
+			<key>name</key>
+			<string>"Sofiyska Sveta Gora (Софийска Света гора)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.6880650</real>
+			<key>longitude</key>
+			<real>23.4161225</real>
+			<key>name</key>
+			<string>"Sofia Airport (Летище София)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.6480470</real>
+			<key>longitude</key>
+			<real>23.3766180</real>
+			<key>name</key>
+			<string>"Aleksandar Malinov (Александър Малинов)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.6415296</real>
+			<key>longitude</key>
+			<real>23.3727486</real>
+			<key>name</key>
+			<string>"Akad. Aleksandar Teodorov-Balan (Акад. Александър Теодоров-Балан)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.6298906</real>
+			<key>longitude</key>
+			<real>23.3731511</real>
+			<key>name</key>
+			<string>"Business Park Sofia (Бизнес Парк София)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.7410240</real>
+			<key>longitude</key>
+			<real>23.2765100</real>
+			<key>name</key>
+			<string>"Obelya (Обеля)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.7404610</real>
+			<key>longitude</key>
+			<real>23.2873270</real>
+			<key>name</key>
+			<string>"Lomsko shose (Ломско шосе)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.7356180</real>
+			<key>longitude</key>
+			<real>23.2926410</real>
+			<key>name</key>
+			<string>"Beli Dunav (Бели Дунав)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.7280000</real>
+			<key>longitude</key>
+			<real>23.3009450</real>
+			<key>name</key>
+			<string>"Nadezhda (Надежда)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.7229500</real>
+			<key>longitude</key>
+			<real>23.3065690</real>
+			<key>name</key>
+			<string>"Han Kubrat (Хан Кубрат)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.7139400</real>
+			<key>longitude</key>
+			<real>23.3138240</real>
+			<key>name</key>
+			<string>"Knyaginya Maria Luiza (Княгиня Мария Луиза)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.7120300</real>
+			<key>longitude</key>
+			<real>23.3207588</real>
+			<key>name</key>
+			<string>"Central Railway Station (Централна ж.п. гара)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.7054710</real>
+			<key>longitude</key>
+			<real>23.3238621</real>
+			<key>name</key>
+			<string>"Lavov Most (Лъвов мост)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.6978580</real>
+			<key>longitude</key>
+			<real>23.3211450</real>
+			<key>name</key>
+			<string>"Serdika II (Сердика II)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.6847251</real>
+			<key>longitude</key>
+			<real>23.3189384</real>
+			<key>name</key>
+			<string>"National Palace of Culture (Национален дворец на културата )"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.6786930</real>
+			<key>longitude</key>
+			<real>23.3217371</real>
+			<key>name</key>
+			<string>"European Union (Европейски съюз)[21]"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.6710890</real>
+			<key>longitude</key>
+			<real>23.3206850</real>
+			<key>name</key>
+			<string>"James Bourchier (Джеймс Баучер)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.6593811</real>
+			<key>longitude</key>
+			<real>23.3165490</real>
+			<key>name</key>
+			<string>"Vitosha (Витоша)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.5636953</real>
+			<key>longitude</key>
+			<real>23.2783983</real>
+			<key>name</key>
+			<string>"Cherni vrah (Черни връх)"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>42.6312607</real>
+			<key>longitude</key>
+			<real>23.3123033</real>
+			<key>name</key>
+			<string>"Dragalevtsi (Драгалевци)"</string>
+		</dict>
+	</array>
+</dict>
+</plist>

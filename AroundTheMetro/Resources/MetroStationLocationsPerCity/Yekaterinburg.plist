@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>stations</key>
+	<array>
+		<dict>
+			<key>latitude</key>
+			<real>56.8864090</real>
+			<key>longitude</key>
+			<real>60.6134609</real>
+			<key>name</key>
+			<string>"Uralmash"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>56.8784108</real>
+			<key>longitude</key>
+			<real>60.6121124</real>
+			<key>name</key>
+			<string>"Mashinostroiteley"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>56.8574675</real>
+			<key>longitude</key>
+			<real>60.6017701</real>
+			<key>name</key>
+			<string>"Uralskaya"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>56.8477945</real>
+			<key>longitude</key>
+			<real>60.5993315</real>
+			<key>name</key>
+			<string>"Dinamo"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>56.8362300</real>
+			<key>longitude</key>
+			<real>60.5996841</real>
+			<key>name</key>
+			<string>"Ploshchad 1905 Goda"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>56.8268790</real>
+			<key>longitude</key>
+			<real>60.6030960</real>
+			<key>name</key>
+			<string>"Geologicheskaya"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>56.8083237</real>
+			<key>longitude</key>
+			<real>60.6096573</real>
+			<key>name</key>
+			<string>"Chkalovskaya"</string>
+		</dict>
+		<dict>
+			<key>latitude</key>
+			<real>56.7983460</real>
+			<key>longitude</key>
+			<real>60.6280890</real>
+			<key>name</key>
+			<string>"Botanicheskaya"</string>
+		</dict>
+	</array>
+</dict>
+</plist>

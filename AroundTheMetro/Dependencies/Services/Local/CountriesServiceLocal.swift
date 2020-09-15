@@ -12,29 +12,43 @@ class CountriesServiceLocal: LocalStorageService {
 
     lazy var allCountries: [Country] = {
         [
-            "Austria", "Canada", "Emirates", "France", "India",
-            "Italy", "Japan", "S_Korea", "Spain", "Sweden",
+            "Argentina", "Austria", "Belgium", "Brazil", "Bulgaria", "Denmark", "Canada", "Emirates",
+            "Finland", "France", "Georgia", "Germany", "India",
+            "Italy", "Japan", "Malaysia", "Mexico", "Norway", "Portugal","S_Korea", "Singapore", "Spain", "Sweden",
             "Switzerland", "Taiwan", "Turkey", "UK", "USA"
         ].compactMap { country(with: $0) }
     }()
 
     func country(with name: String?) -> Country? {
         switch name {
+        case "Argentina": return Country(name: "Argentina", cities: ["Buenos_Aires"].compactMap { city(with: $0) })
         case "Austria": return Country(name: "Austria", cities: ["Vienna"].compactMap { city(with: $0) })
+        case "Belgium": return Country(name: "Beligum", cities: ["Brussels"].compactMap { city(with: $0) })
+        case "Brazil": return Country(name: "Brazil", cities: ["Rio_de_Janeiro", "Sao_Paulo"].compactMap { city(with: $0) })
+        case "Bulgaria": return Country(name: "Bulgaria", cities: ["Sofia"].compactMap { city(with: $0) })
         case "Canada": return Country(name: "Canada", cities: ["Montreal", "Toronto", "Vancouver"].compactMap { city(with: $0) })
+        case "Denmark": return Country(name: "Denmark", cities: ["Copenhagen"].compactMap { city(with: $0) })
+        case "Finland": return Country(name: "Finland", cities: ["Helsinki"].compactMap { city(with: $0) })
         case "Emirates": return Country(name: "Emirates", cities: ["Dubai"].compactMap { city(with: $0) })
         case "France": return Country(name: "France", cities: ["Paris", "Marseille", "Lyon", "Toulouse"].compactMap { city(with: $0) })
+        case "Georgia": return Country(name: "Georgia", cities: ["Tbilisi"].compactMap { city(with: $0) })
+        case "Germany": return Country(name: "Germany", cities: ["Berlin", "Hamburg", "Munich"].compactMap { city(with: $0) })
         case "India": return Country(name: "India", cities: ["Delhi", "Kolkata", "Mumbai"].compactMap { city(with: $0) })
         case "Italy": return Country(name: "Italy", cities: ["Rome", "Milan"].compactMap { city(with: $0) })
         case "Japan": return Country(name: "Japan", cities: ["Tokyo", "Osaka", "Yokohama", "Nagoya"].compactMap { city(with: $0) })
+        case "Malaysia": return Country(name: "Malaysia", cities: ["Kuala_Lumpur"].compactMap { city(with: $0) })
+        case "Mexico": return Country(name: "Mexico", cities: ["Mexico_City"].compactMap { city(with: $0) })
+        case "Norway": return Country(name: "Norway", cities: ["Oslo"].compactMap { city(with: $0) })
+        case "Portugal": return Country(name: "Portugal", cities: ["Lisbon"].compactMap { city(with: $0) })
         case "S_Korea": return Country(name: "S_Korea", cities: ["Seoul", "Busan"].compactMap { city(with: $0) })
+        case "Singapore": return Country(name: "Singapore", cities: ["Singapore"].compactMap { city(with: $0) })
         case "Spain": return Country(name: "Spain", cities: ["Barcelona", "Madrid", "Bilbao"].compactMap { city(with: $0) })
         case "Sweden": return Country(name: "Sweden", cities: ["Stockholm"].compactMap { city(with: $0) })
         case "Switzerland": return Country(name: "Switzerland", cities: ["Lausanne"].compactMap { city(with: $0) })
         case "Taiwan": return Country(name: "Taiwan", cities: ["Taipei"].compactMap { city(with: $0) })
         case "Turkey": return Country(name: "Turkey", cities: ["Istanbul"].compactMap { city(with: $0) })
         case "UK": return Country(name: "UK", cities: ["London", "Glasgow"].compactMap { city(with: $0) })
-        case "USA": return Country(name: "USA", cities: ["New_York_City", "Miami", "Chicago","Atlanta"].compactMap { city(with: $0) })
+        case "USA": return Country(name: "USA", cities: ["Atlanta", "Boston", "Chicago", "Miami", "New_York_City", "Philadelphia"].compactMap { city(with: $0) })
         default: return nil
         }
     }
@@ -74,7 +88,25 @@ class CountriesServiceLocal: LocalStorageService {
         case "Glasgow": return City(name: "Glasgow", metroPlanImage: #imageLiteral(resourceName: "Glasgow_Map"))
         case "Miami": return City(name: "Miami", metroPlanImage: #imageLiteral(resourceName: "Miami_Map"))
         case "Chicago": return City(name: "Chicago", metroPlanImage: #imageLiteral(resourceName: "Chicago_Map"))
-        case "Atlanta": return City(name: "Atlanta", metroPlanImage: #imageLiteral(resourceName: "Atlanta_Map"))
+        case "Atlanta": return City(name: "Atlanta", metroPlanImage: #imageLiteral(resourceName: "Atlanta_Map"))            
+        case "Brussels": return City(name: "Brussels", metroPlanImage: #imageLiteral(resourceName: "Brussels_Map"))
+        case "Rio_de_Janeiro": return City(name: "Rio_de_Janeiro", metroPlanImage: #imageLiteral(resourceName: "Rio_de_Janeiro_Map"))
+        case "Sao_Paulo": return City(name: "Sao_Paulo", metroPlanImage: #imageLiteral(resourceName: "Sao_Paulo_Map"))
+        case "Sofia": return City(name: "Sofia", metroPlanImage: #imageLiteral(resourceName: "Sofia_Map"))
+        case "Copenhagen": return City(name: "Copenhagen", metroPlanImage: #imageLiteral(resourceName: "Copenhagen_Map"))
+        case "Helsinki": return City(name: "Helsinki", metroPlanImage: #imageLiteral(resourceName: "Helsinki_Map"))
+        case "Tbilisi": return City(name: "Tbilisi", metroPlanImage: #imageLiteral(resourceName: "Tbilisi_Map"))
+        case "Berlin": return City(name: "Berlin", metroPlanImage: #imageLiteral(resourceName: "Berlin_Map"))
+        case "Hamburg": return City(name: "Hamburg", metroPlanImage: #imageLiteral(resourceName: "Hamburg_Map"))
+        case "Munich": return City(name: "Munich", metroPlanImage: #imageLiteral(resourceName: "Munich_Map"))
+        case "Kuala_Lumpur": return City(name: "Kuala_Lumpur", metroPlanImage: #imageLiteral(resourceName: "Kuala_Lumpur_Map"))
+        case "Mexico_City": return City(name: "Mexico_City", metroPlanImage: #imageLiteral(resourceName: "Mexico_City_Map"))
+        case "Oslo": return City(name: "Oslo", metroPlanImage: #imageLiteral(resourceName: "Oslo_Map"))
+        case "Lisbon": return City(name: "Lisbon", metroPlanImage: #imageLiteral(resourceName: "Lisbon_Map"))
+        case "Singapore": return City(name: "Singapore", metroPlanImage: #imageLiteral(resourceName: "Singapore_Map"))
+        case "Philadelphia": return City(name: "Philadelphia", metroPlanImage: #imageLiteral(resourceName: "Philadelphia_Map.png"))
+        case "Boston": return City(name: "Boston", metroPlanImage: #imageLiteral(resourceName: "Boston_Map.png"))
+           
         default: return nil
         }
     }
