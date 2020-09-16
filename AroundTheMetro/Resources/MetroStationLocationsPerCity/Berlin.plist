@@ -222,14 +222,6 @@
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real>52.1203</real>
-			<key>longitude</key>
-			<real>11.5966</real>
-			<key>name</key>
-			<string>"Magdeburger Straße turning plant"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
 			<real>52.4994445</real>
 			<key>longitude</key>
 			<real>13.3543572</real>
@@ -443,14 +435,6 @@
 			<real>13.3818150</real>
 			<key>name</key>
 			<string>"Unter den Linden"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
-			<real>52.1766390</real>
-			<key>longitude</key>
-			<real>7.5311100</real>
-			<key>name</key>
-			<string>"Kupfergraben"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -782,14 +766,6 @@
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Nord-Süd Tunnel"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
 			<real>52.5202894</real>
 			<key>longitude</key>
 			<real>13.3869776</real>
@@ -835,14 +811,6 @@
 			<real>13.3907574</real>
 			<key>name</key>
 			<string>"Hallesches Tor"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Landwehr Canal"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>

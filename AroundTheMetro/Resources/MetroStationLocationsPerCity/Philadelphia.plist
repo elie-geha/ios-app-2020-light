@@ -110,27 +110,11 @@
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Stadium (Ithan Ave)"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
 			<real>40.0279740</real>
 			<key>longitude</key>
 			<real>-75.3363610</real>
 			<key>name</key>
 			<string>"Garrett Hill"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Roberts Rd"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -179,14 +163,6 @@
 			<real>-75.2914480</real>
 			<key>name</key>
 			<string>"Beechwood-Brookline"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Penfield"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -467,14 +443,6 @@
 			<real>-75.1947222</real>
 			<key>name</key>
 			<string>"Allen Lane"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Carpenter"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -826,7 +794,7 @@
 			<key>longitude</key>
 			<real>-75.0786357</real>
 			<key>name</key>
-			<string>"Frankford & Delaware"</string>
+			<string>"Frankford - Delaware"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -1406,14 +1374,6 @@
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"T.C. Logan"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
 			<real>40.0245662</real>
 			<key>longitude</key>
 			<real>-75.1478411</real>
@@ -1578,7 +1538,7 @@
 			<key>longitude</key>
 			<real>14.5500720</real>
 			<key>name</key>
-			<string>"AT&T"</string>
+			<string>"AT-T"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -1675,14 +1635,6 @@
 			<real>-77.4812137</real>
 			<key>name</key>
 			<string>"Ashland"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Lindenwold NJ Transit to: Atlantic City"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -2038,14 +1990,6 @@
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real>33.8035492</real>
-			<key>longitude</key>
-			<real>-117.8774523</real>
-			<key>name</key>
-			<string>"Magnolia Ave"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
 			<real>39.9557799</real>
 			<key>longitude</key>
 			<real>-75.1819683</real>
@@ -2107,14 +2051,6 @@
 			<real>-75.2708333</real>
 			<key>name</key>
 			<string>"Lansdowne"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Gladstone"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -2330,7 +2266,7 @@
 			<key>longitude</key>
 			<real>-75.2515750</real>
 			<key>name</key>
-			<string>"Terminal A (East & West)"</string>
+			<string>"Terminal A (East - West)"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -2346,7 +2282,7 @@
 			<key>longitude</key>
 			<real>-71.0165047</real>
 			<key>name</key>
-			<string>"Terminals C & D"</string>
+			<string>"Terminals C - D"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -2354,7 +2290,7 @@
 			<key>longitude</key>
 			<real>-95.3344763</real>
 			<key>name</key>
-			<string>"Terminals E & F"</string>
+			<string>"Terminals E - F"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -2378,7 +2314,7 @@
 			<key>longitude</key>
 			<real>-86.8299335</real>
 			<key>name</key>
-			<string>"15–16th & Locust"</string>
+			<string>"15–16th - Locust"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -2386,7 +2322,7 @@
 			<key>longitude</key>
 			<real>-86.8354160</real>
 			<key>name</key>
-			<string>"12–13th & Locust"</string>
+			<string>"12–13th - Locust"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -2394,7 +2330,7 @@
 			<key>longitude</key>
 			<real>-93.0655721</real>
 			<key>name</key>
-			<string>"9–10th & Locust"</string>
+			<string>"9–10th - Locust"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>

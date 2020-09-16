@@ -318,14 +318,6 @@
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Martim Moniz (formerly Socorro)"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
 			<real>38.7144118</real>
 			<key>longitude</key>
 			<real>-9.1408772</real>

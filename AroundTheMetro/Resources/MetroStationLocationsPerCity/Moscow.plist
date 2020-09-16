@@ -1110,14 +1110,6 @@
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Vykhino yard"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
 			<real>55.7022220</real>
 			<key>longitude</key>
 			<real>37.8518810</real>
@@ -1147,14 +1139,6 @@
 			<real>37.8640150</real>
 			<key>name</key>
 			<string>"Novokosino"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Novogireyevo yard"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -1358,14 +1342,6 @@
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Vladykino yard"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
 			<real>55.8474220</real>
 			<key>longitude</key>
 			<real>37.5900291</real>
@@ -1502,14 +1478,6 @@
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Varshavskoye yard"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
 			<real>55.6233905</real>
 			<key>longitude</key>
 			<real>37.6091300</real>
@@ -1555,14 +1523,6 @@
 			<real>37.5351506</real>
 			<key>name</key>
 			<string>"Seligerskaya"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Likhobory yard"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -1670,14 +1630,6 @@
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Pechatniki yard"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
 			<real>55.6933670</real>
 			<key>longitude</key>
 			<real>37.7265390</real>
@@ -1755,14 +1707,6 @@
 			<real>37.6204860</real>
 			<key>name</key>
 			<string>"Varshavskaya"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Zamoskvoretskoye yard"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>

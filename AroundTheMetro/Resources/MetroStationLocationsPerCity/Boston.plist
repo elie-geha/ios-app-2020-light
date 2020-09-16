@@ -38,14 +38,6 @@
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real>42.3656132</real>
-			<key>longitude</key>
-			<real>-71.0095602</real>
-			<key>name</key>
-			<string>"Airport Handicapped/disabled access"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
 			<real>42.3301540</real>
 			<key>longitude</key>
 			<real>-71.0576550</real>
@@ -298,7 +290,7 @@
 			<key>longitude</key>
 			<real>-71.0623959</real>
 			<key>name</key>
-			<string>"Chinatown "</string>
+			<string>"Chinatown"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -474,7 +466,7 @@
 			<key>longitude</key>
 			<real>-71.1346281</real>
 			<key>name</key>
-			<string>"Griggs Street/Long Avenue"</string>
+			<string>"Griggs Street Long Avenue"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -538,7 +530,7 @@
 			<key>longitude</key>
 			<real>-71.0523646</real>
 			<key>name</key>
-			<string>"JFK/UMass"</string>
+			<string>"JFK UMass"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -546,7 +538,7 @@
 			<key>longitude</key>
 			<real>-71.0862248</real>
 			<key>name</key>
-			<string>"Kendall/MIT"</string>
+			<string>"Kendall MIT"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -722,7 +714,7 @@
 			<key>longitude</key>
 			<real>-71.0413280</real>
 			<key>name</key>
-			<string>"Northern Avenue & Harbor Street"</string>
+			<string>"Northern Avenue - Harbor Street"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -730,7 +722,7 @@
 			<key>longitude</key>
 			<real>-71.0413280</real>
 			<key>name</key>
-			<string>"Northern Avenue & Tide Street"</string>
+			<string>"Northern Avenue - Tide Street"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>

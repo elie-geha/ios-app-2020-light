@@ -46,14 +46,6 @@
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Berliner Tor Berne"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
 			<real>53.5422630</real>
 			<key>longitude</key>
 			<real>10.1074113</real>

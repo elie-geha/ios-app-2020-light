@@ -158,14 +158,6 @@
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real>26.0117843</real>
-			<key>longitude</key>
-			<real>-80.1678443</real>
-			<key>name</key>
-			<string>"Florida"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
 			<real>-34.6037014</real>
 			<key>longitude</key>
 			<real>-58.3813785</real>
@@ -614,14 +606,6 @@
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real>-31.4228000</real>
-			<key>longitude</key>
-			<real>-64.1758000</real>
-			<key>name</key>
-			<string>"Córdoba"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
 			<real>-34.6035460</real>
 			<key>longitude</key>
 			<real>-58.3729700</real>
@@ -635,14 +619,6 @@
 			<real>-58.4059187</real>
 			<key>name</key>
 			<string>"Once"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Domingo Faustino Sarmiento Railway"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>

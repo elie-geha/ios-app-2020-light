@@ -1174,14 +1174,6 @@
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Stage 2"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
 			<real>1.4227165</real>
 			<key>longitude</key>
 			<real>103.7985073</real>
@@ -1318,14 +1310,6 @@
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Stage 4"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
 			<real>1.2971989</real>
 			<key>longitude</key>
 			<real>103.8780928</real>
@@ -1379,14 +1363,6 @@
 			<real>103.9436909</real>
 			<key>name</key>
 			<string>"Bayshore"</string>
-		</dict>
-		<dict>
-			<key>latitude</key>
-			<real></real>
-			<key>longitude</key>
-			<real></real>
-			<key>name</key>
-			<string>"Stage 5"</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
