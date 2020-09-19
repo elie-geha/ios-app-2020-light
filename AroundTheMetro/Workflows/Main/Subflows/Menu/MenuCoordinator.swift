@@ -8,20 +8,31 @@
 
 import UIKit
 
-class MenuCoordinator: CoordinatorType {
+class MenuCoordinator: BaseCoordinator {
+    var context: AppContext
+
+    var onLogin: (() -> Void)?
+    var onProfile: (() -> Void)?
     var onHome: (() -> Void)?
     var onChangeCity: (() -> Void)?
     var onContactUs: (() -> Void)?
-    
-    private var router: UINavigationController
 
-    init(with router: UINavigationController) {
-        self.router = router
+    init(with router: RouterType, context: AppContext) {
+        self.context = context
+        super.init(with: router)
     }
 
-    func start() {
+    override func start() {
         let viewController = Storyboard.Menu.menuVC
+        initialContainer = viewController
         viewController.menuItems = [
+            MainMenuItem(
+                type: context.auth.isAuthorized ? .profile : .login,
+                onSelect: { [weak self] in
+                    self?.context.auth.isAuthorized == true
+                        ? self?.onProfile?()
+                        : self?.onLogin?()
+            }),
             MainMenuItem(type: .home, onSelect: { [weak self] in
                 self?.onHome?()
             }),
@@ -32,6 +43,6 @@ class MenuCoordinator: CoordinatorType {
                 self?.onContactUs?()
             })
         ]
-        router.setViewControllers([viewController], animated: false)
+        router.show(container: viewController, animated: false)
     }
 }

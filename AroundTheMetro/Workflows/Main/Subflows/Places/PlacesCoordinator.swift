@@ -10,18 +10,17 @@ import FirebaseAnalytics
 import SVProgressHUD
 import UIKit
 
-class PlacesCoordinator: CoordinatorType {
-    private var router: UINavigationController
+class PlacesCoordinator: BaseCoordinator {
     private var context: AppContext
     private var placeType: PlaceType
 
-    init(with router: UINavigationController, context: AppContext, type: PlaceType) {
-        self.router = router
+    init(with router: RouterType, context: AppContext, type: PlaceType) {
         self.context = context
         self.placeType = type
+        super.init(with: router)
     }
 
-    func start() {
+    override func start() {
         guard let country = context.countriesRepository.currentCountry,
             let city = context.countriesRepository.currentCity else { return }
 
@@ -42,6 +41,7 @@ class PlacesCoordinator: CoordinatorType {
 
     private func openPlacesVC(with metrosAndPlaces: [MetroStation: [Place]]) {
         let vc = Storyboard.Places.placesVC
+        initialContainer = vc
 
         vc.metrosAndPlaces = metrosAndPlaces
 
@@ -59,11 +59,11 @@ class PlacesCoordinator: CoordinatorType {
             allPlacesVC.onOpenDetails = vc.onOpenDetails
             allPlacesVC.title = metro.name
             allPlacesVC.additionalSafeAreaInsets = .zero
-            self?.router.pushViewController(allPlacesVC, animated: true)
+            self?.router.show(container: allPlacesVC, animated: true)
         }
         vc.metroViewController = metrosVC
 
-        router.pushViewController(vc, animated: true)
+        router.show(container: vc, animated: true)
     }
 
     private func openPlaceDetails(with place: Place) {
@@ -85,11 +85,11 @@ class PlacesCoordinator: CoordinatorType {
 
             let webBrowser = WebBrowserViewController()
             webBrowser.url = url
-            self?.router.pushViewController(webBrowser, animated: true)
+            self?.router.show(container: webBrowser, animated: true)
 
             self?.context.analytics.trackEvent(with: .websiteClicked(place.name, place.website ?? "no url"))
         }
-        router.pushViewController(vc, animated: true)
+        router.show(container: vc, animated: true)
 
         context.analytics.trackEvent(with: .detailsPageView(place.name))
         context.ads.handleEvent(with: .openDetailsPage)

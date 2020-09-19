@@ -66,6 +66,13 @@
 		1F4C2BF024EDBD4200C39967 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */; };
 		1F4C2BF224EDBDBA00C39967 /* HomeMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */; };
 		1F5F783825160112009174DC /* Tbilisi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F5F783725160112009174DC /* Tbilisi.plist */; };
+		1F5F787425161051009174DC /* AppleAuthorizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5F787325161051009174DC /* AppleAuthorizationHelper.swift */; };
+		1F5F787725161134009174DC /* AppleAuthIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5F787625161134009174DC /* AppleAuthIntegration.swift */; };
+		1F5F787B25161440009174DC /* AuthIntegration+Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5F787A2516143F009174DC /* AuthIntegration+Apple.swift */; };
+		1F763C192516391400B0FF26 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F763C182516391400B0FF26 /* BaseCoordinator.swift */; };
+		1F763C27251642BD00B0FF26 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F763C26251642BD00B0FF26 /* RoundButton.swift */; };
+		1F763C4925164E3800B0FF26 /* AuthIntegration+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F763C4825164E3800B0FF26 /* AuthIntegration+Google.swift */; };
+		1F763C4D25164F7900B0FF26 /* GoogleAuthIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F763C4C25164F7900B0FF26 /* GoogleAuthIntegration.swift */; };
 		1F8E20F224FEBC4A00F28DB2 /* OnBoardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20F124FEBC4A00F28DB2 /* OnBoardingCoordinator.swift */; };
 		1F8E20F524FEBCBA00F28DB2 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20F424FEBCBA00F28DB2 /* CoordinatorType.swift */; };
 		1F8E20F824FEBDBA00F28DB2 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E20F724FEBDBA00F28DB2 /* OnBoarding.storyboard */; };
@@ -101,6 +108,16 @@
 		1FA3C43924EBDE6A00295FFA /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C43824EBDE6A00295FFA /* AppConstants.swift */; };
 		1FA3C43D24EBEB9D00295FFA /* PlacesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C43C24EBEB9D00295FFA /* PlacesResponse.swift */; };
 		1FA3C43F24EBEBAA00295FFA /* MetroStationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3C43E24EBEBAA00295FFA /* MetroStationsResponse.swift */; };
+		1FDBC941250A9FDE0009CD8D /* RouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC940250A9FDE0009CD8D /* RouterType.swift */; };
+		1FDBC943250AA0230009CD8D /* ContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC942250AA0230009CD8D /* ContainerType.swift */; };
+		1FDBC94B250AB9CD0009CD8D /* AuthorizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC948250AB9CD0009CD8D /* AuthorizationCoordinator.swift */; };
+		1FDBC94C250AB9CD0009CD8D /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDBC949250AB9CD0009CD8D /* Authorization.storyboard */; };
+		1FDBC94D250AB9CD0009CD8D /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC94A250AB9CD0009CD8D /* AuthorizationViewController.swift */; };
+		1FDBC951250ABD4D0009CD8D /* AuthIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC950250ABD4D0009CD8D /* AuthIntegration.swift */; };
+		1FDBC955250E15250009CD8D /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC954250E15250009CD8D /* RegistrationViewController.swift */; };
+		1FDBC95A250E24900009CD8D /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC957250E24900009CD8D /* ProfileCoordinator.swift */; };
+		1FDBC95B250E24900009CD8D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDBC958250E24900009CD8D /* Profile.storyboard */; };
+		1FDBC95C250E24900009CD8D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC959250E24900009CD8D /* ProfileViewController.swift */; };
 		1FF6843024F04BFE0068A69A /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6842F24F04BFE0068A69A /* Menu.storyboard */; };
 		1FF6843224F04C5C0068A69A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6843124F04C5C0068A69A /* MenuViewController.swift */; };
 		1FF6843424F04CC20068A69A /* MainMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6843324F04CC20068A69A /* MainMenuItem.swift */; };
@@ -209,6 +226,15 @@
 		1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuType.swift; sourceTree = "<group>"; };
 		1F5F783725160112009174DC /* Tbilisi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tbilisi.plist; sourceTree = "<group>"; };
+		1F5F787325161051009174DC /* AppleAuthorizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthorizationHelper.swift; sourceTree = "<group>"; };
+		1F5F787625161134009174DC /* AppleAuthIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthIntegration.swift; sourceTree = "<group>"; };
+		1F5F787A2516143F009174DC /* AuthIntegration+Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthIntegration+Apple.swift"; sourceTree = "<group>"; };
+		1F5F787D25161F97009174DC /* AroundTheMetroDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AroundTheMetroDebug.entitlements; sourceTree = "<group>"; };
+		1F763BF3251630C800B0FF26 /* AroundTheMetroRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AroundTheMetroRelease.entitlements; sourceTree = "<group>"; };
+		1F763C182516391400B0FF26 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		1F763C26251642BD00B0FF26 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		1F763C4825164E3800B0FF26 /* AuthIntegration+Google.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthIntegration+Google.swift"; sourceTree = "<group>"; };
+		1F763C4C25164F7900B0FF26 /* GoogleAuthIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthIntegration.swift; sourceTree = "<group>"; };
 		1F8E20F124FEBC4A00F28DB2 /* OnBoardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCoordinator.swift; sourceTree = "<group>"; };
 		1F8E20F424FEBCBA00F28DB2 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 		1F8E20F724FEBDBA00F28DB2 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
@@ -246,6 +272,16 @@
 		1FA3C43824EBDE6A00295FFA /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		1FA3C43C24EBEB9D00295FFA /* PlacesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesResponse.swift; sourceTree = "<group>"; };
 		1FA3C43E24EBEBAA00295FFA /* MetroStationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStationsResponse.swift; sourceTree = "<group>"; };
+		1FDBC940250A9FDE0009CD8D /* RouterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterType.swift; sourceTree = "<group>"; };
+		1FDBC942250AA0230009CD8D /* ContainerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerType.swift; sourceTree = "<group>"; };
+		1FDBC948250AB9CD0009CD8D /* AuthorizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCoordinator.swift; sourceTree = "<group>"; };
+		1FDBC949250AB9CD0009CD8D /* Authorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
+		1FDBC94A250AB9CD0009CD8D /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		1FDBC950250ABD4D0009CD8D /* AuthIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthIntegration.swift; sourceTree = "<group>"; };
+		1FDBC954250E15250009CD8D /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		1FDBC957250E24900009CD8D /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		1FDBC958250E24900009CD8D /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		1FDBC959250E24900009CD8D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1FF6842F24F04BFE0068A69A /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		1FF6843124F04C5C0068A69A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		1FF6843324F04CC20068A69A /* MainMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuItem.swift; sourceTree = "<group>"; };
@@ -361,6 +397,7 @@
 		1F1DD6D224F981EC003C4A9F /* Integrations */ = {
 			isa = PBXGroup;
 			children = (
+				1FDBC952250ABEDE0009CD8D /* Auth */,
 				1F1DD6DA24F9861B003C4A9F /* AnalyticsIntegration.swift */,
 				1F1DD6DC24F9882B003C4A9F /* AdsIntegration.swift */,
 			);
@@ -372,6 +409,8 @@
 			children = (
 				1F8E20F624FEBD5400F28DB2 /* Enums */,
 				1F8E20F424FEBCBA00F28DB2 /* CoordinatorType.swift */,
+				1FDBC940250A9FDE0009CD8D /* RouterType.swift */,
+				1FDBC942250AA0230009CD8D /* ContainerType.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -496,6 +535,43 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		1F5F78722516101C009174DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */,
+				1FF6843C24F0547F0068A69A /* Collection+Registerable.swift */,
+				1FF6843E24F054AE0068A69A /* UIView+Factory.swift */,
+				1FF6844024F054DC0068A69A /* UIBundle+Current.swift */,
+				1F8E20FB24FEC07E00F28DB2 /* UIColor+hex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1F763C172516390600B0FF26 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1F763C182516391400B0FF26 /* BaseCoordinator.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		1F763C23251642A100B0FF26 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F763C26251642BD00B0FF26 /* RoundButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1F763C24251642A800B0FF26 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F1DD6A524F3E9C4003C4A9F /* AdsContainerViewController.swift */,
+				1F8E210024FF960000F28DB2 /* WebBrowserViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		1F8E20EF24FEBC1E00F28DB2 /* Subflows */ = {
 			isa = PBXGroup;
 			children = (
@@ -539,8 +615,8 @@
 		1F8E20FF24FF95D300F28DB2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				1F1DD6A524F3E9C4003C4A9F /* AdsContainerViewController.swift */,
-				1F8E210024FF960000F28DB2 /* WebBrowserViewController.swift */,
+				1F763C23251642A100B0FF26 /* Views */,
+				1F763C24251642A800B0FF26 /* ViewControllers */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -567,6 +643,8 @@
 		1FA3C3EB24EB11B700295FFA /* AroundTheMetro */ = {
 			isa = PBXGroup;
 			children = (
+				1F763BF3251630C800B0FF26 /* AroundTheMetroRelease.entitlements */,
+				1F5F787D25161F97009174DC /* AroundTheMetroDebug.entitlements */,
 				1FA3C42E24EBD8E900295FFA /* AppContext.swift */,
 				1FA3C3EC24EB11B700295FFA /* AppDelegate.swift */,
 				1FA3C40224EB13AB00295FFA /* AppCoordinator.swift */,
@@ -575,6 +653,7 @@
 				1FA3C43224EBDB4F00295FFA /* Networking */,
 				1F1DD6D324F98285003C4A9F /* Types */,
 				1FA3C41624EB2A8100295FFA /* Model */,
+				1F763C172516390600B0FF26 /* Base */,
 				1FA3C40424EB148600295FFA /* Dependencies */,
 				1FA3C40124EB131500295FFA /* Workflows */,
 				1F8E20FF24FF95D300F28DB2 /* Components */,
@@ -601,6 +680,8 @@
 		1FA3C40124EB131500295FFA /* Workflows */ = {
 			isa = PBXGroup;
 			children = (
+				1FDBC956250E24780009CD8D /* Profile */,
+				1FDBC93D250A9A740009CD8D /* Authorization */,
 				1F8E20F024FEBC3900F28DB2 /* OnBoarding */,
 				1FA3C40724EB17D700295FFA /* Main */,
 			);
@@ -683,13 +764,10 @@
 		1FA3C42924EB34B200295FFA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1F5F78722516101C009174DC /* Extensions */,
 				1FA3C42A24EB34D600295FFA /* UserDefaultsBacked.swift */,
 				1FA3C42C24EB352000295FFA /* AnyOptional.swift */,
-				1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */,
-				1FF6843C24F0547F0068A69A /* Collection+Registerable.swift */,
-				1FF6843E24F054AE0068A69A /* UIView+Factory.swift */,
-				1FF6844024F054DC0068A69A /* UIBundle+Current.swift */,
-				1F8E20FB24FEC07E00F28DB2 /* UIColor+hex.swift */,
+				1F5F787325161051009174DC /* AppleAuthorizationHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -749,6 +827,55 @@
 				1FA3C43E24EBEBAA00295FFA /* MetroStationsResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		1FDBC93D250A9A740009CD8D /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				1FDBC94F250AB9D90009CD8D /* View */,
+				1FDBC948250AB9CD0009CD8D /* AuthorizationCoordinator.swift */,
+				1FDBC949250AB9CD0009CD8D /* Authorization.storyboard */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		1FDBC94F250AB9D90009CD8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1FDBC94A250AB9CD0009CD8D /* AuthorizationViewController.swift */,
+				1FDBC954250E15250009CD8D /* RegistrationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1FDBC952250ABEDE0009CD8D /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				1F763C4C25164F7900B0FF26 /* GoogleAuthIntegration.swift */,
+				1F5F787625161134009174DC /* AppleAuthIntegration.swift */,
+				1FDBC950250ABD4D0009CD8D /* AuthIntegration.swift */,
+				1F5F787A2516143F009174DC /* AuthIntegration+Apple.swift */,
+				1F763C4825164E3800B0FF26 /* AuthIntegration+Google.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		1FDBC956250E24780009CD8D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1FDBC95D250E24970009CD8D /* View */,
+				1FDBC957250E24900009CD8D /* ProfileCoordinator.swift */,
+				1FDBC958250E24900009CD8D /* Profile.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		1FDBC95D250E24970009CD8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1FDBC959250E24900009CD8D /* ProfileViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		1FF6842E24F04BEA0068A69A /* View */ = {
@@ -851,6 +978,7 @@
 				1FA3C3E624EB11B700295FFA /* Frameworks */,
 				1FA3C3E724EB11B700295FFA /* Resources */,
 				1E67D382E4CFBBAC4C7105BB /* [CP] Embed Pods Frameworks */,
+				A334BA58C3D9C837B11FA1D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -909,6 +1037,7 @@
 				1F4C2BC324ED955200C39967 /* Istanbul.plist in Resources */,
 				51C50D8125104CC20048EB09 /* Copenhagen.plist in Resources */,
 				5153026425118E5000E73CB8 /* Munich.plist in Resources */,
+				1FDBC94C250AB9CD0009CD8D /* Authorization.storyboard in Resources */,
 				1F4C2BBF24ED955200C39967 /* Vancouver.plist in Resources */,
 				1FF6846F24F0655C0068A69A /* Localizable.strings in Resources */,
 				1FF6843024F04BFE0068A69A /* Menu.storyboard in Resources */,
@@ -968,6 +1097,7 @@
 				515302702511906500E73CB8 /* Singapore.plist in Resources */,
 				1F4C2BAF24ED955200C39967 /* Lausanne.plist in Resources */,
 				51C50D7F25104CC20048EB09 /* Sao_Paulo.plist in Resources */,
+				1FDBC95B250E24900009CD8D /* Profile.storyboard in Resources */,
 				1F4C2BE524EDAC2200C39967 /* ImageCell.xib in Resources */,
 				1F1DD6A824F3F07B003C4A9F /* GoogleService-Info.plist in Resources */,
 			);
@@ -991,6 +1121,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A334BA58C3D9C837B11FA1D2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B6B2F2E48973955AE6BBC8B0 /* [CP] Check Pods Manifest.lock */ = {
@@ -1024,35 +1171,45 @@
 			files = (
 				1FA3C42424EB2D5700295FFA /* CountriesRepository.swift in Sources */,
 				1FA3C43D24EBEB9D00295FFA /* PlacesResponse.swift in Sources */,
+				1FDBC955250E15250009CD8D /* RegistrationViewController.swift in Sources */,
 				1F4C2BD724EDA05E00C39967 /* HomeViewController.swift in Sources */,
+				1F5F787725161134009174DC /* AppleAuthIntegration.swift in Sources */,
 				1FA3C43624EBDB8A00295FFA /* ATLApiTarget.swift in Sources */,
 				1FA3C40324EB13AB00295FFA /* AppCoordinator.swift in Sources */,
 				1FA3C42D24EB352000295FFA /* AnyOptional.swift in Sources */,
 				1FA3C3ED24EB11B700295FFA /* AppDelegate.swift in Sources */,
 				1F1DD6A224F3D7D9003C4A9F /* MetroPlanViewController.swift in Sources */,
 				1F4C2B8C24ED931200C39967 /* MetroLocationsService.swift in Sources */,
+				1F763C27251642BD00B0FF26 /* RoundButton.swift in Sources */,
 				1F4C2BEB24EDAFFC00C39967 /* BannersResponse.swift in Sources */,
 				1FF6847C24F0764B0068A69A /* PlaceListCell.swift in Sources */,
+				1FDBC94B250AB9CD0009CD8D /* AuthorizationCoordinator.swift in Sources */,
 				1F1DD6DD24F9882B003C4A9F /* AdsIntegration.swift in Sources */,
 				1F1DD6D924F98434003C4A9F /* AdsEventType.swift in Sources */,
 				1F4C2B8824ED926100C39967 /* MetroStationLocation.swift in Sources */,
 				1FF6843F24F054AE0068A69A /* UIView+Factory.swift in Sources */,
+				1FDBC951250ABD4D0009CD8D /* AuthIntegration.swift in Sources */,
 				1FA3C42B24EB34D600295FFA /* UserDefaultsBacked.swift in Sources */,
 				1F4C2B8A24ED92BB00C39967 /* MetroLocationsRepository.swift in Sources */,
 				1F8E20F224FEBC4A00F28DB2 /* OnBoardingCoordinator.swift in Sources */,
 				1FF6843D24F0547F0068A69A /* Collection+Registerable.swift in Sources */,
+				1FDBC95A250E24900009CD8D /* ProfileCoordinator.swift in Sources */,
 				1FA3C41324EB212700295FFA /* Assets.swift in Sources */,
 				1F1DD6A624F3E9C4003C4A9F /* AdsContainerViewController.swift in Sources */,
 				1FA3C42224EB2CF900295FFA /* PlacesServiceLocal.swift in Sources */,
+				1F763C4D25164F7900B0FF26 /* GoogleAuthIntegration.swift in Sources */,
 				1FF6844424F061870068A69A /* ContactUsController.swift in Sources */,
 				1FA3C3EF24EB11B700295FFA /* SceneDelegate.swift in Sources */,
+				1F763C192516391400B0FF26 /* BaseCoordinator.swift in Sources */,
 				1F1DD6DB24F9861B003C4A9F /* AnalyticsIntegration.swift in Sources */,
+				1FDBC94D250AB9CD0009CD8D /* AuthorizationViewController.swift in Sources */,
 				1F8E20F524FEBCBA00F28DB2 /* CoordinatorType.swift in Sources */,
 				1FA3C43524EBDB8A00295FFA /* NetworkAdapter.swift in Sources */,
 				1F8E20FE24FEC29B00F28DB2 /* OnBoardingViewController.swift in Sources */,
 				1F4C2BDD24EDA84000C39967 /* BannersCell.swift in Sources */,
 				1F1DD6AC24F4D496003C4A9F /* ChangeCityViewController.swift in Sources */,
 				1FA3C41C24EB2AA200295FFA /* Country.swift in Sources */,
+				1FDBC95C250E24900009CD8D /* ProfileViewController.swift in Sources */,
 				1F4C2BE324EDABD900C39967 /* ImageCell.swift in Sources */,
 				1FF6847924F0761B0068A69A /* PlaceDetailsViewController.swift in Sources */,
 				1FA3C40924EB17EB00295FFA /* MainCoordinator.swift in Sources */,
@@ -1065,6 +1222,7 @@
 				1FA3C42024EB2B2F00295FFA /* PlacesServiceRemote.swift in Sources */,
 				1F4C2BD924EDA08B00C39967 /* Storyboard.swift in Sources */,
 				1FA3C41124EB1FFE00295FFA /* MenuCoordinator.swift in Sources */,
+				1FDBC943250AA0230009CD8D /* ContainerType.swift in Sources */,
 				1FF6847324F06B070068A69A /* PlacesViewController.swift in Sources */,
 				1FA3C43F24EBEBAA00295FFA /* MetroStationsResponse.swift in Sources */,
 				1FF6847724F075FF0068A69A /* MetroListViewController.swift in Sources */,
@@ -1073,16 +1231,19 @@
 				1FA3C41524EB290F00295FFA /* PlacesRepository.swift in Sources */,
 				1FA3C40E24EB184100295FFA /* HomeCoordinator.swift in Sources */,
 				1F8E20FC24FEC07E00F28DB2 /* UIColor+hex.swift in Sources */,
+				1F5F787425161051009174DC /* AppleAuthorizationHelper.swift in Sources */,
 				1FF6843224F04C5C0068A69A /* MenuViewController.swift in Sources */,
 				1F8E210124FF960000F28DB2 /* WebBrowserViewController.swift in Sources */,
 				1F4C2BE824EDAF3300C39967 /* BannersServiceRemote.swift in Sources */,
 				1FA3C42824EB349100295FFA /* UserStorageService.swift in Sources */,
 				1FF6844124F054DC0068A69A /* UIBundle+Current.swift in Sources */,
 				1F4C2BCF24ED9A3700C39967 /* Appearance.swift in Sources */,
+				1FDBC941250A9FDE0009CD8D /* RouterType.swift in Sources */,
 				1FA3C41824EB2A9000295FFA /* Place.swift in Sources */,
 				1F1DD6D524F9829E003C4A9F /* AnalyticsEventType.swift in Sources */,
 				1F4C2BF024EDBD4200C39967 /* String+Localized.swift in Sources */,
 				1FA3C41E24EB2AAD00295FFA /* MetroStation.swift in Sources */,
+				1F5F787B25161440009174DC /* AuthIntegration+Apple.swift in Sources */,
 				1FF6847524F075F00068A69A /* AllPlacesListViewController.swift in Sources */,
 				1FA3C42624EB2D8A00295FFA /* CountriesServiceLocal.swift in Sources */,
 				1F1DD6A024F3D4AF003C4A9F /* LocateMetroViewController.swift in Sources */,
@@ -1090,6 +1251,7 @@
 				1F8E20FA24FEBF6800F28DB2 /* OnBoardingStepType.swift in Sources */,
 				1F4C2BE124EDAAAD00C39967 /* Banner.swift in Sources */,
 				1F4C2BDF24EDA8EF00C39967 /* MenuCell.swift in Sources */,
+				1F763C4925164E3800B0FF26 /* AuthIntegration+Google.swift in Sources */,
 				1FF6848224F3CA860068A69A /* PlacesCoordinator.swift in Sources */,
 				1FA3C43924EBDE6A00295FFA /* AppConstants.swift in Sources */,
 			);
@@ -1258,8 +1420,9 @@
 			baseConfigurationReference = A85239D9126354EC81AB8AED /* Pods-AroundTheMetro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = AroundTheMetro/AroundTheMetroDebug.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
 				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
@@ -1271,7 +1434,7 @@
 				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AugmentedDiscovery.AroundTheMetro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = AroundTheMetro_Dev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1282,8 +1445,9 @@
 			baseConfigurationReference = D8FC33BDD46E6721368886D7 /* Pods-AroundTheMetro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = AroundTheMetro/AroundTheMetroRelease.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
 				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
@@ -1295,7 +1459,7 @@
 				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AugmentedDiscovery.AroundTheMetro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = AroundTheMetro_Dev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

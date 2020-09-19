@@ -8,34 +8,30 @@
 
 import UIKit
 
-class OnBoardingCoordinator: CoordinatorType {
+class OnBoardingCoordinator: BaseCoordinator {
     // MARK: - Context
     private var context: AppContext
 
-    // MARK: - Navigation
-    private var router: UIViewController
-
-    // MARK: - Actions
-
-    var onComplete: ((Bool) -> Void)?
-
     // MARK: -
 
-    init(with router: UIViewController,
+    init(with router: RouterType,
          context: AppContext) {
-        self.router = router
         self.context = context
+        super.init(with: router)
     }
 
-    func start() {
+    override func start() {
         let onBoardingVC = Storyboard.OnBoarding.onBoardingVC
+        initialContainer = onBoardingVC
         onBoardingVC.steps = [.discover, .locate, .offlineMap, .stayTuned]
         onBoardingVC.onFinish = { [weak self] in
             self?.onComplete?(true)
+            self?.router.hide(container: onBoardingVC, animated: true)
         }
         onBoardingVC.onSkip = { [weak self] in
             self?.onComplete?(false)
+            self?.router.hide(container: onBoardingVC, animated: true)
         }
-        router.present(onBoardingVC, animated: true)
+        router.show(container: onBoardingVC, animated: true)
     }
 }

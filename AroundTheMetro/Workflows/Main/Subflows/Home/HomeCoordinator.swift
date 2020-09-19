@@ -9,24 +9,23 @@
 import SVProgressHUD
 import UIKit
 
-class HomeCoordinator: CoordinatorType {
+class HomeCoordinator: BaseCoordinator {
     var onShare: (() -> Void)?
     var onMenu: (() -> Void)?
 
-    private var router: UINavigationController
     private var context: AppContext
-
-    private var placesCoordinator: PlacesCoordinator?
 
     private var homeViewController: HomeViewController?
 
-    init(with router: UINavigationController, context: AppContext) {
-        self.router = router
+    init(with router: RouterType, context: AppContext) {
         self.context = context
+        super.init(with: router)
     }
 
-    func start() {
-        homeViewController = Storyboard.Home.homeVC
+    override func start() {
+        let viewController = Storyboard.Home.homeVC
+        initialContainer = viewController
+        homeViewController = viewController
         homeViewController?.title = context.countriesRepository.currentCity?.name
 
         updateBanners()
@@ -54,14 +53,14 @@ class HomeCoordinator: CoordinatorType {
         ]
         homeViewController?.onLeftBarButton = onMenu
         homeViewController?.onRightBarButton = onShare
-        router.setViewControllers([homeViewController].compactMap { $0 }, animated: false)
+        router.show(container: viewController, animated: true)
     }
 
     private func openMetroPlan() {
         let vc = Storyboard.Home.metroPlanVC
         vc.city = context.countriesRepository.currentCity
         vc.title = context.countriesRepository.currentCity?.name
-        router.pushViewController(vc, animated: true)
+        router.show(container: vc, animated: true)
     }
     
     private func openLocateMetro() {
@@ -79,7 +78,7 @@ class HomeCoordinator: CoordinatorType {
                     let vc = Storyboard.Home.locateMetroVC
                     vc.stations = stations
                     vc.title = city.name
-                    self?.router.pushViewController(vc, animated: true)
+                    self?.router.show(container: vc, animated: true)
                 case .failure(let error):
                     SVProgressHUD.showError(withStatus: error.localizedDescription)
                     SVProgressHUD.dismiss(withDelay: 3.0)
@@ -88,8 +87,12 @@ class HomeCoordinator: CoordinatorType {
     }
 
     private func openPlaces(with placeType: PlaceType) {
-        placesCoordinator = PlacesCoordinator(with: router, context: context, type: placeType)
-        placesCoordinator?.start()
+        let placesCoordinator = PlacesCoordinator(with: router, context: context, type: placeType)
+        addDependency(placesCoordinator)
+        placesCoordinator.onComplete = { [weak self] _ in
+            self?.removeDependency(placesCoordinator)
+        }
+        placesCoordinator.start()
     }
 
     func updateBanners() {
