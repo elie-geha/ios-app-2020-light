@@ -20,7 +20,7 @@ final class AuthorizationCoordinator: BaseCoordinator {
     }
 
     override func start() {
-        let authorizationCoordinatorVC = Storyboard.Authorization.authorizationVC
+        let authorizationCoordinatorVC = StoryboardScene.Authorization.initialScene.instantiate()
         initialContainer = authorizationCoordinatorVC
         authorizationCoordinatorVC.onBack = { [weak self] in
             self?.finish()
@@ -52,7 +52,7 @@ final class AuthorizationCoordinator: BaseCoordinator {
     }
 
     private func showRegistration() {
-        let registrationVC = Storyboard.Authorization.registrationVC
+        let registrationVC = StoryboardScene.Authorization.registrationViewController.instantiate()
         registrationVC.onRegister = { [weak self] email, password in
             self?.context.auth.register(with: email, password: password) { result in
                 switch result {

@@ -21,7 +21,7 @@ final class ProfileCoordinator: BaseCoordinator {
     }
 
     override func start() {
-        let profileVC = Storyboard.Profile.profileVC
+        let profileVC = StoryboardScene.Profile.profileViewController.instantiate()
         profileVC.onLogout = { [weak self] in
             self?.onLogout?()
             self?.finish()

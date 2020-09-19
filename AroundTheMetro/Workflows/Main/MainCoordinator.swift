@@ -106,7 +106,7 @@ class MainCoordinator: BaseCoordinator {
     }
 
     private func createChangeCity() {
-        let changeCityVC = Storyboard.Menu.changeCityVC
+        let changeCityVC = StoryboardScene.Menu.changeCityViewController.instantiate()
         self.changeCityController = changeCityVC
         changeCityVC.onConfirm = { [weak self] selectedCountry, selectedCity in
             self?.context.countriesRepository.currentCountry = selectedCountry

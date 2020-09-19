@@ -6,6 +6,8 @@ use_frameworks!
 target 'AroundTheMetro' do
     # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
 
+    pod 'SwiftGen', '~> 6.0'
+    
     pod 'AKSideMenu'
     pod 'Moya'
     pod 'Kingfisher'

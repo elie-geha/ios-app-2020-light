@@ -46,4 +46,12 @@ enum HomeMenuType {
         case .attractions: return "Attractions".localized
         }
     }
+
+
+    var subtitle: String? {
+        switch self {
+        case .metroPlan, .locateMetro: return "(Works Offline)".localized
+        default: return nil
+        }
+    }
 }

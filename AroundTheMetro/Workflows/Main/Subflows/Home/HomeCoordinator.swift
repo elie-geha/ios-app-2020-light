@@ -23,7 +23,7 @@ class HomeCoordinator: BaseCoordinator {
     }
 
     override func start() {
-        let viewController = Storyboard.Home.homeVC
+        let viewController = StoryboardScene.Home.initialScene.instantiate()
         initialContainer = viewController
         homeViewController = viewController
         homeViewController?.title = context.countriesRepository.currentCity?.name
@@ -57,7 +57,7 @@ class HomeCoordinator: BaseCoordinator {
     }
 
     private func openMetroPlan() {
-        let vc = Storyboard.Home.metroPlanVC
+        let vc = StoryboardScene.Home.metroPlanViewController.instantiate()
         vc.city = context.countriesRepository.currentCity
         vc.title = context.countriesRepository.currentCity?.name
         router.show(container: vc, animated: true)
@@ -75,7 +75,7 @@ class HomeCoordinator: BaseCoordinator {
                 switch result {
                 case .success(let stations):
                     SVProgressHUD.dismiss()
-                    let vc = Storyboard.Home.locateMetroVC
+                    let vc = StoryboardScene.Home.locateMetroViewController.instantiate()
                     vc.stations = stations
                     vc.title = city.name
                     self?.router.show(container: vc, animated: true)

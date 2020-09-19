@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,6 +36,15 @@
                             <constraint firstAttribute="width" constant="44" id="RaX-Zw-xAc"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Nv-T8-mzL">
+                        <rect key="frame" x="69" y="108" width="180" height="11"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="180" id="0wE-Qg-aVh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="muG-Om-PF7" firstAttribute="top" secondItem="YjS-pk-cSb" secondAttribute="top" constant="85" id="04r-HT-tXV"/>
@@ -44,13 +54,16 @@
                     <constraint firstItem="IWc-zo-Zzz" firstAttribute="centerX" secondItem="YjS-pk-cSb" secondAttribute="centerX" id="a4h-19-vA6"/>
                     <constraint firstItem="muG-Om-PF7" firstAttribute="centerX" secondItem="YjS-pk-cSb" secondAttribute="centerX" id="bOj-HE-610"/>
                     <constraint firstItem="IWc-zo-Zzz" firstAttribute="top" secondItem="YjS-pk-cSb" secondAttribute="top" constant="30" id="gZ8-EM-PQD"/>
+                    <constraint firstItem="2Nv-T8-mzL" firstAttribute="centerX" secondItem="YjS-pk-cSb" secondAttribute="centerX" id="j1J-wt-xDy"/>
                     <constraint firstAttribute="bottom" secondItem="S87-Nw-onw" secondAttribute="bottom" id="ogq-ep-IUR"/>
+                    <constraint firstItem="2Nv-T8-mzL" firstAttribute="top" secondItem="muG-Om-PF7" secondAttribute="bottom" constant="2" id="tq0-OD-D0X"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="318" height="199"/>
             <connections>
                 <outlet property="iconView" destination="IWc-zo-Zzz" id="usx-4H-D2U"/>
                 <outlet property="imageView" destination="S87-Nw-onw" id="QIM-Ov-3sK"/>
+                <outlet property="subtitleLabel" destination="2Nv-T8-mzL" id="dux-Uv-81v"/>
                 <outlet property="titleLabel" destination="muG-Om-PF7" id="1A9-V4-DYJ"/>
             </connections>
             <point key="canvasLocation" x="173.91304347826087" y="38.504464285714285"/>
