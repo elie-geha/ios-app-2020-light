@@ -65,6 +65,7 @@
 		1F4C2BEE24EDB3A500C39967 /* BannersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BED24EDB3A500C39967 /* BannersRepository.swift */; };
 		1F4C2BF024EDBD4200C39967 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */; };
 		1F4C2BF224EDBDBA00C39967 /* HomeMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */; };
+		1F5F783825160112009174DC /* Tbilisi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F5F783725160112009174DC /* Tbilisi.plist */; };
 		1F8E20F224FEBC4A00F28DB2 /* OnBoardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20F124FEBC4A00F28DB2 /* OnBoardingCoordinator.swift */; };
 		1F8E20F524FEBCBA00F28DB2 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20F424FEBCBA00F28DB2 /* CoordinatorType.swift */; };
 		1F8E20F824FEBDBA00F28DB2 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E20F724FEBDBA00F28DB2 /* OnBoarding.storyboard */; };
@@ -121,7 +122,6 @@
 		1FF6848224F3CA860068A69A /* PlacesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6848124F3CA860068A69A /* PlacesCoordinator.swift */; };
 		1FF6848424F3CACC0068A69A /* Places.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6848324F3CACC0068A69A /* Places.storyboard */; };
 		5153024A251125C200E73CB8 /* Boston.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51530249251125C200E73CB8 /* Boston.plist */; };
-		515302562511315200E73CB8 /* Tbilisi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 515302552511315200E73CB8 /* Tbilisi.plist */; };
 		5153025825118B2900E73CB8 /* Buenos_Aires.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5153025725118B2900E73CB8 /* Buenos_Aires.plist */; };
 		5153025A25118BC400E73CB8 /* Rio_de_Janeiro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5153025925118BC400E73CB8 /* Rio_de_Janeiro.plist */; };
 		5153025E25118CB800E73CB8 /* Helsinki.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5153025D25118CB800E73CB8 /* Helsinki.plist */; };
@@ -208,6 +208,7 @@
 		1F4C2BED24EDB3A500C39967 /* BannersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersRepository.swift; sourceTree = "<group>"; };
 		1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuType.swift; sourceTree = "<group>"; };
+		1F5F783725160112009174DC /* Tbilisi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tbilisi.plist; sourceTree = "<group>"; };
 		1F8E20F124FEBC4A00F28DB2 /* OnBoardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCoordinator.swift; sourceTree = "<group>"; };
 		1F8E20F424FEBCBA00F28DB2 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 		1F8E20F724FEBDBA00F28DB2 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
@@ -272,7 +273,6 @@
 		1FF6848124F3CA860068A69A /* PlacesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCoordinator.swift; sourceTree = "<group>"; };
 		1FF6848324F3CACC0068A69A /* Places.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Places.storyboard; sourceTree = "<group>"; };
 		51530249251125C200E73CB8 /* Boston.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Boston.plist; sourceTree = "<group>"; };
-		515302552511315200E73CB8 /* Tbilisi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Tbilisi.plist; path = "../../../../../../../../../../Users/eliasgeha/Downloads/plist cities/Tbilisi.plist"; sourceTree = "<group>"; };
 		5153025725118B2900E73CB8 /* Buenos_Aires.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Buenos_Aires.plist; sourceTree = "<group>"; };
 		5153025925118BC400E73CB8 /* Rio_de_Janeiro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Rio_de_Janeiro.plist; sourceTree = "<group>"; };
 		5153025D25118CB800E73CB8 /* Helsinki.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Helsinki.plist; sourceTree = "<group>"; };
@@ -398,7 +398,7 @@
 				1F4C2BA724ED955200C39967 /* Lyon.plist */,
 				1F4C2B9624ED955200C39967 /* Toulouse.plist */,
 				51530249251125C200E73CB8 /* Boston.plist */,
-				515302552511315200E73CB8 /* Tbilisi.plist */,
+				1F5F783725160112009174DC /* Tbilisi.plist */,
 				5153025F25118E0500E73CB8 /* Berlin.plist */,
 				5153026125118E4300E73CB8 /* Hamburg.plist */,
 				5153026325118E5000E73CB8 /* Munich.plist */,
@@ -945,13 +945,13 @@
 				1F4C2BC824ED955200C39967 /* Stockholm.plist in Resources */,
 				51C50D7925104CC20048EB09 /* Sofia.plist in Resources */,
 				1F4C2BCB24ED955200C39967 /* Miami.plist in Resources */,
-				515302562511315200E73CB8 /* Tbilisi.plist in Resources */,
 				1F4C2BD124ED9B6F00C39967 /* Home.storyboard in Resources */,
 				1F4C2BB124ED955200C39967 /* Toronto.plist in Resources */,
 				1F4C2BB324ED955200C39967 /* Chicago.plist in Resources */,
 				1F4C2BC024ED955200C39967 /* Montreal.plist in Resources */,
 				5153026825118EDD00E73CB8 /* Kolkata.plist in Resources */,
 				51C50D7D25104CC20048EB09 /* Brussels.plist in Resources */,
+				1F5F783825160112009174DC /* Tbilisi.plist in Resources */,
 				1F4C2BB824ED955200C39967 /* Osaka.plist in Resources */,
 				51C50D8625104CC20048EB09 /* Saint_Petersburg.plist in Resources */,
 				1F4C2BB524ED955200C39967 /* Marseille.plist in Resources */,
