@@ -1,5 +1,5 @@
 //
-//  AppleAuthorizationController.swift
+//  AppleAuthorization.swift
 //  AroundTheMetro
 //
 //  Created by Artem Alexandrov on 19.09.2020.
@@ -15,16 +15,20 @@ enum AppleAuthError: Error {
 }
 
 @available(iOS 13, *)
-class AppleAuthorizationController: NSObject {
-    var onDidAuthenticate: ((_ token: String, _ nonce: String) -> Void)?
-    var onDidFailAuthentication: ((Error) -> Void)?
+class AppleAuthIntegration: NSObject, AppleAuthIntegrationType {
+    var completion: ((Result<(token: String, nonce: String), Error>) -> Void)?
 
     // Unhashed nonce.
     fileprivate var currentNonce: String?
 
     var authController: ASAuthorizationController?
+    var window: UIWindow?
 
-    func startSignInWithAppleFlow() {
+    func signIn(in window: UIWindow?,
+                completion: ((Result<(token: String, nonce: String), Error>) -> Void)?) {
+        self.completion = completion
+        self.window = window
+
         let nonce = AppleAuthorizationHelper.generateRandomNonce()
         currentNonce = nonce
         let appleIDProvider = ASAuthorizationAppleIDProvider()
@@ -42,50 +46,50 @@ class AppleAuthorizationController: NSObject {
 }
 
 @available(iOS 13.0, *)
-extension AppleAuthorizationController: ASAuthorizationControllerDelegate {
+extension AppleAuthIntegration: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController,
                                  didCompleteWithAuthorization authorization: ASAuthorization) {
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
             guard let nonce = currentNonce else {
-                onDidFailAuthentication?(
-                    AppleAuthError.completedWithError(
+                completion?(
+                    .failure(AppleAuthError.completedWithError(
                         "Invalid state: A login callback was received, but no login request was sent."
-                    )
+                    ))
                 )
                 return
             }
             guard let appleIDToken = appleIDCredential.identityToken else {
-                onDidFailAuthentication?(
-                    AppleAuthError.completedWithError(
+                completion?(
+                    .failure(AppleAuthError.completedWithError(
                         "Unable to fetch identity token"
-                    )
+                    ))
                 )
                 return
             }
             guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
-                onDidFailAuthentication?(
-                    AppleAuthError.completedWithError(
+                completion?(
+                    .failure(AppleAuthError.completedWithError(
                         "Unable to serialize token string from data: \(appleIDToken.debugDescription)"
-                    )
+                    ))
                 )
 
                 return
             }
 
-            onDidAuthenticate?(idTokenString, nonce)
+            completion?(.success((token: idTokenString, nonce: nonce)))
         }
     }
 
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         // Handle error.
-        onDidFailAuthentication?(AppleAuthError.failed(error.localizedDescription))
+        completion?(.failure(AppleAuthError.failed(error.localizedDescription)))
     }
 }
 
 @available(iOS 13.0, *)
-extension AppleAuthorizationController: ASAuthorizationControllerPresentationContextProviding {
+extension AppleAuthIntegration: ASAuthorizationControllerPresentationContextProviding {
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
-        return UIApplication.shared.keyWindow ?? UIWindow()
+        return window ?? UIWindow()
     }
 }
 

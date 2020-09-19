@@ -66,9 +66,12 @@
 		1F4C2BF024EDBD4200C39967 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */; };
 		1F4C2BF224EDBDBA00C39967 /* HomeMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */; };
 		1F5F787425161051009174DC /* AppleAuthorizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5F787325161051009174DC /* AppleAuthorizationHelper.swift */; };
-		1F5F787725161134009174DC /* AppleAuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5F787625161134009174DC /* AppleAuthorizationController.swift */; };
+		1F5F787725161134009174DC /* AppleAuthIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5F787625161134009174DC /* AppleAuthIntegration.swift */; };
 		1F5F787B25161440009174DC /* AuthIntegration+Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5F787A2516143F009174DC /* AuthIntegration+Apple.swift */; };
 		1F763C192516391400B0FF26 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F763C182516391400B0FF26 /* BaseCoordinator.swift */; };
+		1F763C27251642BD00B0FF26 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F763C26251642BD00B0FF26 /* RoundButton.swift */; };
+		1F763C4925164E3800B0FF26 /* AuthIntegration+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F763C4825164E3800B0FF26 /* AuthIntegration+Google.swift */; };
+		1F763C4D25164F7900B0FF26 /* GoogleAuthIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F763C4C25164F7900B0FF26 /* GoogleAuthIntegration.swift */; };
 		1F8E20F224FEBC4A00F28DB2 /* OnBoardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20F124FEBC4A00F28DB2 /* OnBoardingCoordinator.swift */; };
 		1F8E20F524FEBCBA00F28DB2 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20F424FEBCBA00F28DB2 /* CoordinatorType.swift */; };
 		1F8E20F824FEBDBA00F28DB2 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E20F724FEBDBA00F28DB2 /* OnBoarding.storyboard */; };
@@ -198,11 +201,14 @@
 		1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuType.swift; sourceTree = "<group>"; };
 		1F5F787325161051009174DC /* AppleAuthorizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthorizationHelper.swift; sourceTree = "<group>"; };
-		1F5F787625161134009174DC /* AppleAuthorizationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthorizationController.swift; sourceTree = "<group>"; };
+		1F5F787625161134009174DC /* AppleAuthIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthIntegration.swift; sourceTree = "<group>"; };
 		1F5F787A2516143F009174DC /* AuthIntegration+Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthIntegration+Apple.swift"; sourceTree = "<group>"; };
 		1F5F787D25161F97009174DC /* AroundTheMetroDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AroundTheMetroDebug.entitlements; sourceTree = "<group>"; };
 		1F763BF3251630C800B0FF26 /* AroundTheMetroRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AroundTheMetroRelease.entitlements; sourceTree = "<group>"; };
 		1F763C182516391400B0FF26 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		1F763C26251642BD00B0FF26 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		1F763C4825164E3800B0FF26 /* AuthIntegration+Google.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthIntegration+Google.swift"; sourceTree = "<group>"; };
+		1F763C4C25164F7900B0FF26 /* GoogleAuthIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthIntegration.swift; sourceTree = "<group>"; };
 		1F8E20F124FEBC4A00F28DB2 /* OnBoardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCoordinator.swift; sourceTree = "<group>"; };
 		1F8E20F424FEBCBA00F28DB2 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 		1F8E20F724FEBDBA00F28DB2 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
@@ -474,12 +480,21 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		1F763C1B25163E8400B0FF26 /* AppleAuth */ = {
+		1F763C23251642A100B0FF26 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1F5F787625161134009174DC /* AppleAuthorizationController.swift */,
+				1F763C26251642BD00B0FF26 /* RoundButton.swift */,
 			);
-			path = AppleAuth;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1F763C24251642A800B0FF26 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F1DD6A524F3E9C4003C4A9F /* AdsContainerViewController.swift */,
+				1F8E210024FF960000F28DB2 /* WebBrowserViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		1F8E20EF24FEBC1E00F28DB2 /* Subflows */ = {
@@ -525,8 +540,8 @@
 		1F8E20FF24FF95D300F28DB2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				1F1DD6A524F3E9C4003C4A9F /* AdsContainerViewController.swift */,
-				1F8E210024FF960000F28DB2 /* WebBrowserViewController.swift */,
+				1F763C23251642A100B0FF26 /* Views */,
+				1F763C24251642A800B0FF26 /* ViewControllers */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -742,7 +757,6 @@
 		1FDBC93D250A9A740009CD8D /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				1F763C1B25163E8400B0FF26 /* AppleAuth */,
 				1FDBC94F250AB9D90009CD8D /* View */,
 				1FDBC948250AB9CD0009CD8D /* AuthorizationCoordinator.swift */,
 				1FDBC949250AB9CD0009CD8D /* Authorization.storyboard */,
@@ -762,8 +776,11 @@
 		1FDBC952250ABEDE0009CD8D /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				1F763C4C25164F7900B0FF26 /* GoogleAuthIntegration.swift */,
+				1F5F787625161134009174DC /* AppleAuthIntegration.swift */,
 				1FDBC950250ABD4D0009CD8D /* AuthIntegration.swift */,
 				1F5F787A2516143F009174DC /* AuthIntegration+Apple.swift */,
+				1F763C4825164E3800B0FF26 /* AuthIntegration+Google.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -886,6 +903,7 @@
 				1FA3C3E624EB11B700295FFA /* Frameworks */,
 				1FA3C3E724EB11B700295FFA /* Resources */,
 				1E67D382E4CFBBAC4C7105BB /* [CP] Embed Pods Frameworks */,
+				A334BA58C3D9C837B11FA1D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1005,6 +1023,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A334BA58C3D9C837B11FA1D2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B6B2F2E48973955AE6BBC8B0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1038,13 +1073,14 @@
 				1FA3C43D24EBEB9D00295FFA /* PlacesResponse.swift in Sources */,
 				1FDBC955250E15250009CD8D /* RegistrationViewController.swift in Sources */,
 				1F4C2BD724EDA05E00C39967 /* HomeViewController.swift in Sources */,
-				1F5F787725161134009174DC /* AppleAuthorizationController.swift in Sources */,
+				1F5F787725161134009174DC /* AppleAuthIntegration.swift in Sources */,
 				1FA3C43624EBDB8A00295FFA /* ATLApiTarget.swift in Sources */,
 				1FA3C40324EB13AB00295FFA /* AppCoordinator.swift in Sources */,
 				1FA3C42D24EB352000295FFA /* AnyOptional.swift in Sources */,
 				1FA3C3ED24EB11B700295FFA /* AppDelegate.swift in Sources */,
 				1F1DD6A224F3D7D9003C4A9F /* MetroPlanViewController.swift in Sources */,
 				1F4C2B8C24ED931200C39967 /* MetroLocationsService.swift in Sources */,
+				1F763C27251642BD00B0FF26 /* RoundButton.swift in Sources */,
 				1F4C2BEB24EDAFFC00C39967 /* BannersResponse.swift in Sources */,
 				1FF6847C24F0764B0068A69A /* PlaceListCell.swift in Sources */,
 				1FDBC94B250AB9CD0009CD8D /* AuthorizationCoordinator.swift in Sources */,
@@ -1061,6 +1097,7 @@
 				1FA3C41324EB212700295FFA /* Assets.swift in Sources */,
 				1F1DD6A624F3E9C4003C4A9F /* AdsContainerViewController.swift in Sources */,
 				1FA3C42224EB2CF900295FFA /* PlacesServiceLocal.swift in Sources */,
+				1F763C4D25164F7900B0FF26 /* GoogleAuthIntegration.swift in Sources */,
 				1FF6844424F061870068A69A /* ContactUsController.swift in Sources */,
 				1FA3C3EF24EB11B700295FFA /* SceneDelegate.swift in Sources */,
 				1F763C192516391400B0FF26 /* BaseCoordinator.swift in Sources */,
@@ -1114,6 +1151,7 @@
 				1F8E20FA24FEBF6800F28DB2 /* OnBoardingStepType.swift in Sources */,
 				1F4C2BE124EDAAAD00C39967 /* Banner.swift in Sources */,
 				1F4C2BDF24EDA8EF00C39967 /* MenuCell.swift in Sources */,
+				1F763C4925164E3800B0FF26 /* AuthIntegration+Google.swift in Sources */,
 				1FF6848224F3CA860068A69A /* PlacesCoordinator.swift in Sources */,
 				1FA3C43924EBDE6A00295FFA /* AppConstants.swift in Sources */,
 			);

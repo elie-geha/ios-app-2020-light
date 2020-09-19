@@ -35,6 +35,7 @@ public final class AuthorizationViewController: UIViewController {
     var onForgotPassword: (() -> Void)?
 
     var onLoginWithApple: (() -> Void)?
+    var onLoginWithGoogle: (() -> Void)?
 
     // MARK: - Private variables
 
@@ -79,6 +80,10 @@ public final class AuthorizationViewController: UIViewController {
 
     @IBAction func loginWithApple() {
         onLoginWithApple?()
+    }
+
+    @IBAction func loginWithGoogle() {
+        onLoginWithGoogle?()
     }
 
     // MARK: - Private

@@ -19,7 +19,10 @@ class AppContext {
     // MARK: - Integrations
     let analytics: AnalyticsIntegrationType
     let ads: AdsIntegrationType
-    let auth: AuthIntegration
+    let auth: AuthIntegrationType
+
+    let appleAuth: AppleAuthIntegrationType?
+    let googleAuth: GoogleAuthIntegrationType
 
     init() {
         userStorageService = UserStorageService()
@@ -33,5 +36,12 @@ class AppContext {
         analytics = AnalyticsIntegration()
         ads = AdsIntegration()
         auth = AuthIntegration()
+
+        if #available(iOS 13, *) {
+            appleAuth = AppleAuthIntegration()
+        } else {
+            appleAuth = nil
+        }
+        googleAuth = GoogleAuthIntegration()
     }
 }

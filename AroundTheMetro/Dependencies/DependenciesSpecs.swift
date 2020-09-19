@@ -75,4 +75,23 @@ protocol AuthIntegrationType: Integration {
     func login(with email: String, password: String, completion: ((Result<AuthUserInfo?, AuthError>) -> Void)?)
     func register(with email: String, password: String, completion: ((Result<AuthUserInfo?, AuthError>) -> Void)?)
     func logout(completion: ((Error?) -> Void)?)
+
+    func appleSignIn(with idTokenString: String,
+                     nonce: String,
+                     completion: ((Result<AuthUserInfo?, AuthError>) -> Void)?)
+
+    func googleSignIn(with idTokenString: String,
+                      accessToken: String,
+                      completion: ((Result<AuthUserInfo?, AuthError>) -> Void)?)
 }
+
+protocol AppleAuthIntegrationType: Integration {
+    func signIn(in window: UIWindow?,
+                completion: ((Result<(token: String, nonce: String), Error>) -> Void)?)
+}
+
+protocol GoogleAuthIntegrationType: Integration {
+    func signIn(in viewController: UIViewController?,
+                completion: ((Result<(token: String, accessToken: String), Error>) -> Void)?)
+}
+

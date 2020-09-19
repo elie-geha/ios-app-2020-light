@@ -9,21 +9,14 @@
 import Firebase
 
 extension AuthIntegration {
-    func appleSignIn(with idTokenString: String, nonce: String, completion: ((Result<AuthUserInfo?, AuthError>) -> Void)?) {
+    func appleSignIn(with idTokenString: String,
+                     nonce: String,
+                     completion: ((Result<AuthUserInfo?, AuthError>) -> Void)?) {
         // Initialize a Apple credential.
         let credential = OAuthProvider.credential(withProviderID: "apple.com",
                                                   idToken: idTokenString,
                                                   rawNonce: nonce)
         // Sign in with Apple.
-        Auth.auth().signIn(with: credential) { result, error in
-            guard error == nil else {
-                completion?(.failure(.loginError(error?.localizedDescription ?? "Unknown error")))
-                return
-            }
-
-            if result != nil {
-                completion?(.success(self.userInfo))
-            }
-        }
+        login(with: credential, completion: completion)
     }
 }

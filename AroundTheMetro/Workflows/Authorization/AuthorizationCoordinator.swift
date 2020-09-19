@@ -12,8 +12,6 @@ import UIKit
 final class AuthorizationCoordinator: BaseCoordinator {
     var context: AppContext
 
-    private var appleAuthController: Any?
-
     // MARK: -
 
     init(with router: RouterType, context: AppContext) {
@@ -45,9 +43,10 @@ final class AuthorizationCoordinator: BaseCoordinator {
             // TODO
         }
         authorizationCoordinatorVC.onLoginWithApple = {[weak self] in
-            if #available(iOS 13, *) {
-                self?.loginWithApple()
-            }
+            self?.loginWithApple()
+        }
+        authorizationCoordinatorVC.onLoginWithGoogle = {[weak self] in
+            self?.loginWithGoogle()
         }
         router.show(container: authorizationCoordinatorVC, animated: true)
     }
@@ -78,26 +77,45 @@ final class AuthorizationCoordinator: BaseCoordinator {
         router.show(container: registrationVC, animated: true)
     }
 
-    @available(iOS 13, *)
     private func loginWithApple() {
-        let appleAuthenticationController = AppleAuthorizationController()
-        appleAuthenticationController.onDidAuthenticate = { [weak self] token, nonce in
-            self?.context.auth.appleSignIn(with: token, nonce: nonce, completion: { result in
-                switch result {
-                case .failure(let error):
-                    SVProgressHUD.showError(withStatus: error.localizedDescription)
-                    SVProgressHUD.dismiss(withDelay: 3.0)
-                case .success:
-                    self?.finish()
-                }
-            })
-        }
-        appleAuthenticationController.onDidFailAuthentication = { error in
-            SVProgressHUD.showError(withStatus: error.localizedDescription)
-            SVProgressHUD.dismiss(withDelay: 3.0)
-        }
+        let appleAuthIntegration = context.appleAuth
 
-        appleAuthenticationController.startSignInWithAppleFlow()
-        appleAuthController = appleAuthenticationController
+        appleAuthIntegration?.signIn( in: initialContainer?.asUIViewController()?.view.window) { [weak self] result in
+                switch result {
+                case .success(let authData):
+                    self?.context.auth.appleSignIn(with: authData.token, nonce: authData.nonce, completion: { result in
+                        switch result {
+                        case .failure(let error):
+                            SVProgressHUD.showError(withStatus: error.localizedDescription)
+                            SVProgressHUD.dismiss(withDelay: 3.0)
+                        case .success:
+                            self?.finish()
+                        }
+                    })
+
+                case .failure: break;
+                }
+            }
+    }
+
+    private func loginWithGoogle() {
+        let googleAuthIntegration = context.googleAuth
+
+        googleAuthIntegration.signIn( in: initialContainer?.asUIViewController()) { [weak self] result in
+            switch result {
+            case .success(let authData):
+                self?.context.auth.googleSignIn(with: authData.token, accessToken: authData.accessToken, completion: { result in
+                    switch result {
+                    case .failure(let error):
+                        SVProgressHUD.showError(withStatus: error.localizedDescription)
+                        SVProgressHUD.dismiss(withDelay: 3.0)
+                    case .success:
+                        self?.finish()
+                    }
+                })
+
+            case .failure: break;
+            }
+        }
     }
 }

@@ -143,8 +143,8 @@
                                         <rect key="frame" x="20" y="452" width="280" height="40"/>
                                         <subviews>
                                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAU-Ab-2Jq">
-                                                <rect key="frame" x="0.0" y="19.5" width="97.5" height="1"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <rect key="frame" x="2" y="19.5" width="95.5" height="1"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="KtF-UZ-v6C"/>
                                                 </constraints>
@@ -159,8 +159,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tlk-YX-exv">
-                                                <rect key="frame" x="182.5" y="19.5" width="97.5" height="1"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <rect key="frame" x="182.5" y="19.5" width="95.5" height="1"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="Tbi-TE-6c7"/>
                                                 </constraints>
@@ -172,12 +172,12 @@
                                             <constraint firstAttribute="height" constant="40" id="FT9-8o-Dl4"/>
                                             <constraint firstItem="tKQ-Op-1iC" firstAttribute="centerX" secondItem="E5M-l5-79S" secondAttribute="centerX" id="QQM-nD-1HX"/>
                                             <constraint firstItem="Tlk-YX-exv" firstAttribute="centerY" secondItem="E5M-l5-79S" secondAttribute="centerY" id="S9A-C7-UqC"/>
-                                            <constraint firstItem="jAU-Ab-2Jq" firstAttribute="leading" secondItem="E5M-l5-79S" secondAttribute="leading" id="Xsc-ba-ICY"/>
+                                            <constraint firstItem="jAU-Ab-2Jq" firstAttribute="leading" secondItem="E5M-l5-79S" secondAttribute="leading" constant="2" id="Xsc-ba-ICY"/>
                                             <constraint firstItem="tKQ-Op-1iC" firstAttribute="leading" secondItem="jAU-Ab-2Jq" secondAttribute="trailing" constant="30" id="bOC-2y-9IU"/>
                                             <constraint firstItem="tKQ-Op-1iC" firstAttribute="centerY" secondItem="E5M-l5-79S" secondAttribute="centerY" id="esI-Iy-gId"/>
                                             <constraint firstItem="jAU-Ab-2Jq" firstAttribute="centerY" secondItem="E5M-l5-79S" secondAttribute="centerY" id="q5n-Yp-9cM"/>
                                             <constraint firstAttribute="width" constant="374" id="sbA-Wb-bin"/>
-                                            <constraint firstAttribute="trailing" secondItem="Tlk-YX-exv" secondAttribute="trailing" id="w8m-Le-EZX"/>
+                                            <constraint firstAttribute="trailing" secondItem="Tlk-YX-exv" secondAttribute="trailing" constant="2" id="w8m-Le-EZX"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -190,27 +190,34 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nhu-Tf-Kzs">
-                                        <rect key="frame" x="138" y="492" width="44" height="44"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nhu-Tf-Kzs">
+                                        <rect key="frame" x="99" y="492" width="122" height="56"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lch-ZS-X5k">
-                                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lch-ZS-X5k" customClass="RoundButton" customModule="AroundTheMetro" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="lch-ZS-X5k" secondAttribute="height" multiplier="1:1" id="cFK-RK-w9G"/>
                                                 </constraints>
-                                                <state key="normal" image="apple_white"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="22"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
+                                                <state key="normal" backgroundImage="apple_white"/>
                                                 <connections>
                                                     <action selector="loginWithApple" destination="6TY-HL-beg" eventType="touchUpInside" id="Or6-Gz-s9m"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCT-Ad-gJa" customClass="RoundButton" customModule="AroundTheMetro" customModuleProvider="target">
+                                                <rect key="frame" x="66" y="0.0" width="56" height="56"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="pCT-Ad-gJa" secondAttribute="height" multiplier="1:1" id="HFt-lX-rxV"/>
+                                                </constraints>
+                                                <state key="normal" image="google"/>
+                                                <connections>
+                                                    <action selector="loginWithGoogle" destination="6TY-HL-beg" eventType="touchUpInside" id="Qw3-ZN-C7b"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="yZo-AL-dD1"/>
+                                            <constraint firstItem="pCT-Ad-gJa" firstAttribute="width" secondItem="pCT-Ad-gJa" secondAttribute="height" multiplier="1:1" id="CJ6-EH-5IV"/>
+                                            <constraint firstAttribute="height" constant="56" id="yZo-AL-dD1"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -452,6 +459,7 @@
     <resources>
         <image name="Logo-white" width="150" height="150"/>
         <image name="apple_white" width="44" height="44"/>
+        <image name="google" width="30" height="30"/>
         <image name="left-side-menu" width="1242" height="2208"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

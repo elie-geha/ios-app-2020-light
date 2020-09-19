@@ -39,6 +39,19 @@ class AuthIntegration: AuthIntegrationType {
         }
     }
 
+    func login(with credentials: AuthCredential, completion: ((Result<AuthUserInfo?, AuthError>) -> Void)?) {
+        Auth.auth().signIn(with: credentials) { result, error in
+            guard error == nil else {
+                completion?(.failure(.loginError(error?.localizedDescription ?? "Unknown error")))
+                return
+            }
+
+            if result != nil {
+                completion?(.success(self.userInfo))
+            }
+        }
+    }
+
     func register(with email: String, password: String, completion: ((Result<AuthUserInfo?, AuthError>) -> Void)?) {
         guard !isAuthorized else {
             completion?(.failure(.alreadyLoggedIn))

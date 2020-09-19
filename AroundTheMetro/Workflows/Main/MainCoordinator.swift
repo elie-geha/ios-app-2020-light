@@ -157,10 +157,11 @@ class MainCoordinator: BaseCoordinator {
             if success {
                 self?.menuCoordinator.restart()
                 self?.router.hide(container: authRouter, animated: true)
+                self?.removeDependency(authCoordinator)
             }
         }
         authCoordinator.start()
-        addDependency(authCoordinator)
+        addDependency(authCoordinator, autoremove: false)
         router.present(container: authRouter, animated: true)
     }
 
