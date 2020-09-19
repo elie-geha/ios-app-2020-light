@@ -65,6 +65,7 @@
 		1F4C2BEE24EDB3A500C39967 /* BannersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BED24EDB3A500C39967 /* BannersRepository.swift */; };
 		1F4C2BF024EDBD4200C39967 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */; };
 		1F4C2BF224EDBDBA00C39967 /* HomeMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */; };
+		1F5F783825160112009174DC /* Tbilisi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F5F783725160112009174DC /* Tbilisi.plist */; };
 		1F8E20F224FEBC4A00F28DB2 /* OnBoardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20F124FEBC4A00F28DB2 /* OnBoardingCoordinator.swift */; };
 		1F8E20F524FEBCBA00F28DB2 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20F424FEBCBA00F28DB2 /* CoordinatorType.swift */; };
 		1F8E20F824FEBDBA00F28DB2 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E20F724FEBDBA00F28DB2 /* OnBoarding.storyboard */; };
@@ -120,6 +121,30 @@
 		1FF6848024F076720068A69A /* MetroListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6847F24F076720068A69A /* MetroListCell.swift */; };
 		1FF6848224F3CA860068A69A /* PlacesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6848124F3CA860068A69A /* PlacesCoordinator.swift */; };
 		1FF6848424F3CACC0068A69A /* Places.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6848324F3CACC0068A69A /* Places.storyboard */; };
+		5153024A251125C200E73CB8 /* Boston.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51530249251125C200E73CB8 /* Boston.plist */; };
+		5153025825118B2900E73CB8 /* Buenos_Aires.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5153025725118B2900E73CB8 /* Buenos_Aires.plist */; };
+		5153025A25118BC400E73CB8 /* Rio_de_Janeiro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5153025925118BC400E73CB8 /* Rio_de_Janeiro.plist */; };
+		5153025E25118CB800E73CB8 /* Helsinki.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5153025D25118CB800E73CB8 /* Helsinki.plist */; };
+		5153026025118E0500E73CB8 /* Berlin.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5153025F25118E0500E73CB8 /* Berlin.plist */; };
+		5153026225118E4300E73CB8 /* Hamburg.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5153026125118E4300E73CB8 /* Hamburg.plist */; };
+		5153026425118E5000E73CB8 /* Munich.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5153026325118E5000E73CB8 /* Munich.plist */; };
+		5153026625118EAE00E73CB8 /* Delhi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5153026525118EAE00E73CB8 /* Delhi.plist */; };
+		5153026825118EDD00E73CB8 /* Kolkata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5153026725118EDD00E73CB8 /* Kolkata.plist */; };
+		5153026A25118EF300E73CB8 /* Mumbai.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5153026925118EF300E73CB8 /* Mumbai.plist */; };
+		5153026C25118F8300E73CB8 /* Lisbon.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5153026B25118F8300E73CB8 /* Lisbon.plist */; };
+		5153026E25118FF500E73CB8 /* Moscow.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5153026D25118FF500E73CB8 /* Moscow.plist */; };
+		515302702511906500E73CB8 /* Singapore.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5153026F2511906500E73CB8 /* Singapore.plist */; };
+		515302742511911700E73CB8 /* Philadelphia.plist in Resources */ = {isa = PBXBuildFile; fileRef = 515302732511911700E73CB8 /* Philadelphia.plist */; };
+		51C50D7325104CC20048EB09 /* Oslo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D5E25104CBE0048EB09 /* Oslo.plist */; };
+		51C50D7925104CC20048EB09 /* Sofia.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D6425104CBF0048EB09 /* Sofia.plist */; };
+		51C50D7B25104CC20048EB09 /* Yekaterinburg.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D6625104CC00048EB09 /* Yekaterinburg.plist */; };
+		51C50D7D25104CC20048EB09 /* Brussels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D6825104CC00048EB09 /* Brussels.plist */; };
+		51C50D7F25104CC20048EB09 /* Sao_Paulo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D6A25104CC00048EB09 /* Sao_Paulo.plist */; };
+		51C50D8025104CC20048EB09 /* Kuala_Lumpur.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D6B25104CC10048EB09 /* Kuala_Lumpur.plist */; };
+		51C50D8125104CC20048EB09 /* Copenhagen.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D6C25104CC10048EB09 /* Copenhagen.plist */; };
+		51C50D8425104CC20048EB09 /* Mexico_City.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D6F25104CC10048EB09 /* Mexico_City.plist */; };
+		51C50D8525104CC20048EB09 /* Rio_de_Janeiro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D7025104CC10048EB09 /* Rio_de_Janeiro.plist */; };
+		51C50D8625104CC20048EB09 /* Saint_Petersburg.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D7125104CC10048EB09 /* Saint_Petersburg.plist */; };
 		9A8E11562C4F72C0771E6240 /* Pods_AroundTheMetro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57C4B5707ABD4ED9E88BA9B /* Pods_AroundTheMetro.framework */; };
 /* End PBXBuildFile section */
 
@@ -183,6 +208,7 @@
 		1F4C2BED24EDB3A500C39967 /* BannersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersRepository.swift; sourceTree = "<group>"; };
 		1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuType.swift; sourceTree = "<group>"; };
+		1F5F783725160112009174DC /* Tbilisi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tbilisi.plist; sourceTree = "<group>"; };
 		1F8E20F124FEBC4A00F28DB2 /* OnBoardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCoordinator.swift; sourceTree = "<group>"; };
 		1F8E20F424FEBCBA00F28DB2 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 		1F8E20F724FEBDBA00F28DB2 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
@@ -246,6 +272,30 @@
 		1FF6847F24F076720068A69A /* MetroListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroListCell.swift; sourceTree = "<group>"; };
 		1FF6848124F3CA860068A69A /* PlacesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCoordinator.swift; sourceTree = "<group>"; };
 		1FF6848324F3CACC0068A69A /* Places.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Places.storyboard; sourceTree = "<group>"; };
+		51530249251125C200E73CB8 /* Boston.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Boston.plist; sourceTree = "<group>"; };
+		5153025725118B2900E73CB8 /* Buenos_Aires.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Buenos_Aires.plist; sourceTree = "<group>"; };
+		5153025925118BC400E73CB8 /* Rio_de_Janeiro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Rio_de_Janeiro.plist; sourceTree = "<group>"; };
+		5153025D25118CB800E73CB8 /* Helsinki.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Helsinki.plist; sourceTree = "<group>"; };
+		5153025F25118E0500E73CB8 /* Berlin.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Berlin.plist; sourceTree = "<group>"; };
+		5153026125118E4300E73CB8 /* Hamburg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Hamburg.plist; sourceTree = "<group>"; };
+		5153026325118E5000E73CB8 /* Munich.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Munich.plist; sourceTree = "<group>"; };
+		5153026525118EAE00E73CB8 /* Delhi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Delhi.plist; sourceTree = "<group>"; };
+		5153026725118EDD00E73CB8 /* Kolkata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Kolkata.plist; sourceTree = "<group>"; };
+		5153026925118EF300E73CB8 /* Mumbai.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Mumbai.plist; sourceTree = "<group>"; };
+		5153026B25118F8300E73CB8 /* Lisbon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Lisbon.plist; sourceTree = "<group>"; };
+		5153026D25118FF500E73CB8 /* Moscow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Moscow.plist; sourceTree = "<group>"; };
+		5153026F2511906500E73CB8 /* Singapore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Singapore.plist; sourceTree = "<group>"; };
+		515302732511911700E73CB8 /* Philadelphia.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Philadelphia.plist; sourceTree = "<group>"; };
+		51C50D5E25104CBE0048EB09 /* Oslo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Oslo.plist; sourceTree = "<group>"; };
+		51C50D6425104CBF0048EB09 /* Sofia.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Sofia.plist; sourceTree = "<group>"; };
+		51C50D6625104CC00048EB09 /* Yekaterinburg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Yekaterinburg.plist; sourceTree = "<group>"; };
+		51C50D6825104CC00048EB09 /* Brussels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Brussels.plist; sourceTree = "<group>"; };
+		51C50D6A25104CC00048EB09 /* Sao_Paulo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Sao_Paulo.plist; sourceTree = "<group>"; };
+		51C50D6B25104CC10048EB09 /* Kuala_Lumpur.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Kuala_Lumpur.plist; sourceTree = "<group>"; };
+		51C50D6C25104CC10048EB09 /* Copenhagen.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Copenhagen.plist; sourceTree = "<group>"; };
+		51C50D6F25104CC10048EB09 /* Mexico_City.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Mexico_City.plist; sourceTree = "<group>"; };
+		51C50D7025104CC10048EB09 /* Rio_de_Janeiro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Rio_de_Janeiro.plist; sourceTree = "<group>"; };
+		51C50D7125104CC10048EB09 /* Saint_Petersburg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Saint_Petersburg.plist; sourceTree = "<group>"; };
 		A85239D9126354EC81AB8AED /* Pods-AroundTheMetro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundTheMetro.debug.xcconfig"; path = "Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro.debug.xcconfig"; sourceTree = "<group>"; };
 		C57C4B5707ABD4ED9E88BA9B /* Pods_AroundTheMetro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundTheMetro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8FC33BDD46E6721368886D7 /* Pods-AroundTheMetro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundTheMetro.release.xcconfig"; path = "Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro.release.xcconfig"; sourceTree = "<group>"; };
@@ -329,34 +379,59 @@
 		1F4C2B8D24ED955200C39967 /* MetroStationLocationsPerCity */ = {
 			isa = PBXGroup;
 			children = (
+				5153025725118B2900E73CB8 /* Buenos_Aires.plist */,
+				1F4C2BA424ED955200C39967 /* Vienna.plist */,
+				51C50D6825104CC00048EB09 /* Brussels.plist */,
+				5153026B25118F8300E73CB8 /* Lisbon.plist */,
+				5153026D25118FF500E73CB8 /* Moscow.plist */,
+				5153025925118BC400E73CB8 /* Rio_de_Janeiro.plist */,
+				51C50D6A25104CC00048EB09 /* Sao_Paulo.plist */,
+				51C50D6425104CBF0048EB09 /* Sofia.plist */,
+				1F4C2BA024ED955200C39967 /* Montreal.plist */,
+				1F4C2B9124ED955200C39967 /* Toronto.plist */,
+				1F4C2B9F24ED955200C39967 /* Vancouver.plist */,
+				51C50D6C25104CC10048EB09 /* Copenhagen.plist */,
+				1F4C2BA624ED955200C39967 /* Dubai.plist */,
+				5153025D25118CB800E73CB8 /* Helsinki.plist */,
+				1F4C2B9024ED955200C39967 /* Paris.plist */,
+				1F4C2B9524ED955200C39967 /* Marseille.plist */,
+				1F4C2BA724ED955200C39967 /* Lyon.plist */,
+				1F4C2B9624ED955200C39967 /* Toulouse.plist */,
+				51530249251125C200E73CB8 /* Boston.plist */,
+				1F5F783725160112009174DC /* Tbilisi.plist */,
+				5153025F25118E0500E73CB8 /* Berlin.plist */,
+				5153026125118E4300E73CB8 /* Hamburg.plist */,
+				5153026325118E5000E73CB8 /* Munich.plist */,
+				5153026525118EAE00E73CB8 /* Delhi.plist */,
+				5153026725118EDD00E73CB8 /* Kolkata.plist */,
+				5153026925118EF300E73CB8 /* Mumbai.plist */,
+				1F4C2B9A24ED955200C39967 /* Rome.plist */,
+				1F4C2B9C24ED955200C39967 /* Milan.plist */,
+				1F4C2BA124ED955200C39967 /* Tokyo.plist */,
+				1F4C2B9824ED955200C39967 /* Osaka.plist */,
+				1F4C2BA924ED955200C39967 /* Yokohama.plist */,
+				1F4C2BA224ED955200C39967 /* Nagoya.plist */,
+				51C50D6B25104CC10048EB09 /* Kuala_Lumpur.plist */,
+				51C50D6F25104CC10048EB09 /* Mexico_City.plist */,
+				51C50D5E25104CBE0048EB09 /* Oslo.plist */,
+				51C50D7025104CC10048EB09 /* Rio_de_Janeiro.plist */,
+				51C50D7125104CC10048EB09 /* Saint_Petersburg.plist */,
+				51C50D6625104CC00048EB09 /* Yekaterinburg.plist */,
 				1F4C2B8E24ED955200C39967 /* Mumbai.plist */,
 				1F4C2B8F24ED955200C39967 /* Lausanne.plist */,
-				1F4C2B9024ED955200C39967 /* Paris.plist */,
-				1F4C2B9124ED955200C39967 /* Toronto.plist */,
 				1F4C2B9224ED955200C39967 /* Taipei.plist */,
 				1F4C2B9324ED955200C39967 /* Chicago.plist */,
-				1F4C2B9424ED955200C39967 /* New_York_City.plist */,
-				1F4C2B9524ED955200C39967 /* Marseille.plist */,
-				1F4C2B9624ED955200C39967 /* Toulouse.plist */,
 				1F4C2B9724ED955200C39967 /* Busan.plist */,
-				1F4C2B9824ED955200C39967 /* Osaka.plist */,
+				5153026F2511906500E73CB8 /* Singapore.plist */,
+				1F4C2B9424ED955200C39967 /* New_York_City.plist */,
+				515302732511911700E73CB8 /* Philadelphia.plist */,
 				1F4C2B9924ED955200C39967 /* Atlanta.plist */,
-				1F4C2B9A24ED955200C39967 /* Rome.plist */,
 				1F4C2B9B24ED955200C39967 /* London.plist */,
-				1F4C2B9C24ED955200C39967 /* Milan.plist */,
 				1F4C2B9D24ED955200C39967 /* Seoul.plist */,
 				1F4C2B9E24ED955200C39967 /* Glasgow.plist */,
-				1F4C2B9F24ED955200C39967 /* Vancouver.plist */,
-				1F4C2BA024ED955200C39967 /* Montreal.plist */,
-				1F4C2BA124ED955200C39967 /* Tokyo.plist */,
-				1F4C2BA224ED955200C39967 /* Nagoya.plist */,
 				1F4C2BA324ED955200C39967 /* Istanbul.plist */,
-				1F4C2BA424ED955200C39967 /* Vienna.plist */,
 				1F4C2BA524ED955200C39967 /* Kolkata.plist */,
-				1F4C2BA624ED955200C39967 /* Dubai.plist */,
-				1F4C2BA724ED955200C39967 /* Lyon.plist */,
 				1F4C2BA824ED955200C39967 /* Stockholm.plist */,
-				1F4C2BA924ED955200C39967 /* Yokohama.plist */,
 				1F4C2BAA24ED955200C39967 /* Bilbao.plist */,
 				1F4C2BAB24ED955200C39967 /* Miami.plist */,
 				1F4C2BAC24ED955200C39967 /* Barcelona.plist */,
@@ -828,19 +903,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F4C2BBB24ED955200C39967 /* London.plist in Resources */,
+				51C50D8425104CC20048EB09 /* Mexico_City.plist in Resources */,
 				1F4C2BCD24ED955200C39967 /* Madrid.plist in Resources */,
 				1F4C2BB624ED955200C39967 /* Toulouse.plist in Resources */,
 				1F4C2BC324ED955200C39967 /* Istanbul.plist in Resources */,
+				51C50D8125104CC20048EB09 /* Copenhagen.plist in Resources */,
+				5153026425118E5000E73CB8 /* Munich.plist in Resources */,
 				1F4C2BBF24ED955200C39967 /* Vancouver.plist in Resources */,
 				1FF6846F24F0655C0068A69A /* Localizable.strings in Resources */,
 				1FF6843024F04BFE0068A69A /* Menu.storyboard in Resources */,
+				51C50D8025104CC20048EB09 /* Kuala_Lumpur.plist in Resources */,
+				5153026625118EAE00E73CB8 /* Delhi.plist in Resources */,
+				5153026025118E0500E73CB8 /* Berlin.plist in Resources */,
+				51C50D7B25104CC20048EB09 /* Yekaterinburg.plist in Resources */,
+				5153026E25118FF500E73CB8 /* Moscow.plist in Resources */,
 				1F4C2BCC24ED955200C39967 /* Barcelona.plist in Resources */,
 				1F4C2BAE24ED955200C39967 /* Mumbai.plist in Resources */,
 				1FF6847024F0655F0068A69A /* InfoPlist.strings in Resources */,
 				1F4C2BC924ED955200C39967 /* Yokohama.plist in Resources */,
 				1F4C2BBD24ED955200C39967 /* Seoul.plist in Resources */,
+				5153026C25118F8300E73CB8 /* Lisbon.plist in Resources */,
+				51C50D8525104CC20048EB09 /* Rio_de_Janeiro.plist in Resources */,
 				1F4C2BB024ED955200C39967 /* Paris.plist in Resources */,
 				1FF6843924F050AF0068A69A /* MainMenuCell.xib in Resources */,
+				5153024A251125C200E73CB8 /* Boston.plist in Resources */,
+				5153026A25118EF300E73CB8 /* Mumbai.plist in Resources */,
+				51C50D7325104CC20048EB09 /* Oslo.plist in Resources */,
 				1F4C2BB424ED955200C39967 /* New_York_City.plist in Resources */,
 				1F4C2BBA24ED955200C39967 /* Rome.plist in Resources */,
 				1FA3C3F924EB11BD00295FFA /* LaunchScreen.storyboard in Resources */,
@@ -849,15 +937,23 @@
 				1F4C2BBC24ED955200C39967 /* Milan.plist in Resources */,
 				1FA3C3F624EB11BD00295FFA /* Assets.xcassets in Resources */,
 				1F4C2BC524ED955200C39967 /* Kolkata.plist in Resources */,
+				5153025825118B2900E73CB8 /* Buenos_Aires.plist in Resources */,
+				5153026225118E4300E73CB8 /* Hamburg.plist in Resources */,
 				1F4C2BC124ED955200C39967 /* Tokyo.plist in Resources */,
 				1F4C2BB724ED955200C39967 /* Busan.plist in Resources */,
+				5153025A25118BC400E73CB8 /* Rio_de_Janeiro.plist in Resources */,
 				1F4C2BC824ED955200C39967 /* Stockholm.plist in Resources */,
+				51C50D7925104CC20048EB09 /* Sofia.plist in Resources */,
 				1F4C2BCB24ED955200C39967 /* Miami.plist in Resources */,
 				1F4C2BD124ED9B6F00C39967 /* Home.storyboard in Resources */,
 				1F4C2BB124ED955200C39967 /* Toronto.plist in Resources */,
 				1F4C2BB324ED955200C39967 /* Chicago.plist in Resources */,
 				1F4C2BC024ED955200C39967 /* Montreal.plist in Resources */,
+				5153026825118EDD00E73CB8 /* Kolkata.plist in Resources */,
+				51C50D7D25104CC20048EB09 /* Brussels.plist in Resources */,
+				1F5F783825160112009174DC /* Tbilisi.plist in Resources */,
 				1F4C2BB824ED955200C39967 /* Osaka.plist in Resources */,
+				51C50D8625104CC20048EB09 /* Saint_Petersburg.plist in Resources */,
 				1F4C2BB524ED955200C39967 /* Marseille.plist in Resources */,
 				1F4C2BB224ED955200C39967 /* Taipei.plist in Resources */,
 				1F4C2BC424ED955200C39967 /* Vienna.plist in Resources */,
@@ -867,7 +963,11 @@
 				1F4C2BC224ED955200C39967 /* Nagoya.plist in Resources */,
 				1F4C2BB924ED955200C39967 /* Atlanta.plist in Resources */,
 				1F4C2BCA24ED955200C39967 /* Bilbao.plist in Resources */,
+				515302742511911700E73CB8 /* Philadelphia.plist in Resources */,
+				5153025E25118CB800E73CB8 /* Helsinki.plist in Resources */,
+				515302702511906500E73CB8 /* Singapore.plist in Resources */,
 				1F4C2BAF24ED955200C39967 /* Lausanne.plist in Resources */,
+				51C50D7F25104CC20048EB09 /* Sao_Paulo.plist in Resources */,
 				1F4C2BE524EDAC2200C39967 /* ImageCell.xib in Resources */,
 				1F1DD6A824F3F07B003C4A9F /* GoogleService-Info.plist in Resources */,
 			);
@@ -1158,8 +1258,9 @@
 			baseConfigurationReference = A85239D9126354EC81AB8AED /* Pods-AroundTheMetro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
 				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1167,9 +1268,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AugmentedDiscovery.AroundTheMetro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1180,8 +1282,9 @@
 			baseConfigurationReference = D8FC33BDD46E6721368886D7 /* Pods-AroundTheMetro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
 				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1189,9 +1292,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AugmentedDiscovery.AroundTheMetro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
