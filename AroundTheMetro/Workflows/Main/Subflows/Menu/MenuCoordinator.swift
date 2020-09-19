@@ -8,11 +8,7 @@
 
 import UIKit
 
-class MenuCoordinator: CoordinatorType {
-    var router: RouterType
-    var initialContainer: ContainerType?
-    var onComplete: ((Bool) -> Void)?
-
+class MenuCoordinator: BaseCoordinator {
     var context: AppContext
 
     var onLogin: (() -> Void)?
@@ -22,11 +18,11 @@ class MenuCoordinator: CoordinatorType {
     var onContactUs: (() -> Void)?
 
     init(with router: RouterType, context: AppContext) {
-        self.router = router
         self.context = context
+        super.init(with: router)
     }
 
-    func start() {
+    override func start() {
         let viewController = Storyboard.Menu.menuVC
         initialContainer = viewController
         viewController.menuItems = [

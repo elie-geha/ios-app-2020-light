@@ -17,9 +17,12 @@ public final class AuthorizationViewController: UIViewController {
     @IBOutlet var registerButton: UIButton!
     @IBOutlet var forgotPasswordButton: UIButton!
 
+    @IBOutlet var appleLoginButton: UIButton!
+
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
 
+    @IBOutlet var orContainer: UIView!
     @IBOutlet var orLabel: UILabel!
 
     // MARK: - Properties
@@ -31,6 +34,8 @@ public final class AuthorizationViewController: UIViewController {
     var onRegister: (() -> Void)?
     var onForgotPassword: (() -> Void)?
 
+    var onLoginWithApple: (() -> Void)?
+
     // MARK: - Private variables
 
     // MARK: - LyfeCicle
@@ -39,6 +44,14 @@ public final class AuthorizationViewController: UIViewController {
         if #available(iOS 12, *) {
             backButton.isHidden = true
         }
+
+        if #available(iOS 13, *) {
+            appleLoginButton.isHidden = false
+        } else {
+            appleLoginButton.isHidden = true
+        }
+
+        orContainer.isHidden = appleLoginButton.isHidden
     }
 
     // MARK: - Actions
@@ -62,6 +75,10 @@ public final class AuthorizationViewController: UIViewController {
 
     @IBAction func forgotPassword() {
         onForgotPassword?()
+    }
+
+    @IBAction func loginWithApple() {
+        onLoginWithApple?()
     }
 
     // MARK: - Private

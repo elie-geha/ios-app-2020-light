@@ -8,26 +8,19 @@
 
 import UIKit
 
-class OnBoardingCoordinator: CoordinatorType {
+class OnBoardingCoordinator: BaseCoordinator {
     // MARK: - Context
     private var context: AppContext
-
-    // MARK: - Navigation
-    var router: RouterType
-    var initialContainer: ContainerType?
-
-    // MARK: - Actions
-    var onComplete: ((Bool) -> Void)?
 
     // MARK: -
 
     init(with router: RouterType,
          context: AppContext) {
-        self.router = router
         self.context = context
+        super.init(with: router)
     }
 
-    func start() {
+    override func start() {
         let onBoardingVC = Storyboard.OnBoarding.onBoardingVC
         initialContainer = onBoardingVC
         onBoardingVC.steps = [.discover, .locate, .offlineMap, .stayTuned]

@@ -32,6 +32,7 @@
                                     </imageView>
                                     <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4xM-FT-JAu">
                                         <rect key="frame" x="20" y="162" width="280" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="OMb-yK-k7a"/>
                                             <constraint firstAttribute="width" constant="374" id="uXy-oo-QJT"/>
@@ -51,6 +52,7 @@
                                     </textField>
                                     <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="znu-ns-XF7">
                                         <rect key="frame" x="20" y="224" width="280" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="iVP-i5-e32"/>
                                             <constraint firstAttribute="width" constant="374" id="naX-sA-DFx"/>
@@ -137,7 +139,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5M-l5-79S">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5M-l5-79S">
                                         <rect key="frame" x="20" y="452" width="280" height="40"/>
                                         <subviews>
                                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAU-Ab-2Jq">
@@ -188,9 +190,32 @@
                                             </mask>
                                         </variation>
                                     </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nhu-Tf-Kzs">
+                                        <rect key="frame" x="138" y="492" width="44" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lch-ZS-X5k">
+                                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="lch-ZS-X5k" secondAttribute="height" multiplier="1:1" id="cFK-RK-w9G"/>
+                                                </constraints>
+                                                <state key="normal" image="apple_white"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="22"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="loginWithApple" destination="6TY-HL-beg" eventType="touchUpInside" id="Or6-Gz-s9m"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="yZo-AL-dD1"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="SiV-Cp-Z8a" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="E5M-l5-79S" secondAttribute="bottom" constant="300" id="2AP-3u-WtY"/>
+                                    <constraint firstItem="Nhu-Tf-Kzs" firstAttribute="top" secondItem="E5M-l5-79S" secondAttribute="bottom" id="2AP-3u-WtY"/>
                                     <constraint firstItem="mf8-XB-BZh" firstAttribute="centerX" secondItem="4xM-FT-JAu" secondAttribute="centerX" id="58c-aW-x5S"/>
                                     <constraint firstItem="znu-ns-XF7" firstAttribute="leading" secondItem="4xM-FT-JAu" secondAttribute="leading" id="5sH-bh-loQ"/>
                                     <constraint firstItem="mf8-XB-BZh" firstAttribute="top" secondItem="SiV-Cp-Z8a" secondAttribute="top" constant="12" id="9pQ-c4-xa7"/>
@@ -201,8 +226,11 @@
                                     <constraint firstItem="Qn4-JX-9DC" firstAttribute="trailing" secondItem="4xM-FT-JAu" secondAttribute="trailing" constant="20" id="Ocl-lD-8cA"/>
                                     <constraint firstItem="4xM-FT-JAu" firstAttribute="centerX" secondItem="Qn4-JX-9DC" secondAttribute="centerX" id="PB3-TE-baH"/>
                                     <constraint firstItem="iUa-Pr-ouE" firstAttribute="top" secondItem="o7V-Pd-Bgl" secondAttribute="bottom" constant="16" id="TX9-6d-jxo"/>
+                                    <constraint firstItem="Nhu-Tf-Kzs" firstAttribute="centerX" secondItem="fRF-jb-zOf" secondAttribute="centerX" id="Yhj-dD-FU7"/>
+                                    <constraint firstItem="Nhu-Tf-Kzs" firstAttribute="top" secondItem="E5M-l5-79S" secondAttribute="bottom" id="aOk-2d-qbJ"/>
                                     <constraint firstItem="MQB-4M-Kiu" firstAttribute="trailing" secondItem="znu-ns-XF7" secondAttribute="trailing" id="aQi-Kc-G1L"/>
                                     <constraint firstItem="mf8-XB-BZh" firstAttribute="centerX" secondItem="SiV-Cp-Z8a" secondAttribute="centerX" id="b3S-xe-Nfq"/>
+                                    <constraint firstItem="SiV-Cp-Z8a" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Nhu-Tf-Kzs" secondAttribute="bottom" constant="20" id="bid-JR-Ecs"/>
                                     <constraint firstItem="4xM-FT-JAu" firstAttribute="leading" secondItem="znu-ns-XF7" secondAttribute="leading" id="bxb-H8-4Yg"/>
                                     <constraint firstItem="znu-ns-XF7" firstAttribute="top" secondItem="4xM-FT-JAu" secondAttribute="bottom" constant="12" id="gQM-Ta-bXm"/>
                                     <constraint firstItem="o7V-Pd-Bgl" firstAttribute="top" secondItem="znu-ns-XF7" secondAttribute="bottom" constant="16" id="j89-gR-5fv"/>
@@ -237,10 +265,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="appleLoginButton" destination="lch-ZS-X5k" id="gLS-yT-yhM"/>
                         <outlet property="backButton" destination="nRP-UG-PbD" id="ZVZ-5O-jKc"/>
                         <outlet property="emailTextField" destination="4xM-FT-JAu" id="a52-Ki-IHN"/>
                         <outlet property="forgotPasswordButton" destination="MQB-4M-Kiu" id="JNL-fv-wV2"/>
                         <outlet property="loginButton" destination="Xl1-4C-EuO" id="UE9-hM-ASZ"/>
+                        <outlet property="orContainer" destination="E5M-l5-79S" id="011-31-euc"/>
                         <outlet property="orLabel" destination="tKQ-Op-1iC" id="gqO-XA-FXd"/>
                         <outlet property="passwordTextField" destination="znu-ns-XF7" id="MtS-Cv-VWl"/>
                         <outlet property="registerButton" destination="o7V-Pd-Bgl" id="W3S-1z-Dkx"/>
@@ -248,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRA-Ks-IbZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.5234375" y="100.78125"/>
+            <point key="canvasLocation" x="135" y="100"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="Cow-Lr-QVK">
@@ -304,6 +334,7 @@
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eez-7t-4FJ">
                                         <rect key="frame" x="20" y="144" width="280" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="dUc-Zr-TCo"/>
                                             <constraint firstAttribute="width" constant="374" id="pUx-Jr-ox7"/>
@@ -323,6 +354,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K0S-OX-KGr">
                                         <rect key="frame" x="20" y="82" width="280" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="5Vq-Vs-47T"/>
                                             <constraint firstAttribute="width" constant="374" id="OBM-Hm-Rp7"/>
@@ -342,6 +374,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ba9-IX-EA4">
                                         <rect key="frame" x="20" y="20" width="280" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="374" id="h91-zI-aBj"/>
                                             <constraint firstAttribute="height" constant="50" id="iq6-jl-N57"/>
@@ -418,6 +451,7 @@
     </scenes>
     <resources>
         <image name="Logo-white" width="150" height="150"/>
+        <image name="apple_white" width="44" height="44"/>
         <image name="left-side-menu" width="1242" height="2208"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

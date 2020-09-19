@@ -57,7 +57,9 @@ protocol AdsIntegrationType: Integration {
 
 struct AuthUserInfo {
     var displayName: String?
+    var email: String?
     var photoURL: URL?
+    var anonimous: Bool = false
 }
 
 enum AuthError: Error {

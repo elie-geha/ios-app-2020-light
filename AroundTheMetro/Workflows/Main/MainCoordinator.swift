@@ -10,26 +10,21 @@ import AKSideMenu
 import SVProgressHUD
 import UIKit
 
-class MainCoordinator: CoordinatorType {
+class MainCoordinator: BaseCoordinator {
     // MARK: - Context
     private var context: AppContext
 
     // MARK: - Navigation
-    var router: RouterType
-    var initialContainer: ContainerType?
-    var onComplete: ((Bool) -> Void)?
 
     private var sideMenuController: AKSideMenu?
 
     private var homeCoordinator: HomeCoordinator!
     private var menuCoordinator: MenuCoordinator!
-    private var authCoordinator: AuthorizationCoordinator?
-    private var profileCoordinator: ProfileCoordinator?
 
     private var homeCoordinatorRouter: RouterType!
-
     private var menuCoordinatorRouter: RouterType!
     private var changeCityRouter: RouterType!
+
     private var changeCityController: ChangeCityViewController!
     private var contactUsController: ContactUsController!
 
@@ -37,16 +32,15 @@ class MainCoordinator: CoordinatorType {
 
     init(with router: RouterType,
          context: AppContext) {
-        self.router = router
         self.context = context
-
+        super.init(with: router)
         createHomeCoordinator()
         createMenuCoordinator()
         createChangeCity()
         createContactUs()
     }
 
-    func start() {
+    override func start() {
         let sideMenuController = AKSideMenu(contentViewController: initialMainRouter().asUIViewController() ?? UIViewController(),
                                             leftMenuViewController: menuCoordinatorRouter.asUIViewController(),
                                             rightMenuViewController: nil)
@@ -158,20 +152,21 @@ class MainCoordinator: CoordinatorType {
     private func showLogin() {
         let authRouter = UINavigationController()
         authRouter.setNavigationBarHidden(true, animated: false)
-        authCoordinator = AuthorizationCoordinator(with: authRouter, context: context)
-        authCoordinator?.onComplete = { [weak self] success in
+        let authCoordinator = AuthorizationCoordinator(with: authRouter, context: context)
+        authCoordinator.onComplete = { [weak self] success in
             if success {
                 self?.menuCoordinator.restart()
                 self?.router.hide(container: authRouter, animated: true)
             }
         }
-        authCoordinator?.start()
+        authCoordinator.start()
+        addDependency(authCoordinator)
         router.present(container: authRouter, animated: true)
     }
 
     private func showProfile() {
-        profileCoordinator = ProfileCoordinator(with: router)
-        profileCoordinator?.onLogout = { [weak self] in
+        let profileCoordinator = ProfileCoordinator(with: router, context: context)
+        profileCoordinator.onLogout = { [weak self] in
             self?.context.auth.logout(completion: { error in
                 guard error == nil else {
                     SVProgressHUD.showError(withStatus: error?.localizedDescription)
@@ -182,6 +177,7 @@ class MainCoordinator: CoordinatorType {
                 self?.menuCoordinator.restart()
             })
         }
-        profileCoordinator?.start()
+        addDependency(profileCoordinator)
+        profileCoordinator.start()
     }
 }

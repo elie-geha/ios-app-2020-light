@@ -11,7 +11,10 @@ import Firebase
 class AuthIntegration: AuthIntegrationType {
     var userInfo: AuthUserInfo? {
         guard let currentUser = Auth.auth().currentUser else { return nil }
-        return AuthUserInfo(displayName: currentUser.displayName, photoURL: currentUser.photoURL)
+        return AuthUserInfo(displayName: currentUser.displayName,
+                            email: currentUser.email,
+                            photoURL: currentUser.photoURL,
+                            anonimous: currentUser.isAnonymous)
     }
 
     var isAuthorized: Bool {

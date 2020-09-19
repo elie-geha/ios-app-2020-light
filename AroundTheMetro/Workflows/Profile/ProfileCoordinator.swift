@@ -8,20 +8,19 @@
 
 import UIKit
 
-public final class ProfileCoordinator: CoordinatorType {
-    var router: RouterType
-    var initialContainer: ContainerType?
-    var onComplete: ((Bool) -> Void)?
+final class ProfileCoordinator: BaseCoordinator {
+    var context: AppContext
 
     var onLogout: (() -> Void)?
 
     // MARK: -
 
-    init(with router: RouterType) {
-        self.router = router
+    init(with router: RouterType, context: AppContext) {
+        self.context = context
+        super.init(with: router)
     }
 
-    func start() {
+    override func start() {
         let profileVC = Storyboard.Profile.profileVC
         profileVC.onLogout = { [weak self] in
             self?.onLogout?()

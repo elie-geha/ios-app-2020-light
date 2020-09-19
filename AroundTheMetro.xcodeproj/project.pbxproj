@@ -65,6 +65,10 @@
 		1F4C2BEE24EDB3A500C39967 /* BannersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BED24EDB3A500C39967 /* BannersRepository.swift */; };
 		1F4C2BF024EDBD4200C39967 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */; };
 		1F4C2BF224EDBDBA00C39967 /* HomeMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */; };
+		1F5F787425161051009174DC /* AppleAuthorizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5F787325161051009174DC /* AppleAuthorizationHelper.swift */; };
+		1F5F787725161134009174DC /* AppleAuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5F787625161134009174DC /* AppleAuthorizationController.swift */; };
+		1F5F787B25161440009174DC /* AuthIntegration+Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5F787A2516143F009174DC /* AuthIntegration+Apple.swift */; };
+		1F763C192516391400B0FF26 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F763C182516391400B0FF26 /* BaseCoordinator.swift */; };
 		1F8E20F224FEBC4A00F28DB2 /* OnBoardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20F124FEBC4A00F28DB2 /* OnBoardingCoordinator.swift */; };
 		1F8E20F524FEBCBA00F28DB2 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20F424FEBCBA00F28DB2 /* CoordinatorType.swift */; };
 		1F8E20F824FEBDBA00F28DB2 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E20F724FEBDBA00F28DB2 /* OnBoarding.storyboard */; };
@@ -193,6 +197,12 @@
 		1F4C2BED24EDB3A500C39967 /* BannersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersRepository.swift; sourceTree = "<group>"; };
 		1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		1F4C2BF124EDBDBA00C39967 /* HomeMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuType.swift; sourceTree = "<group>"; };
+		1F5F787325161051009174DC /* AppleAuthorizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthorizationHelper.swift; sourceTree = "<group>"; };
+		1F5F787625161134009174DC /* AppleAuthorizationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthorizationController.swift; sourceTree = "<group>"; };
+		1F5F787A2516143F009174DC /* AuthIntegration+Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthIntegration+Apple.swift"; sourceTree = "<group>"; };
+		1F5F787D25161F97009174DC /* AroundTheMetroDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AroundTheMetroDebug.entitlements; sourceTree = "<group>"; };
+		1F763BF3251630C800B0FF26 /* AroundTheMetroRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AroundTheMetroRelease.entitlements; sourceTree = "<group>"; };
+		1F763C182516391400B0FF26 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		1F8E20F124FEBC4A00F28DB2 /* OnBoardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCoordinator.swift; sourceTree = "<group>"; };
 		1F8E20F424FEBCBA00F28DB2 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 		1F8E20F724FEBDBA00F28DB2 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
@@ -444,6 +454,34 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		1F5F78722516101C009174DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */,
+				1FF6843C24F0547F0068A69A /* Collection+Registerable.swift */,
+				1FF6843E24F054AE0068A69A /* UIView+Factory.swift */,
+				1FF6844024F054DC0068A69A /* UIBundle+Current.swift */,
+				1F8E20FB24FEC07E00F28DB2 /* UIColor+hex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1F763C172516390600B0FF26 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1F763C182516391400B0FF26 /* BaseCoordinator.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		1F763C1B25163E8400B0FF26 /* AppleAuth */ = {
+			isa = PBXGroup;
+			children = (
+				1F5F787625161134009174DC /* AppleAuthorizationController.swift */,
+			);
+			path = AppleAuth;
+			sourceTree = "<group>";
+		};
 		1F8E20EF24FEBC1E00F28DB2 /* Subflows */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,6 +553,8 @@
 		1FA3C3EB24EB11B700295FFA /* AroundTheMetro */ = {
 			isa = PBXGroup;
 			children = (
+				1F763BF3251630C800B0FF26 /* AroundTheMetroRelease.entitlements */,
+				1F5F787D25161F97009174DC /* AroundTheMetroDebug.entitlements */,
 				1FA3C42E24EBD8E900295FFA /* AppContext.swift */,
 				1FA3C3EC24EB11B700295FFA /* AppDelegate.swift */,
 				1FA3C40224EB13AB00295FFA /* AppCoordinator.swift */,
@@ -523,6 +563,7 @@
 				1FA3C43224EBDB4F00295FFA /* Networking */,
 				1F1DD6D324F98285003C4A9F /* Types */,
 				1FA3C41624EB2A8100295FFA /* Model */,
+				1F763C172516390600B0FF26 /* Base */,
 				1FA3C40424EB148600295FFA /* Dependencies */,
 				1FA3C40124EB131500295FFA /* Workflows */,
 				1F8E20FF24FF95D300F28DB2 /* Components */,
@@ -633,13 +674,10 @@
 		1FA3C42924EB34B200295FFA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1F5F78722516101C009174DC /* Extensions */,
 				1FA3C42A24EB34D600295FFA /* UserDefaultsBacked.swift */,
 				1FA3C42C24EB352000295FFA /* AnyOptional.swift */,
-				1F4C2BEF24EDBD4200C39967 /* String+Localized.swift */,
-				1FF6843C24F0547F0068A69A /* Collection+Registerable.swift */,
-				1FF6843E24F054AE0068A69A /* UIView+Factory.swift */,
-				1FF6844024F054DC0068A69A /* UIBundle+Current.swift */,
-				1F8E20FB24FEC07E00F28DB2 /* UIColor+hex.swift */,
+				1F5F787325161051009174DC /* AppleAuthorizationHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -704,6 +742,7 @@
 		1FDBC93D250A9A740009CD8D /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				1F763C1B25163E8400B0FF26 /* AppleAuth */,
 				1FDBC94F250AB9D90009CD8D /* View */,
 				1FDBC948250AB9CD0009CD8D /* AuthorizationCoordinator.swift */,
 				1FDBC949250AB9CD0009CD8D /* Authorization.storyboard */,
@@ -724,6 +763,7 @@
 			isa = PBXGroup;
 			children = (
 				1FDBC950250ABD4D0009CD8D /* AuthIntegration.swift */,
+				1F5F787A2516143F009174DC /* AuthIntegration+Apple.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -998,6 +1038,7 @@
 				1FA3C43D24EBEB9D00295FFA /* PlacesResponse.swift in Sources */,
 				1FDBC955250E15250009CD8D /* RegistrationViewController.swift in Sources */,
 				1F4C2BD724EDA05E00C39967 /* HomeViewController.swift in Sources */,
+				1F5F787725161134009174DC /* AppleAuthorizationController.swift in Sources */,
 				1FA3C43624EBDB8A00295FFA /* ATLApiTarget.swift in Sources */,
 				1FA3C40324EB13AB00295FFA /* AppCoordinator.swift in Sources */,
 				1FA3C42D24EB352000295FFA /* AnyOptional.swift in Sources */,
@@ -1022,6 +1063,7 @@
 				1FA3C42224EB2CF900295FFA /* PlacesServiceLocal.swift in Sources */,
 				1FF6844424F061870068A69A /* ContactUsController.swift in Sources */,
 				1FA3C3EF24EB11B700295FFA /* SceneDelegate.swift in Sources */,
+				1F763C192516391400B0FF26 /* BaseCoordinator.swift in Sources */,
 				1F1DD6DB24F9861B003C4A9F /* AnalyticsIntegration.swift in Sources */,
 				1FDBC94D250AB9CD0009CD8D /* AuthorizationViewController.swift in Sources */,
 				1F8E20F524FEBCBA00F28DB2 /* CoordinatorType.swift in Sources */,
@@ -1052,6 +1094,7 @@
 				1FA3C41524EB290F00295FFA /* PlacesRepository.swift in Sources */,
 				1FA3C40E24EB184100295FFA /* HomeCoordinator.swift in Sources */,
 				1F8E20FC24FEC07E00F28DB2 /* UIColor+hex.swift in Sources */,
+				1F5F787425161051009174DC /* AppleAuthorizationHelper.swift in Sources */,
 				1FF6843224F04C5C0068A69A /* MenuViewController.swift in Sources */,
 				1F8E210124FF960000F28DB2 /* WebBrowserViewController.swift in Sources */,
 				1F4C2BE824EDAF3300C39967 /* BannersServiceRemote.swift in Sources */,
@@ -1063,6 +1106,7 @@
 				1F1DD6D524F9829E003C4A9F /* AnalyticsEventType.swift in Sources */,
 				1F4C2BF024EDBD4200C39967 /* String+Localized.swift in Sources */,
 				1FA3C41E24EB2AAD00295FFA /* MetroStation.swift in Sources */,
+				1F5F787B25161440009174DC /* AuthIntegration+Apple.swift in Sources */,
 				1FF6847524F075F00068A69A /* AllPlacesListViewController.swift in Sources */,
 				1FA3C42624EB2D8A00295FFA /* CountriesServiceLocal.swift in Sources */,
 				1F1DD6A024F3D4AF003C4A9F /* LocateMetroViewController.swift in Sources */,
@@ -1238,7 +1282,9 @@
 			baseConfigurationReference = A85239D9126354EC81AB8AED /* Pods-AroundTheMetro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = AroundTheMetro/AroundTheMetroDebug.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
 				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
@@ -1250,6 +1296,7 @@
 				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AugmentedDiscovery.AroundTheMetro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = AroundTheMetro_Dev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1260,7 +1307,9 @@
 			baseConfigurationReference = D8FC33BDD46E6721368886D7 /* Pods-AroundTheMetro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = AroundTheMetro/AroundTheMetroRelease.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
 				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
@@ -1272,6 +1321,7 @@
 				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AugmentedDiscovery.AroundTheMetro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = AroundTheMetro_Dev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

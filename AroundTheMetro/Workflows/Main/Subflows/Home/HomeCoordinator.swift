@@ -9,25 +9,20 @@
 import SVProgressHUD
 import UIKit
 
-class HomeCoordinator: CoordinatorType {
-    var router: RouterType
-    var initialContainer: ContainerType?
-    var onComplete: ((Bool) -> Void)?
-
+class HomeCoordinator: BaseCoordinator {
     var onShare: (() -> Void)?
     var onMenu: (() -> Void)?
 
     private var context: AppContext
 
-    private var placesCoordinator: PlacesCoordinator?
     private var homeViewController: HomeViewController?
 
     init(with router: RouterType, context: AppContext) {
-        self.router = router
         self.context = context
+        super.init(with: router)
     }
 
-    func start() {
+    override func start() {
         let viewController = Storyboard.Home.homeVC
         initialContainer = viewController
         homeViewController = viewController
@@ -92,8 +87,12 @@ class HomeCoordinator: CoordinatorType {
     }
 
     private func openPlaces(with placeType: PlaceType) {
-        placesCoordinator = PlacesCoordinator(with: router, context: context, type: placeType)
-        placesCoordinator?.start()
+        let placesCoordinator = PlacesCoordinator(with: router, context: context, type: placeType)
+        addDependency(placesCoordinator)
+        placesCoordinator.onComplete = { [weak self] _ in
+            self?.removeDependency(placesCoordinator)
+        }
+        placesCoordinator.start()
     }
 
     func updateBanners() {

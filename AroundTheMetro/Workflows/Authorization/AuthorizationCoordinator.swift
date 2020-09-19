@@ -9,21 +9,19 @@
 import SVProgressHUD
 import UIKit
 
-public final class AuthorizationCoordinator: CoordinatorType {
-    var router: RouterType
-    var initialContainer: ContainerType?
-    var onComplete: ((Bool) -> Void)?
-
+final class AuthorizationCoordinator: BaseCoordinator {
     var context: AppContext
+
+    private var appleAuthController: Any?
 
     // MARK: -
 
     init(with router: RouterType, context: AppContext) {
-        self.router = router
         self.context = context
+        super.init(with: router)
     }
 
-    func start() {
+    override func start() {
         let authorizationCoordinatorVC = Storyboard.Authorization.authorizationVC
         initialContainer = authorizationCoordinatorVC
         authorizationCoordinatorVC.onBack = { [weak self] in
@@ -46,10 +44,15 @@ public final class AuthorizationCoordinator: CoordinatorType {
         authorizationCoordinatorVC.onForgotPassword = {
             // TODO
         }
+        authorizationCoordinatorVC.onLoginWithApple = {[weak self] in
+            if #available(iOS 13, *) {
+                self?.loginWithApple()
+            }
+        }
         router.show(container: authorizationCoordinatorVC, animated: true)
     }
 
-    func showRegistration() {
+    private func showRegistration() {
         let registrationVC = Storyboard.Authorization.registrationVC
         registrationVC.onRegister = { [weak self] email, password in
             self?.context.auth.register(with: email, password: password) { result in
@@ -73,5 +76,28 @@ public final class AuthorizationCoordinator: CoordinatorType {
             self?.router.hide(container: registrationVC, animated: true)
         }
         router.show(container: registrationVC, animated: true)
+    }
+
+    @available(iOS 13, *)
+    private func loginWithApple() {
+        let appleAuthenticationController = AppleAuthorizationController()
+        appleAuthenticationController.onDidAuthenticate = { [weak self] token, nonce in
+            self?.context.auth.appleSignIn(with: token, nonce: nonce, completion: { result in
+                switch result {
+                case .failure(let error):
+                    SVProgressHUD.showError(withStatus: error.localizedDescription)
+                    SVProgressHUD.dismiss(withDelay: 3.0)
+                case .success:
+                    self?.finish()
+                }
+            })
+        }
+        appleAuthenticationController.onDidFailAuthentication = { error in
+            SVProgressHUD.showError(withStatus: error.localizedDescription)
+            SVProgressHUD.dismiss(withDelay: 3.0)
+        }
+
+        appleAuthenticationController.startSignInWithAppleFlow()
+        appleAuthController = appleAuthenticationController
     }
 }

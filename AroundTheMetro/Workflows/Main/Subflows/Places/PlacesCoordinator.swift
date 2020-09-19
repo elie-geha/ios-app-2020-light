@@ -10,21 +10,17 @@ import FirebaseAnalytics
 import SVProgressHUD
 import UIKit
 
-class PlacesCoordinator: CoordinatorType {
-    var router: RouterType
-    var initialContainer: ContainerType?
-    var onComplete: ((Bool) -> Void)?
-
+class PlacesCoordinator: BaseCoordinator {
     private var context: AppContext
     private var placeType: PlaceType
 
     init(with router: RouterType, context: AppContext, type: PlaceType) {
-        self.router = router
         self.context = context
         self.placeType = type
+        super.init(with: router)
     }
 
-    func start() {
+    override func start() {
         guard let country = context.countriesRepository.currentCountry,
             let city = context.countriesRepository.currentCity else { return }
 

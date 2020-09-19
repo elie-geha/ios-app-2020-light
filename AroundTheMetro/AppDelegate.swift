@@ -32,10 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        AppEvents.activateApp()
-    }
-
     // MARK: UISceneSession Lifecycle
 
     @available(iOS 13.0, *)
@@ -46,6 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func setupIntegrations(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        AppEvents.activateApp()
+        
         IQKeyboardManager.shared.enable = true
         
         // MARK: - Firebase config
