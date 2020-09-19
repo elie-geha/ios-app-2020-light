@@ -17,11 +17,23 @@ class ImageCell: UICollectionViewCell {
             titleLabel.isHidden = true
         }
     }
+    @IBOutlet private weak var subtitleLabel: UILabel! {
+        didSet {
+            subtitleLabel.isHidden = true
+        }
+    }
 
     var title: String? {
         didSet {
             titleLabel.text = title
             titleLabel.isHidden = title == nil
+        }
+    }
+
+    var subtitle: String? {
+        didSet {
+            subtitleLabel.text = subtitle
+            subtitleLabel.isHidden = subtitle == nil
         }
     }
 }

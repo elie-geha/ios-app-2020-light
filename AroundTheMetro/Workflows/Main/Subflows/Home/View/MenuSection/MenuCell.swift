@@ -57,6 +57,7 @@ extension MenuCell: UICollectionViewDataSource {
         cell.imageView.image = UIImage(named: menuItem.type.backgroundImageName)
         cell.iconView.image = UIImage(named: menuItem.type.iconName)
         cell.title = menuItem.type.title
+        cell.subtitle = menuItem.type.subtitle
         
         return cell
     }
