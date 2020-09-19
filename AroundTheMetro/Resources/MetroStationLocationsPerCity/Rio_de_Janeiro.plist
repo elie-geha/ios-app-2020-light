@@ -10,23 +10,23 @@
 			<key>longitude</key>
 			<real>-43.1938526</real>
 			<key>name</key>
-			<string>"Cantagalo"</string>
+			<string>&quot;Cantagalo&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
 			<real>-22.9672682</real>
 			<key>longitude</key>
-			<real>-43.1870500</real>
+			<real>-43.18705</real>
 			<key>name</key>
-			<string>"Siqueira Campos"</string>
+			<string>&quot;Siqueira Campos&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real>-22.9645970</real>
+			<real>-22.964597</real>
 			<key>longitude</key>
 			<real>-43.1806069</real>
 			<key>name</key>
-			<string>"Cardeal Arcoverde"</string>
+			<string>&quot;Cardeal Arcoverde&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -34,15 +34,15 @@
 			<key>longitude</key>
 			<real>-43.1841435</real>
 			<key>name</key>
-			<string>"Botafogo"</string>
+			<string>&quot;Botafogo&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
 			<real>-22.9371565</real>
 			<key>longitude</key>
-			<real>-43.1782830</real>
+			<real>-43.178283</real>
 			<key>name</key>
-			<string>"Flamengo"</string>
+			<string>&quot;Flamengo&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -50,7 +50,7 @@
 			<key>longitude</key>
 			<real>-43.1782692</real>
 			<key>name</key>
-			<string>"Largo do Machado"</string>
+			<string>&quot;Largo do Machado&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -58,15 +58,15 @@
 			<key>longitude</key>
 			<real>-43.1765885</real>
 			<key>name</key>
-			<string>"Catete"</string>
+			<string>&quot;Catete&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real>-22.9204120</real>
+			<real>-22.920412</real>
 			<key>longitude</key>
 			<real>-43.1765628</real>
 			<key>name</key>
-			<string>"Glória"</string>
+			<string>&quot;Glória&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -74,7 +74,7 @@
 			<key>longitude</key>
 			<real>-43.1756641</real>
 			<key>name</key>
-			<string>"Cinelândia"</string>
+			<string>&quot;Cinelândia&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -82,7 +82,7 @@
 			<key>longitude</key>
 			<real>-43.1786305</real>
 			<key>name</key>
-			<string>"Carioca"</string>
+			<string>&quot;Carioca&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -90,7 +90,7 @@
 			<key>longitude</key>
 			<real>-43.1814998</real>
 			<key>name</key>
-			<string>"Uruguaiana"</string>
+			<string>&quot;Uruguaiana&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -98,7 +98,7 @@
 			<key>longitude</key>
 			<real>-43.1860655</real>
 			<key>name</key>
-			<string>"Presidente Vargas"</string>
+			<string>&quot;Presidente Vargas&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -106,15 +106,15 @@
 			<key>longitude</key>
 			<real>-43.1917136</real>
 			<key>name</key>
-			<string>"Central"</string>
+			<string>&quot;Central&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real>-22.9099190</real>
+			<real>-22.909919</real>
 			<key>longitude</key>
 			<real>-43.2003102</real>
 			<key>name</key>
-			<string>"Praça Onze"</string>
+			<string>&quot;Praça Onze&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -122,7 +122,7 @@
 			<key>longitude</key>
 			<real>-43.2065358</real>
 			<key>name</key>
-			<string>"Estácio"</string>
+			<string>&quot;Estácio&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -130,7 +130,7 @@
 			<key>longitude</key>
 			<real>-43.2178035</real>
 			<key>name</key>
-			<string>"Afonso Pena"</string>
+			<string>&quot;Afonso Pena&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -138,7 +138,7 @@
 			<key>longitude</key>
 			<real>-43.2237254</real>
 			<key>name</key>
-			<string>"São Francisco Xavier"</string>
+			<string>&quot;São Francisco Xavier&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -146,7 +146,7 @@
 			<key>longitude</key>
 			<real>-43.2326032</real>
 			<key>name</key>
-			<string>"Saens Peña"</string>
+			<string>&quot;Saens Peña&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -154,7 +154,7 @@
 			<key>longitude</key>
 			<real>-43.2396541</real>
 			<key>name</key>
-			<string>"Uruguai"</string>
+			<string>&quot;Uruguai&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -162,7 +162,7 @@
 			<key>longitude</key>
 			<real>-43.2063193</real>
 			<key>name</key>
-			<string>"Cidade Nova"</string>
+			<string>&quot;Cidade Nova&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -170,7 +170,7 @@
 			<key>longitude</key>
 			<real>-43.2209045</real>
 			<key>name</key>
-			<string>"São Cristóvão"</string>
+			<string>&quot;São Cristóvão&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -178,7 +178,7 @@
 			<key>longitude</key>
 			<real>-43.2334301</real>
 			<key>name</key>
-			<string>"Maracanã"</string>
+			<string>&quot;Maracanã&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -186,7 +186,7 @@
 			<key>longitude</key>
 			<real>-43.2444918</real>
 			<key>name</key>
-			<string>"Triagem"</string>
+			<string>&quot;Triagem&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -194,7 +194,7 @@
 			<key>longitude</key>
 			<real>-43.2603494</real>
 			<key>name</key>
-			<string>"Maria da Graça"</string>
+			<string>&quot;Maria da Graça&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -202,7 +202,7 @@
 			<key>longitude</key>
 			<real>-43.2718786</real>
 			<key>name</key>
-			<string>"Nova América/Del Castilho"</string>
+			<string>&quot;Nova América/Del Castilho&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -210,7 +210,7 @@
 			<key>longitude</key>
 			<real>-43.2834299</real>
 			<key>name</key>
-			<string>"Inhaúma"</string>
+			<string>&quot;Inhaúma&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -218,15 +218,15 @@
 			<key>longitude</key>
 			<real>-43.2974813</real>
 			<key>name</key>
-			<string>"Engenho da Rainha"</string>
+			<string>&quot;Engenho da Rainha&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real>-22.8624390</real>
+			<real>-22.862439</real>
 			<key>longitude</key>
 			<real>-43.3067797</real>
 			<key>name</key>
-			<string>"Thomaz Coelho"</string>
+			<string>&quot;Thomaz Coelho&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -234,15 +234,15 @@
 			<key>longitude</key>
 			<real>-43.3131695</real>
 			<key>name</key>
-			<string>"Vicente de Carvalho"</string>
+			<string>&quot;Vicente de Carvalho&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
 			<real>-22.8264544</real>
 			<key>longitude</key>
-			<real>-43.3346780</real>
+			<real>-43.334678</real>
 			<key>name</key>
-			<string>"Irajá"</string>
+			<string>&quot;Irajá&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -250,7 +250,7 @@
 			<key>longitude</key>
 			<real>-43.3338597</real>
 			<key>name</key>
-			<string>"Colégio"</string>
+			<string>&quot;Colégio&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -258,7 +258,7 @@
 			<key>longitude</key>
 			<real>-43.3428414</real>
 			<key>name</key>
-			<string>"Coelho Neto"</string>
+			<string>&quot;Coelho Neto&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -266,23 +266,23 @@
 			<key>longitude</key>
 			<real>-43.3497101</real>
 			<key>name</key>
-			<string>"Acari/Fazenda Botafogo"</string>
+			<string>&quot;Acari/Fazenda Botafogo&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real>-22.8162490</real>
+			<real>-22.816249</real>
 			<key>longitude</key>
 			<real>-43.3584873</real>
 			<key>name</key>
-			<string>"Engenheiro Rubens Paiva"</string>
+			<string>&quot;Engenheiro Rubens Paiva&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
 			<real>-22.8066608</real>
 			<key>longitude</key>
-			<real>-43.3649170</real>
+			<real>-43.364917</real>
 			<key>name</key>
-			<string>"Pavuna"</string>
+			<string>&quot;Pavuna&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -290,7 +290,7 @@
 			<key>longitude</key>
 			<real>-43.2059706</real>
 			<key>name</key>
-			<string>"Nossa Senhora da Paz"</string>
+			<string>&quot;Nossa Senhora da Paz&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -298,15 +298,15 @@
 			<key>longitude</key>
 			<real>-43.2157862</real>
 			<key>name</key>
-			<string>"Jardim de Alah"</string>
+			<string>&quot;Jardim de Alah&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
 			<real>-22.9776489</real>
 			<key>longitude</key>
-			<real>-43.2225860</real>
+			<real>-43.222586</real>
 			<key>name</key>
-			<string>"Leblon"</string>
+			<string>&quot;Leblon&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -314,7 +314,7 @@
 			<key>longitude</key>
 			<real>-43.2259052</real>
 			<key>name</key>
-			<string>"Gávea "</string>
+			<string>&quot;Gávea &quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
@@ -322,15 +322,15 @@
 			<key>longitude</key>
 			<real>-43.2557209</real>
 			<key>name</key>
-			<string>"São Conrado"</string>
+			<string>&quot;São Conrado&quot;</string>
 		</dict>
 		<dict>
 			<key>latitude</key>
-			<real>-23.0068590</real>
+			<real>-23.006859</real>
 			<key>longitude</key>
 			<real>-43.3109429</real>
 			<key>name</key>
-			<string>"Jardim Oceânico"</string>
+			<string>&quot;Jardim Oceânico&quot;</string>
 		</dict>
 	</array>
 </dict>

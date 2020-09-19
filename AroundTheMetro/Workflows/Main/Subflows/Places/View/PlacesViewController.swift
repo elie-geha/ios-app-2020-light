@@ -48,10 +48,6 @@ class PlacesViewController: TabmanViewController {
         setupView()
         reloadChildControllers()
     }
-//
-//    override func viewWillAppear(_ animated: Bool) {
-//        barLayoutGuide.heightAnchor
-//    }
 
     // MARK: - Private
 

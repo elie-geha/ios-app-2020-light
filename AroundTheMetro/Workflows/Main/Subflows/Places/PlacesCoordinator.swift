@@ -30,7 +30,8 @@ class PlacesCoordinator: BaseCoordinator {
             switch result {
             case .success(let metrosAndPlaces):
                 SVProgressHUD.dismiss()
-                self?.openPlacesVC(with: metrosAndPlaces)
+                let withoutEmptyMetros = metrosAndPlaces.filter { !$0.value.isEmpty }
+                self?.openPlacesVC(with: withoutEmptyMetros)
             case .failure(let error):
                 SVProgressHUD.showError(withStatus: error.localizedDescription)
                 SVProgressHUD.dismiss(withDelay: 3.0)
@@ -40,7 +41,7 @@ class PlacesCoordinator: BaseCoordinator {
     }
 
     private func openPlacesVC(with metrosAndPlaces: [MetroStation: [Place]]) {
-        let vc = Storyboard.Places.placesVC
+        let vc = StoryboardScene.Places.placesViewController.instantiate()
         initialContainer = vc
 
         vc.metrosAndPlaces = metrosAndPlaces
@@ -49,17 +50,18 @@ class PlacesCoordinator: BaseCoordinator {
             self?.openPlaceDetails(with: place)
         }
 
-        let allPlacesVC = Storyboard.Places.allPlacesListVC
+        let allPlacesVC = StoryboardScene.Places.allPlacesListViewController.instantiate()
         allPlacesVC.onOpenDetails = vc.onOpenDetails
         vc.allPlacesViewController = allPlacesVC
 
-        let metrosVC = Storyboard.Places.metroListVC
+        let metrosVC = StoryboardScene.Places.metroListViewController.instantiate()
         metrosVC.onOpenPlaces = { [weak self] metro, places in
-            let allPlacesVC = Storyboard.Places.allPlacesListVC
-            allPlacesVC.onOpenDetails = vc.onOpenDetails
-            allPlacesVC.title = metro.name
-            allPlacesVC.additionalSafeAreaInsets = .zero
-            self?.router.show(container: allPlacesVC, animated: true)
+            let placesVC = StoryboardScene.Places.allPlacesListViewController.instantiate()
+            placesVC.onOpenDetails = vc.onOpenDetails
+            placesVC.title = metro.name
+            placesVC.places = places
+            placesVC.additionalSafeAreaInsets = .zero
+            self?.router.show(container: placesVC, animated: true)
         }
         vc.metroViewController = metrosVC
 
@@ -67,7 +69,7 @@ class PlacesCoordinator: BaseCoordinator {
     }
 
     private func openPlaceDetails(with place: Place) {
-        let vc = Storyboard.Places.placeDetailsVC
+        let vc = StoryboardScene.Places.placeDetailViewController.instantiate()
         vc.place = place
         vc.onCall = { [weak self] place in
             guard let phoneNumber = place.phoneNumber,

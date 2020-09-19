@@ -23,7 +23,7 @@ class MenuCoordinator: BaseCoordinator {
     }
 
     override func start() {
-        let viewController = Storyboard.Menu.menuVC
+        let viewController = StoryboardScene.Menu.initialScene.instantiate()
         initialContainer = viewController
         viewController.menuItems = [
             MainMenuItem(

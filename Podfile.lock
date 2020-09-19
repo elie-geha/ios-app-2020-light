@@ -109,6 +109,7 @@ PODS:
   - Pageboy (3.6.1)
   - PromisesObjC (1.2.10)
   - SVProgressHUD (2.2.6)
+  - SwiftGen (6.3.0)
   - Tabman (2.9.1):
     - Pageboy (~> 3.6.0)
 
@@ -123,6 +124,7 @@ DEPENDENCIES:
   - Kingfisher
   - Moya
   - SVProgressHUD (from `https://github.com/slizeray/SVProgressHUD.git`)
+  - SwiftGen (~> 6.0)
   - Tabman (~> 2.9)
 
 SPEC REPOS:
@@ -152,6 +154,7 @@ SPEC REPOS:
     - nanopb
     - Pageboy
     - PromisesObjC
+    - SwiftGen
     - Tabman
 
 EXTERNAL SOURCES:
@@ -190,8 +193,9 @@ SPEC CHECKSUMS:
   Pageboy: 29a2d474ad99404b4d77f325e0ab6d705930a4fb
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
   SVProgressHUD: 6ed134667e9ebb2f33679e8273cd48fd3fa349e5
+  SwiftGen: 3d5024a47ea79e408cded20763d7a17d18a4548c
   Tabman: 085d89c65be9e883629bdaf5b1453a6397e57846
 
-PODFILE CHECKSUM: c42b5d76f3d686429c3dd4ec638865cdd2795f84
+PODFILE CHECKSUM: 6025f3b5d0395a4ce49e8a5061e87facd1c069a2
 
 COCOAPODS: 1.9.3

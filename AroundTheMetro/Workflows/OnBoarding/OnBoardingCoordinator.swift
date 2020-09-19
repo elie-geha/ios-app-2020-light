@@ -21,7 +21,7 @@ class OnBoardingCoordinator: BaseCoordinator {
     }
 
     override func start() {
-        let onBoardingVC = Storyboard.OnBoarding.onBoardingVC
+        let onBoardingVC = StoryboardScene.OnBoarding.onBoardingViewController.instantiate()
         initialContainer = onBoardingVC
         onBoardingVC.steps = [.discover, .locate, .offlineMap, .stayTuned]
         onBoardingVC.onFinish = { [weak self] in
