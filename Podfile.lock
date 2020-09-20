@@ -14,6 +14,10 @@ PODS:
   - FBSDKCoreKit/Basics (5.15.1)
   - FBSDKCoreKit/Core (5.15.1):
     - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (5.15.1):
+    - FBSDKLoginKit/Login (= 5.15.1)
+  - FBSDKLoginKit/Login (5.15.1):
+    - FBSDKCoreKit (~> 5.0)
   - Firebase/Auth (6.30.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.8.0)
@@ -116,6 +120,8 @@ PODS:
 DEPENDENCIES:
   - AKSideMenu
   - FacebookCore
+  - FBSDKCoreKit
+  - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Core
   - Google-Mobile-Ads-SDK
@@ -134,6 +140,7 @@ SPEC REPOS:
     - AppAuth
     - FacebookCore
     - FBSDKCoreKit
+    - FBSDKLoginKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -172,6 +179,7 @@ SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   FacebookCore: ba86524b66cfa86d0f8e65d08faa8504a9f732dd
   FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
+  FBSDKLoginKit: f1ea8026a58b52d30c9f2e6a58ca7d813619fb83
   Firebase: 210f41ca352067d83b1ba4fd2e7fb49a0c017397
   FirebaseAnalytics: a299a86ef70fcc6aa011418bc65a7e101fb9636c
   FirebaseAuth: 300433de340c1b058dbb8aec224a3f1bcfda5184
@@ -196,6 +204,6 @@ SPEC CHECKSUMS:
   SwiftGen: 3d5024a47ea79e408cded20763d7a17d18a4548c
   Tabman: 085d89c65be9e883629bdaf5b1453a6397e57846
 
-PODFILE CHECKSUM: 6025f3b5d0395a4ce49e8a5061e87facd1c069a2
+PODFILE CHECKSUM: dacef9cc45b5c4214b97d1bd986efbe0cce0cb5c
 
 COCOAPODS: 1.9.3

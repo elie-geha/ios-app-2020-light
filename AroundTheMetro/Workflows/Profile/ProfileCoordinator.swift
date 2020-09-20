@@ -11,7 +11,7 @@ import UIKit
 final class ProfileCoordinator: BaseCoordinator {
     var context: AppContext
 
-    var onLogout: (() -> Void)?
+    var onLogout: EmptyCallback?
 
     // MARK: -
 

@@ -30,8 +30,8 @@ class HomeViewController: UIViewController {
         }
     }
 
-    var onLeftBarButton: (() -> Void)?
-    var onRightBarButton: (() -> Void)?
+    var onLeftBarButton: EmptyCallback?
+    var onRightBarButton: EmptyCallback?
 
     // MARK: - Private Properties
 

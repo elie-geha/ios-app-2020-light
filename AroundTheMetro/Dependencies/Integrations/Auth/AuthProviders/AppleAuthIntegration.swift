@@ -9,14 +9,9 @@
 import Foundation
 import AuthenticationServices
 
-enum AppleAuthError: Error {
-    case completedWithError(String)
-    case failed(String)
-}
-
 @available(iOS 13, *)
 class AppleAuthIntegration: NSObject, AppleAuthIntegrationType {
-    var completion: ((Result<(token: String, nonce: String), Error>) -> Void)?
+    var completion: ((Result<(token: String, nonce: String), ThirdPartyAuthError>) -> Void)?
 
     // Unhashed nonce.
     fileprivate var currentNonce: String?
@@ -25,7 +20,7 @@ class AppleAuthIntegration: NSObject, AppleAuthIntegrationType {
     var window: UIWindow?
 
     func signIn(in window: UIWindow?,
-                completion: ((Result<(token: String, nonce: String), Error>) -> Void)?) {
+                completion: ((Result<(token: String, nonce: String), ThirdPartyAuthError>) -> Void)?) {
         self.completion = completion
         self.window = window
 
@@ -52,7 +47,7 @@ extension AppleAuthIntegration: ASAuthorizationControllerDelegate {
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
             guard let nonce = currentNonce else {
                 completion?(
-                    .failure(AppleAuthError.completedWithError(
+                    .failure(ThirdPartyAuthError.completedWithError(
                         "Invalid state: A login callback was received, but no login request was sent."
                     ))
                 )
@@ -60,7 +55,7 @@ extension AppleAuthIntegration: ASAuthorizationControllerDelegate {
             }
             guard let appleIDToken = appleIDCredential.identityToken else {
                 completion?(
-                    .failure(AppleAuthError.completedWithError(
+                    .failure(ThirdPartyAuthError.completedWithError(
                         "Unable to fetch identity token"
                     ))
                 )
@@ -68,7 +63,7 @@ extension AppleAuthIntegration: ASAuthorizationControllerDelegate {
             }
             guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
                 completion?(
-                    .failure(AppleAuthError.completedWithError(
+                    .failure(ThirdPartyAuthError.completedWithError(
                         "Unable to serialize token string from data: \(appleIDToken.debugDescription)"
                     ))
                 )
@@ -82,7 +77,7 @@ extension AppleAuthIntegration: ASAuthorizationControllerDelegate {
 
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         // Handle error.
-        completion?(.failure(AppleAuthError.failed(error.localizedDescription)))
+        completion?(.failure(ThirdPartyAuthError.failed(error.localizedDescription)))
     }
 }
 

@@ -24,7 +24,7 @@ class RegistrationViewController: UIViewController {
     // MARK: - Callbacks
 
     var onRegister: ((_ email: String, _ password: String) -> Void)?
-    var onBack: (() -> Void)?
+    var onBack: EmptyCallback?
 
     // MARK: - Private variables
 

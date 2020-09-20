@@ -11,11 +11,11 @@ import UIKit
 class MenuCoordinator: BaseCoordinator {
     var context: AppContext
 
-    var onLogin: (() -> Void)?
-    var onProfile: (() -> Void)?
-    var onHome: (() -> Void)?
-    var onChangeCity: (() -> Void)?
-    var onContactUs: (() -> Void)?
+    var onLogin: EmptyCallback?
+    var onProfile: EmptyCallback?
+    var onHome: EmptyCallback?
+    var onChangeCity: EmptyCallback?
+    var onContactUs: EmptyCallback?
 
     init(with router: RouterType, context: AppContext) {
         self.context = context

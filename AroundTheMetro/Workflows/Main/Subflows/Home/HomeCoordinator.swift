@@ -10,8 +10,8 @@ import SVProgressHUD
 import UIKit
 
 class HomeCoordinator: BaseCoordinator {
-    var onShare: (() -> Void)?
-    var onMenu: (() -> Void)?
+    var onShare: EmptyCallback?
+    var onMenu: EmptyCallback?
 
     private var context: AppContext
 

@@ -32,8 +32,8 @@ class OnBoardingViewController: UIViewController {
 
     // MARK: - Callbacks
 
-    var onFinish: (() -> Void)?
-    var onSkip: (() -> Void)?
+    var onFinish: EmptyCallback?
+    var onSkip: EmptyCallback?
 
     // MARK: - Private variables
 

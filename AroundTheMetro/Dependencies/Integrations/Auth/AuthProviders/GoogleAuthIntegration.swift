@@ -11,10 +11,10 @@ import GoogleSignIn
 import Firebase
 
 class GoogleAuthIntegration: NSObject, GoogleAuthIntegrationType {
-    var completion: ((Result<(token: String, accessToken: String), Error>) -> Void)?
+    var completion: ((Result<(token: String, accessToken: String), ThirdPartyAuthError>) -> Void)?
 
     func signIn(in viewController: UIViewController?,
-                completion: ((Result<(token: String, accessToken: String), Error>) -> Void)?) {
+                completion: ((Result<(token: String, accessToken: String), ThirdPartyAuthError>) -> Void)?) {
         self.completion = completion
 
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
@@ -27,7 +27,7 @@ class GoogleAuthIntegration: NSObject, GoogleAuthIntegrationType {
 extension GoogleAuthIntegration: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         guard error == nil else {
-            completion?(.failure(error!))
+            completion?(.failure(ThirdPartyAuthError.failed(error!.localizedDescription)))
             return
         }
 

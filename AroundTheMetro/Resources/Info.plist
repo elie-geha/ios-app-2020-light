@@ -26,6 +26,14 @@
 				<string>com.googleusercontent.apps.999254037272-kgf3d76b6us3gbgiko8e0rnj6bfa7krt</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb214940625744205</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>

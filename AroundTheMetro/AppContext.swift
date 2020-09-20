@@ -23,6 +23,7 @@ class AppContext {
 
     let appleAuth: AppleAuthIntegrationType?
     let googleAuth: GoogleAuthIntegrationType
+    let facebookAuth: FacebookAuthIntegrationType
 
     init() {
         userStorageService = UserStorageService()
@@ -43,5 +44,6 @@ class AppContext {
             appleAuth = nil
         }
         googleAuth = GoogleAuthIntegration()
+        facebookAuth = FacebookAuthIntegration()
     }
 }
