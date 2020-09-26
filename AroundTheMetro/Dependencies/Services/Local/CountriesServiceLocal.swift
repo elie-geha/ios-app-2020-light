@@ -23,7 +23,7 @@ class CountriesServiceLocal: LocalStorageService {
         switch name {
         case "Argentina": return Country(name: "Argentina", cities: ["Buenos_Aires"].compactMap { city(with: $0) })
         case "Austria": return Country(name: "Austria", cities: ["Vienna"].compactMap { city(with: $0) })
-        case "Belgium": return Country(name: "Beligum", cities: ["Brussels"].compactMap { city(with: $0) })
+        case "Belgium": return Country(name: "Belgium", cities: ["Brussels"].compactMap { city(with: $0) })
         case "Brazil": return Country(name: "Brazil", cities: ["Rio_de_Janeiro", "Sao_Paulo"].compactMap { city(with: $0) })
         case "Bulgaria": return Country(name: "Bulgaria", cities: ["Sofia"].compactMap { city(with: $0) })
         case "Canada": return Country(name: "Canada", cities: ["Montreal", "Toronto", "Vancouver"].compactMap { city(with: $0) })
