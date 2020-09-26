@@ -191,7 +191,7 @@
                                         </variation>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nhu-Tf-Kzs">
-                                        <rect key="frame" x="99" y="492" width="122" height="56"/>
+                                        <rect key="frame" x="66" y="492" width="188" height="56"/>
                                         <subviews>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lch-ZS-X5k" customClass="RoundButton" customModule="AroundTheMetro" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
@@ -203,8 +203,18 @@
                                                     <action selector="loginWithApple" destination="6TY-HL-beg" eventType="touchUpInside" id="Or6-Gz-s9m"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCT-Ad-gJa" customClass="RoundButton" customModule="AroundTheMetro" customModuleProvider="target">
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kb-y1-d08" customClass="RoundButton" customModule="AroundTheMetro" customModuleProvider="target">
                                                 <rect key="frame" x="66" y="0.0" width="56" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="0Kb-y1-d08" secondAttribute="height" multiplier="1:1" id="gOd-5F-dPA"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="facebook"/>
+                                                <connections>
+                                                    <action selector="loginWithFacebook" destination="6TY-HL-beg" eventType="touchUpInside" id="x7d-Hq-Qtq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCT-Ad-gJa" customClass="RoundButton" customModule="AroundTheMetro" customModuleProvider="target">
+                                                <rect key="frame" x="132" y="0.0" width="56" height="56"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="pCT-Ad-gJa" secondAttribute="height" multiplier="1:1" id="HFt-lX-rxV"/>
@@ -217,6 +227,7 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="pCT-Ad-gJa" firstAttribute="width" secondItem="pCT-Ad-gJa" secondAttribute="height" multiplier="1:1" id="CJ6-EH-5IV"/>
+                                            <constraint firstItem="0Kb-y1-d08" firstAttribute="width" secondItem="0Kb-y1-d08" secondAttribute="height" multiplier="1:1" id="IlB-fx-pjX"/>
                                             <constraint firstAttribute="height" constant="56" id="yZo-AL-dD1"/>
                                         </constraints>
                                     </stackView>
@@ -459,6 +470,7 @@
     <resources>
         <image name="Logo-white" width="150" height="150"/>
         <image name="apple_white" width="44" height="44"/>
+        <image name="facebook" width="44" height="44"/>
         <image name="google" width="30" height="30"/>
         <image name="left-side-menu" width="1242" height="2208"/>
         <systemColor name="systemBackgroundColor">

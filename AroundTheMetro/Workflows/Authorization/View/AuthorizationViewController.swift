@@ -29,13 +29,14 @@ public final class AuthorizationViewController: UIViewController {
 
     // MARK: - Callbacks
 
-    var onBack: (() -> Void)?
+    var onBack: EmptyCallback?
     var onLogin: ((_ email: String, _ password: String) -> Void)?
-    var onRegister: (() -> Void)?
-    var onForgotPassword: (() -> Void)?
+    var onRegister: EmptyCallback?
+    var onForgotPassword: EmptyCallback?
 
-    var onLoginWithApple: (() -> Void)?
-    var onLoginWithGoogle: (() -> Void)?
+    var onLoginWithApple: EmptyCallback?
+    var onLoginWithGoogle: EmptyCallback?
+    var onLoginWithFacebook: EmptyCallback?
 
     // MARK: - Private variables
 
@@ -84,6 +85,10 @@ public final class AuthorizationViewController: UIViewController {
 
     @IBAction func loginWithGoogle() {
         onLoginWithGoogle?()
+    }
+
+    @IBAction func loginWithFacebook() {
+        onLoginWithFacebook?()
     }
 
     // MARK: - Private

@@ -15,7 +15,7 @@ public final class ProfileViewController: UIViewController {
 
     // MARK: - Callbacks
 
-    var onLogout: (() -> Void)?
+    var onLogout: EmptyCallback?
 
     // MARK: - Private variables
 

@@ -27,13 +27,7 @@ final class AuthorizationCoordinator: BaseCoordinator {
         }
         authorizationCoordinatorVC.onLogin = { [weak self] email, password in
             self?.context.auth.login(with: email, password: password) { result in
-                switch result {
-                case .failure(let error):
-                    SVProgressHUD.showError(withStatus: error.localizedDescription)
-                    SVProgressHUD.dismiss(withDelay: 3.0)
-                case .success:
-                    self?.finish()
-                }
+                self?.handleAuthorization(with: result)
             }
         }
         authorizationCoordinatorVC.onRegister = { [weak self] in
@@ -42,11 +36,14 @@ final class AuthorizationCoordinator: BaseCoordinator {
         authorizationCoordinatorVC.onForgotPassword = {
             // TODO
         }
-        authorizationCoordinatorVC.onLoginWithApple = {[weak self] in
+        authorizationCoordinatorVC.onLoginWithApple = { [weak self] in
             self?.loginWithApple()
         }
-        authorizationCoordinatorVC.onLoginWithGoogle = {[weak self] in
+        authorizationCoordinatorVC.onLoginWithGoogle = { [weak self] in
             self?.loginWithGoogle()
+        }
+        authorizationCoordinatorVC.onLoginWithFacebook = { [weak self] in
+            self?.loginWithFacebook()
         }
         router.show(container: authorizationCoordinatorVC, animated: true)
     }
@@ -55,20 +52,7 @@ final class AuthorizationCoordinator: BaseCoordinator {
         let registrationVC = StoryboardScene.Authorization.registrationViewController.instantiate()
         registrationVC.onRegister = { [weak self] email, password in
             self?.context.auth.register(with: email, password: password) { result in
-                switch result {
-                case .failure(let error):
-                    let errorMessage: String
-                    if case let .loginError(message) = error {
-                        errorMessage = message
-                    } else {
-                        errorMessage = error.localizedDescription
-                    }
-
-                    SVProgressHUD.showError(withStatus: errorMessage)
-                    SVProgressHUD.dismiss(withDelay: 3.0)
-                case .success:
-                    self?.finish()
-                }
+                self?.handleAuthorization(with: result)
             }
         }
         registrationVC.onBack = { [weak self] in
@@ -81,21 +65,14 @@ final class AuthorizationCoordinator: BaseCoordinator {
         let appleAuthIntegration = context.appleAuth
 
         appleAuthIntegration?.signIn( in: initialContainer?.asUIViewController()?.view.window) { [weak self] result in
-                switch result {
-                case .success(let authData):
-                    self?.context.auth.appleSignIn(with: authData.token, nonce: authData.nonce, completion: { result in
-                        switch result {
-                        case .failure(let error):
-                            SVProgressHUD.showError(withStatus: error.localizedDescription)
-                            SVProgressHUD.dismiss(withDelay: 3.0)
-                        case .success:
-                            self?.finish()
-                        }
-                    })
-
-                case .failure: break;
+            switch result {
+            case .success(let authData):
+                self?.context.auth.appleSignIn(with: authData.token, nonce: authData.nonce) { result in
+                    self?.handleAuthorization(with: result)
                 }
+            case .failure(let error): self?.handleThirdPartyAuthFailure(with: error)
             }
+        }
     }
 
     private func loginWithGoogle() {
@@ -104,18 +81,50 @@ final class AuthorizationCoordinator: BaseCoordinator {
         googleAuthIntegration.signIn( in: initialContainer?.asUIViewController()) { [weak self] result in
             switch result {
             case .success(let authData):
-                self?.context.auth.googleSignIn(with: authData.token, accessToken: authData.accessToken, completion: { result in
-                    switch result {
-                    case .failure(let error):
-                        SVProgressHUD.showError(withStatus: error.localizedDescription)
-                        SVProgressHUD.dismiss(withDelay: 3.0)
-                    case .success:
-                        self?.finish()
-                    }
-                })
-
-            case .failure: break;
+                self?.context.auth.googleSignIn(with: authData.token, accessToken: authData.accessToken) { result in
+                    self?.handleAuthorization(with: result)
+                }
+            case .failure(let error): self?.handleThirdPartyAuthFailure(with: error)
             }
+        }
+    }
+
+    private func loginWithFacebook() {
+        let facebookAuthIntegration = context.facebookAuth
+
+        facebookAuthIntegration.signIn(in: initialContainer?.asUIViewController()) { [weak self] result in
+            switch result {
+            case .success(let authData):
+                self?.context.auth.facebookSignIn(with: authData) { result in
+                    self?.handleAuthorization(with: result)
+                }
+            case .failure(let error): self?.handleThirdPartyAuthFailure(with: error)
+            }
+        }
+    }
+
+    private func handleAuthorization(with result: Result<AuthUserInfo?, AuthError>) {
+        switch result {
+        case .failure(let error):
+            let errorMessage: String
+            if case let .loginError(message) = error {
+                errorMessage = message
+            } else {
+                errorMessage = error.localizedDescription
+            }
+            SVProgressHUD.showError(withStatus: errorMessage)
+            SVProgressHUD.dismiss(withDelay: 3.0)
+        case .success:
+            finish()
+        }
+    }
+
+    private func handleThirdPartyAuthFailure(with error: ThirdPartyAuthError) {
+        switch error {
+        case .completedWithError(let error), .failed(let error):
+            SVProgressHUD.showError(withStatus: error)
+            SVProgressHUD.dismiss(withDelay: 3.0)
+        default: break
         }
     }
 }

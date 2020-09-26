@@ -26,6 +26,14 @@
 				<string>com.googleusercontent.apps.999254037272-kgf3d76b6us3gbgiko8e0rnj6bfa7krt</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb214940625744205</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
@@ -33,6 +41,11 @@
 	<string>214940625744205</string>
 	<key>FacebookDisplayName</key>
 	<string>AroundTheMetro</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>fbauth</string>
+      <string>fbauth2</string>
+    </array>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-5420876778958572~6113034677</string>
 	<key>ITSAppUsesNonExemptEncryption</key>

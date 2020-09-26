@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F19B9B5251763980039A01A /* IntegrationSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19B9B4251763980039A01A /* IntegrationSpecs.swift */; };
+		1F19B9B82517640C0039A01A /* Callbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19B9B72517640C0039A01A /* Callbacks.swift */; };
 		1F1DD6A024F3D4AF003C4A9F /* LocateMetroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD69F24F3D4AF003C4A9F /* LocateMetroViewController.swift */; };
 		1F1DD6A224F3D7D9003C4A9F /* MetroPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6A124F3D7D9003C4A9F /* MetroPlanViewController.swift */; };
 		1F1DD6A624F3E9C4003C4A9F /* AdsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6A524F3E9C4003C4A9F /* AdsContainerViewController.swift */; };
@@ -73,6 +75,7 @@
 		1F763C4925164E3800B0FF26 /* AuthIntegration+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F763C4825164E3800B0FF26 /* AuthIntegration+Google.swift */; };
 		1F763C4D25164F7900B0FF26 /* GoogleAuthIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F763C4C25164F7900B0FF26 /* GoogleAuthIntegration.swift */; };
 		1F763C7725165A8000B0FF26 /* Storyboards+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F763C7625165A8000B0FF26 /* Storyboards+Generated.swift */; };
+		1F763CC025175C0000B0FF26 /* FacebookAuthIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F763CBF25175C0000B0FF26 /* FacebookAuthIntegration.swift */; };
 		1F8E20F224FEBC4A00F28DB2 /* OnBoardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20F124FEBC4A00F28DB2 /* OnBoardingCoordinator.swift */; };
 		1F8E20F524FEBCBA00F28DB2 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E20F424FEBCBA00F28DB2 /* CoordinatorType.swift */; };
 		1F8E20F824FEBDBA00F28DB2 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E20F724FEBDBA00F28DB2 /* OnBoarding.storyboard */; };
@@ -118,6 +121,7 @@
 		1FDBC95A250E24900009CD8D /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC957250E24900009CD8D /* ProfileCoordinator.swift */; };
 		1FDBC95B250E24900009CD8D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDBC958250E24900009CD8D /* Profile.storyboard */; };
 		1FDBC95C250E24900009CD8D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBC959250E24900009CD8D /* ProfileViewController.swift */; };
+		1FF16379251761AD00B8571D /* AuthIntegration+Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF16378251761AD00B8571D /* AuthIntegration+Facebook.swift */; };
 		1FF6843024F04BFE0068A69A /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6842F24F04BFE0068A69A /* Menu.storyboard */; };
 		1FF6843224F04C5C0068A69A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6843124F04C5C0068A69A /* MenuViewController.swift */; };
 		1FF6843424F04CC20068A69A /* MainMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6843324F04CC20068A69A /* MainMenuItem.swift */; };
@@ -165,6 +169,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F19B9B4251763980039A01A /* IntegrationSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationSpecs.swift; sourceTree = "<group>"; };
+		1F19B9B72517640C0039A01A /* Callbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callbacks.swift; sourceTree = "<group>"; };
 		1F1DD69F24F3D4AF003C4A9F /* LocateMetroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateMetroViewController.swift; sourceTree = "<group>"; };
 		1F1DD6A124F3D7D9003C4A9F /* MetroPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroPlanViewController.swift; sourceTree = "<group>"; };
 		1F1DD6A524F3E9C4003C4A9F /* AdsContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsContainerViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +241,7 @@
 		1F763C4C25164F7900B0FF26 /* GoogleAuthIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthIntegration.swift; sourceTree = "<group>"; };
 		1F763C7325165A4C00B0FF26 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		1F763C7625165A8000B0FF26 /* Storyboards+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Storyboards+Generated.swift"; sourceTree = "<group>"; };
+		1F763CBF25175C0000B0FF26 /* FacebookAuthIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthIntegration.swift; sourceTree = "<group>"; };
 		1F8E20F124FEBC4A00F28DB2 /* OnBoardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCoordinator.swift; sourceTree = "<group>"; };
 		1F8E20F424FEBCBA00F28DB2 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 		1F8E20F724FEBDBA00F28DB2 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
@@ -282,6 +289,7 @@
 		1FDBC957250E24900009CD8D /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		1FDBC958250E24900009CD8D /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		1FDBC959250E24900009CD8D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1FF16378251761AD00B8571D /* AuthIntegration+Facebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthIntegration+Facebook.swift"; sourceTree = "<group>"; };
 		1FF6842F24F04BFE0068A69A /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		1FF6843124F04C5C0068A69A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		1FF6843324F04CC20068A69A /* MainMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuItem.swift; sourceTree = "<group>"; };
@@ -580,6 +588,16 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
+		1F763CE225175C1700B0FF26 /* AuthProviders */ = {
+			isa = PBXGroup;
+			children = (
+				1F5F787625161134009174DC /* AppleAuthIntegration.swift */,
+				1F763CBF25175C0000B0FF26 /* FacebookAuthIntegration.swift */,
+				1F763C4C25164F7900B0FF26 /* GoogleAuthIntegration.swift */,
+			);
+			path = AuthProviders;
+			sourceTree = "<group>";
+		};
 		1F8E20EF24FEBC1E00F28DB2 /* Subflows */ = {
 			isa = PBXGroup;
 			children = (
@@ -705,6 +723,7 @@
 				1FA3C40B24EB181E00295FFA /* Repositories */,
 				1FA3C40A24EB181900295FFA /* Services */,
 				1FA3C40524EB14A700295FFA /* DependenciesSpecs.swift */,
+				1F19B9B4251763980039A01A /* IntegrationSpecs.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -778,6 +797,7 @@
 				1FA3C42A24EB34D600295FFA /* UserDefaultsBacked.swift */,
 				1FA3C42C24EB352000295FFA /* AnyOptional.swift */,
 				1F5F787325161051009174DC /* AppleAuthorizationHelper.swift */,
+				1F19B9B72517640C0039A01A /* Callbacks.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -860,11 +880,11 @@
 		1FDBC952250ABEDE0009CD8D /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				1F763C4C25164F7900B0FF26 /* GoogleAuthIntegration.swift */,
-				1F5F787625161134009174DC /* AppleAuthIntegration.swift */,
+				1F763CE225175C1700B0FF26 /* AuthProviders */,
 				1FDBC950250ABD4D0009CD8D /* AuthIntegration.swift */,
 				1F5F787A2516143F009174DC /* AuthIntegration+Apple.swift */,
 				1F763C4825164E3800B0FF26 /* AuthIntegration+Google.swift */,
+				1FF16378251761AD00B8571D /* AuthIntegration+Facebook.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -982,8 +1002,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FA3C3FD24EB11BD00295FFA /* Build configuration list for PBXNativeTarget "AroundTheMetro" */;
 			buildPhases = (
-				1F763C712516594E00B0FF26 /* Generate Code */,
 				B6B2F2E48973955AE6BBC8B0 /* [CP] Check Pods Manifest.lock */,
+				1F763C712516594E00B0FF26 /* Generate Code */,
 				1FA3C3E524EB11B700295FFA /* Sources */,
 				1FA3C3E624EB11B700295FFA /* Frameworks */,
 				1FA3C3E724EB11B700295FFA /* Resources */,
@@ -1232,6 +1252,7 @@
 				1F1DD6DB24F9861B003C4A9F /* AnalyticsIntegration.swift in Sources */,
 				1FDBC94D250AB9CD0009CD8D /* AuthorizationViewController.swift in Sources */,
 				1F8E20F524FEBCBA00F28DB2 /* CoordinatorType.swift in Sources */,
+				1F763CC025175C0000B0FF26 /* FacebookAuthIntegration.swift in Sources */,
 				1FA3C43524EBDB8A00295FFA /* NetworkAdapter.swift in Sources */,
 				1F8E20FE24FEC29B00F28DB2 /* OnBoardingViewController.swift in Sources */,
 				1F4C2BDD24EDA84000C39967 /* BannersCell.swift in Sources */,
@@ -1247,6 +1268,7 @@
 				1FF6843B24F051780068A69A /* MainMenuType.swift in Sources */,
 				1FF6843724F04E8B0068A69A /* MainMenuCell.swift in Sources */,
 				1FF6843424F04CC20068A69A /* MainMenuItem.swift in Sources */,
+				1F19B9B82517640C0039A01A /* Callbacks.swift in Sources */,
 				1FA3C42024EB2B2F00295FFA /* PlacesServiceRemote.swift in Sources */,
 				1FA3C41124EB1FFE00295FFA /* MenuCoordinator.swift in Sources */,
 				1FDBC943250AA0230009CD8D /* ContainerType.swift in Sources */,
@@ -1262,6 +1284,7 @@
 				1FF6843224F04C5C0068A69A /* MenuViewController.swift in Sources */,
 				1F8E210124FF960000F28DB2 /* WebBrowserViewController.swift in Sources */,
 				1F4C2BE824EDAF3300C39967 /* BannersServiceRemote.swift in Sources */,
+				1F19B9B5251763980039A01A /* IntegrationSpecs.swift in Sources */,
 				1FA3C42824EB349100295FFA /* UserStorageService.swift in Sources */,
 				1FF6844124F054DC0068A69A /* UIBundle+Current.swift in Sources */,
 				1F4C2BCF24ED9A3700C39967 /* Appearance.swift in Sources */,
@@ -1275,6 +1298,7 @@
 				1FA3C42624EB2D8A00295FFA /* CountriesServiceLocal.swift in Sources */,
 				1F1DD6A024F3D4AF003C4A9F /* LocateMetroViewController.swift in Sources */,
 				1FF6848024F076720068A69A /* MetroListCell.swift in Sources */,
+				1FF16379251761AD00B8571D /* AuthIntegration+Facebook.swift in Sources */,
 				1F8E20FA24FEBF6800F28DB2 /* OnBoardingStepType.swift in Sources */,
 				1F4C2BE124EDAAAD00C39967 /* Banner.swift in Sources */,
 				1F4C2BDF24EDA8EF00C39967 /* MenuCell.swift in Sources */,
