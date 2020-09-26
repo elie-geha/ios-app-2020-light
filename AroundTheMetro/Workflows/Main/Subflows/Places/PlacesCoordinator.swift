@@ -66,6 +66,7 @@ class PlacesCoordinator: BaseCoordinator {
         vc.metroViewController = metrosVC
 
         router.show(container: vc, animated: true)
+        context.ads.handleEvent(with: .open(.places(placeType)))
     }
 
     private func openPlaceDetails(with place: Place) {
@@ -94,6 +95,6 @@ class PlacesCoordinator: BaseCoordinator {
         router.show(container: vc, animated: true)
 
         context.analytics.trackEvent(with: .detailsPageView(place.name))
-        context.ads.handleEvent(with: .openDetailsPage)
+        context.ads.handleEvent(with: .open(.details(placeType)))
     }
 }

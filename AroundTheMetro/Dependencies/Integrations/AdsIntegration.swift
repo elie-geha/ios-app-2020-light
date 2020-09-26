@@ -14,6 +14,7 @@ class AdsIntegration: NSObject, AdsIntegrationType {
     private var detailsPageViews = 0
     private var adsContainer: AdsContainer?
     private var interstitial = GADInterstitial(adUnitID: AppConstants.Ads.interstitialUnitID)
+    private let bannerView = GADBannerView()
 
     override init() {
         super.init()
@@ -29,13 +30,18 @@ class AdsIntegration: NSObject, AdsIntegrationType {
 
     func handleEvent(with type: AdsEventType) {
         switch type {
-        case .openDetailsPage:
-            detailsPageViews += 1
-            if detailsPageViews == AppConstants.Ads.detailsPageViewsToShowInterstitial {
-                showInterstitialIfNeeded()
-                detailsPageViews = 0
+        case .open(let pageType):
+            switch pageType {
+            case .details:
+                detailsPageViews += 1
+                if detailsPageViews == AppConstants.Ads.detailsPageViewsToShowInterstitial {
+                    showInterstitialIfNeeded()
+                    detailsPageViews = 0
+                }
+            default: break;
             }
-            break;
+
+            bannerView.load(GADRequest())
         }
     }
 
@@ -45,18 +51,17 @@ class AdsIntegration: NSObject, AdsIntegrationType {
         self.adsContainer = adsContainer
 
         if let adsContainer = adsContainer {
-            let bannerView = GADBannerView()
             bannerView.rootViewController = adsContainer
             bannerView.adUnitID = AppConstants.Ads.bannerAdsUnitID
             bannerView.delegate = self
             bannerView.isAutoloadEnabled = true
 
             adsContainer.setBannerView(bannerView)
-            adsContainer.onResized = { newSize in
+            adsContainer.onResized = { [weak self] newSize in
                 let size = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(newSize.width)
-                bannerView.adSize = size
+                self?.bannerView.adSize = size
                 adsContainer.resizeBanner(to: size.size.height)
-                bannerView.load(GADRequest())
+                self?.bannerView.load(GADRequest())
             }
         }
     }

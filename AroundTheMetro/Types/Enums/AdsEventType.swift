@@ -7,5 +7,5 @@
 //
 
 enum AdsEventType {
-    case openDetailsPage
+    case open(PageType)
 }

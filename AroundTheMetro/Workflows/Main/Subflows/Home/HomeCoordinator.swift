@@ -54,6 +54,7 @@ class HomeCoordinator: BaseCoordinator {
         homeViewController?.onLeftBarButton = onMenu
         homeViewController?.onRightBarButton = onShare
         router.show(container: viewController, animated: true)
+        context.ads.handleEvent(with: .open(.home))
     }
 
     private func openMetroPlan() {
@@ -61,6 +62,7 @@ class HomeCoordinator: BaseCoordinator {
         vc.city = context.countriesRepository.currentCity
         vc.title = context.countriesRepository.currentCity?.name
         router.show(container: vc, animated: true)
+        context.ads.handleEvent(with: .open(.metroPlan))
     }
     
     private func openLocateMetro() {
@@ -79,6 +81,7 @@ class HomeCoordinator: BaseCoordinator {
                     vc.stations = stations
                     vc.title = city.name
                     self?.router.show(container: vc, animated: true)
+                    self?.context.ads.handleEvent(with: .open(.locateMetro))
                 case .failure(let error):
                     SVProgressHUD.showError(withStatus: error.localizedDescription)
                     SVProgressHUD.dismiss(withDelay: 3.0)

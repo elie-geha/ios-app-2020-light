@@ -20,6 +20,8 @@
 		1F1DD6DD24F9882B003C4A9F /* AdsIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6DC24F9882B003C4A9F /* AdsIntegration.swift */; };
 		1F38A98A251F99AF002E8316 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F38A989251F99AF002E8316 /* StoreKit.framework */; };
 		1F38A98C251F99BC002E8316 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F38A98B251F99BC002E8316 /* AVFoundation.framework */; };
+		1F38A9E1251FC413002E8316 /* PageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F38A9E0251FC413002E8316 /* PageType.swift */; };
+		1F38A9E5251FC46F002E8316 /* PlaceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F38A9E4251FC46F002E8316 /* PlaceType.swift */; };
 		1F4C2B8824ED926100C39967 /* MetroStationLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8724ED926100C39967 /* MetroStationLocation.swift */; };
 		1F4C2B8A24ED92BB00C39967 /* MetroLocationsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8924ED92BB00C39967 /* MetroLocationsRepository.swift */; };
 		1F4C2B8C24ED931200C39967 /* MetroLocationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8B24ED931200C39967 /* MetroLocationsService.swift */; };
@@ -184,6 +186,8 @@
 		1F1DD6DC24F9882B003C4A9F /* AdsIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsIntegration.swift; sourceTree = "<group>"; };
 		1F38A989251F99AF002E8316 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1F38A98B251F99BC002E8316 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1F38A9E0251FC413002E8316 /* PageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageType.swift; sourceTree = "<group>"; };
+		1F38A9E4251FC46F002E8316 /* PlaceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceType.swift; sourceTree = "<group>"; };
 		1F4C2B8724ED926100C39967 /* MetroStationLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStationLocation.swift; sourceTree = "<group>"; };
 		1F4C2B8924ED92BB00C39967 /* MetroLocationsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroLocationsRepository.swift; sourceTree = "<group>"; };
 		1F4C2B8B24ED931200C39967 /* MetroLocationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroLocationsService.swift; sourceTree = "<group>"; };
@@ -640,6 +644,8 @@
 				1F1DD6D424F9829E003C4A9F /* AnalyticsEventType.swift */,
 				1F1DD6D824F98434003C4A9F /* AdsEventType.swift */,
 				1F8E20F924FEBF6800F28DB2 /* OnBoardingStepType.swift */,
+				1F38A9E0251FC413002E8316 /* PageType.swift */,
+				1F38A9E4251FC46F002E8316 /* PlaceType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -1238,6 +1244,7 @@
 				1F4C2B8C24ED931200C39967 /* MetroLocationsService.swift in Sources */,
 				1F763C27251642BD00B0FF26 /* RoundButton.swift in Sources */,
 				1F4C2BEB24EDAFFC00C39967 /* BannersResponse.swift in Sources */,
+				1F38A9E1251FC413002E8316 /* PageType.swift in Sources */,
 				1FF6847C24F0764B0068A69A /* PlaceListCell.swift in Sources */,
 				1FDBC94B250AB9CD0009CD8D /* AuthorizationCoordinator.swift in Sources */,
 				1F1DD6DD24F9882B003C4A9F /* AdsIntegration.swift in Sources */,
@@ -1273,6 +1280,7 @@
 				1F4C2BEE24EDB3A500C39967 /* BannersRepository.swift in Sources */,
 				1FA3C42F24EBD8E900295FFA /* AppContext.swift in Sources */,
 				1FA3C40624EB14A700295FFA /* DependenciesSpecs.swift in Sources */,
+				1F38A9E5251FC46F002E8316 /* PlaceType.swift in Sources */,
 				1FF6843B24F051780068A69A /* MainMenuType.swift in Sources */,
 				1FF6843724F04E8B0068A69A /* MainMenuCell.swift in Sources */,
 				1FF6843424F04CC20068A69A /* MainMenuItem.swift in Sources */,
@@ -1483,7 +1491,7 @@
 				CODE_SIGN_ENTITLEMENTS = AroundTheMetro/AroundTheMetroDebug.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
 				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1509,7 +1517,7 @@
 				CODE_SIGN_ENTITLEMENTS = AroundTheMetro/AroundTheMetroRelease.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
 				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

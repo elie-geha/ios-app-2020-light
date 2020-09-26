@@ -75,6 +75,7 @@ class MainCoordinator: BaseCoordinator {
         homeCoordinator = HomeCoordinator(with: homeCoordinatorRouter, context: context)
         homeCoordinator.onMenu = { [weak self] in
             self?.sideMenuController?.presentLeftMenuViewController()
+            self?.context.ads.handleEvent(with: .open(.leftMenu))
         }
         homeCoordinator.onShare = { [weak self] in
             self?.sideMenuController?.presentRightMenuViewController()
@@ -89,15 +90,18 @@ class MainCoordinator: BaseCoordinator {
         menuCoordinator = MenuCoordinator(with: menuCoordinatorRouter, context: context)
         menuCoordinator.onLogin = { [weak self] in
             self?.showLogin()
+            self?.context.ads.handleEvent(with: .open(.login))
         }
         menuCoordinator.onProfile = { [weak self] in
             self?.showProfile()
+            self?.context.ads.handleEvent(with: .open(.profile))
         }
         menuCoordinator.onHome = { [weak self] in
             self?.setContentViewController(self?.homeCoordinatorRouter.asUIViewController())
         }
         menuCoordinator.onChangeCity = { [weak self] in
             self?.showChangeCity()
+            self?.context.ads.handleEvent(with: .open(.changeCity))
         }
         menuCoordinator.onContactUs = { [weak self] in
             self?.showContactUs()
