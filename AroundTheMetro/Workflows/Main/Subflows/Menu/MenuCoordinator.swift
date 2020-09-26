@@ -26,13 +26,14 @@ class MenuCoordinator: BaseCoordinator {
         let viewController = StoryboardScene.Menu.initialScene.instantiate()
         initialContainer = viewController
         viewController.menuItems = [
-            MainMenuItem(
-                type: context.auth.isAuthorized ? .profile : .login,
-                onSelect: { [weak self] in
-                    self?.context.auth.isAuthorized == true
-                        ? self?.onProfile?()
-                        : self?.onLogin?()
-            }),
+            // In development
+//            MainMenuItem(
+//                type: context.auth.isAuthorized ? .profile : .login,
+//                onSelect: { [weak self] in
+//                    self?.context.auth.isAuthorized == true
+//                        ? self?.onProfile?()
+//                        : self?.onLogin?()
+//            }),
             MainMenuItem(type: .home, onSelect: { [weak self] in
                 self?.onHome?()
             }),
