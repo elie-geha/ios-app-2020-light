@@ -1491,7 +1491,7 @@
 				CODE_SIGN_ENTITLEMENTS = AroundTheMetro/AroundTheMetroDebug.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
 				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1517,7 +1517,7 @@
 				CODE_SIGN_ENTITLEMENTS = AroundTheMetro/AroundTheMetroRelease.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
 				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

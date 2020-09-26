@@ -19,7 +19,7 @@ struct Appearance {
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = backButtonImage
 
         UINavigationBar.appearance().tintColor = UIColor.systemGray
-        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -300, vertical: -3.5),
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -800, vertical: -3.5),
                                                                           for: .default)
     }
 }

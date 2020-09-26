@@ -6,6 +6,7 @@
 //  Copyright © 2020 AugmentedDiscovery. All rights reserved.
 //
 
+import SVProgressHUD
 import UIKit
 import WebKit
 
@@ -31,8 +32,21 @@ class WebBrowserViewController: UIViewController {
         webView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         webView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
 
+        webView.navigationDelegate = self
+
         if let url = url {
+            SVProgressHUD.show()
             webView.load(URLRequest(url: url))
         }
+    }
+}
+
+extension WebBrowserViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        SVProgressHUD.dismiss()
+    }
+
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        SVProgressHUD.dismiss()
     }
 }
