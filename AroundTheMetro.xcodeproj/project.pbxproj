@@ -18,6 +18,8 @@
 		1F1DD6D924F98434003C4A9F /* AdsEventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6D824F98434003C4A9F /* AdsEventType.swift */; };
 		1F1DD6DB24F9861B003C4A9F /* AnalyticsIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6DA24F9861B003C4A9F /* AnalyticsIntegration.swift */; };
 		1F1DD6DD24F9882B003C4A9F /* AdsIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DD6DC24F9882B003C4A9F /* AdsIntegration.swift */; };
+		1F38A98A251F99AF002E8316 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F38A989251F99AF002E8316 /* StoreKit.framework */; };
+		1F38A98C251F99BC002E8316 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F38A98B251F99BC002E8316 /* AVFoundation.framework */; };
 		1F4C2B8824ED926100C39967 /* MetroStationLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8724ED926100C39967 /* MetroStationLocation.swift */; };
 		1F4C2B8A24ED92BB00C39967 /* MetroLocationsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8924ED92BB00C39967 /* MetroLocationsRepository.swift */; };
 		1F4C2B8C24ED931200C39967 /* MetroLocationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C2B8B24ED931200C39967 /* MetroLocationsService.swift */; };
@@ -180,6 +182,8 @@
 		1F1DD6D824F98434003C4A9F /* AdsEventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsEventType.swift; sourceTree = "<group>"; };
 		1F1DD6DA24F9861B003C4A9F /* AnalyticsIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsIntegration.swift; sourceTree = "<group>"; };
 		1F1DD6DC24F9882B003C4A9F /* AdsIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsIntegration.swift; sourceTree = "<group>"; };
+		1F38A989251F99AF002E8316 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1F38A98B251F99BC002E8316 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1F4C2B8724ED926100C39967 /* MetroStationLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStationLocation.swift; sourceTree = "<group>"; };
 		1F4C2B8924ED92BB00C39967 /* MetroLocationsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroLocationsRepository.swift; sourceTree = "<group>"; };
 		1F4C2B8B24ED931200C39967 /* MetroLocationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroLocationsService.swift; sourceTree = "<group>"; };
@@ -351,6 +355,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A8E11562C4F72C0771E6240 /* Pods_AroundTheMetro.framework in Frameworks */,
+				1F38A98A251F99AF002E8316 /* StoreKit.framework in Frameworks */,
+				1F38A98C251F99BC002E8316 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -981,6 +987,8 @@
 		2410F300C0187DE229E3EE8F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F38A98B251F99BC002E8316 /* AVFoundation.framework */,
+				1F38A989251F99AF002E8316 /* StoreKit.framework */,
 				C57C4B5707ABD4ED9E88BA9B /* Pods_AroundTheMetro.framework */,
 			);
 			name = Frameworks;

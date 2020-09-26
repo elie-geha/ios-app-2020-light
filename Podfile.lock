@@ -9,6 +9,8 @@ PODS:
   - ChartboostSDK (8.2.1)
   - FacebookCore (0.9.0):
     - FBSDKCoreKit (~> 5.0)
+  - FBAudienceNetwork (5.10.1):
+    - FBSDKCoreKit/Basics (>= 5.6.0)
   - FBSDKCoreKit (5.15.1):
     - FBSDKCoreKit/Basics (= 5.15.1)
     - FBSDKCoreKit/Core (= 5.15.1)
@@ -69,6 +71,9 @@ PODS:
   - GoogleMobileAdsMediationChartboost (8.2.1.0):
     - ChartboostSDK (= 8.2.1)
     - Google-Mobile-Ads-SDK (>= 7.64.0)
+  - GoogleMobileAdsMediationFacebook (5.10.1.0):
+    - FBAudienceNetwork (= 5.10.1)
+    - Google-Mobile-Ads-SDK (>= 7.62.0)
   - GoogleMobileAdsMediationIronSource (7.0.1.0):
     - Google-Mobile-Ads-SDK (>= 7.64.0)
     - IronSourceSDK (= 7.0.1)
@@ -138,6 +143,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Google-Mobile-Ads-SDK
   - GoogleMobileAdsMediationChartboost
+  - GoogleMobileAdsMediationFacebook
   - GoogleMobileAdsMediationIronSource
   - GoogleMobileAdsMediationTapjoy
   - GoogleSignIn
@@ -155,6 +161,7 @@ SPEC REPOS:
     - AppAuth
     - ChartboostSDK
     - FacebookCore
+    - FBAudienceNetwork
     - FBSDKCoreKit
     - FBSDKLoginKit
     - Firebase
@@ -167,6 +174,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleMobileAdsMediationChartboost
+    - GoogleMobileAdsMediationFacebook
     - GoogleMobileAdsMediationIronSource
     - GoogleMobileAdsMediationTapjoy
     - GoogleSignIn
@@ -200,6 +208,7 @@ SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   ChartboostSDK: 68fe9ccc0b445e033f0eaedaa9146f388d6aa692
   FacebookCore: ba86524b66cfa86d0f8e65d08faa8504a9f732dd
+  FBAudienceNetwork: 6cdcc40aa475e8045ab14398e181a3dc90a5014e
   FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
   FBSDKLoginKit: f1ea8026a58b52d30c9f2e6a58ca7d813619fb83
   Firebase: 210f41ca352067d83b1ba4fd2e7fb49a0c017397
@@ -212,6 +221,7 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 3def7652b1f5b5a576178dc332e2a36a260fbef6
   GoogleDataTransport: 672fb0ce96fe7f7f31d43672fca62ad2c9c86f7b
   GoogleMobileAdsMediationChartboost: d0bc2f925afc89aac3a8580919fb4191e2e10232
+  GoogleMobileAdsMediationFacebook: 22e37144dabf56418439e7a48a12495838f153f2
   GoogleMobileAdsMediationIronSource: ae6b7420087d7b688d6e354e7d8d91c0a7b1a13c
   GoogleMobileAdsMediationTapjoy: 0d9f8430300015502a14cea94f3010e196c57a4e
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
@@ -231,6 +241,6 @@ SPEC CHECKSUMS:
   Tabman: 085d89c65be9e883629bdaf5b1453a6397e57846
   TapjoySDK: ab02725a55e84c2fdd6fafc872cb00bd58e8adb2
 
-PODFILE CHECKSUM: 925d4ea3ebd5177e274bd0ab90733aaf31cbf85f
+PODFILE CHECKSUM: 80836caa5252eddb511cfabbc9d27aab605f20e9
 
 COCOAPODS: 1.9.3

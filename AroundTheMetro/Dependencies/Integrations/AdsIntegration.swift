@@ -19,6 +19,11 @@ class AdsIntegration: NSObject, AdsIntegrationType {
         super.init()
         GADMobileAds.sharedInstance().start(completionHandler: nil)
 
+        #if targetEnvironment(simulator)
+        let testDevices: [String] = [kDFPSimulatorID as? String].compactMap { $0 }
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = testDevices
+        #endif
+
         interstitial.delegate = self
     }
 

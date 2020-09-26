@@ -17,6 +17,7 @@ target 'AroundTheMetro' do
     pod 'GoogleMobileAdsMediationChartboost'
     pod 'GoogleMobileAdsMediationIronSource'
     pod 'GoogleMobileAdsMediationTapjoy'
+    pod 'GoogleMobileAdsMediationFacebook'
     pod 'GoogleSignIn'
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
