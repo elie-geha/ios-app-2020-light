@@ -12,12 +12,14 @@ class MenuCoordinator: CoordinatorType {
     var onHome: (() -> Void)?
     var onChangeCity: (() -> Void)?
     var onContactUs: (() -> Void)?
-    
+    var onSubscription: (() -> Void)?
+
     private var router: UINavigationController
 
     init(with router: UINavigationController) {
         self.router = router
     }
+
 
     func start() {
         let viewController = Storyboard.Menu.menuVC
@@ -32,6 +34,10 @@ class MenuCoordinator: CoordinatorType {
                 self?.onContactUs?()
             })
         ]
+		viewController.showSubscriptionScene = { [weak self] in
+			self?.onSubscription?()
+		}
+
         router.setViewControllers([viewController], animated: false)
     }
 }

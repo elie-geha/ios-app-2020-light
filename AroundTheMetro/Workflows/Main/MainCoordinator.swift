@@ -27,6 +27,7 @@ class MainCoordinator: CoordinatorType {
     private var changeCityRouter: UINavigationController!
     private var changeCityController: ChangeCityViewController!
     private var contactUsController: ContactUsController!
+    private var subscriptionViewController: SubScriptionViewController!
 
     private var shareRouter: UINavigationController!
 
@@ -41,6 +42,7 @@ class MainCoordinator: CoordinatorType {
         createMenuCoordinator()
         createChangeCity()
         createContactUs()
+		createSubscription()
         createShare()
     }
 
@@ -98,6 +100,9 @@ class MainCoordinator: CoordinatorType {
         menuCoordinator.onContactUs = { [weak self] in
             self?.showContactUs()
         }
+		menuCoordinator.onSubscription = { [weak self] in
+			self?.showSubscription()
+		}
         menuCoordinator.start()
     }
 
@@ -117,6 +122,10 @@ class MainCoordinator: CoordinatorType {
         contactUsController = ContactUsController()
     }
 
+    private func createSubscription() {
+		subscriptionViewController = Storyboard.Subscription.sunscriptionVC
+    }
+
     private func createShare() {
 //        let shareVC = UIViewController() // instantiate from storyboard
 //        shareRouter = UINavigationController(rootViewController: shareVC)
@@ -131,6 +140,10 @@ class MainCoordinator: CoordinatorType {
     private func showContactUs() {
         contactUsController.present(from: router)
     }
+
+	private func showSubscription() {
+		subscriptionViewController.present(from: router)
+	}
 
     private func showChangeCity(fromLeftMenu: Bool = true) {
         changeCityController.isFromLeftMenu = fromLeftMenu

@@ -28,8 +28,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             appCoordinator = AppCoordinator(with: window, context: AppContext())
             appCoordinator?.start()
         }
+		verifySubscription()
         return true
     }
+
+	private func verifySubscription() {
+		IAPManager.shared.startObserving()
+
+		//check if subscription is still valid
+//		ControlSettings.shouldShowAddMobBanner = !IAPManager.shared.isSubscribed
+
+		guard IAPManager.shared.isSubscribed else {return}
+
+		switch IAPManager.shared.verify(transactionIdentifier: "") {
+		case .success(_):
+			break
+		case .failure(let error):
+			guard let iapError  = error as? IAPManager.IAPManagerError else {break}
+			switch iapError {
+			case .subscriptionExpired:
+				//					self.updateSubscriptionStatus()
+				//remove subscription
+				IAPManager.shared.productID = ""
+//				ControlSettings.shouldShowAddMobBanner = true
+				break
+			default:
+				break
+			}
+		}
+	}
+
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         AppEvents.activateApp()

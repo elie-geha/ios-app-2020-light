@@ -12,18 +12,19 @@ import UIKit
 
 class ContactUsController: NSObject {
     func present(from viewController: UIViewController) {
-        guard MFMailComposeViewController.canSendMail() else {
-            SVProgressHUD.showError(withStatus: "no_mail".localized)
-            SVProgressHUD.dismiss(withDelay: 3.0)
-            return
-        }
+		guard MFMailComposeViewController.canSendMail() else {
+			SVProgressHUD.showError(withStatus: "no_mail".localized)
+			SVProgressHUD.dismiss(withDelay: 3.0)
+			return
+		}
 
-        let contactUsVC = MFMailComposeViewController()
-        contactUsVC.mailComposeDelegate = self
-        contactUsVC.setToRecipients([AppConstants.ContactUs.recepient])
-        contactUsVC.setSubject(AppConstants.ContactUs.subject)
+		let contactUsVC = MFMailComposeViewController()
+		contactUsVC.mailComposeDelegate = self
+		contactUsVC.setToRecipients([AppConstants.ContactUs.recepient])
+		contactUsVC.setSubject(AppConstants.ContactUs.subject)
 
-        viewController.present(contactUsVC, animated: true)
+		viewController.present(contactUsVC, animated: true)
+
     }
 }
 

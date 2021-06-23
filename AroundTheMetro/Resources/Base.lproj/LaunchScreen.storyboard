@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,21 +17,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="VI6-aH-e7a">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cityselectv3" translatesAutoresizingMaskIntoConstraints="NO" id="VI6-aH-e7a">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="metro-green" translatesAutoresizingMaskIntoConstraints="NO" id="EKM-cz-1Ze">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="metro-green" translatesAutoresizingMaskIntoConstraints="NO" id="EKM-cz-1Ze">
                                 <rect key="frame" x="62" y="134.5" width="290" height="627"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qvT-za-pnL">
+                                <rect key="frame" x="74" y="232" width="266" height="432"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="atmwhitelogo" translatesAutoresizingMaskIntoConstraints="NO" id="HCY-2c-ZOH">
+                                        <rect key="frame" x="0.0" y="0.0" width="266" height="266"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="HCY-2c-ZOH" secondAttribute="height" multiplier="1:1" id="zom-bf-9Dv"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBV-ep-wzv">
+                                        <rect key="frame" x="0.0" y="384" width="266" height="48"/>
+                                        <string key="text" base64-UTF8="YES">
+TWFkZSBieSBQbGFuZXQgTG92ZXJzC0ZvciBQbGFuZXQgTG92ZXJzA
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="HCY-2c-ZOH" firstAttribute="leading" secondItem="qvT-za-pnL" secondAttribute="leading" id="C38-aT-hGl"/>
+                                    <constraint firstAttribute="trailing" secondItem="VBV-ep-wzv" secondAttribute="trailing" id="EsJ-lJ-g6b"/>
+                                    <constraint firstAttribute="trailing" secondItem="HCY-2c-ZOH" secondAttribute="trailing" id="I6S-jY-9f9"/>
+                                    <constraint firstItem="VBV-ep-wzv" firstAttribute="leading" secondItem="qvT-za-pnL" secondAttribute="leading" id="cD4-B4-mWc"/>
+                                    <constraint firstAttribute="bottom" secondItem="VBV-ep-wzv" secondAttribute="bottom" id="li2-hO-9S5"/>
+                                    <constraint firstItem="VBV-ep-wzv" firstAttribute="top" secondItem="HCY-2c-ZOH" secondAttribute="bottom" constant="118" id="rcr-gR-7Ba"/>
+                                    <constraint firstItem="HCY-2c-ZOH" firstAttribute="top" secondItem="qvT-za-pnL" secondAttribute="top" id="s8z-yc-1Bu"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="o2E-4k-ys9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="EKM-cz-1Ze" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="39W-ja-M9I"/>
+                            <constraint firstItem="qvT-za-pnL" firstAttribute="leading" secondItem="o2E-4k-ys9" secondAttribute="leading" constant="74" id="4ZW-WM-WFz"/>
+                            <constraint firstItem="qvT-za-pnL" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="I68-B4-6VN"/>
                             <constraint firstItem="EKM-cz-1Ze" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Jzb-ZM-UOk"/>
                             <constraint firstItem="EKM-cz-1Ze" firstAttribute="width" secondItem="VI6-aH-e7a" secondAttribute="width" multiplier="0.7" id="Lvk-Tz-cVr"/>
                             <constraint firstAttribute="bottom" secondItem="VI6-aH-e7a" secondAttribute="bottom" id="VfS-BA-JtG"/>
                             <constraint firstItem="EKM-cz-1Ze" firstAttribute="height" secondItem="VI6-aH-e7a" secondAttribute="height" multiplier="0.7" id="VgW-r0-N0V"/>
+                            <constraint firstItem="o2E-4k-ys9" firstAttribute="trailing" secondItem="qvT-za-pnL" secondAttribute="trailing" constant="74" id="ckL-hb-ldw"/>
                             <constraint firstAttribute="trailing" secondItem="VI6-aH-e7a" secondAttribute="trailing" id="d5t-36-bW6"/>
                             <constraint firstItem="VI6-aH-e7a" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="y4P-I5-21J"/>
                             <constraint firstItem="VI6-aH-e7a" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="zhW-LA-KaX"/>
@@ -38,11 +74,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchImage" width="320" height="480"/>
+        <image name="atmwhitelogo" width="82" height="82"/>
+        <image name="cityselectv3" width="228.5" height="406"/>
         <image name="metro-green" width="1024" height="1024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

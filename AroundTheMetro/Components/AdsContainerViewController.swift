@@ -35,10 +35,15 @@ class AdsContainerViewController: UIViewController {
 
     override func viewDidLoad() {
         layoutViews()
+
+		bannerViewContainer.isHidden = IAPManager.shared.isSubscribed
     }
 
     override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		bannerViewContainer.isHidden = IAPManager.shared.isSubscribed
         self.onResized?(view.frame.size)
+
     }
 
     override func viewWillTransition(to size: CGSize,
@@ -50,7 +55,7 @@ class AdsContainerViewController: UIViewController {
     }
 
     private func setBannerHeight(_ bannerHeight: CGFloat) {
-        self.bannerHeight.constant = bannerHeight
+		self.bannerHeight.constant = self.bannerViewContainer.isHidden ? 0 : bannerHeight
 
         UIView.animate(withDuration: 0.5) {
             self.view.layoutIfNeeded()
