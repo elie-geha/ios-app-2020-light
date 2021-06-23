@@ -10,12 +10,14 @@ enum MainMenuType {
     case home
     case changeCity
     case contactUs
+    case subscription
 
     var iconName: String {
         switch self {
         case .home: return "home-icon"
         case .changeCity: return "city-icon"
         case .contactUs: return "contactus-icon"
+		case .subscription:  return "contactus-icon"
         }
     }
 
@@ -24,6 +26,7 @@ enum MainMenuType {
         case .home: return "Home".localized
         case .changeCity: return "Change City".localized
         case .contactUs: return "Contact us".localized
+        case .subscription: return "Subscription".localized
         }
     }
 }

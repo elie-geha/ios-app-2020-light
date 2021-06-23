@@ -19,11 +19,19 @@ public class MenuViewController: UIViewController {
         }
     }
 
+	var showSubscriptionScene: (() -> Void)?
+	
     override public func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+		NotificationCenter.default.addObserver(self, selector: #selector(self.subscriptionUpdated), name: Notification.Name(IAPManager.SUBSCRIPTION_UPDATED_NOTIFICATION), object: nil)
+		subscriptionUpdated()
     }
 
+	deinit {
+		NotificationCenter.default.removeObserver(self)
+	}
+	
     //Mark: - SetupView
     func setupView()  {
         tableView.isOpaque = false
@@ -32,6 +40,22 @@ public class MenuViewController: UIViewController {
         tableView.bounces = false
         tableView.register(MainMenuCell.nib, forCellReuseIdentifier: MainMenuCell.reuseID)
     }
+
+	@objc func subscriptionUpdated() {
+		let type = menuItems.last?.type ?? .contactUs
+
+		//remove subscription from menu item if user has subscribed
+		if IAPManager.shared.isSubscribed && type == .subscription{
+			menuItems.removeLast()
+			tableView.reloadData()
+		}
+		//add subscription if user is not yet subscribed
+		else if !IAPManager.shared.isSubscribed && type != .subscription {
+			menuItems.append(MainMenuItem(type: .subscription, onSelect: { [weak self] in
+				self?.showSubscriptionScene?()
+			}))
+		}
+	}
 }
 
 extension MenuViewController: UITableViewDelegate {

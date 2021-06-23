@@ -51,4 +51,10 @@ enum Storyboard {
 
         static let onBoardingVC = storyboard.instantiateViewController(withIdentifier: "OnBoardingViewController") as! OnBoardingViewController
     }
+
+    enum Subscription: StoryboardType {
+        static let name = "Subscription"
+
+        static let sunscriptionVC = storyboard.instantiateViewController(withIdentifier: "SubScriptionViewController") as! SubScriptionViewController
+    }
 }
