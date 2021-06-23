@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:AppReceiptValidator/AppReceiptValidator.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:AroundTheMetro.xcodeproj">
    </FileRef>
    <FileRef
