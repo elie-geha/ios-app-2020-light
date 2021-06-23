@@ -49,3 +49,4 @@ fastlane/screenshots
 
 # General
 .DS_Store
+Podfile.lock
