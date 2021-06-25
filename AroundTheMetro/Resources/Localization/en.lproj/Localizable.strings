@@ -108,3 +108,12 @@
 "onboarding.offlineMap.description" = "Access metro map even when your phone is offline";
 "onboarding.stayTuned.title" = "Stay Tuned";
 "onboarding.stayTuned.description" = "More amazing features to come... Stay tuned!";
+
+//Payment screen slider titles
+"paymentSlidertitle1" = "Promoting Local Economies";
+"paymentSlidertitle2" = "Receive Coupons and Free Gifts";
+"paymentSlidertitle3" = "Discover Interesting Places";
+"paymentSlidertitle4" = "Connect with People Around the World";
+"paymentSlidertitle5" = "Together for a Better Planet";
+
+"Subscription" = "Go Premium";

@@ -110,3 +110,11 @@
 "onboarding.stayTuned.title" = "Más pronto";
 "onboarding.stayTuned.description" = "Más funciones sorprendentes por venir ... ¡Estén atentos!";
 
+//Payment screen slider titles
+"paymentSlidertitle1" = "Promoción de las economías locales";
+"paymentSlidertitle2" = "Reciba cupones y obsequios gratis";
+"paymentSlidertitle3" = "Descubre lugares interesantes";
+"paymentSlidertitle4" = "Conéctese con personas de todo el mundo";
+"paymentSlidertitle5" = "Juntos por un planeta mejor";
+
+"Subscription" = "Hazte Premium";

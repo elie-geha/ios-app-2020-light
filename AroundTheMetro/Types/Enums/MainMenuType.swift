@@ -17,7 +17,7 @@ enum MainMenuType {
         case .home: return "home-icon"
         case .changeCity: return "city-icon"
         case .contactUs: return "contactus-icon"
-		case .subscription:  return "contactus-icon"
+		case .subscription:  return "global-icon"
         }
     }
 

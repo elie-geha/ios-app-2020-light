@@ -104,3 +104,12 @@
 "onboarding.offlineMap.description" = "Accédez au plan du métro même lorsque votre téléphone est hors ligne";
 "onboarding.stayTuned.title" = "Plus à venir";
 "onboarding.stayTuned.description" = "D'autres fonctionnalités étonnantes à venir ... Restez à l'écoute!";
+
+//Payment screen slider titles
+"paymentSlidertitle1" = "Promouvoir les économies locales";
+"paymentSlidertitle2" = "Recevez des coupons et des cadeaux gratuits";
+"paymentSlidertitle3" = "Découvrez des lieux intéressants";
+"paymentSlidertitle4" = "Connectez-vous avec des gens du monde entier";
+"paymentSlidertitle5" = "Ensemble pour une meilleure planète";
+
+"Subscription" = "Passer en Premium";

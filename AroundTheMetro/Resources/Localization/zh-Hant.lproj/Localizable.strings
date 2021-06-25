@@ -105,3 +105,12 @@
 "onboarding.offlineMap.description" = "即使手机离线也可以访问都会区地图";
 "onboarding.stayTuned.title" = "很快";
 "onboarding.stayTuned.description" = "即将推出更多精彩功能...敬请期待！";
+
+//Payment screen slider titles
+"paymentSlidertitle1" = "促進地方經濟";
+"paymentSlidertitle2" = "接收優惠券和免費禮物";
+"paymentSlidertitle3" = "發現有趣的地方";
+"paymentSlidertitle4" = "與世界各地的人們聯繫";
+"paymentSlidertitle5" = "攜手共創美好地球";
+
+"Subscription" = "高級版";
