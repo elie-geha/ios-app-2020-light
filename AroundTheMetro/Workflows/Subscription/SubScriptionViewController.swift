@@ -90,12 +90,13 @@ class SubScriptionViewController: UIViewController {
 
 	//MARK:- Data
 	private func getSliderData() -> [SlideItem] {
-		let item1 = SlideItem(icon: UIImage(named: "Balloon"), title: "Slide 1")
-		let item2 = SlideItem(icon: UIImage(named: "Balloon"), title: "Slide 2")
-		let item3 = SlideItem(icon: UIImage(named: "Balloon"), title: "Slide 3")
-		let item4 = SlideItem(icon: UIImage(named: "Balloon"), title: "Slide 4")
-		let item5 = SlideItem(icon: UIImage(named: "Balloon"), title: "Slide 5")
-		return [item1,item2,item3,item4,item5]
+		let item1 = SlideItem(icon: UIImage(named: "image1"), title: "Title 1")
+		let item2 = SlideItem(icon: UIImage(named: "image2"), title: "Title 2")
+		let item3 = SlideItem(icon: UIImage(named: "image3"), title: "Title 3")
+		let item4 = SlideItem(icon: UIImage(named: "image4"), title: "Title 4")
+		let item5 = SlideItem(icon: UIImage(named: "image5"), title: "Title 5")
+		let item6 = SlideItem(icon: UIImage(named: "image6"), title: "Title 6")
+		return [item1,item2,item3,item4,item5,item6]
 	}
 
 	private func fetchProducts() {
@@ -175,17 +176,23 @@ class SubScriptionViewController: UIViewController {
 	}
 
 	@IBAction func share(_ sender: Any) {
-		let items: [Any] = ["This app is my favorite"]
+		let items: [Any] = ["Discover interesting places around metro stations. Available in more the 70+ cities. Download the Free App Here", URL(string: "https://apps.apple.com/us/app/id1276636784")!]
 		let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
 		present(ac, animated: true)
 	}
 
 	@IBAction func terms(_ sender: Any) {
-
+		open(url: URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!)
 	}
 
 	@IBAction func privacyPolicy(_ sender: Any) {
+		open(url: URL(string: "https://ad.aroundthemetro.com/privacy/")!)
+	}
 
+	private func open(url: URL) {
+		if UIApplication.shared.canOpenURL(url) {
+			UIApplication.shared.open(url, options: [:], completionHandler: nil)
+		}
 	}
 
 	//MARK:- Navigation
