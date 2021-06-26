@@ -90,13 +90,13 @@ class SubScriptionViewController: UIViewController {
 
 	//MARK:- Data
 	private func getSliderData() -> [SlideItem] {
-		let item1 = SlideItem(icon: UIImage(named: "image1"), title: "Title 1")
-		let item2 = SlideItem(icon: UIImage(named: "image2"), title: "Title 2")
-		let item3 = SlideItem(icon: UIImage(named: "image3"), title: "Title 3")
-		let item4 = SlideItem(icon: UIImage(named: "image4"), title: "Title 4")
-		let item5 = SlideItem(icon: UIImage(named: "image5"), title: "Title 5")
-		let item6 = SlideItem(icon: UIImage(named: "image6"), title: "Title 6")
-		return [item1,item2,item3,item4,item5,item6]
+        let item1 = SlideItem(icon: UIImage(named: "image1"), title: "paymentSlidertitle1".localized)
+		let item2 = SlideItem(icon: UIImage(named: "image2"), title: "paymentSlidertitle2".localized)
+		let item3 = SlideItem(icon: UIImage(named: "image3"), title: "paymentSlidertitle3".localized)
+		let item4 = SlideItem(icon: UIImage(named: "image4"), title: "paymentSlidertitle4".localized)
+		let item5 = SlideItem(icon: UIImage(named: "image5"), title: "paymentSlidertitle5".localized)
+//		let item6 = SlideItem(icon: UIImage(named: "image6"), title: "Title 6")
+		return [item1,item2,item3,item4,item5]
 	}
 
 	private func fetchProducts() {
