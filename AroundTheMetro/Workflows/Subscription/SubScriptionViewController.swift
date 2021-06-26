@@ -136,8 +136,10 @@ class SubScriptionViewController: UIViewController {
 	}
 
 	private func buyProduct(_ product: SKProduct) {
+		SVProgressHUD.show()
 		IAPManager.shared.buy(product: product) { [weak self] (result) in
 			guard let self = self else {return}
+			SVProgressHUD.dismiss()
 			switch result {
 			case .success(let productId):
 				//save subscription

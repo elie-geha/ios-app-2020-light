@@ -37,8 +37,14 @@ class AdsContainerViewController: UIViewController {
         layoutViews()
 
 		bannerViewContainer.isHidden = IAPManager.shared.isSubscribed
+
+		NotificationCenter.default.addObserver(self, selector: #selector(self.subscriptionUpdated), name: Notification.Name(IAPManager.SUBSCRIPTION_UPDATED_NOTIFICATION), object: nil)
     }
 
+	deinit {
+		NotificationCenter.default.removeObserver(self)
+	}
+	
     override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		bannerViewContainer.isHidden = IAPManager.shared.isSubscribed
@@ -54,6 +60,15 @@ class AdsContainerViewController: UIViewController {
       })
     }
 
+	@objc func subscriptionUpdated() {
+		if IAPManager.shared.isSubscribed {
+			hideBanner()
+		}else {
+			bannerViewContainer.isHidden = false
+			self.onResized?(view.frame.size)
+		}
+	}
+	
     private func setBannerHeight(_ bannerHeight: CGFloat) {
 		self.bannerHeight.constant = self.bannerViewContainer.isHidden ? 0 : bannerHeight
 
