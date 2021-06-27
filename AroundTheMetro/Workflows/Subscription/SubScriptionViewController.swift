@@ -27,7 +27,7 @@ class SubScriptionViewController: UIViewController {
     @IBOutlet var yearlySubscriptionPricePerMonth: UILabel!
     @IBOutlet var termsButton: UIButton!
     @IBOutlet var privacyPolicyButton: UIButton!
-    
+    @IBOutlet var trialView: UIView!
     
     // MARK: - Properties
     var slideData = [SlideItem]() {
@@ -65,6 +65,7 @@ class SubScriptionViewController: UIViewController {
         configureCollectionView()
         
         monthlySubscriptionView.layer.borderColor = UIColor(hex: "#2F8146")?.cgColor
+        trialView.layer.borderColor = UIColor(hex: "#2F8146")?.cgColor
         
         termsButton.setAttributedTitle(underlinedText("Terms of Use"), for: .normal)
         privacyPolicyButton.setAttributedTitle(underlinedText("Privacy Policy"), for: .normal)
@@ -72,7 +73,7 @@ class SubScriptionViewController: UIViewController {
     
     private func underlinedText(_ text: String) -> NSAttributedString {
         let attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 17),
+            .font: UIFont.systemFont(ofSize: 15),
             .foregroundColor: UIColor.white,
             .underlineStyle: NSUnderlineStyle.single.rawValue
         ]
@@ -87,6 +88,10 @@ class SubScriptionViewController: UIViewController {
     private func configureCollectionView() {
         collectionView.layer.borderWidth = 1
         collectionView.layer.borderColor = UIColor(hex: "#707070")?.cgColor
+    }
+    
+    private func slideImages() {
+        
     }
     
     //MARK:- Data
@@ -155,6 +160,10 @@ class SubScriptionViewController: UIViewController {
     
     // MARK: - Actions
     
+    @IBAction func getThreeDaysTrial() {
+        
+    }
+    
     @IBAction func buyYearlySubscription() {
         let result = products.filter{$0.productIdentifier == IAPManager.YEARLY_SUBSCRIPTION_ID}
         guard let product = result.first else {
@@ -204,7 +213,7 @@ class SubScriptionViewController: UIViewController {
     
     //MARK:- Navigation
     func present(from viewController: UIViewController) {
-        
+        viewController.modalPresentationStyle = .fullScreen
         viewController.present(self, animated: true)
     }
 }
