@@ -2,7 +2,7 @@
 //  SubScriptionViewController.swift
 //  AroundTheMetro
 //
-//  Created by Mansoor Ali on 23/06/2021.
+//  Created by Fahad Baig on 23/06/2021.
 //  Copyright © 2021 AugmentedDiscovery. All rights reserved.
 //
 
@@ -41,6 +41,7 @@ class SubScriptionViewController: UIViewController {
     
     var onFinish: (() -> Void)?
     var onSkip: (() -> Void)?
+    var timer : Timer?
     
     // MARK: - Private variables
     private var products = [SKProduct]()
@@ -58,6 +59,7 @@ class SubScriptionViewController: UIViewController {
         
         //get products
         fetchProducts()
+
     }
     
     // MARK: - UI
@@ -69,6 +71,17 @@ class SubScriptionViewController: UIViewController {
         
         termsButton.setAttributedTitle(underlinedText("Terms of Use"), for: .normal)
         privacyPolicyButton.setAttributedTitle(underlinedText("Privacy Policy"), for: .normal)
+    }
+    
+    @objc private func makeSlidingImages() {
+        guard let selectedIndexPath = collectionView.visibleCells.map({collectionView.indexPath(for: $0)}).first, let indexPath = selectedIndexPath?.row else { return }
+        if indexPath == slideData.count-1 {
+            collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .right, animated: true)
+            pageControl.currentPage = 0
+        } else {
+            collectionView.scrollToItem(at: IndexPath(row: indexPath+1, section: 0), at: .centeredHorizontally, animated: true)
+            pageControl.currentPage = indexPath+1
+        }
     }
     
     private func underlinedText(_ text: String) -> NSAttributedString {
@@ -153,9 +166,17 @@ class SubScriptionViewController: UIViewController {
                 self.dismiss(animated: true, completion: nil)
             //				self.onFinish?()
             case .failure(let error):
+                if error.localizedDescription == "In-App Purchase process was cancelled." {
+                    SVProgressHUD.dismiss()
+                } else {
                 SVProgressHUD.showError(withStatus: error.localizedDescription)
+                }
             }
         }
+    }
+    
+    private func activeThreeDaysTrial() {
+        self.dismiss(animated: true, completion: nil)
     }
     
     // MARK: - Actions
@@ -183,7 +204,10 @@ class SubScriptionViewController: UIViewController {
     }
     
     @IBAction func exitScene(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: {[weak self] in
+            guard let self = self else { return }
+            self.timer?.invalidate()
+        })
         //		onSkip?()
     }
     
@@ -214,7 +238,14 @@ class SubScriptionViewController: UIViewController {
     //MARK:- Navigation
     func present(from viewController: UIViewController) {
         viewController.modalPresentationStyle = .fullScreen
-        viewController.present(self, animated: true)
+        viewController.present(self, animated: true) { [weak self] in
+            guard let self = self else { return }
+            DispatchQueue.main.asyncAfter(deadline: .now()+1) { [weak self] in
+                guard let self = self else { return }
+                self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.makeSlidingImages), userInfo: nil, repeats: true)
+                self.timer?.fire()
+            }
+        }
     }
 }
 
