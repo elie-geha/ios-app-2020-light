@@ -9,6 +9,8 @@ PODS:
   - FBSDKCoreKit/Basics (5.15.1)
   - FBSDKCoreKit/Core (5.15.1):
     - FBSDKCoreKit/Basics
+  - Firebase/Analytics (6.30.0):
+    - Firebase/Core
   - Firebase/Core (6.30.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 6.7.2)
@@ -89,6 +91,7 @@ PODS:
 DEPENDENCIES:
   - AKSideMenu
   - FacebookCore
+  - Firebase/Analytics
   - Firebase/Core
   - Google-Mobile-Ads-SDK
   - Kingfisher
@@ -151,6 +154,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 6ed134667e9ebb2f33679e8273cd48fd3fa349e5
   Tabman: 085d89c65be9e883629bdaf5b1453a6397e57846
 
-PODFILE CHECKSUM: 9b0f52ef4a52cdb37da11769d8052c4ff1e8b46e
+PODFILE CHECKSUM: 38084a58a4919419795da4e8f9bfc8cc9d7c7115
 
 COCOAPODS: 1.10.1
