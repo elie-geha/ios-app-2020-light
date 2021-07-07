@@ -145,6 +145,9 @@
 		51C50D8425104CC20048EB09 /* Mexico_City.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D6F25104CC10048EB09 /* Mexico_City.plist */; };
 		51C50D8525104CC20048EB09 /* Rio_de_Janeiro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D7025104CC10048EB09 /* Rio_de_Janeiro.plist */; };
 		51C50D8625104CC20048EB09 /* Saint_Petersburg.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D7125104CC10048EB09 /* Saint_Petersburg.plist */; };
+		89A031A02695A7DC00F5FFEE /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A0319F2695A7DC00F5FFEE /* Auth.storyboard */; };
+		89A031A22695A95400F5FFEE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A031A12695A95400F5FFEE /* LoginViewController.swift */; };
+		89A031BC2695CBCA00F5FFEE /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A031BB2695CBCA00F5FFEE /* SignupViewController.swift */; };
 		89ABD61326830D0B00B3AF0A /* Subscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89ABD61226830D0B00B3AF0A /* Subscription.storyboard */; };
 		89ABD616268316C800B3AF0A /* SubScriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ABD615268316C800B3AF0A /* SubScriptionViewController.swift */; };
 		89ABD61A2683194700B3AF0A /* SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ABD6192683194700B3AF0A /* SubscriptionCell.swift */; };
@@ -316,6 +319,9 @@
 		51C50D6F25104CC10048EB09 /* Mexico_City.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Mexico_City.plist; sourceTree = "<group>"; };
 		51C50D7025104CC10048EB09 /* Rio_de_Janeiro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Rio_de_Janeiro.plist; sourceTree = "<group>"; };
 		51C50D7125104CC10048EB09 /* Saint_Petersburg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Saint_Petersburg.plist; sourceTree = "<group>"; };
+		89A0319F2695A7DC00F5FFEE /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		89A031A12695A95400F5FFEE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		89A031BB2695CBCA00F5FFEE /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		89ABD61226830D0B00B3AF0A /* Subscription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Subscription.storyboard; sourceTree = "<group>"; };
 		89ABD615268316C800B3AF0A /* SubScriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubScriptionViewController.swift; sourceTree = "<group>"; };
 		89ABD6192683194700B3AF0A /* SubscriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCell.swift; sourceTree = "<group>"; };
@@ -627,6 +633,7 @@
 		1FA3C40124EB131500295FFA /* Workflows */ = {
 			isa = PBXGroup;
 			children = (
+				89A0319E2695A7CE00F5FFEE /* Auth */,
 				89ABD61026830CE700B3AF0A /* Subscription */,
 				1F8E20F024FEBC3900F28DB2 /* OnBoarding */,
 				1FA3C40724EB17D700295FFA /* Main */,
@@ -858,6 +865,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		89A0319E2695A7CE00F5FFEE /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				89A0319F2695A7DC00F5FFEE /* Auth.storyboard */,
+				89A031A12695A95400F5FFEE /* LoginViewController.swift */,
+				89A031BB2695CBCA00F5FFEE /* SignupViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		89ABD61026830CE700B3AF0A /* Subscription */ = {
 			isa = PBXGroup;
 			children = (
@@ -1012,6 +1029,7 @@
 				1F4C2BC224ED955200C39967 /* Nagoya.plist in Resources */,
 				1F4C2BB924ED955200C39967 /* Atlanta.plist in Resources */,
 				1F4C2BCA24ED955200C39967 /* Bilbao.plist in Resources */,
+				89A031A02695A7DC00F5FFEE /* Auth.storyboard in Resources */,
 				515302742511911700E73CB8 /* Philadelphia.plist in Resources */,
 				5153025E25118CB800E73CB8 /* Helsinki.plist in Resources */,
 				515302702511906500E73CB8 /* Singapore.plist in Resources */,
@@ -1095,6 +1113,7 @@
 				1F1DD6A624F3E9C4003C4A9F /* AdsContainerViewController.swift in Sources */,
 				1FA3C42224EB2CF900295FFA /* PlacesServiceLocal.swift in Sources */,
 				89ABD61A2683194700B3AF0A /* SubscriptionCell.swift in Sources */,
+				89A031A22695A95400F5FFEE /* LoginViewController.swift in Sources */,
 				1FF6844424F061870068A69A /* ContactUsController.swift in Sources */,
 				1FA3C3EF24EB11B700295FFA /* SceneDelegate.swift in Sources */,
 				1F1DD6DB24F9861B003C4A9F /* AnalyticsIntegration.swift in Sources */,
@@ -1142,6 +1161,7 @@
 				1F8E20FA24FEBF6800F28DB2 /* OnBoardingStepType.swift in Sources */,
 				1F4C2BE124EDAAAD00C39967 /* Banner.swift in Sources */,
 				1F4C2BDF24EDA8EF00C39967 /* MenuCell.swift in Sources */,
+				89A031BC2695CBCA00F5FFEE /* SignupViewController.swift in Sources */,
 				1FF6848224F3CA860068A69A /* PlacesCoordinator.swift in Sources */,
 				1FA3C43924EBDE6A00295FFA /* AppConstants.swift in Sources */,
 			);

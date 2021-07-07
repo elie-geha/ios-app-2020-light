@@ -32,7 +32,6 @@ class MainCoordinator: CoordinatorType {
     private var shareRouter: UINavigationController!
 
     // MARK: -
-
     init(with router: UINavigationController,
          context: AppContext) {
         self.router = router

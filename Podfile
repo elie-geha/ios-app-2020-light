@@ -26,5 +26,7 @@ target 'AroundTheMetro' do
     # pod 'TwitterKit'
     # pod 'Firebase/Core'
     # pod 'Proximiio'
+		pod 'Firebase/Auth'
+
     
 end

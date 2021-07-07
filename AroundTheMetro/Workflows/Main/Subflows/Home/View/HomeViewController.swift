@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
     // MARK: - Outlets
@@ -32,6 +33,7 @@ class HomeViewController: UIViewController {
 
     var onLeftBarButton: (() -> Void)?
     var onRightBarButton: (() -> Void)?
+    var logout: (() -> Void)?
 
     // MARK: - Private Properties
 
@@ -45,11 +47,22 @@ class HomeViewController: UIViewController {
         onRightBarButton?()
     }
 
+    @IBAction func actLogout() {
+		do {
+			try Auth.auth().signOut()
+			logout?()
+		}catch {
+
+		}
+    }
+
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         #warning("disabling share screen temporary")
         navigationItem.rightBarButtonItem = nil
+		let logout = UIBarButtonItem(image: UIImage(named: "logout")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(actLogout))
+		self.navigationItem.rightBarButtonItem = logout
     }
 }
 

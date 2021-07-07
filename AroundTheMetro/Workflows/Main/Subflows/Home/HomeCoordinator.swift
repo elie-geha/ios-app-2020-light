@@ -8,6 +8,7 @@
 
 import SVProgressHUD
 import UIKit
+import FirebaseAuth
 
 class HomeCoordinator: CoordinatorType {
     var onShare: (() -> Void)?
@@ -26,36 +27,59 @@ class HomeCoordinator: CoordinatorType {
     }
 
     func start() {
-        homeViewController = Storyboard.Home.homeVC
-        homeViewController?.title = context.countriesRepository.currentCity?.name
 
-        updateBanners()
+		navigateToHome()
+		if Auth.auth().currentUser == nil {
+			navigateToLogin()
+		}
 
-        homeViewController?.menuItems =
-        [
-            MenuItem(type: .metroPlan, onSelect: { [weak self] in
-                self?.openMetroPlan()
-            }),
-            MenuItem(type: .locateMetro, onSelect: { [weak self] in
-                self?.openLocateMetro()
-            }),
-            MenuItem(type: .attractions, onSelect: { [weak self] in
-                self?.openPlaces(with: .attraction)
-            }),
-            MenuItem(type: .restoraunts, onSelect: { [weak self] in
-                self?.openPlaces(with: .restoraunt)
-            }),
-            MenuItem(type: .boutiques, onSelect: { [weak self] in
-                self?.openPlaces(with: .boutique)
-            }),
-            MenuItem(type: .beautyAndHealth, onSelect: { [weak self] in
-                self?.openPlaces(with: .beautyAndHealth)
-            })
-        ]
-        homeViewController?.onLeftBarButton = onMenu
-        homeViewController?.onRightBarButton = onShare
-        router.setViewControllers([homeViewController].compactMap { $0 }, animated: false)
     }
+
+	private func navigateToHome() {
+
+		homeViewController = Storyboard.Home.homeVC
+		homeViewController?.title = context.countriesRepository.currentCity?.name
+
+		updateBanners()
+
+		homeViewController?.menuItems =
+		[
+			MenuItem(type: .metroPlan, onSelect: { [weak self] in
+				self?.openMetroPlan()
+			}),
+			MenuItem(type: .locateMetro, onSelect: { [weak self] in
+				self?.openLocateMetro()
+			}),
+			MenuItem(type: .attractions, onSelect: { [weak self] in
+				self?.openPlaces(with: .attraction)
+			}),
+			MenuItem(type: .restoraunts, onSelect: { [weak self] in
+				self?.openPlaces(with: .restoraunt)
+			}),
+			MenuItem(type: .boutiques, onSelect: { [weak self] in
+				self?.openPlaces(with: .boutique)
+			}),
+			MenuItem(type: .beautyAndHealth, onSelect: { [weak self] in
+				self?.openPlaces(with: .beautyAndHealth)
+			})
+		]
+		homeViewController?.logout =  { [weak self] in
+			self?.navigateToLogin()
+		}
+		homeViewController?.onLeftBarButton = onMenu
+		homeViewController?.onRightBarButton = onShare
+		router.setViewControllers([homeViewController].compactMap { $0 }, animated: false)
+	}
+	private func navigateToLogin() {
+		guard let login = UIStoryboard(name: "Auth", bundle: .main).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {return}
+		let nav = UINavigationController(rootViewController: login)
+		nav.setNavigationBarHidden(true, animated: false)
+		nav.modalPresentationStyle = .fullScreen
+		login.showHome = { [weak self] in
+			self?.router.dismiss(animated: true, completion: nil)
+		}
+		router.present(nav, animated: true, completion: nil)
+	}
 
     private func openMetroPlan() {
         let vc = Storyboard.Home.metroPlanVC

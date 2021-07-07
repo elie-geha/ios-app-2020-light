@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class AppCoordinator {
     let window: UIWindow
     private var mainCoordinator: MainCoordinator?
@@ -24,20 +24,10 @@ class AppCoordinator {
 
     func start() {
         Appearance.setup()
+//		navigateToLogin()
+//		navigateToHome()
 
-        let router = UINavigationController()
-        router.setNavigationBarHidden(true, animated: false)
-
-        let adsControllerContainer = AdsContainerViewController()
-        adsControllerContainer.contentViewController = router
-
-        appContext.ads.setAdsContainer(adsControllerContainer)
-
-        window.rootViewController = adsControllerContainer
-
-        mainCoordinator = MainCoordinator(with: router, context: appContext)
-        mainCoordinator?.start()
-
+		navigateToHome()
         if appContext.userStorageService.isFirstLaunch {
             appContext.userStorageService.isFirstLaunch = false
 
@@ -48,6 +38,36 @@ class AppCoordinator {
 //                router.presentedViewController?.dismiss(animated: true)
 //            }
 //            onBoardingCoordinator?.start()
-        }
+		}
+//		else if Auth.auth().currentUser == nil {
+//			navigateToLogin()
+//		}else {
+
+//		}
     }
+
+	let router = UINavigationController()
+	private func navigateToHome() {
+
+		router.setNavigationBarHidden(true, animated: false)
+
+		let adsControllerContainer = AdsContainerViewController()
+		adsControllerContainer.contentViewController = router
+
+		appContext.ads.setAdsContainer(adsControllerContainer)
+
+		window.rootViewController = adsControllerContainer
+
+		mainCoordinator = MainCoordinator(with: router, context: appContext)
+		mainCoordinator?.start()
+	}
+
+//	private func navigateToLogin() {
+//		window.rootViewController = router
+//		guard let login = UIStoryboard(name: "Auth", bundle: .main).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {return}
+//		login.showHome = { [weak self] in
+//			self?.navigateToHome()
+//		}
+//		router.setViewControllers([login], animated: false)
+//	}
 }
