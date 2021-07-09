@@ -30,7 +30,9 @@ class HomeCoordinator: CoordinatorType {
 
 		navigateToHome()
 		if Auth.auth().currentUser == nil {
-			navigateToLogin()
+			DispatchQueue.main.asyncAfter(deadline: .now()+0.5) { [weak self] in
+				self?.navigateToLogin()
+			}
 		}
 
     }

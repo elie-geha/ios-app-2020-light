@@ -6,9 +6,10 @@
 //  Copyright © 2020 AugmentedDiscovery. All rights reserved.
 //
 
-import FacebookCore
+import FBSDKCoreKit
 import Firebase
 import UIKit
+import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             appCoordinator?.start()
         }
 		verifySubscription()
+		SocialLoginManager.shared.configure()
         return true
     }
 
@@ -72,9 +74,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 
+	@available(iOS 9.0, *)
+	func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any])-> Bool {
+
+		let appId: String = Settings.appID ?? ""
+		if url.scheme != nil && url.scheme!.hasPrefix("fb\(appId)") && url.host ==  "authorize" {
+			return ApplicationDelegate.shared.application(application, open: url, options: options)
+		}
+		return GIDSignIn.sharedInstance().handle(url)
+	}
+
     private func setupIntegrations(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         // MARK: - Firebase config
         FirebaseApp.configure()
+
+		
 
         //MARK: - FACEBOOK SDK CONFIGURATION
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)

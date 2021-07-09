@@ -13,7 +13,7 @@ target 'AroundTheMetro' do
     pod 'Tabman', '~> 2.9'
     pod 'Google-Mobile-Ads-SDK'
     pod 'Firebase/Core'
-    pod 'FacebookCore'
+#    pod 'FacebookCore'
     pod 'Firebase/Analytics'
     # pod 'KVSpinnerView'
     # pod 'GoogleSignIn'
@@ -28,5 +28,10 @@ target 'AroundTheMetro' do
     # pod 'Proximiio'
 		pod 'Firebase/Auth'
 
+		pod 'FBSDKCoreKit', '~> 9.0'
+		pod 'FBSDKLoginKit', '~> 9.0'
+		pod 'FBSDKShareKit', '~> 9.0'
+
+		pod 'GoogleSignIn'
     
 end

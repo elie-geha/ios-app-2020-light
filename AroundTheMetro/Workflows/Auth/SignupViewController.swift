@@ -17,6 +17,7 @@ class SignupViewController: UIViewController {
 	@IBOutlet weak var password: UITextField!
 
 	var showHome: (() -> Void)?
+	let context = AppContext()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,7 +41,7 @@ class SignupViewController: UIViewController {
 				SVProgressHUD.dismiss()
 				SVProgressHUD.showError(withStatus: error?.localizedDescription ?? "")
 			}else {
-				self.updateUserName(fullName: name)
+				self.updateUserName(fullName: name, email: email)
 			}
 		}
 	}
@@ -67,7 +68,7 @@ class SignupViewController: UIViewController {
 		return true
 	}
 
-	private func updateUserName(fullName: String) {
+	private func updateUserName(fullName: String, email: String) {
 		let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
 		changeRequest?.displayName = fullName
 		changeRequest?.commitChanges { [weak self] error in
@@ -75,6 +76,7 @@ class SignupViewController: UIViewController {
 			if error != nil {
 				SVProgressHUD.showError(withStatus: error?.localizedDescription ?? "")
 			}else {
+				self?.context.analytics.trackEvent(with: .signup(email: email))
 				self?.showHome?()
 			}
 		}
