@@ -31,14 +31,14 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb214940625744205</string>
+				<string>fb186228000138375</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>FacebookAppID</key>
-	<string>214940625744205</string>
+	<string>186228000138375</string>
 	<key>FacebookDisplayName</key>
 	<string>AroundTheMetro</string>
 	<key>GADApplicationIdentifier</key>

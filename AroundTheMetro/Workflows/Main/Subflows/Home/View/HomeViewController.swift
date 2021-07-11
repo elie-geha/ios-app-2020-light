@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseAuth
+import FBSDKLoginKit
+import FBSDKCoreKit
 
 class HomeViewController: UIViewController {
     // MARK: - Outlets
@@ -50,6 +52,7 @@ class HomeViewController: UIViewController {
     @IBAction func actLogout() {
 		do {
 			try Auth.auth().signOut()
+			LoginManager().logOut()
 			logout?()
 		}catch {
 

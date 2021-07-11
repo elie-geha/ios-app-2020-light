@@ -7,9 +7,13 @@
 //
 
 import FirebaseAnalytics
+import FBSDKCoreKit
 
 class AnalyticsIntegration: AnalyticsIntegrationType {
     func trackEvent(with type: AnalyticsEventType) {
         Analytics.logEvent(type.eventName, parameters: type.params)
+
+		let name = AppEvents.Name(type.eventName)
+		AppEvents.logEvent(name, parameters: type.params)
     }
 }
