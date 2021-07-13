@@ -102,6 +102,9 @@ class MainCoordinator: CoordinatorType {
 		menuCoordinator.onSubscription = { [weak self] in
 			self?.showSubscription()
 		}
+		menuCoordinator.onProfile = { [weak self] in
+			self?.showProfile()
+		}
         menuCoordinator.start()
     }
 
@@ -142,6 +145,11 @@ class MainCoordinator: CoordinatorType {
 
 	private func showSubscription() {
 		subscriptionViewController.present(from: router)
+	}
+
+	private func showProfile() {
+		let profileViewController = Storyboard.Auth.profileVC
+		profileViewController.present(from: router)
 	}
 
     private func showChangeCity(fromLeftMenu: Bool = true) {

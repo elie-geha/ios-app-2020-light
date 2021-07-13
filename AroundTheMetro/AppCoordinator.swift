@@ -31,13 +31,15 @@ class AppCoordinator {
         if appContext.userStorageService.isFirstLaunch {
             appContext.userStorageService.isFirstLaunch = false
 
-			let subscription = Storyboard.Subscription.sunscriptionVC
-			router.present(subscription, animated: true, completion: nil)
-//            onBoardingCoordinator = OnBoardingCoordinator(with: router, context: appContext)
-//            onBoardingCoordinator?.onComplete = { isFinished in
-//                router.presentedViewController?.dismiss(animated: true)
-//            }
-//            onBoardingCoordinator?.start()
+			onBoardingCoordinator = OnBoardingCoordinator(with: router, context: appContext)
+			onBoardingCoordinator?.onComplete = {[weak self] isFinished in
+				self?.router.presentedViewController?.dismiss(animated: true)
+				self?.router.presentedViewController?.dismiss(animated: true, completion: { [weak self] in
+					let subscription = Storyboard.Subscription.sunscriptionVC
+					self?.router.present(subscription, animated: true, completion: nil)
+				})
+			}
+			onBoardingCoordinator?.start()
 		}
 //		else if Auth.auth().currentUser == nil {
 //			navigateToLogin()

@@ -15,6 +15,12 @@ enum AnalyticsEventType {
 	case facebookLogin
 	case googleLogin
 	case appleLogin
+	case clickMonthly(id: String, value: String)
+	case clickYearly(id: String, value: String)
+	case clickLifeTime(id: String, value: String)
+	case purchasedMonthly(id: String, value: String)
+	case purchasedYearly(id: String, value: String)
+	case purchasedLifeTime(id: String, value: String)
 
     var eventName: String {
         switch self {
@@ -26,6 +32,12 @@ enum AnalyticsEventType {
 		case.facebookLogin: return "facebook_login"
 		case .googleLogin: return "google_login"
 		case .appleLogin: return "apple_login"
+		case .clickMonthly(_,_): return "click_monthly"
+		case .clickYearly(_,_): return "click_yearly"
+		case .clickLifeTime(_,_): return "click_lifetime"
+		case .purchasedMonthly(_, _): return "purchased_monthly"
+		case .purchasedYearly(_,_): return "purchased_yearly"
+		case .purchasedLifeTime(_,_): return "purchased_lifetime"
         }
     }
 
@@ -53,6 +65,18 @@ enum AnalyticsEventType {
 			return [:]
 		case .appleLogin:
 			return [:]
+		case .clickMonthly(let id, let value):
+			return ["id":id,"value":value]
+		case .clickYearly(let id, let value):
+			return["id":id, "value":value]
+		case .clickLifeTime(let id, let value):
+			return ["id":id, "value":value]
+		case .purchasedMonthly(let id, let value):
+			return ["id":id, "value":value]
+		case .purchasedYearly(let id, let value):
+			return ["id":id, "value": value]
+		case .purchasedLifeTime(let id, let value):
+			return ["id":id, "value":value]
         }
     }
 }

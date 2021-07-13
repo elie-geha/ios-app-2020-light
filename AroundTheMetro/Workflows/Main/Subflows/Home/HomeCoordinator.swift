@@ -29,14 +29,15 @@ class HomeCoordinator: CoordinatorType {
     func start() {
 
 		navigateToHome()
-		if Auth.auth().currentUser == nil {
-			DispatchQueue.main.asyncAfter(deadline: .now()+0.5) { [weak self] in
-				self?.navigateToLogin()
-			}
-		}
+//		if Auth.auth().currentUser == nil {
+//			DispatchQueue.main.asyncAfter(deadline: .now()+0.5) { [weak self] in
+//				self?.navigateToLogin()
+//			}
+//		}
 
     }
 
+	var isLoggedIn: Bool {Auth.auth().currentUser != nil}
 	private func navigateToHome() {
 
 		homeViewController = Storyboard.Home.homeVC
@@ -47,21 +48,45 @@ class HomeCoordinator: CoordinatorType {
 		homeViewController?.menuItems =
 		[
 			MenuItem(type: .metroPlan, onSelect: { [weak self] in
+				guard self?.isLoggedIn ?? false else {
+					self?.navigateToLogin()
+					return
+				}
 				self?.openMetroPlan()
 			}),
 			MenuItem(type: .locateMetro, onSelect: { [weak self] in
+				guard self?.isLoggedIn ?? false else {
+					self?.navigateToLogin()
+					return
+				}
 				self?.openLocateMetro()
 			}),
 			MenuItem(type: .attractions, onSelect: { [weak self] in
+				guard self?.isLoggedIn ?? false else {
+					self?.navigateToLogin()
+					return
+				}
 				self?.openPlaces(with: .attraction)
 			}),
 			MenuItem(type: .restoraunts, onSelect: { [weak self] in
+				guard self?.isLoggedIn ?? false else {
+					self?.navigateToLogin()
+					return
+				}
 				self?.openPlaces(with: .restoraunt)
 			}),
 			MenuItem(type: .boutiques, onSelect: { [weak self] in
+				guard self?.isLoggedIn ?? false else {
+					self?.navigateToLogin()
+					return
+				}
 				self?.openPlaces(with: .boutique)
 			}),
 			MenuItem(type: .beautyAndHealth, onSelect: { [weak self] in
+				guard self?.isLoggedIn ?? false else {
+					self?.navigateToLogin()
+					return
+				}
 				self?.openPlaces(with: .beautyAndHealth)
 			})
 		]
@@ -76,7 +101,7 @@ class HomeCoordinator: CoordinatorType {
 		guard let login = UIStoryboard(name: "Auth", bundle: .main).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {return}
 		let nav = UINavigationController(rootViewController: login)
 		nav.setNavigationBarHidden(true, animated: false)
-		nav.modalPresentationStyle = .fullScreen
+//		nav.modalPresentationStyle = .fullScreen
 		login.showHome = { [weak self] in
 			self?.router.dismiss(animated: true, completion: nil)
 		}

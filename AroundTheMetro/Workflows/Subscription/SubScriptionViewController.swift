@@ -38,7 +38,7 @@ class SubScriptionViewController: UIViewController {
     }
     
     // MARK: - Callbacks
-    
+	let context = AppContext()
     var onFinish: (() -> Void)?
     var onSkip: (() -> Void)?
     var timer : Timer?
@@ -186,11 +186,12 @@ class SubScriptionViewController: UIViewController {
     }
     
     @IBAction func buyYearlySubscription() {
+
         let result = products.filter{$0.productIdentifier == IAPManager.YEARLY_SUBSCRIPTION_ID}
         guard let product = result.first else {
             return
         }
-        
+		context.analytics.trackEvent(with: .clickYearly(id: IAPManager.YEARLY_SUBSCRIPTION_ID, value: product.priceFormatted))
         buyProduct(product)
     }
     
@@ -199,7 +200,7 @@ class SubScriptionViewController: UIViewController {
         guard let product = result.first else {
             return
         }
-        
+		context.analytics.trackEvent(with: .clickMonthly(id: IAPManager.MONTHLY_SUBSCRIPTION_ID, value: product.priceFormatted))
         buyProduct(product)
     }
     

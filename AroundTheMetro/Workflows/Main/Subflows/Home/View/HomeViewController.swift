@@ -50,23 +50,48 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func actLogout() {
-		do {
-			try Auth.auth().signOut()
-			LoginManager().logOut()
-			logout?()
-		}catch {
-
-		}
+		showConfirmationAlert()
     }
+
+	private func showConfirmationAlert() {
+		let okay = UIAlertAction(title: "Okay", style: .default) { [weak self] (_) in
+			do {
+				try Auth.auth().signOut()
+				self?.navigationItem.rightBarButtonItems = []
+				NotificationCenter.default.post(Notification.init(name: Notification.Name(rawValue: Constants.LOGIN_UPDATED)))
+			}catch {
+
+			}
+		}
+		let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+		let alert = UIAlertController(title: "Do you want to logout of app?", message: "", preferredStyle: .alert)
+		alert.addAction(okay)
+		alert.addAction(cancel)
+		self.present(alert, animated: true, completion: nil)
+	}
 
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         #warning("disabling share screen temporary")
         navigationItem.rightBarButtonItem = nil
-		let logout = UIBarButtonItem(image: UIImage(named: "logout")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(actLogout))
-		self.navigationItem.rightBarButtonItem = logout
+
+		NotificationCenter.default.addObserver(self, selector: #selector(self.loginUpdated), name: Notification.Name(Constants.LOGIN_UPDATED), object: nil)
     }
+
+	@objc func loginUpdated() {
+		if Auth.auth().currentUser != nil {
+			let logout = UIBarButtonItem(image: UIImage(named: "logout")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(actLogout))
+			self.navigationItem.rightBarButtonItems = [logout]
+		}else {
+			self.navigationItem.rightBarButtonItems = []
+		}
+	}
+
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		loginUpdated()
+	}
 }
 
 extension HomeViewController: UITableViewDelegate {

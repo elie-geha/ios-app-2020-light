@@ -45,6 +45,7 @@ class LoginViewController: UIViewController {
 				SVProgressHUD.showError(withStatus: error?.localizedDescription ?? "")
 			}else {
 				self.showHome?()
+				self.postLoginNotification()
 			}
 		}
 	}
@@ -72,6 +73,7 @@ class LoginViewController: UIViewController {
 				self?.authenticateFacebook(credential: credential) { [weak self] in
 					SVProgressHUD.dismiss()
 					self?.showHome?()
+					self?.postLoginNotification()
 				}
 			case .failure(let error):
 				SVProgressHUD.showError(withStatus: error.localizedDescription)
@@ -90,6 +92,7 @@ class LoginViewController: UIViewController {
 					self?.context.analytics.trackEvent(with: .googleLogin)
 					SVProgressHUD.dismiss()
 					self?.showHome?()
+					self?.postLoginNotification()
 				})
 			case .failure(let error):
 				SVProgressHUD.showError(withStatus: error.localizedDescription)
@@ -97,6 +100,9 @@ class LoginViewController: UIViewController {
 		}
 	}
 
+	private func postLoginNotification() {
+		NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: Constants.LOGIN_UPDATED)))
+	}
 	@IBAction func loginWithApple() {
 		if #available(iOS 13.0, *) {
 			SocialLoginManager.shared.getAppleToken { [weak self] (result) in
@@ -123,6 +129,7 @@ class LoginViewController: UIViewController {
 			case .success(_):
 				self?.context.analytics.trackEvent(with: .appleLogin)
 				self?.showHome?()
+				self?.postLoginNotification()
 			case .failure(let error):
 				SVProgressHUD.showError(withStatus: error.localizedDescription)
 			}

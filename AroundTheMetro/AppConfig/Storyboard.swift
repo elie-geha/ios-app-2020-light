@@ -57,4 +57,10 @@ enum Storyboard {
 
         static let sunscriptionVC = storyboard.instantiateViewController(withIdentifier: "SubScriptionViewController") as! SubScriptionViewController
     }
+
+    enum Auth: StoryboardType {
+        static let name = "Auth"
+
+        static let profileVC = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+    }
 }

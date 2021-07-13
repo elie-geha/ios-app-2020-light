@@ -7,7 +7,11 @@
 //
 
 import UIKit
+import FirebaseAuth
 
+class Constants {
+	static let LOGIN_UPDATED = "LOGIN_UPDATED"
+}
 public class MenuViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
 
@@ -20,11 +24,13 @@ public class MenuViewController: UIViewController {
     }
 
 	var showSubscriptionScene: (() -> Void)?
+	var showProfileScene: (() -> Void)?
 	
     override public func viewDidLoad() {
         super.viewDidLoad()
         setupView()
 		NotificationCenter.default.addObserver(self, selector: #selector(self.subscriptionUpdated), name: Notification.Name(IAPManager.SUBSCRIPTION_UPDATED_NOTIFICATION), object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(self.loginUpdated), name: Notification.Name(Constants.LOGIN_UPDATED), object: nil)
 		subscriptionUpdated()
     }
 
@@ -40,6 +46,28 @@ public class MenuViewController: UIViewController {
         tableView.bounces = false
         tableView.register(MainMenuCell.nib, forCellReuseIdentifier: MainMenuCell.reuseID)
     }
+
+	@objc func loginUpdated() {
+		let profilePresent = menuItems.filter{$0.type == .profile}.first != nil
+		if Auth.auth().currentUser == nil, profilePresent {
+			//remove profile item
+			for (index,item) in menuItems.enumerated() {
+				if item.type == .profile {
+					menuItems.remove(at: index)
+					tableView.reloadData()
+				}
+			}
+		}else if Auth.auth().currentUser != nil, !profilePresent{
+			let menuItem = MainMenuItem(type: .profile) { [weak self] in
+				self?.showProfileScene?()
+			}
+			if menuItems.count == 4 {
+				menuItems.insert(menuItem, at: 3)
+			}else {
+				menuItems.append(menuItem)
+			}
+		}
+	}
 
 	@objc func subscriptionUpdated() {
 		let type = menuItems.last?.type ?? .contactUs

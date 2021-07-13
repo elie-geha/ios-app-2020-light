@@ -33,5 +33,6 @@ target 'AroundTheMetro' do
 		pod 'FBSDKShareKit', '~> 9.0'
 
 		pod 'GoogleSignIn'
+		pod 'SDWebImage'
     
 end

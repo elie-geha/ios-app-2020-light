@@ -145,6 +145,7 @@
 		51C50D8425104CC20048EB09 /* Mexico_City.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D6F25104CC10048EB09 /* Mexico_City.plist */; };
 		51C50D8525104CC20048EB09 /* Rio_de_Janeiro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D7025104CC10048EB09 /* Rio_de_Janeiro.plist */; };
 		51C50D8625104CC20048EB09 /* Saint_Petersburg.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D7125104CC10048EB09 /* Saint_Petersburg.plist */; };
+		8965450E269DA18500FD9BFA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8965450D269DA18500FD9BFA /* ProfileViewController.swift */; };
 		89A031A02695A7DC00F5FFEE /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A0319F2695A7DC00F5FFEE /* Auth.storyboard */; };
 		89A031A22695A95400F5FFEE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A031A12695A95400F5FFEE /* LoginViewController.swift */; };
 		89A031BC2695CBCA00F5FFEE /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A031BB2695CBCA00F5FFEE /* SignupViewController.swift */; };
@@ -321,6 +322,7 @@
 		51C50D6F25104CC10048EB09 /* Mexico_City.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Mexico_City.plist; sourceTree = "<group>"; };
 		51C50D7025104CC10048EB09 /* Rio_de_Janeiro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Rio_de_Janeiro.plist; sourceTree = "<group>"; };
 		51C50D7125104CC10048EB09 /* Saint_Petersburg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Saint_Petersburg.plist; sourceTree = "<group>"; };
+		8965450D269DA18500FD9BFA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		89A0319F2695A7DC00F5FFEE /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		89A031A12695A95400F5FFEE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		89A031BB2695CBCA00F5FFEE /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -879,6 +881,7 @@
 				89A031A12695A95400F5FFEE /* LoginViewController.swift */,
 				89A033282698323F00F5FFEE /* LoginViewController+Facbook.swift */,
 				89A031BB2695CBCA00F5FFEE /* SignupViewController.swift */,
+				8965450D269DA18500FD9BFA /* ProfileViewController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -1151,6 +1154,7 @@
 				1F1DD6AC24F4D496003C4A9F /* ChangeCityViewController.swift in Sources */,
 				1FA3C41C24EB2AA200295FFA /* Country.swift in Sources */,
 				1F4C2BE324EDABD900C39967 /* ImageCell.swift in Sources */,
+				8965450E269DA18500FD9BFA /* ProfileViewController.swift in Sources */,
 				1FF6847924F0761B0068A69A /* PlaceDetailsViewController.swift in Sources */,
 				1FA3C40924EB17EB00295FFA /* MainCoordinator.swift in Sources */,
 				1F4C2BEE24EDB3A500C39967 /* BannersRepository.swift in Sources */,

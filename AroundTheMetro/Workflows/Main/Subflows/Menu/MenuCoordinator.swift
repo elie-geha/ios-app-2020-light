@@ -7,12 +7,13 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class MenuCoordinator: CoordinatorType {
     var onHome: (() -> Void)?
     var onChangeCity: (() -> Void)?
     var onContactUs: (() -> Void)?
     var onSubscription: (() -> Void)?
+    var onProfile: (() -> Void)?
 
     private var router: UINavigationController
 
@@ -23,19 +24,29 @@ class MenuCoordinator: CoordinatorType {
 
     func start() {
         let viewController = Storyboard.Menu.menuVC
-        viewController.menuItems = [
-            MainMenuItem(type: .home, onSelect: { [weak self] in
-                self?.onHome?()
-            }),
-            MainMenuItem(type: .changeCity, onSelect: { [weak self] in
-                self?.onChangeCity?()
-            }),
-            MainMenuItem(type: .contactUs, onSelect: { [weak self] in
-                self?.onContactUs?()
-            })
-        ]
+		var items = [
+			MainMenuItem(type: .home, onSelect: { [weak self] in
+				self?.onHome?()
+			}),
+			MainMenuItem(type: .changeCity, onSelect: { [weak self] in
+				self?.onChangeCity?()
+			}),
+			MainMenuItem(type: .contactUs, onSelect: { [weak self] in
+				self?.onContactUs?()
+			})
+		]
+
+		if Auth.auth().currentUser != nil {
+			items.append(MainMenuItem(type: .profile, onSelect: {
+				self.onProfile?()
+			}))
+		}
+        viewController.menuItems = items
 		viewController.showSubscriptionScene = { [weak self] in
 			self?.onSubscription?()
+		}
+		viewController.showProfileScene = { [weak self] in
+			self?.onProfile?()
 		}
 
         router.setViewControllers([viewController], animated: false)

@@ -78,6 +78,7 @@ class SignupViewController: UIViewController {
 			}else {
 				self?.context.analytics.trackEvent(with: .signup(email: email))
 				self?.showHome?()
+				NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: Constants.LOGIN_UPDATED)))
 			}
 		}
 	}
