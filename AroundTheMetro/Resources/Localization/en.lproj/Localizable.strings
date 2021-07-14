@@ -21,16 +21,15 @@
 "AR View" = "AR View";
 "Locate Metro" = "Locate Metro";
 
-"Restaurants" = "Eat & Drink";
-"Boutiques" = "Shopping";
-"Beauty & Health" = "Beauty & Health";
-"Attractions" = "Attractions";
+//"Restaurants" = "Eat & Drink";
+//"Boutiques" = "Shopping";
+//"Beauty & Health" = "Beauty & Health";
+//"Attractions" = "Attractions";
 
-"Restaurant" = "Restaurant";
-"Beauty & Health" = "Beauty & Health";
-"Attraction" = "Attraction";
-"Boutique" = "Boutique";
-
+"Restaurants" = "Restaurant";
+"Boutiques" = "Boutique";
+"Beauty & Health" = "Beauty";
+"Attractions" = "Attraction";
 
 //MARK:-MyProfile
 "Home" = "Home";

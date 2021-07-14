@@ -61,20 +61,13 @@ class HomeCoordinator: CoordinatorType {
 				}
 				self?.openLocateMetro()
 			}),
-			MenuItem(type: .attractions, onSelect: { [weak self] in
-				guard self?.isLoggedIn ?? false else {
-					self?.navigateToLogin()
-					return
-				}
-				self?.openPlaces(with: .attraction)
-			}),
-			MenuItem(type: .restoraunts, onSelect: { [weak self] in
-				guard self?.isLoggedIn ?? false else {
-					self?.navigateToLogin()
-					return
-				}
-				self?.openPlaces(with: .restoraunt)
-			}),
+            MenuItem(type: .restoraunts, onSelect: { [weak self] in
+                guard self?.isLoggedIn ?? false else {
+                    self?.navigateToLogin()
+                    return
+                }
+                self?.openPlaces(with: .restoraunt)
+            }),
 			MenuItem(type: .boutiques, onSelect: { [weak self] in
 				guard self?.isLoggedIn ?? false else {
 					self?.navigateToLogin()
@@ -82,6 +75,13 @@ class HomeCoordinator: CoordinatorType {
 				}
 				self?.openPlaces(with: .boutique)
 			}),
+            MenuItem(type: .attractions, onSelect: { [weak self] in
+                guard self?.isLoggedIn ?? false else {
+                    self?.navigateToLogin()
+                    return
+                }
+                self?.openPlaces(with: .attraction)
+            }),
 			MenuItem(type: .beautyAndHealth, onSelect: { [weak self] in
 				guard self?.isLoggedIn ?? false else {
 					self?.navigateToLogin()

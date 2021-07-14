@@ -25,11 +25,15 @@
 "Beauty & Health" = "Beauté et santé";
 "Attractions" = "Attractions";
 
-"Restaurant" = "Restaurant";
-"Beauty & Health" = "Beauté et santé";
-"Attraction" = "Attraction";
-"Boutique" = "Boutique";
+//"Restaurant" = "Restaurant";
+//"Beauty & Health" = "Beauté et santé";
+//"Attraction" = "Attraction";
+//"Boutique" = "Boutique";
 
+"Restaurants" = "Le restaurant";
+"Boutiques" = "Boutique";
+"Beauty & Health" = "Beauté";
+"Attractions" = "Attraction";
 
 //MARK: - MyProfile
 "Home" = "Accueil";
