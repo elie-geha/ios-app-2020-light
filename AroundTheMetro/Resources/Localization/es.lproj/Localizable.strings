@@ -24,10 +24,15 @@
 "Beauty & Health" = "Salud y Belleza";
 "Attractions" = "Atracciones";
 
-"Restaurant" = "Restaurante";
-"Beauty & Health" = "Salud y Belleza";
-"Attraction" = "Atracción";
-"Boutique" = "Boutique";
+//"Restaurant" = "Restaurante";
+//"Beauty & Health" = "Salud y Belleza";
+//"Attraction" = "Atracción";
+//"Boutique" = "Boutique";
+
+"Restaurants" = "Restaurante";
+"Boutiques" = "Boutique";
+"Beauty & Health" = "Belleza";
+"Attractions" = "Atracción";
 
 
 //MARK: - MyProfile

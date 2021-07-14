@@ -24,10 +24,15 @@
 "Beauty & Health" = "美容與健康";
 "Attractions" = "景點";
 
-"Restaurant" = "餐廳";
-"Beauty & Health" = "美容與健康";
-"Attraction" = "引力";
-"Boutique" = "精品";
+//"Restaurant" = "餐廳";
+//"Beauty & Health" = "美容與健康";
+//"Attraction" = "引力";
+//"Boutique" = "精品";
+
+"Restaurants" = "餐厅";
+"Boutiques" = "精品店";
+"Beauty & Health" = "美丽";
+"Attractions" = "景点";
 
 
 //MARK:-MyProfile
