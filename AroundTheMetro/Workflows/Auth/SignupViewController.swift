@@ -22,6 +22,9 @@ class SignupViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+		fullName.delegate = self
+		email.delegate = self
+		password.delegate = self
     }
     
 
@@ -81,5 +84,18 @@ class SignupViewController: UIViewController {
 				NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: Constants.LOGIN_UPDATED)))
 			}
 		}
+	}
+}
+
+extension SignupViewController: UITextFieldDelegate {
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		if textField == fullName {
+			email.becomeFirstResponder()
+		}else if textField == email {
+			password.becomeFirstResponder()
+		}else  if textField == password {
+			password.resignFirstResponder()
+		}
+		return true
 	}
 }
