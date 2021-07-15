@@ -14,6 +14,7 @@ class MenuCoordinator: CoordinatorType {
     var onContactUs: (() -> Void)?
     var onSubscription: (() -> Void)?
     var onProfile: (() -> Void)?
+    var onLogin: (() -> Void)?
 
     private var router: UINavigationController
 
@@ -24,7 +25,18 @@ class MenuCoordinator: CoordinatorType {
 
     func start() {
         let viewController = Storyboard.Menu.menuVC
-		var items = [
+		let item: MainMenuItem
+		if Auth.auth().currentUser == nil {
+			item = MainMenuItem(type: .login, onSelect: { [weak self] in
+				self?.onLogin?()
+			})
+		}else {
+			item = MainMenuItem(type: .profile, onSelect: { [weak self] in
+				self?.onProfile?()
+			})
+		}
+		let items = [
+			item,
 			MainMenuItem(type: .home, onSelect: { [weak self] in
 				self?.onHome?()
 			}),
@@ -36,17 +48,15 @@ class MenuCoordinator: CoordinatorType {
 			})
 		]
 
-		if Auth.auth().currentUser != nil {
-			items.append(MainMenuItem(type: .profile, onSelect: {
-				self.onProfile?()
-			}))
-		}
         viewController.menuItems = items
 		viewController.showSubscriptionScene = { [weak self] in
 			self?.onSubscription?()
 		}
 		viewController.showProfileScene = { [weak self] in
 			self?.onProfile?()
+		}
+		viewController.showLoginScene = { [weak self] in
+			self?.onLogin?()
 		}
 
         router.setViewControllers([viewController], animated: false)

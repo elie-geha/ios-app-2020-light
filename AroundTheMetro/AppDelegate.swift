@@ -10,6 +10,7 @@ import FBSDKCoreKit
 import Firebase
 import UIKit
 import GoogleSignIn
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 		verifySubscription()
 		SocialLoginManager.shared.configure()
+		IQKeyboardManager.shared.enable = true
         return true
     }
 

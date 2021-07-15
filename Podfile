@@ -34,5 +34,5 @@ target 'AroundTheMetro' do
 
 		pod 'GoogleSignIn'
 		pod 'SDWebImage'
-    
+		pod 'IQKeyboardManagerSwift'
 end

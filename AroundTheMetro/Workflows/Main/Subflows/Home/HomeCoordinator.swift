@@ -90,9 +90,9 @@ class HomeCoordinator: CoordinatorType {
 				self?.openPlaces(with: .beautyAndHealth)
 			})
 		]
-		homeViewController?.logout =  { [weak self] in
-			self?.navigateToLogin()
-		}
+//		homeViewController?.logout =  { [weak self] in
+//			self?.navigateToLogin()
+//		}
 		homeViewController?.onLeftBarButton = onMenu
 		homeViewController?.onRightBarButton = onShare
 		router.setViewControllers([homeViewController].compactMap { $0 }, animated: false)

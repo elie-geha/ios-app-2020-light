@@ -81,7 +81,11 @@ class MainCoordinator: CoordinatorType {
             self?.sideMenuController?.presentLeftMenuViewController()
         }
         homeCoordinator.onShare = { [weak self] in
-            self?.sideMenuController?.presentRightMenuViewController()
+//            self?.sideMenuController?.presentRightMenuViewController()
+
+			let items: [Any] = ["Discover interesting places around metro stations. Available in more the 70+ cities. Download the Free App Here", URL(string: "https://apps.apple.com/us/app/id1276636784")!]
+			let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+			self?.router.present(ac, animated: true)
         }
         homeCoordinator.start()
     }
@@ -104,6 +108,9 @@ class MainCoordinator: CoordinatorType {
 		}
 		menuCoordinator.onProfile = { [weak self] in
 			self?.showProfile()
+		}
+		menuCoordinator.onLogin = { [weak self] in
+			self?.showLogin()
 		}
         menuCoordinator.start()
     }
@@ -129,8 +136,8 @@ class MainCoordinator: CoordinatorType {
     }
 
     private func createShare() {
-//        let shareVC = UIViewController() // instantiate from storyboard
-//        shareRouter = UINavigationController(rootViewController: shareVC)
+        let shareVC = UIViewController() // instantiate from storyboard
+        shareRouter = UINavigationController(rootViewController: shareVC)
     }
 
     private func setContentViewController(_ viewController: UIViewController?) {
@@ -149,7 +156,14 @@ class MainCoordinator: CoordinatorType {
 
 	private func showProfile() {
 		let profileViewController = Storyboard.Auth.profileVC
-		profileViewController.present(from: router)
+		let nav = UINavigationController(rootViewController: profileViewController)
+		router.present(nav, animated: true, completion: nil)
+//		profileViewController.present(from: router)
+	}
+
+	private func showLogin() {
+		let loginViewController = Storyboard.Auth.loginVC
+		loginViewController.present(from: router)
 	}
 
     private func showChangeCity(fromLeftMenu: Bool = true) {

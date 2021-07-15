@@ -82,6 +82,7 @@ class SignupViewController: UIViewController {
 				self?.context.analytics.trackEvent(with: .signup(email: email))
 				self?.showHome?()
 				NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: Constants.LOGIN_UPDATED)))
+				self?.dismiss(animated: true, completion: nil)
 			}
 		}
 	}

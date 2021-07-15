@@ -27,6 +27,18 @@ class LoginViewController: UIViewController {
 		password.delegate = self
     }
 
+	func present(from viewController: UIViewController) {
+//		viewController.modalPresentationStyle = .fullScreen
+		viewController.present(self, animated: true) { [weak self] in
+			guard let self = self else { return }
+			DispatchQueue.main.asyncAfter(deadline: .now()+1) { [weak self] in
+				guard let self = self else { return }
+//				self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.makeSlidingImages), userInfo: nil, repeats: true)
+//				self.timer?.fire()
+			}
+		}
+	}
+	
 	//MARK:-
 	//MARK:- Actions
 	@IBAction func login() {
@@ -102,7 +114,9 @@ class LoginViewController: UIViewController {
 
 	private func postLoginNotification() {
 		NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: Constants.LOGIN_UPDATED)))
+		self.dismiss(animated: true, completion: nil)
 	}
+	
 	@IBAction func loginWithApple() {
 		if #available(iOS 13.0, *) {
 			SocialLoginManager.shared.getAppleToken { [weak self] (result) in

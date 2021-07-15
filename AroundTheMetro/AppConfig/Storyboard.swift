@@ -62,5 +62,6 @@ enum Storyboard {
         static let name = "Auth"
 
         static let profileVC = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        static let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
     }
 }

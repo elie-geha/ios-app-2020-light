@@ -25,6 +25,7 @@ public class MenuViewController: UIViewController {
 
 	var showSubscriptionScene: (() -> Void)?
 	var showProfileScene: (() -> Void)?
+	var showLoginScene: (() -> Void)?
 	
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -48,23 +49,14 @@ public class MenuViewController: UIViewController {
     }
 
 	@objc func loginUpdated() {
-		let profilePresent = menuItems.filter{$0.type == .profile}.first != nil
-		if Auth.auth().currentUser == nil, profilePresent {
-			//remove profile item
-			for (index,item) in menuItems.enumerated() {
-				if item.type == .profile {
-					menuItems.remove(at: index)
-					tableView.reloadData()
-				}
-			}
-		}else if Auth.auth().currentUser != nil, !profilePresent{
-			let menuItem = MainMenuItem(type: .profile) { [weak self] in
+		if Auth.auth().currentUser == nil {
+			//add login item
+			menuItems[0] = MainMenuItem(type: .login, onSelect: { [weak self] in
+				self?.showLoginScene?()
+			})
+		}else if Auth.auth().currentUser != nil {
+			menuItems[0]  = MainMenuItem(type: .profile) { [weak self] in
 				self?.showProfileScene?()
-			}
-			if menuItems.count == 4 {
-				menuItems.insert(menuItem, at: 3)
-			}else {
-				menuItems.append(menuItem)
 			}
 		}
 	}

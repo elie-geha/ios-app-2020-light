@@ -25,7 +25,31 @@ class ProfileViewController: UIViewController {
 			emailInitial.isHidden = user.photoURL != nil
 			emailInitial.text = String(user.email?.first ?? "A").uppercased()
 		}
+
+		let logout = UIBarButtonItem(image: UIImage(named: "logout"), style: .plain, target: self, action: #selector(actLogout))
+		self.navigationItem.rightBarButtonItem = logout
     }
+
+	@objc private func actLogout() {
+		showConfirmationAlert()
+	}
+
+	private func showConfirmationAlert() {
+		let okay = UIAlertAction(title: "Okay", style: .default) { [weak self] (_) in
+			do {
+				try Auth.auth().signOut()
+				self?.navigationItem.rightBarButtonItems = []
+				NotificationCenter.default.post(Notification.init(name: Notification.Name(rawValue: Constants.LOGIN_UPDATED)))
+			}catch {
+
+			}
+		}
+		let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+		let alert = UIAlertController(title: "Do you want to logout of app?", message: "", preferredStyle: .alert)
+		alert.addAction(okay)
+		alert.addAction(cancel)
+		self.present(alert, animated: true, completion: nil)
+	}
     
 
     /*
