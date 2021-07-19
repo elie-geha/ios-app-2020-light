@@ -15,12 +15,16 @@ class ProfileViewController: UIViewController {
 	@IBOutlet weak var profileImage: UIImageView!
 	@IBOutlet weak var emailInitial: UILabel!
 	@IBOutlet weak var email: UILabel!
-
+    @IBOutlet weak var currentCity: UILabel!
+    
+    var city: String? = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
 		if let user = Auth.auth().currentUser {
 			email.text = user.email
+            
 			profileImage.sd_setImage(with: user.photoURL)
 			emailInitial.isHidden = user.photoURL != nil
 			emailInitial.text = String(user.email?.first ?? "A").uppercased()
@@ -28,8 +32,10 @@ class ProfileViewController: UIViewController {
 
 		let logout = UIBarButtonItem(image: UIImage(named: "logout"), style: .plain, target: self, action: #selector(actLogout))
 		self.navigationItem.rightBarButtonItem = logout
+        
+        currentCity.text = city
     }
-
+   
 	@objc private func actLogout() {
 		showConfirmationAlert()
 	}

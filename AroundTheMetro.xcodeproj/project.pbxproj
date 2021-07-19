@@ -121,6 +121,7 @@
 		1FF6848024F076720068A69A /* MetroListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6847F24F076720068A69A /* MetroListCell.swift */; };
 		1FF6848224F3CA860068A69A /* PlacesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6848124F3CA860068A69A /* PlacesCoordinator.swift */; };
 		1FF6848424F3CACC0068A69A /* Places.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6848324F3CACC0068A69A /* Places.storyboard */; };
+		4E0D497826A3273D00E5E506 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D497726A3273D00E5E506 /* LocationManager.swift */; };
 		5153024A251125C200E73CB8 /* Boston.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51530249251125C200E73CB8 /* Boston.plist */; };
 		5153025825118B2900E73CB8 /* Buenos_Aires.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5153025725118B2900E73CB8 /* Buenos_Aires.plist */; };
 		5153025A25118BC400E73CB8 /* Rio_de_Janeiro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5153025925118BC400E73CB8 /* Rio_de_Janeiro.plist */; };
@@ -298,6 +299,7 @@
 		1FF6847F24F076720068A69A /* MetroListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroListCell.swift; sourceTree = "<group>"; };
 		1FF6848124F3CA860068A69A /* PlacesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCoordinator.swift; sourceTree = "<group>"; };
 		1FF6848324F3CACC0068A69A /* Places.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Places.storyboard; sourceTree = "<group>"; };
+		4E0D497726A3273D00E5E506 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		51530249251125C200E73CB8 /* Boston.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Boston.plist; sourceTree = "<group>"; };
 		5153025725118B2900E73CB8 /* Buenos_Aires.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Buenos_Aires.plist; sourceTree = "<group>"; };
 		5153025925118BC400E73CB8 /* Rio_de_Janeiro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Rio_de_Janeiro.plist; sourceTree = "<group>"; };
@@ -719,6 +721,7 @@
 				1FA3C41D24EB2AAD00295FFA /* MetroStation.swift */,
 				1F4C2B8724ED926100C39967 /* MetroStationLocation.swift */,
 				1F4C2BE024EDAAAD00C39967 /* Banner.swift */,
+				4E0D497726A3273D00E5E506 /* LocationManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1123,6 +1126,7 @@
 				1F4C2BD724EDA05E00C39967 /* HomeViewController.swift in Sources */,
 				1FA3C43624EBDB8A00295FFA /* ATLApiTarget.swift in Sources */,
 				1FA3C40324EB13AB00295FFA /* AppCoordinator.swift in Sources */,
+				4E0D497826A3273D00E5E506 /* LocationManager.swift in Sources */,
 				1FA3C42D24EB352000295FFA /* AnyOptional.swift in Sources */,
 				1FA3C3ED24EB11B700295FFA /* AppDelegate.swift in Sources */,
 				1F1DD6A224F3D7D9003C4A9F /* MetroPlanViewController.swift in Sources */,
@@ -1365,7 +1369,7 @@
 				CODE_SIGN_ENTITLEMENTS = AroundTheMetro/AroundTheMetro.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
 				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1373,7 +1377,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AugmentedDiscovery.AroundTheMetro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1390,7 +1394,7 @@
 				CODE_SIGN_ENTITLEMENTS = AroundTheMetro/AroundTheMetro.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
 				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1398,7 +1402,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AugmentedDiscovery.AroundTheMetro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -30,7 +30,7 @@ class MainCoordinator: CoordinatorType {
     private var subscriptionViewController: SubScriptionViewController!
 
     private var shareRouter: UINavigationController!
-
+    
     // MARK: -
     init(with router: UINavigationController,
          context: AppContext) {
@@ -156,7 +156,9 @@ class MainCoordinator: CoordinatorType {
 
 	private func showProfile() {
 		let profileViewController = Storyboard.Auth.profileVC
+        profileViewController.city = context.countriesRepository.currentCity?.name
 		let nav = UINavigationController(rootViewController: profileViewController)
+        
 		router.present(nav, animated: true, completion: nil)
 //		profileViewController.present(from: router)
 	}
