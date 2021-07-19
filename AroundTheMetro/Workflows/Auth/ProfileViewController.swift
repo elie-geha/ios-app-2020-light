@@ -35,6 +35,11 @@ class ProfileViewController: UIViewController {
         
         currentCity.text = city
     }
+
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+	}
    
 	@objc private func actLogout() {
 		showConfirmationAlert()
