@@ -80,6 +80,7 @@ class MainCoordinator: CoordinatorType {
         homeCoordinator.onMenu = { [weak self] in
             self?.sideMenuController?.presentLeftMenuViewController()
         }
+		/*
         homeCoordinator.onShare = { [weak self] in
 //            self?.sideMenuController?.presentRightMenuViewController()
 
@@ -89,7 +90,7 @@ class MainCoordinator: CoordinatorType {
                 ac.popoverPresentationController?.sourceView = self?.router.view
             }
 			self?.router.present(ac, animated: true)
-        }
+        }*/
         homeCoordinator.start()
     }
 

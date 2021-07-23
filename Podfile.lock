@@ -6,20 +6,23 @@ PODS:
     - AppAuth/ExternalUserAgent (= 1.4.0)
   - AppAuth/Core (1.4.0)
   - AppAuth/ExternalUserAgent (1.4.0)
-  - FBSDKCoreKit (9.3.0):
-    - FBSDKCoreKit/Basics (= 9.3.0)
-    - FBSDKCoreKit/Core (= 9.3.0)
-  - FBSDKCoreKit/Basics (9.3.0)
-  - FBSDKCoreKit/Core (9.3.0):
-    - FBSDKCoreKit/Basics
-  - FBSDKLoginKit (9.3.0):
-    - FBSDKLoginKit/Login (= 9.3.0)
-  - FBSDKLoginKit/Login (9.3.0):
-    - FBSDKCoreKit (~> 9.3.0)
-  - FBSDKShareKit (9.3.0):
-    - FBSDKShareKit/Share (= 9.3.0)
-  - FBSDKShareKit/Share (9.3.0):
-    - FBSDKCoreKit (~> 9.3.0)
+  - FBSDKCoreKit (11.0.1):
+    - FBSDKCoreKit/Core (= 11.0.1)
+  - FBSDKCoreKit/Core (11.0.1):
+    - FBSDKCoreKit_Basics (~> 11.0.1)
+  - FBSDKCoreKit_Basics (11.0.1):
+    - FBSDKCoreKit_Basics/Basics (= 11.0.1)
+  - FBSDKCoreKit_Basics/Basics (11.0.1)
+  - FBSDKLoginKit (11.0.1):
+    - FBSDKLoginKit/Login (= 11.0.1)
+  - FBSDKLoginKit/Login (11.0.1):
+    - FBSDKCoreKit (~> 11.0.1)
+    - FBSDKCoreKit_Basics (~> 11.0.1)
+  - FBSDKShareKit (11.0.1):
+    - FBSDKShareKit/Share (= 11.0.1)
+  - FBSDKShareKit/Share (11.0.1):
+    - FBSDKCoreKit (~> 11.0.1)
+    - FBSDKCoreKit_Basics (~> 11.0.1)
   - Firebase/Analytics (6.30.0):
     - Firebase/Core
   - Firebase/Auth (6.30.0):
@@ -120,10 +123,10 @@ PODS:
     - Pageboy (~> 3.6.0)
 
 DEPENDENCIES:
-  - AKSideMenu
-  - FBSDKCoreKit (~> 9.0)
-  - FBSDKLoginKit (~> 9.0)
-  - FBSDKShareKit (~> 9.0)
+  - AKSideMenu (~> 1.4.5)
+  - FBSDKCoreKit (~> 11.0.1)
+  - FBSDKLoginKit (~> 11.0.1)
+  - FBSDKShareKit (~> 11.0.1)
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
@@ -142,6 +145,7 @@ SPEC REPOS:
     - Alamofire
     - AppAuth
     - FBSDKCoreKit
+    - FBSDKCoreKit_Basics
     - FBSDKLoginKit
     - FBSDKShareKit
     - Firebase
@@ -180,9 +184,10 @@ SPEC CHECKSUMS:
   AKSideMenu: 2880c44ee04a68f40be783c5cb997b2e0ee22401
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
-  FBSDKCoreKit: 0d1ae58388a458b8222f72025804cdc84eb5d0c3
-  FBSDKLoginKit: aea68df6121c5e165ccae2fabfdc83c4644ee40f
-  FBSDKShareKit: 70889c97c62f0c6b3ccb8b999e73a85f19024001
+  FBSDKCoreKit: 38c9e29a3f1436362acacff6486d3a28628c288f
+  FBSDKCoreKit_Basics: 06780a4a12e16596bde8406add02c6aa1bf38616
+  FBSDKLoginKit: 8243e04c590c38b85c69fcf09d1234514d2475c3
+  FBSDKShareKit: e55ddcd33d5169597ae86866faffae0acae971c1
   Firebase: 210f41ca352067d83b1ba4fd2e7fb49a0c017397
   FirebaseAnalytics: a299a86ef70fcc6aa011418bc65a7e101fb9636c
   FirebaseAuth: 300433de340c1b058dbb8aec224a3f1bcfda5184
@@ -207,6 +212,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 6ed134667e9ebb2f33679e8273cd48fd3fa349e5
   Tabman: 085d89c65be9e883629bdaf5b1453a6397e57846
 
-PODFILE CHECKSUM: 42173a64318fe63ebe5876709513f9d0e0d7001d
+PODFILE CHECKSUM: ddf65a539eaac05bbcf065393e965f249acafd39
 
 COCOAPODS: 1.10.1

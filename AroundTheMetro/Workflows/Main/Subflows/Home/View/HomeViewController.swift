@@ -46,7 +46,14 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func rightBarButtonAction() {
-        onRightBarButton?()
+       // onRightBarButton?()
+
+		let items: [Any] = ["Discover interesting places around metro stations. Available in more the 70+ cities. Download the Free App Here", URL(string: "https://apps.apple.com/us/app/id1276636784")!]
+		let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+		if (ac.popoverPresentationController != nil) {
+			ac.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
+		}
+		self.present(ac, animated: true)
     }
 
 //    @IBAction func actLogout() {

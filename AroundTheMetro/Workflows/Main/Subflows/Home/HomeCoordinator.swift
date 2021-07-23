@@ -11,7 +11,7 @@ import UIKit
 import FirebaseAuth
 
 class HomeCoordinator: CoordinatorType {
-    var onShare: (() -> Void)?
+//    var onShare: (() -> Void)?
     var onMenu: (() -> Void)?
 
     private var router: UINavigationController
@@ -94,7 +94,7 @@ class HomeCoordinator: CoordinatorType {
 //			self?.navigateToLogin()
 //		}
 		homeViewController?.onLeftBarButton = onMenu
-		homeViewController?.onRightBarButton = onShare
+//		homeViewController?.onRightBarButton = onShare
 		router.setViewControllers([homeViewController].compactMap { $0 }, animated: false)
 	}
 	private func navigateToLogin() {
