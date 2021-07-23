@@ -85,6 +85,9 @@ class MainCoordinator: CoordinatorType {
 
 			let items: [Any] = ["Discover interesting places around metro stations. Available in more the 70+ cities. Download the Free App Here", URL(string: "https://apps.apple.com/us/app/id1276636784")!]
 			let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+            if (ac.popoverPresentationController != nil) {
+                ac.popoverPresentationController?.sourceView = self?.router.view
+            }
 			self?.router.present(ac, animated: true)
         }
         homeCoordinator.start()
@@ -165,7 +168,10 @@ class MainCoordinator: CoordinatorType {
 
 	private func showLogin() {
 		let loginViewController = Storyboard.Auth.loginVC
-		loginViewController.present(from: router)
+        let nav = UINavigationController(rootViewController: loginViewController)
+        nav.navigationBar.isHidden = true
+        router.present(nav, animated: true, completion: nil)
+//		loginViewController.present(from: router)
 	}
 
     private func showChangeCity(fromLeftMenu: Bool = true) {

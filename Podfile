@@ -6,7 +6,7 @@ use_frameworks!
 target 'AroundTheMetro' do
     # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
 
-    pod 'AKSideMenu'
+    pod 'AKSideMenu', '~> 1.4.5'
     pod 'Moya'
     pod 'Kingfisher'
     pod 'SVProgressHUD', :git => 'https://github.com/slizeray/SVProgressHUD.git'
@@ -28,10 +28,10 @@ target 'AroundTheMetro' do
     # pod 'Proximiio'
 		pod 'Firebase/Auth'
 
-		pod 'FBSDKCoreKit', '~> 9.0'
-		pod 'FBSDKLoginKit', '~> 9.0'
-		pod 'FBSDKShareKit', '~> 9.0'
-
+		pod 'FBSDKCoreKit', '~> 11.0.1'
+		pod 'FBSDKLoginKit', '~> 11.0.1'
+		pod 'FBSDKShareKit', '~> 11.0.1'
+    
 		pod 'GoogleSignIn'
 		pod 'SDWebImage'
 		pod 'IQKeyboardManagerSwift'
