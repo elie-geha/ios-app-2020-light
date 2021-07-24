@@ -11,11 +11,11 @@ import UIKit
 struct City: Hashable {
     let name: String
     let plistName: String?
-    let metroPlanImage: UIImage
+    let metroPlanImageUrl: String
 
-    init(name: String, plistName: String? = nil, metroPlanImage: UIImage) {
+    init(name: String, plistName: String? = nil, metroPlanImageUrl: String) {
         self.name = name
         self.plistName = plistName
-        self.metroPlanImage = metroPlanImage
+        self.metroPlanImageUrl = metroPlanImageUrl
     }
 }

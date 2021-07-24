@@ -31,7 +31,7 @@ class MetroPlanViewController: UIViewController {
     }
 
     func setImage()  {
-        self.imageView.image = city?.metroPlanImage
+//        self.imageView.image = city?.metroPlanImage
     }
 }
 

@@ -391,6 +391,7 @@ Settings any time after purchase.</string>
                         <outlet property="monthlySubscriptionView" destination="Vcn-Dj-5uL" id="S3j-2H-exL"/>
                         <outlet property="pageControl" destination="sAQ-yk-Jwo" id="PLn-rC-i8p"/>
                         <outlet property="privacyPolicyButton" destination="97R-Mt-Hys" id="i51-OV-7qq"/>
+                        <outlet property="rightBarButton" destination="faM-Vr-Lou" id="FUX-yn-T2x"/>
                         <outlet property="termsButton" destination="gNo-v7-RNj" id="ycW-3d-oz2"/>
                         <outlet property="trialView" destination="TQI-Ir-iSz" id="wn3-nY-NeR"/>
                         <outlet property="yearlyPrice" destination="eq0-UV-OhR" id="Ib1-Ua-MP6"/>

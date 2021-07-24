@@ -28,6 +28,7 @@ class SubScriptionViewController: UIViewController {
     @IBOutlet var termsButton: UIButton!
     @IBOutlet var privacyPolicyButton: UIButton!
     @IBOutlet var trialView: UIView!
+    @IBOutlet var rightBarButton: UIBarButtonItem!
     
     // MARK: - Properties
     var slideData = [SlideItem]() {
@@ -205,7 +206,7 @@ class SubScriptionViewController: UIViewController {
     }
     
     @IBAction func exitScene(_ sender: Any) {
-        self.dismiss(animated: true, completion: {[weak self] in
+        self.dismiss(animated: true, completion: { [weak self] in
             guard let self = self else { return }
             self.timer?.invalidate()
         })
@@ -215,7 +216,10 @@ class SubScriptionViewController: UIViewController {
     @IBAction func share(_ sender: Any) {
         let items: [Any] = ["Discover interesting places around metro stations. Available in more the 70+ cities. Download the Free App Here", URL(string: "https://apps.apple.com/us/app/id1276636784")!]
         let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
-        present(ac, animated: true)
+        if (ac.popoverPresentationController != nil) {
+            ac.popoverPresentationController?.barButtonItem = self.rightBarButton
+        }
+        self.present(ac, animated: true)
     }
     
     @IBAction func terms(_ sender: Any) {
@@ -238,6 +242,9 @@ class SubScriptionViewController: UIViewController {
     
     //MARK:- Navigation
     func present(from viewController: UIViewController) {
+//        let navVc = UINavigationController(rootViewController: self)
+//        navVc.setNavigationBarHidden(true, animated: false)
+//        navVc.modalPresentationStyle = .fullScreen
         viewController.modalPresentationStyle = .fullScreen
         viewController.present(self, animated: true) { [weak self] in
             guard let self = self else { return }
