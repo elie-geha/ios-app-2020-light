@@ -9,6 +9,7 @@
 import Foundation
 import StoreKit
 import AppReceiptValidator
+import SVProgressHUD
 
 // IAPManager.IAPManagerError
 extension IAPManager.IAPManagerError: LocalizedError {
@@ -141,6 +142,17 @@ extension IAPManager: SKPaymentTransactionObserver {
 		onBuyProductHandler = handler
 	}
 
+	func restore(withHandler handler: @escaping ((_ result: Result<String, Error>) -> Void)) {
+
+		SKPaymentQueue.default().remove(self)
+		SKPaymentQueue.default().add(self)
+
+		SKPaymentQueue.default().restoreCompletedTransactions()
+
+		// Keep the completion handler.
+		onBuyProductHandler = handler
+	}
+
 	func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
 
 		transactions.forEach { (transaction) in
@@ -172,6 +184,31 @@ extension IAPManager: SKPaymentTransactionObserver {
 				@unknown default: break
 				}
 			}
+		}
+	}
+
+	func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
+
+		SVProgressHUD.dismiss()
+		if queue.transactions.isEmpty {
+			self.onBuyProductHandler?(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey : "No Purchases Found"])))
+			return
+		}
+		for transaction: SKPaymentTransaction in queue.transactions as [SKPaymentTransaction] {
+			let result = self.verify(transactionIdentifier: transaction.transactionIdentifier ?? "")
+			switch result {
+			case .success(_):
+				productID = transaction.payment.productIdentifier
+				self.onBuyProductHandler?(.success(transaction.payment.productIdentifier))
+			case .failure(let error):
+				self.onBuyProductHandler?(.failure(error))
+			}
+		}
+
+		if (isSubscribed) {
+			// do nothing
+		} else {
+			//NotificationManager.sharedInstance.showNotification(message: "Nothing to restore")
 		}
 	}
 }

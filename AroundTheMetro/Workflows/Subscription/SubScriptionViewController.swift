@@ -214,12 +214,30 @@ class SubScriptionViewController: UIViewController {
     }
     
     @IBAction func share(_ sender: Any) {
+		SVProgressHUD.show()
+		IAPManager.shared.restore { (result) in
+			SVProgressHUD.dismiss()
+			switch result {
+			case .success(let productId):
+				//save subscription
+				IAPManager.shared.productID = productId
+				self.dismiss(animated: true, completion: nil)
+			//				self.onFinish?()
+			case .failure(let error):
+				if error.localizedDescription == "In-App Purchase process was cancelled." {
+					SVProgressHUD.dismiss()
+				} else {
+					SVProgressHUD.showError(withStatus: error.localizedDescription)
+				}
+			}
+		}
+		/*
         let items: [Any] = ["Discover interesting places around metro stations. Available in more the 70+ cities. Download the Free App Here", URL(string: "https://apps.apple.com/us/app/id1276636784")!]
         let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
         if (ac.popoverPresentationController != nil) {
             ac.popoverPresentationController?.barButtonItem = self.rightBarButton
         }
-        self.present(ac, animated: true)
+        self.present(ac, animated: true)*/
     }
     
     @IBAction func terms(_ sender: Any) {
