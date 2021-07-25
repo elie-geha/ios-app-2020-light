@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		guard IAPManager.shared.isSubscribed else {return}
 
-		switch IAPManager.shared.verify(transactionIdentifier: "") {
+		switch IAPManager.shared.verify(productIdentifier: IAPManager.shared.productID) {
 		case .success(_):
 			break
 		case .failure(let error):

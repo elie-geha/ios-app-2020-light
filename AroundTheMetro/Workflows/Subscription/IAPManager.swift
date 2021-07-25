@@ -161,7 +161,7 @@ extension IAPManager: SKPaymentTransactionObserver {
 
 				switch transaction.transactionState {
 				case .purchased, .restored:
-					switch self.verify(transactionIdentifier: transaction.transactionIdentifier ?? "") {
+					switch self.verify(productIdentifier: transaction.payment.productIdentifier) {
 					case .success(_):
 //						self.saveSubscription()
 
@@ -195,7 +195,7 @@ extension IAPManager: SKPaymentTransactionObserver {
 			return
 		}
 		for transaction: SKPaymentTransaction in queue.transactions as [SKPaymentTransaction] {
-			let result = self.verify(transactionIdentifier: transaction.transactionIdentifier ?? "")
+			let result = self.verify(productIdentifier: transaction.transactionIdentifier ?? "")
 			switch result {
 			case .success(_):
 				productID = transaction.payment.productIdentifier
@@ -216,18 +216,26 @@ extension IAPManager: SKPaymentTransactionObserver {
 //MARK:- Verify Transaction
 extension IAPManager {
 
-	func verify(transactionIdentifier: String) -> Result<InAppPurchaseReceipt,Error> {
+	func verify(productIdentifier: String) -> Result<InAppPurchaseReceipt,Error> {
 		let validation = AppReceiptValidator().validateReceipt()
 		switch validation {
 		case .success(let reciept,_,_):
-			guard let inAppPurchaseReceipt = reciept.inAppPurchaseReceipts.last else {
+			var expiryDate: Date?
+			var subscriptionReceipt: InAppPurchaseReceipt?
+			for inAppPurchaseReceipt in reciept.inAppPurchaseReceipts {
+				if inAppPurchaseReceipt.productIdentifier == productIdentifier {
+					expiryDate = inAppPurchaseReceipt.subscriptionExpirationDate
+					subscriptionReceipt = inAppPurchaseReceipt
+				}
+			}
+			guard let expiry = expiryDate?.timeIntervalSince1970, let receiptValue = subscriptionReceipt else {
 				return .failure(IAPManagerError.transactionReceiptNotFound)
 			}
 
-			let expiry = inAppPurchaseReceipt.subscriptionExpirationDate?.timeIntervalSince1970 ?? 0.0
+//			let expiry = expiry?.timeIntervalSince1970 ?? 0.0
 
 			if expiry >= Date().timeIntervalSince1970 {
-				return .success(inAppPurchaseReceipt)
+				return .success(receiptValue)
 			}else {
 				return .failure(IAPManagerError.subscriptionExpired)
 			}
