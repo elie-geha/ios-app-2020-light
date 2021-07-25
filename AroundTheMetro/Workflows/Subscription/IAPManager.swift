@@ -135,6 +135,10 @@ extension IAPManager: SKPaymentTransactionObserver {
 	}
 
 	func buy(product: SKProduct, withHandler handler: @escaping ((_ result: Result<String, Error>) -> Void)) {
+
+		SKPaymentQueue.default().remove(self)
+		SKPaymentQueue.default().add(self)
+		
 		let payment = SKPayment(product: product)
 		SKPaymentQueue.default().add(payment)
 
@@ -161,14 +165,14 @@ extension IAPManager: SKPaymentTransactionObserver {
 
 				switch transaction.transactionState {
 				case .purchased, .restored:
-					switch self.verify(productIdentifier: transaction.payment.productIdentifier) {
-					case .success(_):
+					//switch self.verify(productIdentifier: transaction.payment.productIdentifier) {
+					//case .success(_):
 //						self.saveSubscription()
 
 						self.onBuyProductHandler?(.success(transaction.payment.productIdentifier))
-					case .failure(let error):
-						self.onBuyProductHandler?(.failure(error))
-					}
+					//case .failure(let error):
+					//	self.onBuyProductHandler?(.failure(error))
+				//	}
 					SKPaymentQueue.default().finishTransaction(transaction)
 				case .failed:
 					if let error = transaction.error as? SKError {

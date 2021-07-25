@@ -37,13 +37,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 	private func verifySubscription() {
-		IAPManager.shared.startObserving()
 
 		//check if subscription is still valid
 //		ControlSettings.shouldShowAddMobBanner = !IAPManager.shared.isSubscribed
 
 		guard IAPManager.shared.isSubscribed else {return}
 
+		IAPManager.shared.startObserving()
 		switch IAPManager.shared.verify(productIdentifier: IAPManager.shared.productID) {
 		case .success(_):
 			break
