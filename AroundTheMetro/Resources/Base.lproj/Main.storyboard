@@ -485,13 +485,27 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="71O-8G-Ohi">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="qtf-sh-3EU">
+                                        <rect key="frame" x="141.5" y="265.5" width="37" height="37"/>
+                                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmL-Bv-Wqp">
+                                        <rect key="frame" x="139" y="212" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="qtf-sh-3EU" firstAttribute="centerY" secondItem="b77-1R-ITN" secondAttribute="centerY" id="1de-4g-tB3"/>
                                     <constraint firstItem="71O-8G-Ohi" firstAttribute="centerX" secondItem="b77-1R-ITN" secondAttribute="centerX" id="21A-KP-fUA"/>
                                     <constraint firstItem="71O-8G-Ohi" firstAttribute="top" secondItem="b77-1R-ITN" secondAttribute="top" id="3gU-k9-SUh"/>
                                     <constraint firstAttribute="bottom" secondItem="71O-8G-Ohi" secondAttribute="bottom" id="ABs-nF-JJL"/>
                                     <constraint firstAttribute="trailing" secondItem="71O-8G-Ohi" secondAttribute="trailing" id="NVg-IN-zrN"/>
+                                    <constraint firstItem="qtf-sh-3EU" firstAttribute="top" secondItem="bmL-Bv-Wqp" secondAttribute="bottom" constant="32.5" id="SsU-Pr-OL9"/>
                                     <constraint firstItem="71O-8G-Ohi" firstAttribute="centerY" secondItem="b77-1R-ITN" secondAttribute="centerY" id="TS8-hW-KWq"/>
+                                    <constraint firstItem="bmL-Bv-Wqp" firstAttribute="centerX" secondItem="qtf-sh-3EU" secondAttribute="centerX" id="Zcv-XP-Vxw"/>
+                                    <constraint firstItem="qtf-sh-3EU" firstAttribute="centerX" secondItem="b77-1R-ITN" secondAttribute="centerX" id="db8-Wb-mZq"/>
                                     <constraint firstItem="71O-8G-Ohi" firstAttribute="leading" secondItem="b77-1R-ITN" secondAttribute="leading" id="gkJ-gH-p52"/>
                                 </constraints>
                             </scrollView>
@@ -506,7 +520,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="qtf-sh-3EU" id="OnV-pm-nEK"/>
                         <outlet property="imageView" destination="71O-8G-Ohi" id="2To-Je-DwE"/>
+                        <outlet property="labelText" destination="bmL-Bv-Wqp" id="okw-jv-yF3"/>
                         <outlet property="scrollView" destination="b77-1R-ITN" id="CCi-jy-zvN"/>
                     </connections>
                 </viewController>
@@ -742,13 +758,13 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Mrg-cL-pAN">
                                                     <rect key="frame" x="88" y="16.5" width="206" height="42.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5AN-OI-zNW">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5AN-OI-zNW">
                                                             <rect key="frame" x="0.0" y="0.0" width="206" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRD-Qe-XaB">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRD-Qe-XaB">
                                                             <rect key="frame" x="0.0" y="25.5" width="206" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>

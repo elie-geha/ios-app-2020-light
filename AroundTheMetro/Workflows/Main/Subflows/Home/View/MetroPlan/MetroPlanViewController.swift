@@ -7,31 +7,46 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MetroPlanViewController: UIViewController {
 
     var city: City? {
         didSet {
-            if isViewLoaded {
-                setImage()
-            }
+//            if isViewLoaded {
+                
+//            }
         }
     }
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
-
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setImage()
         scrollView.delegate = self
         self.scrollView.minimumZoomScale = 1
         self.scrollView.maximumZoomScale = 10.0
+        setImage()
     }
 
-    func setImage()  {
-//        self.imageView.image = city?.metroPlanImage
+    func setImage() {
+        if city?.name == "Moscow" {
+            imageView.image = UIImage(named: "Moscow_Map")
+            activityIndicator.stopAnimating()
+            return
+        } else if city?.name == "Sofia" {
+            imageView.image = UIImage(named: "Sofia_Map")
+            activityIndicator.stopAnimating()
+            return
+        }
+        activityIndicator.startAnimating()
+        guard let url = URL(string: city?.metroPlanImageUrl ?? "") else { activityIndicator.stopAnimating(); return }
+        imageView.sd_setImage(with: url) { [weak self] (image, error, cacheType, url) in
+            self?.activityIndicator.stopAnimating()
+        }
     }
 }
 

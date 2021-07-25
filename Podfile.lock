@@ -115,9 +115,9 @@ PODS:
   - nanopb/encode (1.30905.0)
   - Pageboy (3.6.1)
   - PromisesObjC (1.2.10)
-  - SDWebImage (5.11.1):
-    - SDWebImage/Core (= 5.11.1)
-  - SDWebImage/Core (5.11.1)
+  - SDWebImage (4.4.8):
+    - SDWebImage/Core (= 4.4.8)
+  - SDWebImage/Core (4.4.8)
   - SVProgressHUD (2.2.6)
   - Tabman (2.9.1):
     - Pageboy (~> 3.6.0)
@@ -135,7 +135,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - Kingfisher
   - Moya
-  - SDWebImage
+  - SDWebImage (~> 4.0)
   - SVProgressHUD (from `https://github.com/slizeray/SVProgressHUD.git`)
   - Tabman (~> 2.9)
 
@@ -208,10 +208,10 @@ SPEC CHECKSUMS:
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   Pageboy: 29a2d474ad99404b4d77f325e0ab6d705930a4fb
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
-  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SVProgressHUD: 6ed134667e9ebb2f33679e8273cd48fd3fa349e5
   Tabman: 085d89c65be9e883629bdaf5b1453a6397e57846
 
-PODFILE CHECKSUM: ddf65a539eaac05bbcf065393e965f249acafd39
+PODFILE CHECKSUM: 481043d30f3e4adcaf5fb3cd2eec0c71e2579f6c
 
 COCOAPODS: 1.10.1

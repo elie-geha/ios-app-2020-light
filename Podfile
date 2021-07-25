@@ -33,6 +33,6 @@ target 'AroundTheMetro' do
 		pod 'FBSDKShareKit', '~> 11.0.1'
     
 		pod 'GoogleSignIn'
-		pod 'SDWebImage'
+    pod 'SDWebImage', '~> 4.0'
 		pod 'IQKeyboardManagerSwift'
 end

@@ -32,7 +32,9 @@ enum Storyboard {
 
         static let homeVC = storyboard.instantiateInitialViewController() as! HomeViewController
         static let locateMetroVC = storyboard.instantiateViewController(withIdentifier: "LocateMetroViewController") as! LocateMetroViewController
-        static let metroPlanVC = storyboard.instantiateViewController(withIdentifier: "MetroPlanViewController") as! MetroPlanViewController
+        static var metroPlanVC: MetroPlanViewController {
+            storyboard.instantiateViewController(withIdentifier: "MetroPlanViewController") as! MetroPlanViewController
+        }
     }
 
     enum Places: StoryboardType {
