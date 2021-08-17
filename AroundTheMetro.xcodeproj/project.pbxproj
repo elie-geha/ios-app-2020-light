@@ -324,6 +324,7 @@
 		51C50D6F25104CC10048EB09 /* Mexico_City.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Mexico_City.plist; sourceTree = "<group>"; };
 		51C50D7025104CC10048EB09 /* Rio_de_Janeiro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Rio_de_Janeiro.plist; sourceTree = "<group>"; };
 		51C50D7125104CC10048EB09 /* Saint_Petersburg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Saint_Petersburg.plist; sourceTree = "<group>"; };
+		89461B2A26CB9DD0005415E2 /* AroundTheMetro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AroundTheMetro-Bridging-Header.h"; sourceTree = "<group>"; };
 		8965450D269DA18500FD9BFA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		89A0319F2695A7DC00F5FFEE /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		89A031A12695A95400F5FFEE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -614,6 +615,7 @@
 				1FA3C40224EB13AB00295FFA /* AppCoordinator.swift */,
 				1FA3C3EE24EB11B700295FFA /* SceneDelegate.swift */,
 				89A033262698314F00F5FFEE /* SocialLoginManager.swift */,
+				89461B2A26CB9DD0005415E2 /* AroundTheMetro-Bridging-Header.h */,
 				1FA3C43724EBDE5C00295FFA /* AppConfig */,
 				1FA3C43224EBDB4F00295FFA /* Networking */,
 				1F1DD6D324F98285003C4A9F /* Types */,
@@ -953,6 +955,7 @@
 				TargetAttributes = {
 					1FA3C3E824EB11B700295FFA = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -1366,6 +1369,7 @@
 			baseConfigurationReference = A85239D9126354EC81AB8AED /* Pods-AroundTheMetro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = AroundTheMetro/AroundTheMetro.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -1381,6 +1385,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.AugmentedDiscovery.AroundTheMetro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AroundTheMetro/AroundTheMetro-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1391,6 +1397,7 @@
 			baseConfigurationReference = D8FC33BDD46E6721368886D7 /* Pods-AroundTheMetro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = AroundTheMetro/AroundTheMetro.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -1406,6 +1413,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.AugmentedDiscovery.AroundTheMetro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AroundTheMetro/AroundTheMetro-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

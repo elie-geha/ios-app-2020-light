@@ -48,45 +48,45 @@ class HomeCoordinator: CoordinatorType {
 		homeViewController?.menuItems =
 		[
 			MenuItem(type: .metroPlan, onSelect: { [weak self] in
-				guard self?.isLoggedIn ?? false else {
-					self?.navigateToLogin()
-					return
-				}
+//				guard self?.isLoggedIn ?? false else {
+//					self?.navigateToLogin()
+//					return
+//				}
 				self?.openMetroPlan()
 			}),
 			MenuItem(type: .locateMetro, onSelect: { [weak self] in
-				guard self?.isLoggedIn ?? false else {
-					self?.navigateToLogin()
-					return
-				}
+//				guard self?.isLoggedIn ?? false else {
+//					self?.navigateToLogin()
+//					return
+//				}
 				self?.openLocateMetro()
 			}),
             MenuItem(type: .restoraunts, onSelect: { [weak self] in
-                guard self?.isLoggedIn ?? false else {
-                    self?.navigateToLogin()
-                    return
-                }
+//                guard self?.isLoggedIn ?? false else {
+//                    self?.navigateToLogin()
+//                    return
+//                }
                 self?.openPlaces(with: .restoraunt)
             }),
 			MenuItem(type: .boutiques, onSelect: { [weak self] in
-				guard self?.isLoggedIn ?? false else {
-					self?.navigateToLogin()
-					return
-				}
+//				guard self?.isLoggedIn ?? false else {
+//					self?.navigateToLogin()
+//					return
+//				}
 				self?.openPlaces(with: .boutique)
 			}),
             MenuItem(type: .attractions, onSelect: { [weak self] in
-                guard self?.isLoggedIn ?? false else {
-                    self?.navigateToLogin()
-                    return
-                }
+//                guard self?.isLoggedIn ?? false else {
+//                    self?.navigateToLogin()
+//                    return
+//                }
                 self?.openPlaces(with: .attraction)
             }),
 			MenuItem(type: .beautyAndHealth, onSelect: { [weak self] in
-				guard self?.isLoggedIn ?? false else {
-					self?.navigateToLogin()
-					return
-				}
+//				guard self?.isLoggedIn ?? false else {
+//					self?.navigateToLogin()
+//					return
+//				}
 				self?.openPlaces(with: .beautyAndHealth)
 			})
 		]

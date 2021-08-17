@@ -33,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		verifySubscription()
 		SocialLoginManager.shared.configure()
 		IQKeyboardManager.shared.enable = true
+
+		configureIronSource()
         return true
     }
 
@@ -95,5 +97,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //MARK: - FACEBOOK SDK CONFIGURATION
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
+
+	private func configureIronSource() {
+		let ironSourceAppKey = "d3af4a95"
+
+		IronSource.initWithAppKey(ironSourceAppKey, adUnits: [IS_REWARDED_VIDEO,IS_INTERSTITIAL,IS_OFFERWALL, IS_BANNER])
+
+		ISIntegrationHelper.validateIntegration()
+	}
 }
 

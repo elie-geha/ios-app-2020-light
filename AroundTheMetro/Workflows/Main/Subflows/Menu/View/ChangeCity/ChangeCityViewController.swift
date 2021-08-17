@@ -31,6 +31,8 @@ class ChangeCityViewController: UIViewController {
 
         btnConfirmOutlet.setTitle("Confirm".localized, for: .normal)
         updateCityLabel()
+
+		IronSource.setOfferwallDelegate(self)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -42,6 +44,12 @@ class ChangeCityViewController: UIViewController {
     }
 
     @IBAction func btnConfirmTapped(_ sender: UIButton) {
+		if IronSource.hasOfferwall() {
+			IronSource.showOfferwall(with: self)
+		}else {
+			confirmLocation()
+		}
+		/*
         guard let selectedCountry = selectedCountry, let selectedCity = selectedCity else {
             let alert = UIAlertController(title: "Alert".localized,
                                           message:"Please select country and city".localized,
@@ -54,7 +62,23 @@ class ChangeCityViewController: UIViewController {
         }
 
         onConfirm?(selectedCountry, selectedCity)
+*/
     }
+
+	private func confirmLocation() {
+		guard let selectedCountry = selectedCountry, let selectedCity = selectedCity else {
+			let alert = UIAlertController(title: "Alert".localized,
+										  message:"Please select country and city".localized,
+										  preferredStyle: .alert)
+			alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: nil))
+
+			self.present(alert, animated: true, completion: nil)
+
+			return
+		}
+
+		onConfirm?(selectedCountry, selectedCity)
+	}
 
     func set(countries: [Country], selectedCountry: Country?, selectedCity: City?) {
         self.countries = countries
@@ -185,4 +209,34 @@ extension Collection {
         return self.indices.contains(i) ? self[i] : nil
     }
 
+}
+
+extension ChangeCityViewController: ISOfferwallDelegate {
+	func offerwallHasChangedAvailability(_ available: Bool) {
+//		if available {
+//			IronSource.showOfferwall(with: self)
+//		}else {
+//			confirmLocation()
+//		}
+	}
+
+	func offerwallDidShow() {
+
+	}
+
+	func offerwallDidFailToShowWithError(_ error: Error!) {
+
+	}
+
+	func offerwallDidClose() {
+		confirmLocation()
+	}
+
+	func didReceiveOfferwallCredits(_ creditInfo: [AnyHashable : Any]!) -> Bool {
+		return true
+	}
+
+	func didFailToReceiveOfferwallCreditsWithError(_ error: Error!) {
+
+	}
 }

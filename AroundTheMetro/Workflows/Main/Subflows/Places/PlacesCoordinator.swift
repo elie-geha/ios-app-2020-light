@@ -69,6 +69,7 @@ class PlacesCoordinator: CoordinatorType {
     private func openPlaceDetails(with place: Place) {
         let vc = Storyboard.Places.placeDetailsVC
         vc.place = place
+		vc.city = context.countriesRepository.currentCity
         vc.onCall = { [weak self] place in
             guard let phoneNumber = place.phoneNumber,
                 !phoneNumber.isEmpty,

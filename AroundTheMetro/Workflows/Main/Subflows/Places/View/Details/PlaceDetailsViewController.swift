@@ -19,6 +19,7 @@ class PlaceDetailViewController: UIViewController {
             }
         }
     }
+	var city: City?
 
     var onCall: ((Place) -> Void)?
     var onWebsite: ((Place) -> Void)?
@@ -34,7 +35,7 @@ class PlaceDetailViewController: UIViewController {
     @IBOutlet weak var callusBtn: UIButton!
     @IBOutlet weak var websiteBtn: UIButton!
 
-
+	var vcVisitCount = 0
     @IBAction func callUsBtnTapped(_ sender: UIButton) {
         if let place = place {
             onCall?(place)
@@ -54,7 +55,36 @@ class PlaceDetailViewController: UIViewController {
         websiteBtn.setTitle("Website".localized, for: .normal)
 
         setupView()
+
+		IronSource.setRewardedVideoDelegate(self)
+
     }
+
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		setupNavigationItem()
+
+		vcVisitCount += 1
+		if IronSource.hasRewardedVideo(), vcVisitCount >= 5 {
+			IronSource.showRewardedVideo(with: self)
+			vcVisitCount = 0
+		}
+	}
+
+	func setupNavigationItem() {
+		let item = UIBarButtonItem(image: UIImage(named: "share-2")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(actShare))
+		item.tintColor = UIColor(hex: "#555555")
+		self.navigationItem.rightBarButtonItem = item
+	}
+
+	@objc private func actShare() {
+		let items: [Any] = ["Checkout \(place?.name ?? "") a Great Place Near Metro Station \(place?.metroName ?? "") in \(city?.name ?? "") \nDownload the App for Free: https://apps.apple.com/us/app/id1276636784 and discover great places around metro stations."/*, URL(string: "https://apps.apple.com/us/app/id1276636784")!*/]
+		let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+		if (ac.popoverPresentationController != nil) {
+			ac.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
+		}
+		self.present(ac, animated: true)
+	}
 
     func setupView() {
 
@@ -94,4 +124,39 @@ class PlaceDetailViewController: UIViewController {
 
         openhoursTxtView.isHidden = true
     }
+}
+
+
+extension PlaceDetailViewController: ISRewardedVideoDelegate {
+	func rewardedVideoHasChangedAvailability(_ available: Bool) {
+
+	}
+
+	func didReceiveReward(forPlacement placementInfo: ISPlacementInfo!) {
+
+	}
+
+	func rewardedVideoDidFailToShowWithError(_ error: Error!) {
+
+	}
+
+	func rewardedVideoDidOpen() {
+
+	}
+
+	func rewardedVideoDidClose() {
+
+	}
+
+	func rewardedVideoDidStart() {
+
+	}
+
+	func rewardedVideoDidEnd() {
+
+	}
+
+	func didClickRewardedVideo(_ placementInfo: ISPlacementInfo!) {
+
+	}
 }

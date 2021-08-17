@@ -33,9 +33,8 @@ class PlacesViewController: TabmanViewController {
     }
 
     // MARK: - Outlets
-
-    @IBOutlet var containerView: UIView!
-    @IBOutlet var tabSwitcher: UIView!
+//    @IBOutlet var containerView: UIView!
+//    @IBOutlet var tabSwitcher: UIView!
 
     // MARK: - Private properties
 

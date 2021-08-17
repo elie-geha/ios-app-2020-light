@@ -51,7 +51,7 @@ class AppCoordinator {
 	let router = UINavigationController()
 	private func navigateToHome() {
 
-		router.setNavigationBarHidden(true, animated: false)
+		router.setNavigationBarHidden(false, animated: false)
 
 		let adsControllerContainer = AdsContainerViewController()
 		adsControllerContainer.contentViewController = router

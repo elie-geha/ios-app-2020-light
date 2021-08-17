@@ -35,4 +35,7 @@ target 'AroundTheMetro' do
 		pod 'GoogleSignIn'
     pod 'SDWebImage', '~> 4.0'
 		pod 'IQKeyboardManagerSwift'
+
+		#iron source is a monetization tool
+		pod 'IronSourceSDK', '~> 7.1'
 end
