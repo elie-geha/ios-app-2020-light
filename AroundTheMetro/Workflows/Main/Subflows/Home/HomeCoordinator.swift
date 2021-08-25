@@ -10,7 +10,7 @@ import SVProgressHUD
 import UIKit
 import FirebaseAuth
 
-class HomeCoordinator: CoordinatorType {
+class HomeCoordinator: NSObject, CoordinatorType {
 //    var onShare: (() -> Void)?
     var onMenu: (() -> Void)?
 
@@ -88,6 +88,21 @@ class HomeCoordinator: CoordinatorType {
 //					return
 //				}
 				self?.openPlaces(with: .beautyAndHealth)
+			}),
+			MenuItem(type: .jobsInCity, onSelect: { [weak self] in
+//				guard self?.isLoggedIn ?? false else {
+//					self?.navigateToLogin()
+//					return
+//				}
+				//self?.openPlaces(with: .beautyAndHealth)
+			}),
+			MenuItem(type: .appsWeLove, onSelect: { [weak self] in
+				self?.showOfferWall()
+//				guard self?.isLoggedIn ?? false else {
+//					self?.navigateToLogin()
+//					return
+//				}
+//				self?.openPlaces(with: .beautyAndHealth)
 			})
 		]
 //		homeViewController?.logout =  { [weak self] in
@@ -97,6 +112,14 @@ class HomeCoordinator: CoordinatorType {
 //		homeViewController?.onRightBarButton = onShare
 		router.setViewControllers([homeViewController].compactMap { $0 }, animated: false)
 	}
+
+	private func showOfferWall() {
+		IronSource.setOfferwallDelegate(self)
+		if IronSource.hasOfferwall() {
+			IronSource.showOfferwall(with: router)
+		}
+	}
+	
 	private func navigateToLogin() {
 		guard let login = UIStoryboard(name: "Auth", bundle: .main).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {return}
 		let nav = UINavigationController(rootViewController: login)
@@ -157,4 +180,34 @@ class HomeCoordinator: CoordinatorType {
             }
         })
     }
+}
+
+extension HomeCoordinator: ISOfferwallDelegate {
+	func offerwallHasChangedAvailability(_ available: Bool) {
+//		if available {
+//			IronSource.showOfferwall(with: self)
+//		}else {
+//			confirmLocation()
+//		}
+	}
+
+	func offerwallDidShow() {
+
+	}
+
+	func offerwallDidFailToShowWithError(_ error: Error!) {
+
+	}
+
+	func offerwallDidClose() {
+
+	}
+
+	func didReceiveOfferwallCredits(_ creditInfo: [AnyHashable : Any]!) -> Bool {
+		return true
+	}
+
+	func didFailToReceiveOfferwallCreditsWithError(_ error: Error!) {
+
+	}
 }

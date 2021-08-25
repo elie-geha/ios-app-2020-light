@@ -108,7 +108,7 @@ extension HomeViewController: UITableViewDelegate {
             let width = UIScreen.main.bounds.width
             let height = width * 0.57
             return min(240, height)
-        case 1: return 450
+        case 1: return 600
         default: return 0
         }
     }

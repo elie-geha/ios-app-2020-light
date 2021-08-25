@@ -32,7 +32,6 @@ class ChangeCityViewController: UIViewController {
         btnConfirmOutlet.setTitle("Confirm".localized, for: .normal)
         updateCityLabel()
 
-		IronSource.setOfferwallDelegate(self)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -44,11 +43,11 @@ class ChangeCityViewController: UIViewController {
     }
 
     @IBAction func btnConfirmTapped(_ sender: UIButton) {
-		if IronSource.hasOfferwall() {
+//		if IronSource.hasOfferwall() {
 			IronSource.showOfferwall(with: self)
-		}else {
+//		}else {
 			confirmLocation()
-		}
+//		}
 		/*
         guard let selectedCountry = selectedCountry, let selectedCity = selectedCity else {
             let alert = UIAlertController(title: "Alert".localized,
@@ -209,34 +208,4 @@ extension Collection {
         return self.indices.contains(i) ? self[i] : nil
     }
 
-}
-
-extension ChangeCityViewController: ISOfferwallDelegate {
-	func offerwallHasChangedAvailability(_ available: Bool) {
-//		if available {
-//			IronSource.showOfferwall(with: self)
-//		}else {
-//			confirmLocation()
-//		}
-	}
-
-	func offerwallDidShow() {
-
-	}
-
-	func offerwallDidFailToShowWithError(_ error: Error!) {
-
-	}
-
-	func offerwallDidClose() {
-		confirmLocation()
-	}
-
-	func didReceiveOfferwallCredits(_ creditInfo: [AnyHashable : Any]!) -> Bool {
-		return true
-	}
-
-	func didFailToReceiveOfferwallCreditsWithError(_ error: Error!) {
-
-	}
 }
