@@ -134,7 +134,7 @@ DEPENDENCIES:
   - Google-Mobile-Ads-SDK
   - GoogleSignIn
   - IQKeyboardManagerSwift
-  - IronSourceSDK
+  - IronSourceSDK (~> 7.1)
   - Kingfisher
   - Moya
   - SDWebImage (~> 4.0)
@@ -216,6 +216,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 6ed134667e9ebb2f33679e8273cd48fd3fa349e5
   Tabman: 085d89c65be9e883629bdaf5b1453a6397e57846
 
-PODFILE CHECKSUM: 47f3ac3178225b99613f044f03457b24c78c1e6c
+PODFILE CHECKSUM: 332fee33942a6767a2a2e4f8f2e3a848e34cce32
 
 COCOAPODS: 1.10.1

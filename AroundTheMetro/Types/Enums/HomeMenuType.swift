@@ -13,7 +13,7 @@ enum HomeMenuType {
     case boutiques
     case beautyAndHealth
     case attractions
-	case jobsInCity
+	case shareTheApp
 	case appsWeLove
 
     var backgroundImageName: String {
@@ -24,8 +24,8 @@ enum HomeMenuType {
         case .boutiques: return "boutiques"
         case .beautyAndHealth: return "bh"
         case .attractions: return "attractions-back"
-        case .jobsInCity: return "attractions-back"
-        case .appsWeLove: return "attractions-back"
+        case .shareTheApp: return "shareApp"
+        case .appsWeLove: return "appsLove"
         }
     }
 
@@ -37,7 +37,7 @@ enum HomeMenuType {
         case .boutiques: return "boutique-icon"
         case .beautyAndHealth: return "beauty-icon"
         case .attractions: return "attractions-icon"
-        case .jobsInCity: return "services-icon"
+        case .shareTheApp: return "share"
         case .appsWeLove: return "coins-icon"
         }
     }
@@ -50,8 +50,8 @@ enum HomeMenuType {
         case .boutiques: return "Boutiques".localized
         case .beautyAndHealth: return "Beauty & Health".localized
         case .attractions: return "Attractions".localized
-		case .jobsInCity: return "Jobs In\n[City]".localized
-		case .appsWeLove: return "Apps we\nLove".localized
+		case .shareTheApp: return "Share The\nApp".localized
+		case .appsWeLove: return "Apps We\nLove".localized
         }
     }
 }
