@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "20180314202746-GettyImages-854822274.jpeg",
+      "filename" : "590-Smartphone_App_Marketplace_Background.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "590-Smartphone_App_Marketplace_Background@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "590-Smartphone_App_Marketplace_Background@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
