@@ -45,7 +45,8 @@ enum Storyboard {
         static let allPlacesListVC = storyboard.instantiateViewController(withIdentifier: "AllPlacesListViewController") as! AllPlacesListViewController
         static let metroListVC = storyboard.instantiateViewController(withIdentifier: "MetroListViewController") as! MetroListViewController
 
-        static let placeDetailsVC = storyboard.instantiateViewController(withIdentifier: "PlaceDetailViewController") as! PlaceDetailViewController
+		static var placeDetailsVC: PlaceDetailViewController { storyboard.instantiateViewController(withIdentifier: "PlaceDetailViewController") as! PlaceDetailViewController
+		}
     }
 
     enum OnBoarding: StoryboardType {
