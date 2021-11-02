@@ -11,6 +11,7 @@ enum UndergroundTarget {
     case getMetroListForStoreAPI(type: PlaceType, country: Country, city: City)
     case getCountriesList
     case getCitiesList
+	case getJobs(page: Int, location: String, keyword: String)
 }
 
 extension UndergroundTarget: TargetType {
@@ -19,7 +20,12 @@ extension UndergroundTarget: TargetType {
     }
     
     var baseURL: URL {
-        return URL(string: AppConstants.API.urlBase)!
+		switch self {
+		case .getJobs(_, _, _):
+			return URL(string: "http://jobs.aroundthemetro.com")!
+		default:
+			return URL(string: AppConstants.API.urlBase)!
+		}
     }
     
     var path: String {
@@ -40,6 +46,8 @@ extension UndergroundTarget: TargetType {
             return "getcities"
         case .getCountriesList:
             return "getCountry"
+		case .getJobs(_, _, _):
+			return "/index.php"
         }
     }
     
@@ -53,7 +61,7 @@ extension UndergroundTarget: TargetType {
     }
     
     var parameterEncoding: ParameterEncoding {
-        return JSONEncoding.default
+		return JSONEncoding.default
     }
     
     var sampleData: Data {
@@ -83,6 +91,8 @@ extension UndergroundTarget: TargetType {
              .getMetroListForStoreAPI(let type, _, _),
              .getPlaces(let type, _, _):
             return .requestParameters(parameters: ["type": type.apiValue], encoding: URLEncoding.default)
+		case .getJobs(let page,let location, let keyword):
+			return .requestParameters(parameters: ["code" : "am9ic1BvcnRhbEFwaQ==","Keyword":keyword, "Location":location,"Page":page], encoding: URLEncoding.queryString)
         }
     }
 }

@@ -69,4 +69,12 @@ enum Storyboard {
 		}
         static let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
     }
+
+    enum Job: StoryboardType {
+        static let name = "job"
+
+		static var jobList: JobListViewController{
+			storyboard.instantiateViewController(withIdentifier: "JobListViewController") as! JobListViewController
+		}
+    }
 }

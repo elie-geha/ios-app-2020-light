@@ -9,6 +9,7 @@
 import SVProgressHUD
 import UIKit
 import FirebaseAuth
+import FBSDKShareKit
 
 class HomeCoordinator: NSObject, CoordinatorType {
 //    var onShare: (() -> Void)?
@@ -89,13 +90,15 @@ class HomeCoordinator: NSObject, CoordinatorType {
 //				}
 				self?.openPlaces(with: .beautyAndHealth)
 			}),
-			MenuItem(type: .shareTheApp, onSelect: { [weak self] in
+			MenuItem(type: .jobsInCity, onSelect: { [weak self] in
+				self?.openJobList()
+				/*
                 let items: [Any] = ["Discover interesting places around metro stations. Available in more the 70+ cities. Download the Free App Here", URL(string: "https://apps.apple.com/us/app/id1276636784")!]
                 let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
                 if (ac.popoverPresentationController != nil) {
 //                    ac.popoverPresentationController?.sourceView = router.
                 }
-                self?.router.present(ac, animated: true)
+                self?.router.present(ac, animated: true)*/
                 
 			}),
 			MenuItem(type: .appsWeLove, onSelect: { [weak self] in
@@ -139,7 +142,62 @@ class HomeCoordinator: NSObject, CoordinatorType {
         vc.title = context.countriesRepository.currentCity?.name
         router.pushViewController(vc, animated: true)
     }
-    
+
+	private func openJobList() {
+		let vc = Storyboard.Job.jobList
+		let viewModel = AllJobListViewModel(view: vc)
+
+		let reachibility = NetworkReachibility()
+		let service = JobServiceWithFallbackToLocalData(remote: JobRemoteService(), local: JobLocalService(), reachibility: reachibility)
+		let usecase = AllJobListUsecase(viewModel: viewModel, service: service, city: context.countriesRepository.currentCity?.name ?? "", reachibility: reachibility)
+
+		vc.usecase = usecase
+		vc.share = { [weak self] (job) in
+			guard let self = self else {return}
+			let content = self.shareContent(job: job)
+			self.showFacebookShare(msg: content.1, url: content.0)
+		}
+
+		vc.shareOnFacebook = { [weak self] job in
+			guard let self = self else {return}
+			let content = self.shareContent(job: job)
+			self.showActivityController(items: [content.1,content.0])
+		}
+
+		vc.showDetail = { [weak self] job in
+
+		}
+
+		router.pushViewController(vc, animated: true)
+	}
+
+	private func shareContent(job: Job) -> (URL,String){
+		let url = URL(string: "https://apps.apple.com/us/app/id1276636784")!
+		let message = "I found this Job Offer: (\(job.title)) on Around the Metro. Download the App for Free and find your dream job today."
+		return (url,message)
+	}
+
+	private func showFacebookShare(msg: String, url: URL) {
+		// Same as previous session
+//		let image = UIImage(named: "AppIcon")!
+//		let photo = SharePhoto(image: image, userGenerated: true)
+//		let photoContent = SharePhotoContent()
+//		photoContent.photos = [photo]
+		let textContent = ShareLinkContent()
+		textContent.quote = msg
+		textContent.contentURL = url
+		textContent.hashtag = Hashtag("#aroundthemetro")
+
+		// Share the content (photo) as a dialog with News Feed / Story
+		let sharingDialog = ShareDialog.init(fromViewController: router, content: textContent, delegate: self)
+		sharingDialog.show()
+	}
+
+	private func showActivityController(items: [Any]) {
+		let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+		self.router.present(ac, animated: true)
+	}
+
     private func openLocateMetro() {
         guard let country = context.countriesRepository.currentCountry,
             let city = context.countriesRepository.currentCity else { return }
@@ -212,4 +270,21 @@ extension HomeCoordinator: ISOfferwallDelegate {
 	func didFailToReceiveOfferwallCreditsWithError(_ error: Error!) {
 
 	}
+}
+
+//MARK:- SharingDelegate
+extension HomeCoordinator: SharingDelegate {
+	func sharer(_ sharer: Sharing, didCompleteWithResults results: [String : Any]) {
+
+	}
+
+	func sharer(_ sharer: Sharing, didFailWithError error: Error) {
+
+	}
+
+	func sharerDidCancel(_ sharer: Sharing) {
+
+	}
+
+
 }

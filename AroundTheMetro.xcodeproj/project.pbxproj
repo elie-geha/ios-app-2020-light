@@ -146,7 +146,13 @@
 		51C50D8425104CC20048EB09 /* Mexico_City.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D6F25104CC10048EB09 /* Mexico_City.plist */; };
 		51C50D8525104CC20048EB09 /* Rio_de_Janeiro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D7025104CC10048EB09 /* Rio_de_Janeiro.plist */; };
 		51C50D8625104CC20048EB09 /* Saint_Petersburg.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D7125104CC10048EB09 /* Saint_Petersburg.plist */; };
+		89484700272E8A1F003F0FD7 /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894846FF272E8A1F003F0FD7 /* JobListViewController.swift */; };
+		89484702272E8A34003F0FD7 /* job.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89484701272E8A34003F0FD7 /* job.storyboard */; };
+		89484704272EA123003F0FD7 /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89484703272EA123003F0FD7 /* JobCell.swift */; };
+		89484706272EA186003F0FD7 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89484705272EA186003F0FD7 /* Job.swift */; };
+		89484708272EA303003F0FD7 /* JobService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89484707272EA303003F0FD7 /* JobService.swift */; };
 		8965450E269DA18500FD9BFA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8965450D269DA18500FD9BFA /* ProfileViewController.swift */; };
+		899D13A6272EB2130093E363 /* Reachibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D13A5272EB2130093E363 /* Reachibility.swift */; };
 		89A031A02695A7DC00F5FFEE /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A0319F2695A7DC00F5FFEE /* Auth.storyboard */; };
 		89A031A22695A95400F5FFEE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A031A12695A95400F5FFEE /* LoginViewController.swift */; };
 		89A031BC2695CBCA00F5FFEE /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A031BB2695CBCA00F5FFEE /* SignupViewController.swift */; };
@@ -158,6 +164,9 @@
 		89ABD61F26833B3A00B3AF0A /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ABD61E26833B3A00B3AF0A /* IAPManager.swift */; };
 		89ABD62726833B6B00B3AF0A /* AppReceiptValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ABD62626833B6B00B3AF0A /* AppReceiptValidator.framework */; };
 		89ABD62826833B6B00B3AF0A /* AppReceiptValidator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89ABD62626833B6B00B3AF0A /* AppReceiptValidator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		89C65C542730432D002C40D1 /* Layer+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C65C532730432D002C40D1 /* Layer+Utilities.swift */; };
+		89C65C56273067A8002C40D1 /* JobListUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C65C55273067A8002C40D1 /* JobListUsecase.swift */; };
+		89C65C58273067CD002C40D1 /* JobListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C65C57273067CD002C40D1 /* JobListViewModel.swift */; };
 		9A8E11562C4F72C0771E6240 /* Pods_AroundTheMetro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57C4B5707ABD4ED9E88BA9B /* Pods_AroundTheMetro.framework */; };
 /* End PBXBuildFile section */
 
@@ -325,7 +334,13 @@
 		51C50D7025104CC10048EB09 /* Rio_de_Janeiro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Rio_de_Janeiro.plist; sourceTree = "<group>"; };
 		51C50D7125104CC10048EB09 /* Saint_Petersburg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Saint_Petersburg.plist; sourceTree = "<group>"; };
 		89461B2A26CB9DD0005415E2 /* AroundTheMetro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AroundTheMetro-Bridging-Header.h"; sourceTree = "<group>"; };
+		894846FF272E8A1F003F0FD7 /* JobListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewController.swift; sourceTree = "<group>"; };
+		89484701272E8A34003F0FD7 /* job.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = job.storyboard; sourceTree = "<group>"; };
+		89484703272EA123003F0FD7 /* JobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
+		89484705272EA186003F0FD7 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		89484707272EA303003F0FD7 /* JobService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobService.swift; sourceTree = "<group>"; };
 		8965450D269DA18500FD9BFA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		899D13A5272EB2130093E363 /* Reachibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachibility.swift; sourceTree = "<group>"; };
 		89A0319F2695A7DC00F5FFEE /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		89A031A12695A95400F5FFEE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		89A031BB2695CBCA00F5FFEE /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -337,6 +352,9 @@
 		89ABD6192683194700B3AF0A /* SubscriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCell.swift; sourceTree = "<group>"; };
 		89ABD61E26833B3A00B3AF0A /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		89ABD62626833B6B00B3AF0A /* AppReceiptValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppReceiptValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89C65C532730432D002C40D1 /* Layer+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Layer+Utilities.swift"; sourceTree = "<group>"; };
+		89C65C55273067A8002C40D1 /* JobListUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListUsecase.swift; sourceTree = "<group>"; };
+		89C65C57273067CD002C40D1 /* JobListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewModel.swift; sourceTree = "<group>"; };
 		A85239D9126354EC81AB8AED /* Pods-AroundTheMetro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundTheMetro.debug.xcconfig"; path = "Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro.debug.xcconfig"; sourceTree = "<group>"; };
 		C57C4B5707ABD4ED9E88BA9B /* Pods_AroundTheMetro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundTheMetro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8FC33BDD46E6721368886D7 /* Pods-AroundTheMetro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundTheMetro.release.xcconfig"; path = "Target Support Files/Pods-AroundTheMetro/Pods-AroundTheMetro.release.xcconfig"; sourceTree = "<group>"; };
@@ -583,6 +601,7 @@
 			children = (
 				1F1DD6A524F3E9C4003C4A9F /* AdsContainerViewController.swift */,
 				1F8E210024FF960000F28DB2 /* WebBrowserViewController.swift */,
+				89C65C532730432D002C40D1 /* Layer+Utilities.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -646,6 +665,7 @@
 		1FA3C40124EB131500295FFA /* Workflows */ = {
 			isa = PBXGroup;
 			children = (
+				89962F12272E861600D45FD6 /* Jobs */,
 				89A0319E2695A7CE00F5FFEE /* Auth */,
 				89ABD61026830CE700B3AF0A /* Subscription */,
 				1F8E20F024FEBC3900F28DB2 /* OnBoarding */,
@@ -767,6 +787,7 @@
 			children = (
 				1FA3C43424EBDB8A00295FFA /* ATLApiTarget.swift */,
 				1FA3C43324EBDB8A00295FFA /* NetworkAdapter.swift */,
+				899D13A5272EB2130093E363 /* Reachibility.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -786,6 +807,7 @@
 			children = (
 				1FA3C43B24EBEB9000295FFA /* Response */,
 				1FA3C41F24EB2B2F00295FFA /* PlacesServiceRemote.swift */,
+				89484707272EA303003F0FD7 /* JobService.swift */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -877,6 +899,19 @@
 				C57C4B5707ABD4ED9E88BA9B /* Pods_AroundTheMetro.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89962F12272E861600D45FD6 /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				894846FF272E8A1F003F0FD7 /* JobListViewController.swift */,
+				89C65C57273067CD002C40D1 /* JobListViewModel.swift */,
+				89C65C55273067A8002C40D1 /* JobListUsecase.swift */,
+				89484705272EA186003F0FD7 /* Job.swift */,
+				89484701272E8A34003F0FD7 /* job.storyboard */,
+				89484703272EA123003F0FD7 /* JobCell.swift */,
+			);
+			path = Jobs;
 			sourceTree = "<group>";
 		};
 		89A0319E2695A7CE00F5FFEE /* Auth */ = {
@@ -1034,6 +1069,7 @@
 				1F4C2BB324ED955200C39967 /* Chicago.plist in Resources */,
 				1F4C2BC024ED955200C39967 /* Montreal.plist in Resources */,
 				5153026825118EDD00E73CB8 /* Kolkata.plist in Resources */,
+				89484702272E8A34003F0FD7 /* job.storyboard in Resources */,
 				51C50D7D25104CC20048EB09 /* Brussels.plist in Resources */,
 				1F5F783825160112009174DC /* Tbilisi.plist in Resources */,
 				1F4C2BB824ED955200C39967 /* Osaka.plist in Resources */,
@@ -1125,10 +1161,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FA3C42424EB2D5700295FFA /* CountriesRepository.swift in Sources */,
+				89484704272EA123003F0FD7 /* JobCell.swift in Sources */,
 				1FA3C43D24EBEB9D00295FFA /* PlacesResponse.swift in Sources */,
 				1F4C2BD724EDA05E00C39967 /* HomeViewController.swift in Sources */,
 				1FA3C43624EBDB8A00295FFA /* ATLApiTarget.swift in Sources */,
 				1FA3C40324EB13AB00295FFA /* AppCoordinator.swift in Sources */,
+				89C65C58273067CD002C40D1 /* JobListViewModel.swift in Sources */,
 				4E0D497826A3273D00E5E506 /* LocationManager.swift in Sources */,
 				1FA3C42D24EB352000295FFA /* AnyOptional.swift in Sources */,
 				1FA3C3ED24EB11B700295FFA /* AppDelegate.swift in Sources */,
@@ -1137,7 +1175,9 @@
 				1F4C2BEB24EDAFFC00C39967 /* BannersResponse.swift in Sources */,
 				89A033272698314F00F5FFEE /* SocialLoginManager.swift in Sources */,
 				1FF6847C24F0764B0068A69A /* PlaceListCell.swift in Sources */,
+				899D13A6272EB2130093E363 /* Reachibility.swift in Sources */,
 				1F1DD6DD24F9882B003C4A9F /* AdsIntegration.swift in Sources */,
+				89484706272EA186003F0FD7 /* Job.swift in Sources */,
 				1F1DD6D924F98434003C4A9F /* AdsEventType.swift in Sources */,
 				1F4C2B8824ED926100C39967 /* MetroStationLocation.swift in Sources */,
 				1FF6843F24F054AE0068A69A /* UIView+Factory.swift in Sources */,
@@ -1164,14 +1204,17 @@
 				8965450E269DA18500FD9BFA /* ProfileViewController.swift in Sources */,
 				1FF6847924F0761B0068A69A /* PlaceDetailsViewController.swift in Sources */,
 				1FA3C40924EB17EB00295FFA /* MainCoordinator.swift in Sources */,
+				89C65C56273067A8002C40D1 /* JobListUsecase.swift in Sources */,
 				1F4C2BEE24EDB3A500C39967 /* BannersRepository.swift in Sources */,
 				1FA3C42F24EBD8E900295FFA /* AppContext.swift in Sources */,
 				1FA3C40624EB14A700295FFA /* DependenciesSpecs.swift in Sources */,
+				89484700272E8A1F003F0FD7 /* JobListViewController.swift in Sources */,
 				1FF6843B24F051780068A69A /* MainMenuType.swift in Sources */,
 				1FF6843724F04E8B0068A69A /* MainMenuCell.swift in Sources */,
 				1FF6843424F04CC20068A69A /* MainMenuItem.swift in Sources */,
 				1FA3C42024EB2B2F00295FFA /* PlacesServiceRemote.swift in Sources */,
 				1F4C2BD924EDA08B00C39967 /* Storyboard.swift in Sources */,
+				89C65C542730432D002C40D1 /* Layer+Utilities.swift in Sources */,
 				1FA3C41124EB1FFE00295FFA /* MenuCoordinator.swift in Sources */,
 				1FF6847324F06B070068A69A /* PlacesViewController.swift in Sources */,
 				1FA3C43F24EBEBAA00295FFA /* MetroStationsResponse.swift in Sources */,
@@ -1191,6 +1234,7 @@
 				1F1DD6D524F9829E003C4A9F /* AnalyticsEventType.swift in Sources */,
 				89ABD616268316C800B3AF0A /* SubScriptionViewController.swift in Sources */,
 				1F4C2BF024EDBD4200C39967 /* String+Localized.swift in Sources */,
+				89484708272EA303003F0FD7 /* JobService.swift in Sources */,
 				1FA3C41E24EB2AAD00295FFA /* MetroStation.swift in Sources */,
 				1FF6847524F075F00068A69A /* AllPlacesListViewController.swift in Sources */,
 				89A033292698323F00F5FFEE /* LoginViewController+Facbook.swift in Sources */,

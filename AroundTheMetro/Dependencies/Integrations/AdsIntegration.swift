@@ -125,9 +125,9 @@ extension AdsIntegration: GADBannerViewDelegate {
 extension AdsIntegration: GADInterstitialDelegate {
     func interstitialDidReceiveAd(_ ad: GADInterstitial) {
         if let adsContainer = adsContainer {
-            if !IAPManager.shared.isSubscribed {
-            ad.present(fromRootViewController: adsContainer)
-            }
+			if !IAPManager.shared.isSubscribed {
+				ad.present(fromRootViewController: adsContainer)
+			}
         }
     }
 }
