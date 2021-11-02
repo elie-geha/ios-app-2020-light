@@ -37,9 +37,17 @@ class AdsContainerViewController: UIViewController {
         layoutViews()
 
 		bannerViewContainer.isHidden = IAPManager.shared.isSubscribed
-
+		showIronsourceBannerView(vc: self)
 		NotificationCenter.default.addObserver(self, selector: #selector(self.subscriptionUpdated), name: Notification.Name(IAPManager.SUBSCRIPTION_UPDATED_NOTIFICATION), object: nil)
     }
+
+	private func showIronsourceBannerView(vc: UIViewController) {
+		IronSource.setBannerDelegate(self)
+//		if let size = ISBannerSize(width: Int(adsContainer.view.frame.size.width), andHeight: Int(AdsIntegration.ironsourceBannerHeight)) {
+		if let size = ISBannerSize(width: Int(320), andHeight: Int(50)) {
+			IronSource.loadBanner(with: vc, size: size,placement: "DefaultBanner")
+		}
+	}
 
 	deinit {
 		NotificationCenter.default.removeObserver(self)
@@ -118,4 +126,36 @@ extension AdsContainerViewController: AdsContainer {
     func resizeBanner(to height: CGFloat) {
         setBannerHeight(height)
     }
+}
+
+extension AdsContainerViewController: ISBannerDelegate {
+	func bannerDidLoad(_ bannerView: ISBannerView!) {
+
+	}
+
+	func bannerDidFailToLoadWithError(_ error: Error!) {
+
+	}
+
+	func didClickBanner() {
+
+	}
+
+	func bannerWillPresentScreen() {
+
+	}
+
+	func bannerDidDismissScreen() {
+
+	}
+
+	func bannerWillLeaveApplication() {
+		
+	}
+
+	func bannerDidShow() {
+
+	}
+
+
 }
