@@ -45,7 +45,8 @@ enum Storyboard {
         static let allPlacesListVC = storyboard.instantiateViewController(withIdentifier: "AllPlacesListViewController") as! AllPlacesListViewController
         static let metroListVC = storyboard.instantiateViewController(withIdentifier: "MetroListViewController") as! MetroListViewController
 
-        static let placeDetailsVC = storyboard.instantiateViewController(withIdentifier: "PlaceDetailViewController") as! PlaceDetailViewController
+		static var placeDetailsVC: PlaceDetailViewController { storyboard.instantiateViewController(withIdentifier: "PlaceDetailViewController") as! PlaceDetailViewController
+		}
     }
 
     enum OnBoarding: StoryboardType {
@@ -67,5 +68,13 @@ enum Storyboard {
 			storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
 		}
         static let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+    }
+
+    enum Job: StoryboardType {
+        static let name = "job"
+
+		static var jobList: JobListViewController{
+			storyboard.instantiateViewController(withIdentifier: "JobListViewController") as! JobListViewController
+		}
     }
 }

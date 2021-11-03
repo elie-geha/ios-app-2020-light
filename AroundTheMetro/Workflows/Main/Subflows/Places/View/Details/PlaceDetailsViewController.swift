@@ -35,7 +35,6 @@ class PlaceDetailViewController: UIViewController {
     @IBOutlet weak var callusBtn: UIButton!
     @IBOutlet weak var websiteBtn: UIButton!
 
-	var vcVisitCount = 0
     @IBAction func callUsBtnTapped(_ sender: UIButton) {
         if let place = place {
             onCall?(place)
@@ -56,19 +55,22 @@ class PlaceDetailViewController: UIViewController {
 
         setupView()
 
-		IronSource.setRewardedVideoDelegate(self)
-
+		guard !IAPManager.shared.isSubscribed else {return}
+		if IronSource.hasRewardedVideo(), RewardVideoAdManager().shouldDisplay() {
+			IronSource.showRewardedVideo(with: self)
+		}else if InterstatialAdManager().shouldDisplay() {
+			showInterstitialAd()
+		}
     }
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		setupNavigationItem()
+	}
 
-		vcVisitCount += 1
-		if IronSource.hasRewardedVideo(), vcVisitCount >= 5 {
-			IronSource.showRewardedVideo(with: self)
-			vcVisitCount = 0
-		}
+	private func showInterstitialAd() {
+		IronSource.setInterstitialDelegate(self)
+		IronSource.loadInterstitial()
 	}
 
 	func setupNavigationItem() {
@@ -157,6 +159,37 @@ extension PlaceDetailViewController: ISRewardedVideoDelegate {
 	}
 
 	func didClickRewardedVideo(_ placementInfo: ISPlacementInfo!) {
+
+	}
+}
+
+//MARK:- ISBannerDelegate
+extension PlaceDetailViewController: ISInterstitialDelegate {
+	func interstitialDidLoad() {
+		IronSource.showInterstitial(with: self)
+	}
+
+	func interstitialDidFailToLoadWithError(_ error: Error!) {
+
+	}
+
+	func interstitialDidOpen() {
+
+	}
+
+	func interstitialDidClose() {
+
+	}
+
+	func interstitialDidShow() {
+
+	}
+
+	func interstitialDidFailToShowWithError(_ error: Error!) {
+
+	}
+
+	func didClickInterstitial() {
 
 	}
 }
