@@ -150,7 +150,6 @@
 		89484702272E8A34003F0FD7 /* job.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89484701272E8A34003F0FD7 /* job.storyboard */; };
 		89484704272EA123003F0FD7 /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89484703272EA123003F0FD7 /* JobCell.swift */; };
 		89484706272EA186003F0FD7 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89484705272EA186003F0FD7 /* Job.swift */; };
-		89484708272EA303003F0FD7 /* JobService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89484707272EA303003F0FD7 /* JobService.swift */; };
 		8965450E269DA18500FD9BFA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8965450D269DA18500FD9BFA /* ProfileViewController.swift */; };
 		899D13A6272EB2130093E363 /* Reachibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D13A5272EB2130093E363 /* Reachibility.swift */; };
 		89A031A02695A7DC00F5FFEE /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A0319F2695A7DC00F5FFEE /* Auth.storyboard */; };
@@ -338,7 +337,6 @@
 		89484701272E8A34003F0FD7 /* job.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = job.storyboard; sourceTree = "<group>"; };
 		89484703272EA123003F0FD7 /* JobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
 		89484705272EA186003F0FD7 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
-		89484707272EA303003F0FD7 /* JobService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobService.swift; sourceTree = "<group>"; };
 		8965450D269DA18500FD9BFA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		899D13A5272EB2130093E363 /* Reachibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachibility.swift; sourceTree = "<group>"; };
 		89A0319F2695A7DC00F5FFEE /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
@@ -807,7 +805,6 @@
 			children = (
 				1FA3C43B24EBEB9000295FFA /* Response */,
 				1FA3C41F24EB2B2F00295FFA /* PlacesServiceRemote.swift */,
-				89484707272EA303003F0FD7 /* JobService.swift */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -1234,7 +1231,6 @@
 				1F1DD6D524F9829E003C4A9F /* AnalyticsEventType.swift in Sources */,
 				89ABD616268316C800B3AF0A /* SubScriptionViewController.swift in Sources */,
 				1F4C2BF024EDBD4200C39967 /* String+Localized.swift in Sources */,
-				89484708272EA303003F0FD7 /* JobService.swift in Sources */,
 				1FA3C41E24EB2AAD00295FFA /* MetroStation.swift in Sources */,
 				1FF6847524F075F00068A69A /* AllPlacesListViewController.swift in Sources */,
 				89A033292698323F00F5FFEE /* LoginViewController+Facbook.swift in Sources */,
