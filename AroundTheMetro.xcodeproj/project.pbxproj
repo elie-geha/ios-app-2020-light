@@ -146,6 +146,7 @@
 		51C50D8425104CC20048EB09 /* Mexico_City.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D6F25104CC10048EB09 /* Mexico_City.plist */; };
 		51C50D8525104CC20048EB09 /* Rio_de_Janeiro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D7025104CC10048EB09 /* Rio_de_Janeiro.plist */; };
 		51C50D8625104CC20048EB09 /* Saint_Petersburg.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C50D7125104CC10048EB09 /* Saint_Petersburg.plist */; };
+		8934CEB72733E92A004271FB /* JobService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934CEB62733E92A004271FB /* JobService.swift */; };
 		89484700272E8A1F003F0FD7 /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894846FF272E8A1F003F0FD7 /* JobListViewController.swift */; };
 		89484702272E8A34003F0FD7 /* job.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89484701272E8A34003F0FD7 /* job.storyboard */; };
 		89484704272EA123003F0FD7 /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89484703272EA123003F0FD7 /* JobCell.swift */; };
@@ -332,6 +333,7 @@
 		51C50D6F25104CC10048EB09 /* Mexico_City.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Mexico_City.plist; sourceTree = "<group>"; };
 		51C50D7025104CC10048EB09 /* Rio_de_Janeiro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Rio_de_Janeiro.plist; sourceTree = "<group>"; };
 		51C50D7125104CC10048EB09 /* Saint_Petersburg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Saint_Petersburg.plist; sourceTree = "<group>"; };
+		8934CEB62733E92A004271FB /* JobService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobService.swift; sourceTree = "<group>"; };
 		89461B2A26CB9DD0005415E2 /* AroundTheMetro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AroundTheMetro-Bridging-Header.h"; sourceTree = "<group>"; };
 		894846FF272E8A1F003F0FD7 /* JobListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewController.swift; sourceTree = "<group>"; };
 		89484701272E8A34003F0FD7 /* job.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = job.storyboard; sourceTree = "<group>"; };
@@ -803,6 +805,7 @@
 		1FA3C43A24EBEB8700295FFA /* Places */ = {
 			isa = PBXGroup;
 			children = (
+				8934CEB62733E92A004271FB /* JobService.swift */,
 				1FA3C43B24EBEB9000295FFA /* Response */,
 				1FA3C41F24EB2B2F00295FFA /* PlacesServiceRemote.swift */,
 			);
@@ -1176,6 +1179,7 @@
 				1F1DD6DD24F9882B003C4A9F /* AdsIntegration.swift in Sources */,
 				89484706272EA186003F0FD7 /* Job.swift in Sources */,
 				1F1DD6D924F98434003C4A9F /* AdsEventType.swift in Sources */,
+				8934CEB72733E92A004271FB /* JobService.swift in Sources */,
 				1F4C2B8824ED926100C39967 /* MetroStationLocation.swift in Sources */,
 				1FF6843F24F054AE0068A69A /* UIView+Factory.swift in Sources */,
 				1FA3C42B24EB34D600295FFA /* UserDefaultsBacked.swift in Sources */,

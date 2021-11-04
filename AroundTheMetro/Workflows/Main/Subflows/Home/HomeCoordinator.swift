@@ -90,7 +90,7 @@ class HomeCoordinator: NSObject, CoordinatorType {
 //				}
 				self?.openPlaces(with: .beautyAndHealth)
 			}),
-			MenuItem(type: .jobsInCity, onSelect: { [weak self] in
+			MenuItem(type: .jobsInCity(cityName: context.countriesRepository.currentCity?.name ?? ""), onSelect: { [weak self] in
 				self?.openJobList()
 				/*
                 let items: [Any] = ["Discover interesting places around metro stations. Available in more the 70+ cities. Download the Free App Here", URL(string: "https://apps.apple.com/us/app/id1276636784")!]
@@ -155,13 +155,13 @@ class HomeCoordinator: NSObject, CoordinatorType {
 		vc.share = { [weak self] (job) in
 			guard let self = self else {return}
 			let content = self.shareContent(job: job)
-			self.showFacebookShare(msg: content.1, url: content.0)
+			self.showActivityController(items: [content.1,content.0])
 		}
 
 		vc.shareOnFacebook = { [weak self] job in
 			guard let self = self else {return}
 			let content = self.shareContent(job: job)
-			self.showActivityController(items: [content.1,content.0])
+			self.showFacebookShare(msg: content.1, url: content.0)
 		}
 
 		vc.showDetail = { [weak self] job in
