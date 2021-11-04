@@ -39,7 +39,7 @@ enum HomeMenuType {
         case .boutiques: return "boutique-icon"
         case .beautyAndHealth: return "beauty-icon"
         case .attractions: return "attractions-icon"
-		case .jobsInCity: return "Jobs in City"
+		case .jobsInCity: return "services-icon"
 //        case .shareTheApp: return "share"
         case .appsWeLove: return "coins-icon"
         }
