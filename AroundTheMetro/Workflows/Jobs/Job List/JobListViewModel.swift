@@ -15,6 +15,7 @@ protocol JobListViewModel {
 	func reload(items: [Job])
 	func show(error: Error)
 	func loadMoreItems(items: [Job])
+	func job(at position: Int) -> Job
 }
 
 class AllJobListViewModel {
@@ -53,5 +54,9 @@ extension AllJobListViewModel: JobListViewModel {
 	func loadMoreItems(items: [Job]) {
 		view?.hideLoading()
 		view?.loadMore(items: items.map{JobCellViewModel(job: $0)})
+	}
+
+	func job(at position: Int) -> Job {
+		return jobs[position]
 	}
 }

@@ -30,7 +30,7 @@ enum MainMenuType {
         case .home: return "Home".localized
         case .changeCity: return "Change City".localized
         case .contactUs: return "Contact us".localized
-        case .subscription: return "Subscription".localized
+        case .subscription: return "Remove Ads".localized
         case .profile: return "Profile".localized
 		case .login: return "Login".localized
         }

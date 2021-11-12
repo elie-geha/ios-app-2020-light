@@ -76,5 +76,9 @@ enum Storyboard {
 		static var jobList: JobListViewController{
 			storyboard.instantiateViewController(withIdentifier: "JobListViewController") as! JobListViewController
 		}
+
+		static var jobDetail: JobDetailViewController{
+			storyboard.instantiateViewController(withIdentifier: "JobDetailViewController") as! JobDetailViewController
+		}
     }
 }
