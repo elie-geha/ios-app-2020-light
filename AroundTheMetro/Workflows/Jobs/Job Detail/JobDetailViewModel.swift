@@ -23,6 +23,6 @@ class JobAllDetailViewModel {
 
 extension JobAllDetailViewModel: JobDetailViewModel {
 	func showJobDetail(job: Job) {
-		view?.setJobDetails(title: job.title, company: job.company, location: job.locations, salary: job.salary, detail: job.description, date: job.date)
+		view?.setJobDetails(title: job.title, company: job.company, location: job.locations, salary: job.salary, detail: job.description, date: job.date, url: job.url)
 	}
 }

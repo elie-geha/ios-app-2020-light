@@ -12,15 +12,17 @@ protocol JobDetailUsecase {
 	func viewDidLoad()
 	func shareMessage() -> JobShareMessage
 	func shareOnFacebookMessage() -> JobShareMessage
+	func getUrl() -> URL?
 }
 
 protocol JobDetailActionDelegate: AnyObject{
 	func share(message: JobShareMessage)
 	func shareOnFacebook(message: JobShareMessage)
+	func open(url: URL)
 }
 
 protocol JobDetailView: AnyObject {
-	func setJobDetails(title: String, company: String, location: String, salary: String, detail: String, date: String)
+	func setJobDetails(title: String, company: String, location: String, salary: String, detail: String, date: String, url: String)
 }
 
 class JobDetailViewController: UIViewController {
@@ -32,6 +34,7 @@ class JobDetailViewController: UIViewController {
 	@IBOutlet weak var salary: UILabel!
 	@IBOutlet weak var salaryView: UIView!
 	@IBOutlet weak var detail: UILabel!
+	@IBOutlet weak var url: UILabel!
 
 	weak var actions: JobDetailActionDelegate?
 	var usecase: JobDetailUsecase!
@@ -40,6 +43,9 @@ class JobDetailViewController: UIViewController {
         super.viewDidLoad()
 		self.navigationItem.title = "Job Detail"
 		usecase?.viewDidLoad()
+
+		let tap = UITapGestureRecognizer(target: self, action: #selector(actOpenUrl))
+		url.addGestureRecognizer(tap)
     }
 
 	@IBAction private func actShare() {
@@ -49,10 +55,15 @@ class JobDetailViewController: UIViewController {
 	@IBAction func actShareOnFacebook() {
 		actions?.shareOnFacebook(message: usecase.shareOnFacebookMessage())
 	}
+
+	@objc private func actOpenUrl() {
+		guard let url = usecase.getUrl() else {return}
+		actions?.open(url: url)
+	}
 }
 
 extension JobDetailViewController: JobDetailView {
-	func setJobDetails(title: String, company: String, location: String, salary: String, detail: String, date: String) {
+	func setJobDetails(title: String, company: String, location: String, salary: String, detail: String, date: String, url: String) {
 		self.jobTitle.text = title
 		self.compnay.text = company
 		self.location.text = location
@@ -60,5 +71,6 @@ extension JobDetailViewController: JobDetailView {
 		salaryView.isHidden = salary.isEmpty
 		self.detail.text = detail
 		self.date.text = date
+		self.url.text = url
 	}
 }

@@ -343,16 +343,25 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9o0-Vz-rwj">
+                                        <rect key="frame" x="24" y="101" width="366" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.3411764706" green="0.59215686270000001" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.95686274509803915" green="0.96862745098039216" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rAA-qF-qmM" secondAttribute="bottom" constant="24" id="2Lp-PV-vdO"/>
                                     <constraint firstItem="rAA-qF-qmM" firstAttribute="trailing" secondItem="Qqs-xL-vVn" secondAttribute="trailing" id="4rW-a5-Q9H"/>
+                                    <constraint firstItem="9o0-Vz-rwj" firstAttribute="leading" secondItem="rAA-qF-qmM" secondAttribute="leading" id="8M2-1D-NnF"/>
                                     <constraint firstItem="Qqs-xL-vVn" firstAttribute="top" secondItem="cKI-AT-Gtx" secondAttribute="top" constant="32" id="8vM-D7-X8w"/>
                                     <constraint firstItem="rAA-qF-qmM" firstAttribute="leading" secondItem="Qqs-xL-vVn" secondAttribute="leading" id="dMw-1G-U6f"/>
                                     <constraint firstAttribute="trailing" secondItem="Qqs-xL-vVn" secondAttribute="trailing" constant="24" id="iWc-Tk-Sqj"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9o0-Vz-rwj" secondAttribute="bottom" constant="24" id="m4M-EQ-IPX"/>
                                     <constraint firstItem="Qqs-xL-vVn" firstAttribute="leading" secondItem="cKI-AT-Gtx" secondAttribute="leading" constant="24" id="rw0-d1-gwc"/>
+                                    <constraint firstItem="9o0-Vz-rwj" firstAttribute="top" secondItem="rAA-qF-qmM" secondAttribute="bottom" constant="16" id="wXe-Jx-uw6"/>
                                     <constraint firstItem="rAA-qF-qmM" firstAttribute="top" secondItem="Qqs-xL-vVn" secondAttribute="bottom" constant="12" id="yfB-Sp-jXo"/>
+                                    <constraint firstItem="9o0-Vz-rwj" firstAttribute="trailing" secondItem="rAA-qF-qmM" secondAttribute="trailing" id="ytH-kF-n8H"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -388,6 +397,7 @@
                         <outlet property="location" destination="aox-ly-nPP" id="iUv-Nx-7N4"/>
                         <outlet property="salary" destination="UUB-MA-M0k" id="SY6-6h-WYl"/>
                         <outlet property="salaryView" destination="lIX-ON-MuB" id="L4G-jq-epp"/>
+                        <outlet property="url" destination="9o0-Vz-rwj" id="G7P-JP-J3J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUT-d9-kkF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

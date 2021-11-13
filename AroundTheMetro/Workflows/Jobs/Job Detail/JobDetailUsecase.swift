@@ -31,4 +31,8 @@ extension JobAllDetailUsecase: JobDetailUsecase {
 	func shareOnFacebookMessage() -> JobShareMessage {
 		return JobShareMessageGenerator.shareContent(job: job)
 	}
+
+	func getUrl() -> URL? {
+		return URL(string: job.url)
+	}
 }

@@ -85,4 +85,9 @@ extension JobCoordinator: JobListActionDelegate, JobDetailActionDelegate {
 	func showJobDetail(job: Job) {
 		openJobDetail(job: job)
 	}
+
+	func open(url: URL) {
+		guard UIApplication.shared.canOpenURL(url) else {return}
+		UIApplication.shared.open(url, options: [:], completionHandler: nil)
+	}
 }
