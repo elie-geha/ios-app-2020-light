@@ -175,7 +175,7 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boutique-listicon" translatesAutoresizingMaskIntoConstraints="NO" id="Ikj-gb-Bl6">
                                         <rect key="frame" x="105" y="0.0" width="125" height="125"/>
-                                        <color key="backgroundColor" red="0.99607843139999996" green="0.28235294119999998" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="125" id="blz-Jr-DlG"/>
                                             <constraint firstAttribute="height" constant="125" id="cku-fE-f8a"/>

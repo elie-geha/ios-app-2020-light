@@ -10,7 +10,7 @@ import UIKit
 
 class JobCellViewModel {
 
-	let job: Job
+	private let job: Job
 	var title: String {job.title}
 	var company: String {job.company}
 	var locations: String {"(\(job.locations))"}
@@ -33,8 +33,8 @@ class JobCell: UITableViewCell {
 	@IBOutlet weak var date: UILabel!
 	@IBOutlet weak var card: UIView!
 
-	var share: ((Job) -> Void)?
-	var shareOnFaceboook: ((Job) -> Void)?
+	var share: ((JobCell) -> Void)?
+	var shareOnFaceboook: ((JobCell) -> Void)?
 
 	var viewModel: JobCellViewModel? {
 		didSet  {
@@ -59,12 +59,10 @@ class JobCell: UITableViewCell {
 	}
 
 	@IBAction func actShare() {
-		guard let job = viewModel?.job else { return }
-		share?(job)
+		share?(self)
 	}
 
 	@IBAction func actShareOnFacebook() {
-		guard let job = viewModel?.job else { return }
-		shareOnFaceboook?(job)
+		shareOnFaceboook?(self)
 	}
 }

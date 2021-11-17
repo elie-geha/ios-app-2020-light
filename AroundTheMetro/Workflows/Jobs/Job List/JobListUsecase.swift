@@ -8,11 +8,6 @@
 
 import Foundation
 
-protocol JobListUsecase {
-	func getJobs()
-	func didScroll(percentage: CGFloat)
-}
-
 class AllJobListUsecase {
 
 	private let viewModel: JobListViewModel
@@ -62,5 +57,17 @@ extension AllJobListUsecase: JobListUsecase {
 				self?.viewModel.show(error: error)
 			}
 		}
+	}
+
+	func shareMessage(at position: Int) -> JobShareMessage {
+		return JobShareMessageGenerator.shareContent(job: viewModel.job(at: position))
+	}
+
+	func shareOnFacebookMessage(at position: Int) -> JobShareMessage {
+		return JobShareMessageGenerator.shareContent(job: viewModel.job(at: position))
+	}
+
+	func job(at position: Int) -> Job {
+		return viewModel.job(at: position)
 	}
 }

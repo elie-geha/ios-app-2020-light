@@ -22,3 +22,17 @@ struct Job: Decodable {
 	let title: String
 	let company: String
 }
+
+class JobShareMessageGenerator {
+
+	static func shareContent(job: Job) -> JobShareMessage {
+		let url = URL(string: "https://apps.apple.com/us/app/id1276636784")!
+		let message = "I found this Job Offer: (\(job.title)) on Around the Metro. Download the App for Free and find your dream job today."
+		return JobShareMessage(url: url, message: message)
+	}
+}
+
+struct JobShareMessage {
+	let url: URL
+	let message: String
+}

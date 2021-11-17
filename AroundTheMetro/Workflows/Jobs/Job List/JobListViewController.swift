@@ -8,6 +8,14 @@
 
 import UIKit
 
+protocol JobListUsecase {
+	func getJobs()
+	func didScroll(percentage: CGFloat)
+	func shareMessage(at position: Int) -> JobShareMessage
+	func shareOnFacebookMessage(at position: Int) -> JobShareMessage
+	func job(at position: Int) -> Job
+}
+
 protocol JobListView : AnyObject {
 	func showEmptyView()
 	func showFirstPageLoading()
@@ -17,6 +25,12 @@ protocol JobListView : AnyObject {
 	func loadMore(items: [JobCellViewModel])
 	func reloadData(items: [JobCellViewModel])
 	func show(error: String)
+}
+
+protocol JobListActionDelegate: AnyObject {
+	func share(message: JobShareMessage)
+	func shareOnFacebook(message: JobShareMessage)
+	func showJobDetail(job: Job)
 }
 
 class JobListViewController: UIViewController {
@@ -33,10 +47,11 @@ class JobListViewController: UIViewController {
 			tableView.reloadData()
 		}
 	}
+	weak var actions: JobListActionDelegate?
 
-	var share: ((Job) -> Void)?
-	var	shareOnFacebook: ((Job) -> Void)?
-	var showDetail: ((Job) -> Void)?
+//	var share: ((Job) -> Void)?
+//	var	shareOnFacebook: ((Job) -> Void)?
+//	var showDetail: ((Job) -> Void)?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,15 +136,22 @@ extension JobListViewController: UITableViewDataSource, UITableViewDelegate, UIS
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: JobCell.self), for: indexPath) as! JobCell
 		cell.viewModel = items[indexPath.row]
-		cell.share = share
-		cell.shareOnFaceboook = shareOnFacebook
+		cell.share =  { [weak self] (cell) in
+			guard let position = self?.tableView.indexPath(for: cell)?.row,
+				  let msg = self?.usecase?.shareMessage(at: position) else {return}
+			self?.actions?.share(message: msg)
+		}
+		cell.shareOnFaceboook =  { [weak self] (cell) in
+			guard let position = self?.tableView.indexPath(for: cell)?.row,
+				  let msg = self?.usecase?.shareMessage(at: position) else {return}
+			self?.actions?.shareOnFacebook(message: msg)
+		}
 		return cell
 	}
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		guard let cell = tableView.cellForRow(at: indexPath) as? JobCell,
-			  let job = cell.viewModel?.job else {return}
-		showDetail?(job)
+		guard let job = usecase?.job(at: indexPath.row) else {return}
+		self.actions?.showJobDetail(job: job)
 	}
 
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
