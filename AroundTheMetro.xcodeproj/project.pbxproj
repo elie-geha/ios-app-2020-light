@@ -1459,7 +1459,7 @@
 				CODE_SIGN_ENTITLEMENTS = AroundTheMetro/AroundTheMetro.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
@@ -1488,7 +1488,7 @@
 				CODE_SIGN_ENTITLEMENTS = AroundTheMetro/AroundTheMetro.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8TQ2NZ8693;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AroundTheMetro/Resources/Info.plist;
