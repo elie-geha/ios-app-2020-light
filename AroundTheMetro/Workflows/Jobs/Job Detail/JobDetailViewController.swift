@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 protocol JobDetailUsecase {
 	func viewDidLoad()
@@ -58,7 +59,9 @@ class JobDetailViewController: UIViewController {
 
 	@objc private func actOpenUrl() {
 		guard let url = usecase.getUrl() else {return}
-		actions?.open(url: url)
+//		actions?.open(url: url)
+        let svc = SFSafariViewController(url: url)
+        present(svc, animated: true, completion: nil)
 	}
 }
 
