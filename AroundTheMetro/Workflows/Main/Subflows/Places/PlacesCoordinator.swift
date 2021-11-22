@@ -90,9 +90,17 @@ class PlacesCoordinator: CoordinatorType {
 
             self?.context.analytics.trackEvent(with: .websiteClicked(place.name, place.website ?? "no url"))
         }
+		vc.showSubscription = { [weak self] in
+			self?.showSubscription()
+		}
         router.pushViewController(vc, animated: true)
 
         context.analytics.trackEvent(with: .detailsPageView(place.name))
         context.ads.handleEvent(with: .openDetailsPage)
     }
+
+	private func showSubscription() {
+		let vc = Storyboard.Subscription.sunscriptionVC
+		vc.present(from: router)
+	}
 }

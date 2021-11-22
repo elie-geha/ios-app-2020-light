@@ -23,6 +23,7 @@ class PlaceDetailViewController: UIViewController {
 
     var onCall: ((Place) -> Void)?
     var onWebsite: ((Place) -> Void)?
+	var showSubscription: (() -> Void)?
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -147,7 +148,9 @@ extension PlaceDetailViewController: ISRewardedVideoDelegate {
 	}
 
 	func rewardedVideoDidClose() {
-
+		if !(IAPManager.shared.isSubscribed) {
+			self.showSubscription?()
+		}
 	}
 
 	func rewardedVideoDidStart() {
