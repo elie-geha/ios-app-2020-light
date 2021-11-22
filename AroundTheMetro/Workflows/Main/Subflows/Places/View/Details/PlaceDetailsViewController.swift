@@ -58,6 +58,7 @@ class PlaceDetailViewController: UIViewController {
 
 		guard !IAPManager.shared.isSubscribed else {return}
 		if IronSource.hasRewardedVideo(), RewardVideoAdManager().shouldDisplay() {
+			IronSource.setRewardedVideoDelegate(self)
 			IronSource.showRewardedVideo(with: self)
 		}else if InterstatialAdManager().shouldDisplay() {
 			showInterstitialAd()

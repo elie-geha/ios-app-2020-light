@@ -35,8 +35,7 @@ class RewardVideoAdManager {
 	}
 
 	func shouldDisplay() -> Bool {
-		return true
-//		return counter % 5 == 0
+		return counter % 5 == 0
 	}
 }
 
