@@ -44,7 +44,7 @@ class ChangeCityViewController: UIViewController {
 
     @IBAction func btnConfirmTapped(_ sender: UIButton) {
 //		if IronSource.hasOfferwall() {
-			IronSource.showOfferwall(with: self)
+//			IronSource.showOfferwall(with: self)
 //		}else {
 			confirmLocation()
 //		}

@@ -11,7 +11,7 @@ target 'AroundTheMetro' do
     pod 'Kingfisher'
     pod 'SVProgressHUD', :git => 'https://github.com/slizeray/SVProgressHUD.git'
     pod 'Tabman', '~> 2.9'
-    pod 'Google-Mobile-Ads-SDK'
+    pod 'Google-Mobile-Ads-SDK', '~> 8.13'
     pod 'Firebase/Core'
 #    pod 'FacebookCore'
     pod 'Firebase/Analytics'
@@ -37,5 +37,5 @@ target 'AroundTheMetro' do
 		pod 'IQKeyboardManagerSwift'
 
 		#iron source is a monetization tool
-		pod 'IronSourceSDK', '~> 7.1'
+#		pod 'IronSourceSDK', '~> 7.1'
 end

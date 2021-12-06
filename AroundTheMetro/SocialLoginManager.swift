@@ -35,15 +35,16 @@ class SocialLoginManager: NSObject {
 	weak var delegate: SocialLoginManagerDelegate?
 
 	func configure(){
-		self.configureGoogle()
+//		self.configureGoogle(viewController: viewController)
 
 		//MARK: FB SDK
 //		ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
 	}
 
-	private func configureGoogle(){
-		GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-		GIDSignIn.sharedInstance().delegate = self
+	private func configureGoogle(viewController: UIViewController){
+
+//		GIDSignIn.sharedInstance.clientID = FirebaseApp.app()?.options.clientID
+//		GIDSignIn.sharedInstance.delegate = self
 	}
 
 	//login user into facebook and get token
@@ -69,12 +70,25 @@ class SocialLoginManager: NSObject {
 		}
 	}
 
-	var googleTokenCallback: ((Result<(GIDAuthentication),Error>) -> Void)?
+//	var googleTokenCallback: ((Result<(GIDAuthentication),Error>) -> Void)?
 	public func getGoogleSigninToken(viewController: UIViewController , completion: @escaping(Result<GIDAuthentication,Error>) -> Void){
-		self.googleTokenCallback = completion
+		//self.googleTokenCallback = completion
 		self.viewController = viewController
-		GIDSignIn.sharedInstance().presentingViewController = viewController
-		GIDSignIn.sharedInstance().signIn()
+//		GIDSignIn.sharedInstance().presentingViewController = viewController
+//		GIDSignIn.sharedInstance().signIn()
+
+		let clientId = FirebaseApp.app()?.options.clientID ?? ""
+		GIDSignIn.sharedInstance.signIn(
+		   with: GIDConfiguration.init(clientID: clientId),
+		   presenting: viewController
+	   ) { user, error in
+		   guard error == nil else {
+			   completion(.failure(error!))
+			   return
+		   }
+		   guard let user = user else { return }
+		   completion(.success(user.authentication))
+	   }
 	}
 
 	fileprivate var currentNonce: String?
@@ -137,7 +151,8 @@ class SocialLoginManager: NSObject {
 	}
 }
 
-extension SocialLoginManager:GIDSignInDelegate{
+/*
+extension SocialLoginManager: GIDSignInDelegate {
 	func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
 		if let error = error {
 			if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
@@ -170,7 +185,7 @@ extension SocialLoginManager:GIDSignInDelegate{
 		// ...
 		googleTokenCallback?(.failure(error))
 	}
-}
+}*/
 
 //MARK:-
 extension SocialLoginManager: ASAuthorizationControllerDelegate {

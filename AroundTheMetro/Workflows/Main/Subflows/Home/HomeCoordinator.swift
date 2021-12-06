@@ -103,7 +103,14 @@ class HomeCoordinator: NSObject, CoordinatorType {
                 
 			}),
 			MenuItem(type: .appsWeLove, onSelect: { [weak self] in
-				self?.showOfferWall()
+				let items: [Any] = ["Discover interesting places around metro stations. Available in more the 70+ cities. Download the Free App Here", URL(string: "https://apps.apple.com/us/app/id1276636784")!]
+				let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+				if (ac.popoverPresentationController != nil) {
+//                    ac.popoverPresentationController?.sourceView = router.
+				}
+				self?.router.present(ac, animated: true)
+
+				//self?.showOfferWall()
 //				guard self?.isLoggedIn ?? false else {
 //					self?.navigateToLogin()
 //					return
@@ -119,12 +126,13 @@ class HomeCoordinator: NSObject, CoordinatorType {
 		router.setViewControllers([homeViewController].compactMap { $0 }, animated: false)
 	}
 
+	/*
 	private func showOfferWall() {
 		IronSource.setOfferwallDelegate(self)
 		if IronSource.hasOfferwall() {
 			IronSource.showOfferwall(with: router)
 		}
-	}
+	}*/
 	
 	private func navigateToLogin() {
 		guard let login = UIStoryboard(name: "Auth", bundle: .main).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {return}
@@ -194,6 +202,7 @@ class HomeCoordinator: NSObject, CoordinatorType {
     }
 }
 
+/*
 extension HomeCoordinator: ISOfferwallDelegate {
 	func offerwallHasChangedAvailability(_ available: Bool) {
 //		if available {
@@ -222,4 +231,4 @@ extension HomeCoordinator: ISOfferwallDelegate {
 	func didFailToReceiveOfferwallCreditsWithError(_ error: Error!) {
 
 	}
-}
+}*/

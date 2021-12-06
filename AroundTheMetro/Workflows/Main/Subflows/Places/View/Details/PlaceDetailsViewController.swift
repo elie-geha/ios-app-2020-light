@@ -56,13 +56,14 @@ class PlaceDetailViewController: UIViewController {
 
         setupView()
 
+		/*
 		guard !IAPManager.shared.isSubscribed else {return}
 		if IronSource.hasRewardedVideo(), RewardVideoAdManager().shouldDisplay() {
 			IronSource.setRewardedVideoDelegate(self)
 			IronSource.showRewardedVideo(with: self)
 		}else if InterstatialAdManager().shouldDisplay() {
 			showInterstitialAd()
-		}
+		}*/
     }
 
 	override func viewWillAppear(_ animated: Bool) {
@@ -70,10 +71,11 @@ class PlaceDetailViewController: UIViewController {
 		setupNavigationItem()
 	}
 
+	/*
 	private func showInterstitialAd() {
 		IronSource.setInterstitialDelegate(self)
 		IronSource.loadInterstitial()
-	}
+	}*/
 
 	func setupNavigationItem() {
 		let item = UIBarButtonItem(image: UIImage(named: "share-2")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(actShare))
@@ -130,7 +132,7 @@ class PlaceDetailViewController: UIViewController {
     }
 }
 
-
+/*
 extension PlaceDetailViewController: ISRewardedVideoDelegate {
 	func rewardedVideoHasChangedAvailability(_ available: Bool) {
 
@@ -196,4 +198,4 @@ extension PlaceDetailViewController: ISInterstitialDelegate {
 	func didClickInterstitial() {
 
 	}
-}
+}*/

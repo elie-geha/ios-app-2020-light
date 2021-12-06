@@ -57,6 +57,9 @@ class JobCoordinator: NSObject {
 		// Share the content (photo) as a dialog with News Feed / Story
 		let sharingDialog = ShareDialog.init(fromViewController: router, content: textContent, delegate: self)
 		sharingDialog.show()
+
+//		let messageDialog = MessageDialog(content: textContent, delegate: self)
+//		messageDialog.show()
 	}
 
 	private func showActivityController(items: [Any]) {

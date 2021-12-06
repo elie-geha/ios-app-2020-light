@@ -55,7 +55,7 @@ enum HomeMenuType {
         case .attractions: return "Attractions".localized
 //		case .shareTheApp: return "Share The\nApp".localized
 		case .jobsInCity(let cityName): return "Jobs in\n\(cityName)".localized
-		case .appsWeLove: return "Apps We\nLove".localized
+		case .appsWeLove: return "Sharing Is\nCaring"//"Apps We\nLove".localized
         }
     }
 }

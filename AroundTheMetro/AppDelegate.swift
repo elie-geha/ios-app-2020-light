@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		SocialLoginManager.shared.configure()
 		IQKeyboardManager.shared.enable = true
 
-		configureIronSource()
+//		configureIronSource()
         return true
     }
 
@@ -85,7 +85,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		if url.scheme != nil && url.scheme!.hasPrefix("fb\(appId)") && url.host ==  "authorize" {
 			return ApplicationDelegate.shared.application(application, open: url, options: options)
 		}
-		return GIDSignIn.sharedInstance().handle(url)
+		return GIDSignIn.sharedInstance.handle(url)
 	}
 
     private func setupIntegrations(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
@@ -98,12 +98,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
+	/*
 	private func configureIronSource() {
 		let ironSourceAppKey = "d3af4a95"
 
 		IronSource.initWithAppKey(ironSourceAppKey, adUnits: [IS_REWARDED_VIDEO,IS_INTERSTITIAL,IS_OFFERWALL, IS_BANNER])
 
 		ISIntegrationHelper.validateIntegration()
-	}
+	}*/
 }
 

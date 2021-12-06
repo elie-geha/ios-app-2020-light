@@ -97,7 +97,7 @@ class LoginViewController: UIViewController {
 		SocialLoginManager.shared.getGoogleSigninToken(viewController: self) { [weak self] (result) in
 			switch result {
 			case .success(let authentication):
-				let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+				let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken!,
 																 accessToken: authentication.accessToken)
 				SVProgressHUD.show()
 				self?.authenticateGoogle(credential: credential, completion: { [weak self] in
