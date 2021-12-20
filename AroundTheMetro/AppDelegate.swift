@@ -11,7 +11,7 @@ import Firebase
 import UIKit
 import GoogleSignIn
 import IQKeyboardManagerSwift
-
+import GoogleMobileAds
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             appCoordinator = AppCoordinator(with: window, context: AppContext())
             appCoordinator?.start()
         }
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ GADSimulatorID ]
 		verifySubscription()
 		SocialLoginManager.shared.configure()
 		IQKeyboardManager.shared.enable = true
@@ -92,7 +93,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: - Firebase config
         FirebaseApp.configure()
 
-		
+        // Initialize the Google Mobile Ads SDK.
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
 
         //MARK: - FACEBOOK SDK CONFIGURATION
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)

@@ -82,6 +82,7 @@
 "Metro" = "Metro";
 "Mall" = "Centro comercial";
 "Type" = "Tipo";
+"Directions" = "Direcciones";
 
 
 //MARK: - Home Extension

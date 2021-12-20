@@ -23,6 +23,7 @@ class PlaceDetailViewController: UIViewController {
 
     var onCall: ((Place) -> Void)?
     var onWebsite: ((Place) -> Void)?
+    var onDirections: ((Place) -> Void)?
 	var showSubscription: (() -> Void)?
 
     @IBOutlet weak var imageView: UIImageView!
@@ -35,6 +36,7 @@ class PlaceDetailViewController: UIViewController {
 
     @IBOutlet weak var callusBtn: UIButton!
     @IBOutlet weak var websiteBtn: UIButton!
+    @IBOutlet weak var directionsBtn: UIButton!
 
     @IBAction func callUsBtnTapped(_ sender: UIButton) {
         if let place = place {
@@ -47,13 +49,19 @@ class PlaceDetailViewController: UIViewController {
             onWebsite?(place)
         }
     }
+    
+    @IBAction func directionsBtnTapped(_ sender: UIButton) {
+        if let place = place {
+            onDirections?(place)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         callusBtn.setTitle("Call Us".localized, for: .normal)
         websiteBtn.setTitle("Website".localized, for: .normal)
-
+        directionsBtn.setTitle("Directions".localized, for: .normal)
         setupView()
 
 		/*

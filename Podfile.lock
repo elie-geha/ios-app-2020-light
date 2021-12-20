@@ -153,7 +153,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
-  - Google-Mobile-Ads-SDK (~> 8.13)
+  - Google-Mobile-Ads-SDK
   - GoogleSignIn
   - IQKeyboardManagerSwift
   - Kingfisher
@@ -235,6 +235,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 6ed134667e9ebb2f33679e8273cd48fd3fa349e5
   Tabman: 792ac76fd1ec95af175c93db880a3c47cabedc91
 
-PODFILE CHECKSUM: 7677c3ed1300a79bd349e7d24df37e4306b73fec
+PODFILE CHECKSUM: a9a9cdd9648f4a3184b99a1a2ba28330ba09ddff
 
 COCOAPODS: 1.11.2

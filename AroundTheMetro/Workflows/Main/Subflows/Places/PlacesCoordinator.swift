@@ -9,6 +9,7 @@
 import FirebaseAnalytics
 import SVProgressHUD
 import UIKit
+import CoreLocation
 
 class PlacesCoordinator: CoordinatorType {
     private var router: UINavigationController
@@ -90,6 +91,11 @@ class PlacesCoordinator: CoordinatorType {
 
             self?.context.analytics.trackEvent(with: .websiteClicked(place.name, place.website ?? "no url"))
         }
+        
+        vc.onDirections = { [weak self] place in
+            self?.showDirectionsVC(name: place.name)
+        }
+        
 		vc.showSubscription = { [weak self] in
 			self?.showSubscription()
 		}
@@ -103,4 +109,28 @@ class PlacesCoordinator: CoordinatorType {
 		let vc = Storyboard.Subscription.sunscriptionVC
 		vc.present(from: router)
 	}
+    
+//    private func showDirectionsVC() {
+//        let vc = Storyboard.Places.placeDirectionsVC
+//
+//        router.pushViewController(vc, animated: true)
+//    }
+    
+    private func showDirectionsVC(name: String) {
+        guard let url = URL(string: "https://maps.google.com/?q=@37.3161,-122.1836") else { return } //https://maps.google.com/?q=@37.3161,-122.1836
+        let webBrowser = WebBrowserViewController()
+        webBrowser.url = url
+        self.router.pushViewController(webBrowser, animated: true)
+//        CLGeocoder().geocodeAddressString(name) { [weak self] (placemark, error) in
+//            if error != nil {
+//
+//            }
+//
+//            guard let placemark = placemark?.first else { return }
+//            guard let url = URL(string: "https://maps.google.com/?q=@37.3161,-122.1836") else { return } //https://maps.google.com/?q=@37.3161,-122.1836
+//            let webBrowser = WebBrowserViewController()
+//            webBrowser.url = url
+//            self?.router.pushViewController(webBrowser, animated: true)
+//        }
+    }
 }

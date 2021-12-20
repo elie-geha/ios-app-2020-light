@@ -122,6 +122,7 @@
 		1FF6848224F3CA860068A69A /* PlacesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6848124F3CA860068A69A /* PlacesCoordinator.swift */; };
 		1FF6848424F3CACC0068A69A /* Places.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6848324F3CACC0068A69A /* Places.storyboard */; };
 		4E0D497826A3273D00E5E506 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D497726A3273D00E5E506 /* LocationManager.swift */; };
+		4E86889B2771147300F7DAA5 /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E86889A2771147300F7DAA5 /* DirectionsViewController.swift */; };
 		5153024A251125C200E73CB8 /* Boston.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51530249251125C200E73CB8 /* Boston.plist */; };
 		5153025825118B2900E73CB8 /* Buenos_Aires.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5153025725118B2900E73CB8 /* Buenos_Aires.plist */; };
 		5153025A25118BC400E73CB8 /* Rio_de_Janeiro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5153025925118BC400E73CB8 /* Rio_de_Janeiro.plist */; };
@@ -313,6 +314,7 @@
 		1FF6848124F3CA860068A69A /* PlacesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCoordinator.swift; sourceTree = "<group>"; };
 		1FF6848324F3CACC0068A69A /* Places.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Places.storyboard; sourceTree = "<group>"; };
 		4E0D497726A3273D00E5E506 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		4E86889A2771147300F7DAA5 /* DirectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
 		51530249251125C200E73CB8 /* Boston.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Boston.plist; sourceTree = "<group>"; };
 		5153025725118B2900E73CB8 /* Buenos_Aires.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Buenos_Aires.plist; sourceTree = "<group>"; };
 		5153025925118BC400E73CB8 /* Rio_de_Janeiro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Rio_de_Janeiro.plist; sourceTree = "<group>"; };
@@ -896,6 +898,7 @@
 			isa = PBXGroup;
 			children = (
 				1FF6847824F0761B0068A69A /* PlaceDetailsViewController.swift */,
+				4E86889A2771147300F7DAA5 /* DirectionsViewController.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -1238,6 +1241,7 @@
 				1FA3C41124EB1FFE00295FFA /* MenuCoordinator.swift in Sources */,
 				1FF6847324F06B070068A69A /* PlacesViewController.swift in Sources */,
 				1FA3C43F24EBEBAA00295FFA /* MetroStationsResponse.swift in Sources */,
+				4E86889B2771147300F7DAA5 /* DirectionsViewController.swift in Sources */,
 				1FF6847724F075FF0068A69A /* MetroListViewController.swift in Sources */,
 				1FA3C41A24EB2A9800295FFA /* City.swift in Sources */,
 				1F4C2BF224EDBDBA00C39967 /* HomeMenuType.swift in Sources */,

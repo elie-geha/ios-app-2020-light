@@ -83,7 +83,7 @@
 "Metro" = "地铁";
 "Mall" = "购物中心";
 "Type" = "类型";
-
+"Directions" = "路線";
 
 //MARK: - Home Extension
 "Cannot open the website" = "無法打開網站";

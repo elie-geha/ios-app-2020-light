@@ -47,6 +47,9 @@ enum Storyboard {
 
 		static var placeDetailsVC: PlaceDetailViewController { storyboard.instantiateViewController(withIdentifier: "PlaceDetailViewController") as! PlaceDetailViewController
 		}
+        
+        static var placeDirectionsVC: DirectionsViewController { storyboard.instantiateViewController(withIdentifier: "DirectionsViewController") as! DirectionsViewController
+        }
     }
 
     enum OnBoarding: StoryboardType {

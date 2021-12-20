@@ -37,17 +37,17 @@ class AdsContainerViewController: UIViewController {
         layoutViews()
 
 		bannerViewContainer.isHidden = IAPManager.shared.isSubscribed
-		showIronsourceBannerView(vc: self)
+//		showIronsourceBannerView(vc: self)
 		NotificationCenter.default.addObserver(self, selector: #selector(self.subscriptionUpdated), name: Notification.Name(IAPManager.SUBSCRIPTION_UPDATED_NOTIFICATION), object: nil)
     }
 
-	private func showIronsourceBannerView(vc: UIViewController) {
-		IronSource.setBannerDelegate(self)
+//	private func showIronsourceBannerView(vc: UIViewController) {
+//		IronSource.setBannerDelegate(self)
 //		if let size = ISBannerSize(width: Int(adsContainer.view.frame.size.width), andHeight: Int(AdsIntegration.ironsourceBannerHeight)) {
-		if let size = ISBannerSize(width: Int(320), andHeight: Int(50)) {
-			IronSource.loadBanner(with: vc, size: size,placement: "DefaultBanner")
-		}
-	}
+//		if let size = ISBannerSize(width: Int(320), andHeight: Int(50)) {
+//			IronSource.loadBanner(with: vc, size: size,placement: "DefaultBanner")
+//		}
+//	}
 
 	deinit {
 		NotificationCenter.default.removeObserver(self)
@@ -108,8 +108,8 @@ class AdsContainerViewController: UIViewController {
 extension AdsContainerViewController: AdsContainer {
     func setBannerView(_ bannerView: UIView) {
         removeBannerView()
-        bannerViewContainer.addSubview(bannerView)
         bannerView.translatesAutoresizingMaskIntoConstraints = false
+        bannerViewContainer.addSubview(bannerView)
         bannerView.topAnchor.constraint(equalTo: bannerViewContainer.topAnchor).isActive = true
         bannerView.bottomAnchor.constraint(equalTo: bannerViewContainer.bottomAnchor).isActive = true
         bannerView.centerXAnchor.constraint(equalTo: bannerViewContainer.centerXAnchor).isActive = true
@@ -128,34 +128,34 @@ extension AdsContainerViewController: AdsContainer {
     }
 }
 
-extension AdsContainerViewController: ISBannerDelegate {
-	func bannerDidLoad(_ bannerView: ISBannerView!) {
-
-	}
-
-	func bannerDidFailToLoadWithError(_ error: Error!) {
-
-	}
-
-	func didClickBanner() {
-
-	}
-
-	func bannerWillPresentScreen() {
-
-	}
-
-	func bannerDidDismissScreen() {
-
-	}
-
-	func bannerWillLeaveApplication() {
-		
-	}
-
-	func bannerDidShow() {
-
-	}
-
-
-}
+//extension AdsContainerViewController: ISBannerDelegate {
+//	func bannerDidLoad(_ bannerView: ISBannerView!) {
+//
+//	}
+//
+//	func bannerDidFailToLoadWithError(_ error: Error!) {
+//
+//	}
+//
+//	func didClickBanner() {
+//
+//	}
+//
+//	func bannerWillPresentScreen() {
+//
+//	}
+//
+//	func bannerDidDismissScreen() {
+//
+//	}
+//
+//	func bannerWillLeaveApplication() {
+//
+//	}
+//
+//	func bannerDidShow() {
+//
+//	}
+//
+//
+//}
