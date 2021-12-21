@@ -153,7 +153,7 @@ class HomeCoordinator: NSObject, CoordinatorType {
     }
 
 	private func openJobCoordinator() {
-		let coordinator = JobCoordinator(with: router, currentCity: context.countriesRepository.currentCity?.name ?? "")
+        let coordinator = JobCoordinator(with: router, currentCity: context.countriesRepository.currentCity?.name ?? "", context: context)
 		coordinator.start()
 		jobCoordinator = coordinator
 	}

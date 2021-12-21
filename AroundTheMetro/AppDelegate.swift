@@ -95,6 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Initialize the Google Mobile Ads SDK.
         GADMobileAds.sharedInstance().start(completionHandler: nil)
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "5460210e431e8d0630b5989acb1ee22c" ]
 
         //MARK: - FACEBOOK SDK CONFIGURATION
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)

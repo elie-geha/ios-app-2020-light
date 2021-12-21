@@ -13,10 +13,14 @@ class JobCoordinator: NSObject {
 
 	private let currentCity: String
 	private let router: UINavigationController
-
-	init(with router: UINavigationController, currentCity: String) {
+    // MARK: - Context
+    private var context: AppContext
+    
+	init(with router: UINavigationController, currentCity: String,
+         context: AppContext) {
 		self.router = router
 		self.currentCity = currentCity
+        self.context = context
 	}
 
 	func start() {
@@ -33,7 +37,7 @@ class JobCoordinator: NSObject {
 
 		vc.usecase = usecase
 		vc.actions = self
-
+        context.analytics.trackEvent(with: .jobsClicked)
 		router.pushViewController(vc, animated: true)
 	}
 
@@ -44,7 +48,7 @@ class JobCoordinator: NSObject {
 
 		vc.usecase = usecase
 		vc.actions = self
-
+        context.analytics.trackEvent(with: .jobDetailsClicked)
 		router.pushViewController(vc, animated: true)
 	}
 

@@ -23,6 +23,7 @@ xcshareddata
 *.moved-aside
 *.xcuserstate
 
+temp_auto_push.bat
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
@@ -49,3 +50,4 @@ fastlane/screenshots
 
 # General
 .DS_Store
+branch_structure.json

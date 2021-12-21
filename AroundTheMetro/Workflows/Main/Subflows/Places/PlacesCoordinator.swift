@@ -117,20 +117,21 @@ class PlacesCoordinator: CoordinatorType {
 //    }
     
     private func showDirectionsVC(name: String) {
-        guard let url = URL(string: "https://maps.google.com/?q=@37.3161,-122.1836") else { return } //https://maps.google.com/?q=@37.3161,-122.1836
-        let webBrowser = WebBrowserViewController()
-        webBrowser.url = url
-        self.router.pushViewController(webBrowser, animated: true)
-//        CLGeocoder().geocodeAddressString(name) { [weak self] (placemark, error) in
-//            if error != nil {
-//
-//            }
-//
-//            guard let placemark = placemark?.first else { return }
-//            guard let url = URL(string: "https://maps.google.com/?q=@37.3161,-122.1836") else { return } //https://maps.google.com/?q=@37.3161,-122.1836
-//            let webBrowser = WebBrowserViewController()
-//            webBrowser.url = url
-//            self?.router.pushViewController(webBrowser, animated: true)
-//        }
+        CLGeocoder().geocodeAddressString(name) { [weak self] (placemark, error) in
+            if error != nil {
+
+            }
+
+            guard let placemark = placemark?.first else {
+                guard let url = URL(string: "https://maps.google.com/?q=@37.3161,-122.1836") else { return } //https://maps.google.com/?q=@37.3161,-122.1836
+                let webBrowser = WebBrowserViewController()
+                webBrowser.url = url
+                self?.router.pushViewController(webBrowser, animated: true)
+                return }
+            guard let url = URL(string: "https://maps.google.com/?q=@\(placemark.location?.coordinate.latitude ?? 0.0),\(placemark.location?.coordinate.longitude ?? 0.0)") else { return } //https://maps.google.com/?q=@37.3161,-122.1836
+            let webBrowser = WebBrowserViewController()
+            webBrowser.url = url
+            self?.router.pushViewController(webBrowser, animated: true)
+        }
     }
 }
