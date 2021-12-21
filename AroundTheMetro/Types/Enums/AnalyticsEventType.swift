@@ -21,7 +21,9 @@ enum AnalyticsEventType {
 	case purchasedMonthly(id: String, value: String)
 	case purchasedYearly(id: String, value: String)
 	case purchasedLifeTime(id: String, value: String)
-
+    case jobsClicked
+    case jobDetailsClicked
+    
     var eventName: String {
         switch self {
         case .detailsPageView: return "place_page_view"
@@ -38,6 +40,8 @@ enum AnalyticsEventType {
 		case .purchasedMonthly(_, _): return "purchased_monthly"
 		case .purchasedYearly(_,_): return "purchased_yearly"
 		case .purchasedLifeTime(_,_): return "purchased_lifetime"
+        case .jobsClicked: return "jobs_clicked"
+        case .jobDetailsClicked: return "job_details_clicked"
         }
     }
 
@@ -77,6 +81,10 @@ enum AnalyticsEventType {
 			return ["id":id, "value": value]
 		case .purchasedLifeTime(let id, let value):
 			return ["id":id, "value":value]
+        case .jobsClicked:
+            return [:]
+        case .jobDetailsClicked:
+            return [:]
         }
     }
 }
